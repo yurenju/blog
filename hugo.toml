@@ -1,0 +1,4 @@
+baseURL = 'http://yurenju.blog/'
+languageCode = 'en-us'
+title = "Yuren's Blog"
+theme = "hugo-blog-awesome"
