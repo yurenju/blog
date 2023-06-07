@@ -1,5 +1,6 @@
 baseURL = 'http://yurenju.blog/'
-languageCode = 'zh-Hant-TW'
+languageCode = 'zh-hant-tw'
+defaultContentLanguage = "zh-hant-tw"
 title = "Yuren's Blog"
 theme = "hugo-blog-awesome"
 hasCJKLanguage = true
