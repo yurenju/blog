@@ -1,4 +1,4 @@
-baseURL = 'http://yurenju.blog/'
+baseURL = 'http://yurenju.github.io/blog/'
 languageCode = 'zh-Hant-TW'
 title = "Yuren's Blog"
 theme = "hugo-blog-awesome"
