@@ -25,3 +25,20 @@ url = "index.xml"
   intro = "Yuren's Blog"
   name = "Yuren Ju"
   description = "撰寫就是一種思考方式，發佈與分享只是副產品，而真正的意義是在自我的知識脈絡裡面有了歸屬與連結。"
+
+[menu]
+  [[menu.main]]
+    pageRef="/"
+    name = '首頁'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    pageRef="posts"
+    name = '所有文章'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    pageRef="about"
+    name = '關於'
+    url = '/about/'
+    weight = 30
