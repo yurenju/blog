@@ -51,16 +51,22 @@
   flex-direction: row;
   align-items: center;
 
+  @include media-query($on-mobile) {
+    display: block;
+  }
+
   &:not(:first-child) {
     border-top: 1px solid $light;
   }
 
   .post-item-date {
-    min-width: 96px;
-    color: $black;
-
     @include media-query($on-mobile) {
-      font-size: 16px;
+      font-size: $small-font-size;
+      color: $smoke;
+
+      &::before {
+        content: "-";
+      }
     }
   }
 
@@ -71,6 +77,10 @@
     font-size: $base-font-size;
     font-weight: normal;
     letter-spacing: 0.1px;
+
+    @include media-query($on-mobile) {
+      display: inline;
+    }
 
     a {
       color: $text-base-color;
