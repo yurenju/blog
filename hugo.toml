@@ -1,4 +1,26 @@
 baseURL = 'http://yurenju.blog/'
-languageCode = 'en-us'
+languageCode = 'zh-Hant-TW'
 title = "Yuren's Blog"
 theme = "hugo-blog-awesome"
+hasCJKLanguage = true
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/yurenju"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/yurenju"
+
+[[params.socialIcons]]
+name = "Rss"
+url = "index.xml"
+
+[params]
+  goToTop = true
+
+[params.author]
+  avatar = "avatar.jpg"
+  intro = "Yuren's Blog"
+  name = "Yuren Ju"
+  description = "撰寫是一種重新咀嚼消化自己思想的好辦法"
