@@ -37,7 +37,7 @@ $dark-gray: #767f87;
 //////////////// 3. Fonts preferences /////////////////
 $sans-family: Roboto, sans-serif;
 $mono-family: Consolas, monospace;
-$base-font-size: 16px;
+$base-font-size: 20px;
 $medium-font-size: $base-font-size * 0.938;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.85;
@@ -49,8 +49,8 @@ $bold-weight: 700;
 // $black-weight: 900; // uncomment if necessary
 
 //////////////// 4.Responsive design (media queries) /////////////////
-$wide-size: 890px;
-$narrow-size: 720px;
+$wide-size: 1068px;
+$narrow-size: 864px;
 
 // Padding unit
 $spacing-full: 30px;
