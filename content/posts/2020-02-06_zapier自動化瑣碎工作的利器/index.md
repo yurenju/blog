@@ -16,6 +16,7 @@ images:
 ---
 
 ![image](/posts/2020-02-06_zapier自動化瑣碎工作的利器/images/1.png#layoutTextWidth)
+
 [Image credit](https://zapier.com/page/partner-kit/)
 
 最近在[科技島讀](https://daodu.tech/)的 Slack 看到這篇文章《[武漢肺炎爆發時在家工作？31 個讓你遠端工作更有效率的工具](https://www.perapera.ai/post/remotework/)》提到 Zapier 這個我已經知道很久但都沒機會嘗試的工具，讓我這幾天終於開始嘗試這套工具了，想來分享一下試用的心得。
@@ -45,7 +46,9 @@ Zapier 是一個用來自動化各種瑣事的付費服務，它可以把很多�
 6.  還支援 webhook, 真是包山包海…
 
 而提供了這麼多樣的功能，理所當然的是一個[付費服務](https://zapier.com/app/billing/plans)。
+
 ![image](/posts/2020-02-06_zapier自動化瑣碎工作的利器/images/3.png#layoutTextWidth)
+
 收費上也不算便宜。雖然也有免費方案，但是沒有多重步驟感覺起來跟 IFTTT 就沒什麼太大的區別，如果要買付費方案的話感覺就是要用好用滿才不會浪費。
 
 到底要不要買呢，我也還需要考慮一下。你有用 Zapier 嗎？你拿來做什麼事情呢？在下面留言一下吧。

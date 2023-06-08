@@ -72,7 +72,9 @@ EtherDelta 最大的好處是交易全部都在區塊鏈上完成，而且跟中
 Kyber Network 是一個完全去中心化的交易所解決方案，跟 EtherDelta 還有一小部分必要元件採用中心化技術不同，Kyber Network 的交易所中所有必要元件都在區塊鏈上面。
 
 對使用者來說，如果需要將 1 ETH 轉換成 BAT，僅需要呼叫 Kyber Network 的智能合約中的 `Transfer()` 函式，當交易成功時 BAT 就會直接發送到指定的錢包地址，因為只有一個 transaction 而且是直接從錢包發出，不需要掛單與等候，所以在交易費或交易時間上都很不錯。比起 EtherDelta 從存款、提款、掛單至少要三個 blockchain transactions 比較起來 Kyber Network 僅需一個 transaction 真的佔盡優勢。
+
 ![image](/posts/2018-02-11_運行在區塊鏈上的交易所下/images/3.png#layoutTextWidth)
+
 僅需要一個 Transaction 就可以達成交換加密貨幣就是 Kyber Network 的設計關鍵。
 
 Kyber Network 上面沒有掛單的功能，取而代之的是由 `Reserve Manager` 這個角色直接對智能合約設定匯率，使用者交易前就可以透過網站或 API call 取得匯率，由於在交易前就可以取得匯率，使用者就可以依照此匯率決定要不要在 Kyber Network 交易貨幣。

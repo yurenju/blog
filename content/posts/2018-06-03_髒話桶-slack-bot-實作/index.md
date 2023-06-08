@@ -23,11 +23,13 @@ images:
 為什麼不能講「喔喔」？因為你再喔，我就一刀捅死你。
 
 ![image](/posts/2018-06-03_髒話桶-slack-bot-實作/images/1.png#layoutTextWidth)
+
 [https://www.youtube.com/watch?v=DjUKOqcIxis](https://www.youtube.com/watch?v=DjUKOqcIxis)
 
 想當初訂的價格差不多是一杯五十嵐，所以當年訂了中招一次 0.002 BTC，沒想到放在髒話桶裡面的 BTC 大漲，從一杯五十嵐變成一個便當，然後變成一客鰻魚飯，最高點的時候差不多是 1000 台幣，根本是大吃一頓都沒問題啊。後來我們就拿了髒話桶這些錢連吃了兩次都還有剩，可見大家有多喜歡罵髒話跟找人取經了。
 
 ![image](/posts/2018-06-03_髒話桶-slack-bot-實作/images/2.jpeg#layoutTextWidth)
+
 那天雖然我們吃得很好，但是其實我們去錯餐廳了（名字一樣）
 
 最當初的實作因為只是搞笑，所以也是隨便兜一兜。我們用 blockchain.info 作為錢包，然後再用 ifttt 去監測我的信箱有沒有收到 blockchain.info 的信，如果有人轉錢進來時就傳一則訊息到 Slack 去。

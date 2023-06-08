@@ -33,6 +33,7 @@ images:
 ### 存款
 
 ![image](/posts/2020-09-23_金融信任與-decentralized/images/1.jpeg#layoutTextWidth)
+
 [ATM by Roadsidepictures](https://www.flickr.com/photos/roadsidepictures/3347040993/), cc-by-nc
 
 存款是個很方便的服務，旅途在外身上不需要帶太多錢，需要時再到銀行領錢就行了。但你怎麼確定到銀行都可以領出錢，而他們也沒有亂動你的存款呢？在台灣的銀行都相對安全，主要是因為銀行是政府高度監管的行業，在政府的監管下銀行有一定的規矩需要遵守。
@@ -58,6 +59,7 @@ images:
 ### 貨幣兌換
 
 ![image](/posts/2020-09-23_金融信任與-decentralized/images/2.jpeg#layoutTextWidth)
+
 [Exchange by Vladimir Tro](https://www.flickr.com/photos/149732725@N08/34590849396/), cc-by-nc-nd
 
 山邊的村子使用特製的石頭做為貨幣，而海邊的村子使用貝殼。當兩邊村子的人需要互相買對方的商品時，他們會需要找到一個共通的商品來衡量雙方的貨幣的兌換比率。

@@ -20,12 +20,17 @@ images:
 ---
 
 ![image](/posts/2019-07-26_srp-secure-remote-password更健全的登入及資料傳輸保護協議/images/1.jpeg#layoutTextWidth)
+
 [Lock me blue — Paolo Dallorso](https://www.flickr.com/photos/27868169@N00/15466412315/), CC 2.0 by-nc-nd
 
 在開發 web service 時，你是怎麼實作註冊 (register) 以及登入 (login) 功能呢？一般來說我們會讓 client 透過安全的管道把帳號密碼傳輸到伺服器，並且透過 salt 與單向 hash 將 hashed password 儲存到資料庫中。
+
 ![image](/posts/2019-07-26_srp-secure-remote-password更健全的登入及資料傳輸保護協議/images/2.png#layoutTextWidth)
+
 下次登入的時候使用者輸入帳號密碼時會將帳號密碼傳到伺服器上，再透過相同的方式來計算出 hashed password 並且比對與資料庫中儲存的是否一致來驗證，如此一來伺服器就不需要儲存你的明文密碼，並且在後續通訊時依靠既有的安全通道如 https 來確保資料傳輸的安全。
+
 ![image](/posts/2019-07-26_srp-secure-remote-password更健全的登入及資料傳輸保護協議/images/3.png#layoutTextWidth)
+
 不過當處理更敏感的資訊時，通道的安全就會愈來愈重要。[2015 年時曾發生](https://www.bnext.com.tw/article/35854/BN-2015-04-03-041513-81)由中國互聯網路信息中心（CNNIC）發出的有問題的憑證導致其可以在使用者完全無法發現的狀況進行中間人攻擊，這代表以上常見的登入機制形同虛設，所有機密資訊都將會暴露在外。此事件導致 Google 與 Mozilla 往後都不信任由 CNNIC 所發出的憑證。
 
 ![image](/posts/2019-07-26_srp-secure-remote-password更健全的登入及資料傳輸保護協議/images/4.png#layoutTextWidth)
@@ -45,6 +50,7 @@ SRP 是一種強化登入以及資料傳輸保護的機制，此機制可以不�
 #### Register
 
 ![image](/posts/2019-07-26_srp-secure-remote-password更健全的登入及資料傳輸保護協議/images/5.png#layoutTextWidth)
+
 註冊相對簡單，跟平常的註冊流程不一樣的地方是密碼不會直接傳送到 server 去，而是在本地直接計算出 hashed password 才傳到伺服器端。
 
 #### Login

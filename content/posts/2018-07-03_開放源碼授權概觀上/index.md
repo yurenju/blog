@@ -53,6 +53,7 @@ images:
 #### 1. 開放源碼 (Open Source)
 
 ![image](/posts/2018-07-03_開放源碼授權概觀上/images/1.png#layoutTextWidth)
+
 圖片出自於 [A new Firefox and a new Firefox icon](https://blog.mozilla.org/firefox/new-firefox-new-firefox-icon/)
 
 最直觀的特質當然就是開放源碼了，當產品交付給客戶時開放源碼軟體會同時交付原始碼或透過清楚明瞭的方式告知可以到何處取得源碼。
@@ -82,7 +83,9 @@ images:
 ### 有哪些授權？
 
 在從不同層面開始講解各種授權前，我們可以用一張圖來表達不同授權的嚴謹程度。
+
 ![image](/posts/2018-07-03_開放源碼授權概觀上/images/4.png#layoutTextWidth)
+
 越左邊的授權代表在授權的規定越鬆散，反之則是越嚴格。舉例來說 MIT 授權在義務方面僅規範修改源碼後需要將授權聲明納入，完全沒有規範衍生作品是否要開放源碼，也就是衍生作品可以選擇開源或閉源，甚至改變授權也沒問題。
 
 而最嚴格的另外一端 AGPL 授權除了規範衍生作品一定要再採用 AGPL 授權開放源碼外，就連伺服器產品沒有散佈給使用者的產品也需要依照 AGPL 開源授權並且沒有閉源的選項。

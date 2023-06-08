@@ -15,6 +15,7 @@ images:
 ---
 
 ![image](/posts/2016-07-13_開發勞基法計算機才知道的荒謬/images/1.png#layoutTextWidth)
+
 [https://g0v.github.io/workweek](https://g0v.github.io/workweek)
 
 上週看到了[黃國昌](https://www.facebook.com/kcfor2016/videos/574952372687008/)在立法院質詢勞動部時，用了現行法規以及目前各種草案計算後並列出許多表格，心裡就想說這也太麻煩了吧，而且每個人都各說各話，有一個統一的計算介面把公式算到對後，大家就可以透過這個網站來計算各種狀況的加班費與違法狀況了。

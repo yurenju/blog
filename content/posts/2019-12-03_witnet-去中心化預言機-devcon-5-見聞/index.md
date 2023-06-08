@@ -20,6 +20,7 @@ images:
 ---
 
 ![image](/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/1.png#layoutTextWidth)
+
 前言：這篇會講得比較長一點，會從預言機 (Oracle) 一路講到去中心化的預言機 Witnet，抓緊囉！
 
 一般的軟體如果需要介接任何 Web API 時，可以很直覺的用各種工具如 JavaScript 的 `fetch` API 或 golang 的 `http` 套件完成。但是區塊鏈上的智慧合約 (Smart Contract) 如果要介接 Web API 則沒那麼容易。
@@ -37,7 +38,9 @@ images:
 Oracle 的實作方法有很多種，機制啟動後將會到外部擷取資料後寫回區塊鏈。當資料寫回區塊鏈後就變成 deterministic 的資料，不僅可以在智慧合約中取得資料，就算這個數值更新了，因為呼叫時會需要帶入 block number，所以帶入相同的參數時肯定也可以獲得相同的輸出。
 
 如果要自行實作一個簡易的 Oracle，可以在 Ethereum 內部署一個 Oracle 智慧合約，另外在外部建立一個 daemon 來監控這個 Oracle Event，當收到特定 Event 的時候呼叫相對應的 Web APIs 取得結果後，再把結果透過呼叫智慧合約的 callback 來將資料帶入區塊鏈當中，如下圖所示。
+
 ![image](/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/2.png#layoutTextWidth)
+
 至於要如何實作這個外部的 Oracle Daemon 作法就很有彈性，簡單實作方法可以是架設一台 AWS EC2，上面放把可以存取 Oracle 智慧合約的私鑰，監測到新的 Event 時去 Web API 擷取所需資料後寫回區塊鏈。
 
 不過如果每次都得要自己實作這一套還是有點麻煩，而市面上也已經有 Oracle 服務可以讓使用者透過服務存取外部資料，其中最有名的就是 Oraclize，現在更名為 Provable。
@@ -47,7 +50,9 @@ Oracle 的實作方法有很多種，機制啟動後將會到外部擷取資料�
 Provable 提供的機制跟上述自行架設 daemon 的機制類似，不一樣的是 Provable 要提供給不同使用者使用，所以要使用 Provable 服務時需要在智慧合約裡面先寫入你要怎麼讓 Provable 查詢並且解析資料。
 
 以官方的例子來說，如果要從 coinbase 查詢 ETH/USD 的交易資訊，可以在智慧合約中用以下的語法查詢：
+
 ![image](/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/3.png#layoutTextWidth)
+
 此查詢會發出事件後，Provable daemon 監聽到此事件後將會依據查詢語法執行查詢後，再將得到的結果透過智慧合約的 callback 把資料寫回區塊鏈。完整的範例可以看 [Provable 針對 Ethereum 的範例程式](https://docs.provable.xyz/#ethereum-quick-start)。
 
 在 Ethereum 有許多智慧合約都是涉及金融服務，其中經常有大量資金流動，而根據不同的判斷條件可能會造成將資產轉移到不同地方，所以在智慧合約以及 Web APIs 之間的橋樑  — Oracle 的正確性就扮演非常重要的角色。服務提供方需要保證 Oracle 依據他們所宣稱的方式進行，而不會因為牽涉到不同利益而把不同的資料塞回區塊鏈。
@@ -71,13 +76,21 @@ Provable 提供了幾個方法來證明調用資料的正確性，其中一個�
 Witnet 是一個去中心化的 Oracle 網路，也是另外一個區塊鏈，但與 Ethereum 不同之處是在上面的節點可連結外界資訊，是專門為擷取資料而設計的區塊鏈，可以執行擷取資料、驗證以及將資料提供給其他區塊鏈的能力。
 
 我們先從一個使用者的角度來看要如何使用 witnet 來擷取資料。還記得上面用 Provable 擷取 coinbase 價格的例子嗎？如果我們在開發一個需要擷取 ETH 價格的智慧合約，同樣的例子在 Witnet 首先先寫一個 JavaScript 如下：
+
 ![image](/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/4.png#layoutTextWidth)
+
 寫完之後，透過 Witnet 提供的工具 rad2sol 編譯這個 JavaScript 成為一個十六進位的字串，而這個字串所代表的是擷取資料的方法，但是用更精簡的格式儲存，當我們需要使用時，則將一個智慧合約宣告為 Witnet Request 並且將該字串放入建構函式當中：
+
 ![image](/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/5.png#layoutTextWidth)
+
 接著我們就可以在合約之中使用 `UsingWitnet` 所提供的 `witnetPostRequest()` 與 `witnetReadResult()` 分別發出請求以及接收結果。
+
 ![image](/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/6.png#layoutTextWidth)
+
 使用起來比起 Provable 多出了一個編譯的步驟，但其他部分則不會差太多。而之中要如何利用 Witnet 去中心化的機制取得 Web APIs 的回傳結果呢？請見下圖：
+
 ![image](/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/7.png#layoutTextWidth)
+
 在 Witnet 上面的節點總共有三種工作類型：
 
 1.  擷取資料：到開放的 Web APIs 擷取資料

@@ -16,6 +16,7 @@ images:
 ---
 
 ![image](/posts/2017-02-20_tape-除了-mocha-以外的另一個選擇/images/1.jpeg#layoutTextWidth)
+
 [https://flic.kr/p/a22dKZ](https://flic.kr/p/a22dKZ)
 
 前幾天看了 [Why I use Tape Instead of Mocha &amp; So Should You](https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4) 這篇文章之後，覺得他說的幾點都有些道理。正好手邊有個專案需要寫測試，就拿 Tape 來試看看。

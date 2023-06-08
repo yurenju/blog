@@ -60,7 +60,9 @@ images:
 ![image](/posts/2020-06-08_beancount-系列-3加密貨幣交易/images/5.png#layoutTextWidth)
 
 當要賣掉 ETH 時，原本標示成本處直接使用空白的花括號 {}，這代表會利用設定好的記帳方法來轉換資產。以本文的例子採用 FIFO 記帳方式來說，原本的 5 ETH 當中第一個 ETH 成本是 1000 TWD，接下來四個 ETH 成本是 500 TWD，依照先進先出的順序則會取用 1 ETH {1000 TWD} 以及 1 ETH {500TWD} 這兩個 ETH 出售，並且剩下 3 ETH 成本都為 500 TWD。
+
 ![image](/posts/2020-06-08_beancount-系列-3加密貨幣交易/images/6.png#layoutTextWidth)
+
 還記得 beancount 會自動平衡交易中的所有金額吧？如果售出了 1 ETH {1000 TWD} 與 1 ETH {500 TWD} 金額應是 1500 TWD，但是實際上得到的金額卻是 5000 TWD，此時 beancount 就會提醒你這筆交易的數據沒辦法平衡：
 
 ![image](/posts/2020-06-08_beancount-系列-3加密貨幣交易/images/7.png#layoutTextWidth)
@@ -68,6 +70,7 @@ images:
 此時就可以加入 Income:Crypto:PnL 來將所有收益放入這個帳號內。
 
 如果打開 fava 來看一下目前的資產狀況，就可以看得到目前的損益以及剩下 3 ETH 的成本以及目前價值（需要額外提供價格資訊）
+
 ![image](/posts/2020-06-08_beancount-系列-3加密貨幣交易/images/8.png#layoutTextWidth)
 
 ![image](/posts/2020-06-08_beancount-系列-3加密貨幣交易/images/9.png#layoutTextWidth)

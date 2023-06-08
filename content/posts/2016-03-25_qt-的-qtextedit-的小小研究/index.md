@@ -26,7 +26,9 @@ images:
 這問題其實也很簡單，只要隨便打開一個編輯器試試看就知道結果了。第一次會跳到「三國」的後面，第二次則會跳到空白行的第一行，第三次則會跳到「火說」的後面。但是這一切在程式裡面是怎麼發生的呢？
 
 在每個 toolkit 的實作方法都不一樣，我這邊挑了我認為比較好讀的 QT 來研究一下這個行為是怎麼發生的。
+
 ![image](/posts/2016-03-25_qt-的-qtextedit-的小小研究/images/2.png#layoutTextWidth)
+
 自己邊看源碼一邊畫的心智圖
 
 這張 MindMap 我也不能保證全部正確，不過大致上的關係是這樣。QTextDocument 是 QT 裡面來儲存文件的類別，而文件裡面可以有文字區塊 (QTextBlock)、另外一個 Container (QTextFrame)、表格與圖片。
@@ -44,16 +46,19 @@ QTextDocument 與 QTextCursor 用來儲存與操作修改資料，如果是要�
 movePosition() 中，首先會把目前游標所在位置的 QTextBlock 取出，並且一併取出這個 block 的 QTextLayout，並且利用 cursor 目前的位置 (position) 取出目前所在的那一行 (QTextLine)。
 
 ![image](/posts/2016-03-25_qt-的-qtextedit-的小小研究/images/3.png#layoutTextWidth)
+
 QTextCursor::movePosition()
 
 接著將自己的行數 +1 後從 layout-&gt;lineCount() 檢查如果行數 +1 是否會超出這個 block 的範圍，如果沒有超出行數，就取出同 block 的下一行 lineAt(i)，並且用 xToCursor() 算出 cursor 應該要在的位置。
 
 ![image](/posts/2016-03-25_qt-的-qtextedit-的小小研究/images/4.png#layoutTextWidth)
+
 QTextCursor::movePosition()
 
 如果超出行數就利用 block.next() 取出同份文件的下一個 block
 
 ![image](/posts/2016-03-25_qt-的-qtextedit-的小小研究/images/5.png#layoutTextWidth)
+
 QTextCursor::movePosition()
 
 然後再用 lineAt() 與 xToCursor() 來取的行數與正確的位置，最後游標就會到正確的地方囉。

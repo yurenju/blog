@@ -27,6 +27,7 @@ images:
 CSV 檔案格式可以用 iWork 的 Number 或是 [LibreOffice](https://zh-tw.libreoffice.org/) 打開，如果很不幸的你只有 Microsoft Excel，你可以去下載 LibreOffice，那是開源且免費的。
 
 ![image](/posts/2015-07-11_pinkoi-設計師平臺工具組/images/2.png#layoutTextWidth)
+
 Number 打開像這樣
 
 第二個工具故事就長了 ⋯⋯

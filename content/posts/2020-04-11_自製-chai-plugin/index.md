@@ -23,6 +23,7 @@ images:
 ---
 
 ![image](/posts/2020-04-11_自製-chai-plugin/images/1.jpg#layoutTextWidth)
+
 Credit: [Github repo](https://github.com/chaijs)
 
 作為經常使用 Mocha/Chai 的開發者，有時還是覺得 Chai 的功能沒辦法滿足需求。雖然知道 chai 可以自行撰寫 plugin 來更改預設行為，不過一直都沒研究要怎麼做，不過這次正好有機會認真讀了 Chai 的文件後寫了專案要用的 plugin 後來分享一下做法。
@@ -76,7 +77,9 @@ Chai 的框架提供了許多更改原先邏輯的方法。首先新增一個 he
 ![image](/posts/2020-04-11_自製-chai-plugin/images/8.png#layoutTextWidth)
 
 這樣的語法更容易閱讀，需要的行數也較少。接著我們就可以依照我們想要達成的效果利用 `addMethod()` 為 Chai 新增 emit 以及 withArgs 函式：
+
 ![image](/posts/2020-04-11_自製-chai-plugin/images/9.png#layoutTextWidth)
+
 就即可達成用更簡潔的語法達成相同效果的驗證。
 
 ![image](/posts/2020-04-11_自製-chai-plugin/images/10.png#layoutTextWidth)

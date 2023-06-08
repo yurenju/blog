@@ -31,10 +31,13 @@ images:
 假設我們在寫一個賣票程式，可能會需要一個 MeetupEvent 的類別 (Class)，內容如下：
 
 ![image](/posts/2018-05-04_工程師視角什麼是區塊鏈的-smart-contract/images/2.png#layoutTextWidth)
+
 [https://gist.github.com/yurenju/284cfb127a8ba9de07eb8e007acca317](https://gist.github.com/yurenju/284cfb127a8ba9de07eb8e007acca317)
 
 這段 Java 程式的執行方式，一般來說源碼會經過 Java 編譯器轉譯成 Bytecode 之後，透過 JVM (Java Virtual Machine) 在電腦中執行。當這個程式在執行時 `main()` 將會建立一個類別的 instance `event`，此時這個 instance 將會儲存在記憶體裡面，並且可以透過我們定義的方法如 `register()`操作這個 instance，直到整個程式結束。
+
 ![image](/posts/2018-05-04_工程師視角什麼是區塊鏈的-smart-contract/images/3.png#layoutTextWidth)
+
 不管是寫 Java, Python, JavaScript 或其他較為高階的語言，實作上的細節根據不同程式語言會有差異，但是大致上的情形都會是這樣，相信工程師們對這樣的運作架構也耳熟能詳。
 
 ### Smart Contract
@@ -46,10 +49,13 @@ images:
 更精確地來說，在 Ethereum Blockchain 上面 Smart Contract 運作在 Ethereum Virtual Machine (EVM)上面。同樣的 MeetupEvent，我們改用 Smart Contract 的程式語言 solidity 重寫一次：
 
 ![image](/posts/2018-05-04_工程師視角什麼是區塊鏈的-smart-contract/images/4.png#layoutTextWidth)
+
 [https://gist.github.com/yurenju/8598564c516facd734834a51df3fc191](https://gist.github.com/yurenju/8598564c516facd734834a51df3fc191)
 
 這段就是被稱作是 “Smart Contract” 的程式，你可以把它當作是一個類別 (class)。要使用這段程式的時候，它必須被部署 (deploy) 到區塊鏈上，上面這段程式會被創造出一個 instance，而這個 instance 將會被放在區塊鏈上。下圖這個 Ethereum VM 則會運行在每一個 Ethereum 節點上面。一旦合約部署成功時會得到一個地址，它就像記憶體位置一樣，取得這個位置後搭配正確的 interface 資訊就可以執行這個合約。
+
 ![image](/posts/2018-05-04_工程師視角什麼是區塊鏈的-smart-contract/images/5.png#layoutTextWidth)
+
 在區塊鏈上所有人都可以呼叫這個 smart contract 所開出來的函式 (function)。當然因為它就是一段程式，你也可以寫些邏輯來做權限控管。以我們這個程式的例子，可以執行的函式就是 `register()`。這樣說起來，除了 Smart Contract 是跑在區塊鏈上以外，其實他就是一個 instance，跟使用其他程式語言上的 class instance 沒有太大的差別。
 
 而區塊鏈 VM 上跑的程式（也就是 Smart Contract）跟一般 VM 上跑的程式，最不一樣的地方就在於去中心化架構。

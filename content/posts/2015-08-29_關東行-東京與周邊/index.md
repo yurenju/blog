@@ -34,6 +34,7 @@ images:
 去了京都與一些被稱為「小京都」的地方（像是高山），這次我們則到了譽為「小江戶」的川越。買了一日卷之後，我們就從喜多院參觀起。
 
 ![image](/posts/2015-08-29_關東行-東京與周邊/images/1.jpeg#layoutTextWidth)
+
 仙波東照宮前
 
 ![image](/posts/2015-08-29_關東行-東京與周邊/images/2.jpeg#layoutTextWidth)
@@ -61,7 +62,9 @@ images:
 ![image](/posts/2015-08-29_關東行-東京與周邊/images/5.jpeg#layoutTextWidth)
 
 運氣不錯的是剛好遇到有新人在這邊舉行結婚儀式。
+
 ![image](/posts/2015-08-29_關東行-東京與周邊/images/6.jpeg#layoutTextWidth)
+
 至於原宿果然年齡層比較低是一個充滿人的地方 ⋯⋯
 
 ![image](/posts/2015-08-29_關東行-東京與周邊/images/7.jpeg#layoutTextWidth)
@@ -91,6 +94,7 @@ images:
 ![image](/posts/2015-08-29_關東行-東京與周邊/images/10.jpeg#layoutTextWidth)
 
 ![image](/posts/2015-08-29_關東行-東京與周邊/images/11.jpeg#layoutTextWidth)
+
 前面前面有兩根細細的就是放煙火的地方
 
 至於煙火呢，雖然我有錄影但是當然是看別人用好設備錄的影片啊，哈哈，我剛在網路上找到一段今年超級清楚的煙火錄影，來欣賞一下最經典的富士山煙火橋段吧！

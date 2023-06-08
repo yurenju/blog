@@ -43,7 +43,9 @@ images:
 我們在 Meteora 大概待了一個整天（第一天下午一點半到，第二天下午五點半回程）參觀了不少修道院，雖然天氣很冷又下雨，不過我們也運氣很好的同時看到的雲霧中以及大太陽底下的 Meteora。
 
 第一天我們參觀的是 Monastery of the Great Meteoron，不過這座修道院跟 Monastery of Varlaam 中間有個平台可以停下來拍拍照
+
 ![image](/posts/2015-04-14_希臘行天空之城-meteora/images/3.jpeg#layoutTextWidth)
+
 Monastery of Varlaam
 
 我們回程的時候已經下起了毛毛雨，不過在當時那個溫度就足以把手凍到就像不是自己的一樣。我們在 Monastery of Rousanou 前的平台停下來拍照的時候，這隻大狗就橫臥在那個最佳的拍攝位置上 ⋯
@@ -55,24 +57,33 @@ Monastery of Varlaam
 第二天早上起來，外面依然下著有點大的雨，不過沒什麼可以阻止我的！
 
 ![image](/posts/2015-04-14_希臘行天空之城-meteora/images/5.jpeg#layoutTextWidth)
+
 最上面旁邊有個垂降的裝置，可以想像以前用那個載人嗎？
 
 趁著雨小一點先騎去 Kalambaka 想買個輕便雨衣，沒想到竟然沒有這種東西，只好硬著頭皮直接淋雨上 Meteora 參觀第二間 Monastery of Varlaam。
 
 我們去的時候他們正在做小規模的修補，然後就看他們用以前載人用的流籠送一些建設材料上來，實在無法想像以前竟然用這個東西載人。沒想到參觀到一半竟然放晴了！過沒多久一片雲霧飄過，慢慢地湮沒遠方的修道院。
+
 ![image](/posts/2015-04-14_希臘行天空之城-meteora/images/6.jpeg#layoutTextWidth)
+
 Monastery of Rousanou
 
 趁著好天氣，我們騎到 Lonely Planet 地圖上標明 “Lookout” 的點，可以看到整個 Meteora 好幾個修道院，藍天白雲搭上遠處零星點綴的房子真的棒極了。
+
 ![image](/posts/2015-04-14_希臘行天空之城-meteora/images/7.jpeg#layoutTextWidth)
+
 Monastery of Rousanou
 
 接著我們騎著機車到最東邊的一個修女修道院，可惜今天沒有開放，不過我們也在旁邊的平台拍到這座緊鄰 Kalambaka 的修道院。話說雖然是緊鄰但其實沒有路可以直接到，除非用走的否則還是要從西邊繞一圈過來。
+
 ![image](/posts/2015-04-14_希臘行天空之城-meteora/images/8.jpeg#layoutTextWidth)
+
 Monastery of St. Stephen
 
 最後我們參觀了 Monastery of St. Stephen 旁邊的另外一個修道院 Monastery of the Holy Trinity，根據 [Wikipedia](http://zh.wikipedia.org/wiki/%E8%BF%88%E6%B3%B0%E5%A5%A5%E6%8B%89) 上的資料曾經有一集 007 的電影在這邊拍攝。這座修道院要走非常非常多的台階才可以登上，但是上面可以眺望整個 Kalambaka 也是相當值得造訪。
+
 ![image](/posts/2015-04-14_希臘行天空之城-meteora/images/9.jpeg#layoutTextWidth)
+
 Monastery of the Holy Trinity 上遠眺 Kalambaka
 
 參觀完這座修道院後，整個 Meteora 的行程也即將結束了，我們騎著在不太動我們兩個的小機車，到底下的小鎮 Kalambaka 的餐廳 Taverna to “Paramithi” 酒足飯飽之後還了機車，最後在小小的 downtown 裡面到處走走，坐下來喝杯咖啡，享受著就在旁邊的矗立高山美景，拖著行李慢慢的走向火車站，當我打開側背包想要拿出車票時 ⋯。
@@ -82,4 +93,5 @@ Monastery of the Holy Trinity 上遠眺 Kalambaka
 掰掰，Meteora。
 
 ![image](/posts/2015-04-14_希臘行天空之城-meteora/images/10.jpeg#layoutTextWidth)
+
 在火車站也可以看到 Meteora 的美景

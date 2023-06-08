@@ -61,6 +61,7 @@ images:
 後來用 viz.js 輸出則是這樣：
 
 ![image](/posts/2017-01-08_家系圖軟體的雛形與初步研究/images/5.png#layoutTextWidth)
+
 [https://yurenju.github.io/genogram/](https://yurenju.github.io/genogram/)
 
 後來採用 viz.js 發現其實使用 graphviz 是無法做到的，主因是所有 genogram 的圖形都是折線，但是表達雙胞胎時卻不是折線：

@@ -57,6 +57,7 @@ blood.worker 檔案內容如下：
 ![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/4.png#layoutTextWidth)
 
 最後就可以在 blood project 的 gh-pages branch 中找到 [JSON 檔案](https://github.com/g0v/blood/blob/gh-pages/blood.json)，也可以看到每一個小時就會多一個 commit：
+
 ![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/5.png#layoutTextWidth)
 
 ### Github + Travis-CI + IronWorker

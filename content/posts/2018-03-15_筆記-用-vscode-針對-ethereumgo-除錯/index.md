@@ -26,10 +26,13 @@ images:
 `$ make geth`
 
 這個步驟不是必須的，不過可以先試試這個指令會怎麼跑。
+
 ![image](/posts/2018-03-15_筆記-用-vscode-針對-ethereumgo-除錯/images/1.png#layoutTextWidth)
+
 接下來就可以新增 launch.json 這個在 vscode 裡面用來設定 task 的檔案，除了可以用它來設定要怎麼執行指令外，除錯也是利用 launch.json 設定。進到 vscode 第四個 tab 除錯頁籤後，點擊「沒有組態」的下拉選單會出現「新增組態」的選項，接下來基本的 launch.json 就會產生了。
 
 ![image](/posts/2018-03-15_筆記-用-vscode-針對-ethereumgo-除錯/images/2.png#layoutTextWidth)
+
 預設裝好就是中文版就沒調整了。
 
 剛開始的 launch.json 幾乎不用修改就可以使用，長得像下面這個樣子。
@@ -41,5 +44,7 @@ images:
 設定好之後，我們可以先設定 `cmd/geth/accountcmd.go` 裡面的 `accountCreate()` function 為除錯點，接著在開啟著 accountcmd.go 的狀態按下綠色的執行鍵。
 
 此時 vscode debugger 會偵測到有 accountcmd 是由 geth 所引入並且執行（說實在我不太確定他怎麼知道是 geth 指令而不是其他指令），程式執行到這行的時候就會中斷並且列出目前的所有變數、執行堆疊以及可以逐一觀看執行順序。
+
 ![image](/posts/2018-03-15_筆記-用-vscode-針對-ethereumgo-除錯/images/4.png#layoutTextWidth)
+
 除了直接讀原碼外，我一直都還蠻喜歡用除錯功能單步執行來慢慢了解整個程式的架構，這樣了解程式架構還蠻有效的。

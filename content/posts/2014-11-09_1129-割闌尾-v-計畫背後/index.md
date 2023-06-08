@@ -18,6 +18,7 @@ images:
 ---
 
 ![image](/posts/2014-11-09_1129-割闌尾-v-計畫背後/images/1.jpeg#layoutTextWidth)
+
 V 計畫正式公布的那天，大家抬著頭，看投影幕上打著[割闌尾 V 計畫](http://1129vday.tw/)的首頁，不知道心裏想些什麼呢？
 
 我倒是想說說怎麼開始的。

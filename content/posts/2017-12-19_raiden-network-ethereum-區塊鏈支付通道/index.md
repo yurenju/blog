@@ -21,7 +21,9 @@ images:
 這幾天開始在消化 BeyondBlock 演講的內容，聽完了 Raiden Network 後作了一些功課，這篇來消化整理一下目前我所知的 Raiden 網路。
 
 注意這篇文章假設你已經瞭解 Smart Contract 了，如果不了解 Smart Contract 的話讀起來會有點吃力。
+
 ![image](/posts/2017-12-19_raiden-network-ethereum-區塊鏈支付通道/images/1.png#layoutTextWidth)
+
 [https://raiden.network/](https://raiden.network/)
 
 Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想解決三大問題：速度、費用與隱私。
@@ -56,6 +58,7 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 因為我還沒看過 Raiden 的服務或錢包長怎樣，為了比較好的解釋跟想像 Raiden Network，請先想像使用 Raiden 時會像是悠遊卡一樣的儲值卡 app，不一樣的是它是一個 app，平常你會到捷運的儲值機儲值悠遊卡，在 Raiden Network 底下你需要要一個 app 把你的 Ether 以太幣儲值入 Raiden 裡面。
 
 ![image](/posts/2017-12-19_raiden-network-ethereum-區塊鏈支付通道/images/2.png#layoutTextWidth)
+
 抱歉我畫得很醜 🤣
 
 你可以在這個 app 上面看到你的 Ethereum 帳戶與 Raiden 帳戶裡面分別有多少餘額、列出你曾經在 Raiden 網路上作的轉帳，最後 app 底端有三個功能：
@@ -71,7 +74,9 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 #### **開啟通道**
 
 首先，其實通道 (Channel) 其實就是一個 Smart Contract。當你打開了一個通道後就是佈署了一個新的 Smart Contract。舉例來說 Bob 跟 Alice 之間經常一起吃飯，三天兩頭就要互相 Cover 飯錢，他們之間的互動會是這樣：
+
 ![image](/posts/2017-12-19_raiden-network-ethereum-區塊鏈支付通道/images/3.png#layoutTextWidth)
+
 上面的這張圖虛線以上是區塊鏈上的互動，虛線以下是 Raiden 網路上的互動。
 
 首先他們要先開啟一個通道（部署一個 Smart Contract），接著兩個人都先放 5 以太幣到這個 Smart Contract 裡面，讓資金足夠可以在兩人之間流動。當這個 Smart Contract 已經儲存了兩人的以太幣後，雙方就可以開始在 Raiden 網路中進行交易了。當 Bob 在 Raiden 網路送出第一筆 1 ETH 的交易給 Alice 時，此筆交易並不會發到區塊鏈上，取而代之的是 Bob 會將此筆交易資訊包含雙方在通道中的餘額利用自己的私鑰簽章過後，送給 Alice 保存此筆資訊，此筆資訊稱為 Balance Proof。當 Alice 也通知 Bob 收到 Balance Proof 後，這筆交易在 Raiden 上面就會成立了。
@@ -89,14 +94,18 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 假設是 Bob 想要關閉通道，則 Bob 呼叫 Smart Contract 的 `close()`，此時 Bob 會在 `close()` 的參數內附上自己最新取得的一次 Balance Proof，同時在一段時間內 Alice 也可以呼叫 `updateTransfer()` 更新雙方餘額數據。
 
 當雙方都更新完數據後，此通道可以被任何一個人（不限於雙方，可以是 Ethereum 上的任一節點）觸發 `settle()` 將雙方的錢都發回。Bob 跟 Alice 當初都存了 5 ETH 進去這個通道，最後餘額的狀況則是發回給 Bob 6 ETH, 給 Alice 4 ETH。
+
 ![image](/posts/2017-12-19_raiden-network-ethereum-區塊鏈支付通道/images/4.png#layoutTextWidth)
+
 這邊的重點就是因為每個人擁有的 Balance Proof 都會經過對方的私鑰簽名，所以不論是哪一方呼叫了 `close()` 或是 `updateTransfer()`，此通道的 Smart Contract 都可以利用 Solidity 中的 `ecrecover()` 驗證簽名，當 Balance Proof 驗證正確後，Smart Contract 就可以確認這筆餘額雙方都確認無誤。
 `註：[Brian Po-han Chen](https://medium.com/u/b808cc1f2067) 寫過一篇文章[解釋如何使用 ecrecover](https://medium.com/taipei-ethereum-meetup/%E7%94%A8ecrecover%E4%BE%86%E9%A9%97%E7%B0%BD%E5%90%8D-694fa8ae3638)。`
 
 ### 整個 Raiden 網路
 
 剛剛先說明了兩個節點在 Raiden 網路的運作狀況，但是如果每次都要在需要支付的雙方開一個通道來轉帳顯得很不合理，所以 Raiden 網路上的多個節點就派上用場，假如說 Alice (A) 現在要轉帳給 David (D)，他們之間其實並不需要雙方存在直接通道，僅需要 Alice 跟 David 都在 Raiden 網路上即可，也就是說他們都跟 Raiden 網路上的其中一些節點之間已經開啟了通道。
+
 ![image](/posts/2017-12-19_raiden-network-ethereum-區塊鏈支付通道/images/5.png#layoutTextWidth)
+
 原圖出自 [Raiden Network 101](https://raiden.network/101.html) ，但是把格式改成橫的方便閱讀
 
 當 Alice 要轉帳給 David 時，首先他要先在 Raiden 中找到一條通往 David 節點的路徑，找到後就可以借用這些節點之間的通道把以太幣轉給 David。而在整個傳輸完成前，這條通道上交易會使用 Hash Lock 鎖定住，直到 David 在通道上確認已經收到款項，跟 Alice 用 `SecretRequest` 要求解鎖的 Key 後，整個交易才會解鎖。

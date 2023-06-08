@@ -17,7 +17,9 @@ images:
 ---
 
 建立一個軟體服務時，剛開始通常都會把 API Key、連接資料庫或 AWS 的帳號密碼儲存在各式各樣的地方，檔案、環境變數、甚至一個不小心就儲存到 git 裡面。
+
 ![image](/posts/2018-11-13_透過-vault-定期-rotate-credentials/images/1.png#layoutTextWidth)
+
 沒有良好的規劃，帳號密碼很容易就散落各處
 
 隨意儲存固然方便簡單，但是伴隨安全隱憂。隨著服務愈來愈重要，開發者會開始更加安全的儲存這些重要的資訊，例如將這些 credential 集中儲存在同一個地方。除此之外通常也會從多個面向來提昇安全性，像是縮限每個 credential 的存取範圍，或是過一段時間就更換一次 credential 等等。
@@ -33,7 +35,9 @@ images:
 Vault 是一套由 HashiCorp 主導開發用於管理機密資料的開源專案。所有儲存在 vault 內的資料都會經過加密，管理者可以透過開設不同的帳號或 token 來限制不同的存取範圍，同時 token 的存取紀錄都會透過 audit 模組記錄下來，方便之後查核用途。
 
 但是安全的存放機密資料並不是 vault 最實用的地方，Vault 方便之處在於它可以幫你動態的產生 credential 並且設定過期的期限，等期限到了 Vault 會幫你撤銷該 credential。
+
 ![image](/posts/2018-11-13_透過-vault-定期-rotate-credentials/images/2.png#layoutTextWidth)
+
 而因為 credential 會動態的產生，所以每一個元件都會拿到不一樣的 credential。如果發現已經洩漏，也可以透過 audit 模組知道是哪個元件使用的 credential 洩露了，接著用 vault 撤銷憑證的功能把特定的 credential 撤銷。跟所有的元件都採用同一個 credential 相比，影響的範圍會更小，會需要處理的工作也會更少。
 
 ### 範例
@@ -106,7 +110,9 @@ username v-token-my-role-4iDqk7sRI4m6Gocm`
 `Current user: v-token-my-role-6rC0cBjcttqCUEyf`
 
 這兩組帳號密碼都是由 vault 動態建立，並且會在建立後十秒鐘後刪除。
+
 ![image](/posts/2018-11-13_透過-vault-定期-rotate-credentials/images/4.png#layoutTextWidth)
+
 最後當我們用 kill 指令停止 demo.js 程序時，因為我們有監聽 SIGTERM 信號的緣故，此時除了關閉程式我們還會將最近正在使用的帳號密碼撤銷以增加安全性，避免此帳號密碼之後還被其他人使用。
 
 完成的展示過程可以看下面的影片。

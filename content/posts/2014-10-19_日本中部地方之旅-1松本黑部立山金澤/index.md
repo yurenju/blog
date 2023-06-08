@@ -44,6 +44,7 @@ images:
 休息了好一陣子之後，終於覺得沒那麼飽後，我們全家就一起往溫泉澡堂前進了。這邊的浴衣也蠻好看的。
 
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/5.jpeg#layoutTextWidth)
+
 我跟我哥
 
 第二天一早我們就前往黑部立山囉，在這之前想分享個影片給大家看，一覽黑部立山的景致。
@@ -55,13 +56,17 @@ images:
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/6.jpeg#layoutTextWidth)
 
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/7.jpeg#layoutTextWidth)
+
 水庫旁的森林也漸漸轉紅了。
 
 我們在這邊流連許久，後來搭著登山纜車黑部平前進，到這邊之後森林的顏色更加轉成紅黃顏色，剛開始起了大霧，霧散去後出現了一整片的秋色森林。
+
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/8.jpeg#layoutTextWidth)
+
 雲霧散去後的秋色森林
 
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/9.jpeg#layoutTextWidth)
+
 接下來要搭的纜車從雲霧後面探出來，也是非常詩意。
 
 可惜上了室堂之後可能因為海拔比較高的關係，上面天氣不太好，也沒機會到室外逛逛。不過前面幾站的秋色也是很值回票價了！
@@ -71,14 +76,17 @@ images:
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/10.jpeg#layoutTextWidth)
 
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/11.jpeg#layoutTextWidth)
+
 這條街道其實不是古街道保存最完整的那條街，不過街道兩旁低矮的木造房子的氣氛我很喜歡
 
 走完之後我們又跑去日本三大名園的[兼六園](http://zh.wikipedia.org/wiki/%E5%85%BC%E5%85%AD%E5%9C%92)走走
 
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/12.jpeg#layoutTextWidth)
+
 兼六園的石燈籠
 
 ![image](/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/13.jpeg#layoutTextWidth)
+
 Chialin
 
 可惜旁邊金澤城公園的長屋我們太晚去沒機會逛到，其實金澤這個城市再多待一天也不錯，或許之後去[能登半島](http://zh.wikipedia.org/wiki/%E8%83%BD%E7%99%BB%E5%8D%8A%E5%B3%B6)玩的時候可以再來金澤走走。

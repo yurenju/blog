@@ -32,7 +32,9 @@ images:
 ### 國泰世華銀行轉帳明細
 
 在銀行方面我是解析了國泰世華網路銀行交易明細的 csv。在國泰世華的網路銀行，選擇「台幣帳戶明細」那邊可以將交易明細用 csv 格式儲存，不過因為他是用 big5 編碼儲存，所以直接打開會是亂碼。
+
 ![image](/posts/2020-07-02_beancount-系列-4自動化記帳/images/1.png#layoutTextWidth)
+
 下載後就可以用以下指令來把他轉成 beancount 格式的檔案，達成自動記賬。
 `$ soy cathay-bank --config ./cathay-bank.yml --input-file ./cathay-bank.csv`
 
@@ -57,13 +59,17 @@ images:
 如果沒有特別套用規則的轉帳紀錄比如說陽明山住宿，這邊就會是從 `Assets:Bank:Cathay` 轉到 `Expenses:Unknown` 的支出。但是如果像是「信用卡款」就會照著規則重寫。
 
 而每個轉帳紀錄轉成 beancount 格式後每個部份的名稱如下：
+
 ![image](/posts/2020-07-02_beancount-系列-4自動化記帳/images/4.png#layoutTextWidth)
+
 對照著看就是 transaction 底下 metadata/description 如果出現「信用卡款」，原本是 `Expenses:Unknown` 的 posting 的 account 就修改成 `Liabilities:CreditCard:Cathay` 。其他規則也相同，所有出現在明細裡面的欄位都會被轉換成 metadata，有需要的時候就可以從裡面比對欄位並且更改預設值。
 
 ### 國泰世華信用卡帳單
 
 跟銀行交易明細相同，國泰世華信用卡帳單也提供了 CSV 格式下載。從 信用卡 &gt; 帳單查詢及繳款可以看到最近五個月的帳單，點進去之後捲到最下面就可以看到下載 CSV 檔案的選項。
+
 ![image](/posts/2020-07-02_beancount-系列-4自動化記帳/images/5.png#layoutTextWidth)
+
 透過 soy 指令一樣也可以把帳單轉換成 beancount 格式：
 `$ soy cathay-credit-card --config ./cathay-credit-card.yml --input-file ./cathay-credit-card.csv`
 
@@ -76,6 +82,7 @@ images:
 ![image](/posts/2020-07-02_beancount-系列-4自動化記帳/images/7.png#layoutTextWidth)
 
 如果設定正確，執行完成後除了信用卡帳單提供的資訊還會額外提供電子發票的交易明細，比如說原本信用卡只提供總計 270 元的消費，但是比對電子發票之後就會把品項都一一的記錄下來。
+
 ![image](/posts/2020-07-02_beancount-系列-4自動化記帳/images/8.png#layoutTextWidth)
 
 ### 加密貨幣

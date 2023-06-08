@@ -41,6 +41,7 @@ images:
 #### 協同文件編輯
 
 ![image](/posts/2019-02-06_數位書寫工具探索之旅/images/2.jpg#layoutTextWidth)
+
 [https://gsuite.google.com/products/docs/](https://gsuite.google.com/products/docs/)
 
 Google Docs, Quip, HackMD 是同一個分類的，他們更側重協同工作，可以支援多人編輯。離線功能通常做的比較差，因為剛開始的目的就是為了協同作業，所以離線相對來說就不是最主要的功能，通常他們都需要一定程度的網路連線，比如說 Google Docs, quip 的離線功能首次新增文件時都還是需要網路連線。
@@ -48,6 +49,7 @@ Google Docs, Quip, HackMD 是同一個分類的，他們更側重協同工作，
 #### 組織筆記
 
 ![image](/posts/2019-02-06_數位書寫工具探索之旅/images/3.png#layoutTextWidth)
+
 Photo credit: [https://brandfolder.com/evernote](https://brandfolder.com/evernote)
 
 Evernote, OneNote, Bear 是另外一個分類。主要的工作是個人用筆記，多數的操作不需要網路連線就可以使用。因為不需要網路，無論是開啟、新增文件速度都比起協同工具要來的更快速流暢。
@@ -57,6 +59,7 @@ Evernote, OneNote, Bear 是另外一個分類。主要的工作是個人用筆�
 #### 專注書寫工具
 
 ![image](/posts/2019-02-06_數位書寫工具探索之旅/images/4.png#layoutTextWidth)
+
 [iA Writer](https://ia.net/zh-hant/writer)
 
 iA Writer 跟 Ulysses 是另外一個分類，主要的功能是寫作。他們跟筆記軟體的特點非常的類似，也是以離線優先但是主要的功能不是整理資訊，而是專心在書寫這件事情。
@@ -92,6 +95,7 @@ iOS 內建的注音輸入法就我使用的經驗輸入法比起最新的 macOS 
 #### **Chromebook (ASUS C201 Chromebook)**
 
 ![image](/posts/2019-02-06_數位書寫工具探索之旅/images/7.png#layoutTextWidth)
+
 ASUS C201 Chromebook
 
 這是一台約 199 美金的 Chromebook，僅有 web base 的軟體可以在上面使用。螢幕尺寸為 11.6&#34; 但解析度僅有 1366x768，重量為 980g。鍵盤非常的好用，打字體驗非常優秀，可惜的是軟體支援過少。
@@ -101,6 +105,7 @@ web base 的使用情境讓許多軟體無法在上面執行，在我使用的�
 #### Surface Go
 
 ![image](/posts/2019-02-06_數位書寫工具探索之旅/images/8.png#layoutTextWidth)
+
 Surface Go
 
 部分的書寫相關軟體支援 Windows，但是除了 web base app 外通常同一個軟體在 macOS 跟 Windows 的設計都有差異。比如說 Evernote, iA Writer 設計上在不同作業系統的差異很大。

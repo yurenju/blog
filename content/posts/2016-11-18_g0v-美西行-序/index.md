@@ -15,6 +15,7 @@ images:
 ---
 
 ![image](/posts/2016-11-18_g0v-美西行-序/images/1.jpeg#layoutTextWidth)
+
 我真是累壞了。
 
 差不多在收到 LINE Developer Day 邀請的那幾天，我也收到了 clkao 詢問有沒有興趣以 g0v 零時政府貢獻者身份參與 Code For America Summit。這兩次參與國外研討會的機會讓下半年的計畫亂了調，短短幾個月連續出國好幾次。
@@ -26,7 +27,9 @@ images:
 沒想到出國前一週竟然還擠出時間做了另外一個[小專案](https://7holidays.github.io/)，唉。
 
 看著 Google Drive 裡面簡報的半成品，想著高村長說 United Airline 上可以無線上網，看來我在飛越太平洋的上空還得忙著呢。
+
 ![image](/posts/2016-11-18_g0v-美西行-序/images/2.jpeg#layoutTextWidth)
+
 本系列文章總共有七篇，11/18 到 11/24 每日連載 XDDD
 
 - 本文

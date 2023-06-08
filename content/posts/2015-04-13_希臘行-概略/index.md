@@ -18,6 +18,7 @@ images:
 ---
 
 ![image](/posts/2015-04-13_希臘行-概略/images/1.jpeg#layoutTextWidth)
+
 『不然就去希臘吧』。今年原本就有出國旅行的計劃，只是討論了好久一直沒決定到底要去哪裡，在吳哥窟、羅馬、希臘等等地方來回討論過幾次，甚至討論成今年不要出去玩等等。
 
 結果在一句沒有討論的結論後，我們敲定了四月飛往希臘的行程。大約是在一月結束之前開始，我們陸續敲定了機票、住宿、國內交通與概略要去哪幾個景點的規劃，接下來的幾個月就是有一搭沒一搭的討論，到最後幾個禮拜我們才在積極地看一些建築、廣場與歷史相關的資料（其實也沒看多少）。
@@ -25,6 +26,7 @@ images:
 當然這次旅程最主要的參考書籍還是 [Lonely Planet — Greece](http://shop.lonelyplanet.com/greece/greece-travel-guide-11/)，當我們從中間看到 Meteora 這個景點：
 
 ![image](/posts/2015-04-13_希臘行-概略/images/2.jpeg#layoutTextWidth)
+
 Meteora 的修道院
 
 經過反覆討論後就決定安排一個瘋狂的行程也要到 Meteora 看修道院，行程不包含國際航班如下：
@@ -40,6 +42,7 @@ Meteora 的修道院
 預算方面預計花費六萬三台幣上下，目前加當地刷卡消費大概也還沒超過六萬六千元，也還不算失控。
 
 ![image](/posts/2015-04-13_希臘行-概略/images/3.png#layoutTextWidth)
+
 預算表
 
 另外簡單推薦幾間我們吃過覺得不錯的餐廳。
@@ -51,6 +54,7 @@ Kalambaka/Meteora 這個區域如果想要快速吃點東西，可以去 Kalamba
 Santorini 當然是推薦我們吃了兩餐的 [Mama’s House](https://www.google.com/maps/place/Mama%27s+House/@36.417278,25.432695,17z/data=!3m1!4b1!4m2!3m1!1s0x1499cdd1779d8ac3:0x2a2317442a87e2d)，他的海鮮雙人拼盤跟蝦義大利麵都很棒。
 
 ![image](/posts/2015-04-13_希臘行-概略/images/4.jpeg#layoutTextWidth)
+
 雙人海鮮拼盤
 
 如果在 Meteora/Santorini 要租機車除了要記得辦國際駕照外，記得不要租太小的機車，在 Meteora 時，小機車（大概是 50cc~80cc? 上面沒寫）的馬力不太夠爬山路，另外在 Meteora 的時我們承租機車的店家服務態度很棒，也幫他打廣告一下，店名叫做 Meteora car Rental，[地圖在這](https://www.google.com.tw/maps/place/Patriarchou+Dimitriou+12,+Kalampaka+422+00%E5%B8%8C%E8%87%98/@39.7075034,21.6220342,19z/data=!3m1!4b1!4m2!3m1!1s0x13590fcc5d3b84f9:0x23f80d7f37b06bdc)。

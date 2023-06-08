@@ -15,6 +15,7 @@ images:
 ---
 
 ![image](/posts/2020-03-19_ethereum-開發工具比較-truffle-waffle-buidler/images/1.png#layoutTextWidth)
+
 擷取自 [Buidler](https://buidler.dev/) 首頁
 
 這是延續上篇文章《[Solidity 的新開發工具集：Buidler, Waffle, ethers](https://medium.com/@yurenju/ethersjs-waffle-buidler-6e67df037800)》，實際把 Truffle, Waffle 與 Buidler 都設定了一下比較之間的差異。我們的開發環境是 TypeScript，所以設定上也會以支援 TypeScript 為主，同時也看看不同工具有支援那些有利於開發的功能比如說可不可以設定 coverage 等。
@@ -33,6 +34,18 @@ Truffle 是目前最多人採用的工具，設定上也不會有什麼太大的
 
 Truffle 的 Migration 機制是我一直以來不太喜歡的地方，大多數的人都把它拿來佈署，通常也沒其他功能。來看看測試的部分：
 
+```javascript
+const SKEToken = artifacts.require("SKEToken");
+
+contract("2nd SKEToken test", async ([deployer, user1]) => {
+  it("should put 10000 SKEToken in the first account", async () => {
+    const token = await SKEToken.new(10000, { from: deployer });
+    let balance = await token.balanceOf(deployer);
+    assert.equal(balance.valueOf(), 10000);
+  });
+});
+```
+
 而測試方面用了 `contract` 跟 `artifacts.require()` 分別做為取代 mocha 的 `describe` 跟匯入 smart contract，我沒那麼喜歡隱式的引用 `artifacts.require()` 而不是用 `require()` 或 `import` 進來使用。而根據[官方網站的說明](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript#use-contract-instead-of-describe-)， `contract()` 比起 `describe` 多提供了以下兩個功能：
 
 1.  幫你每次重新 deploy contract
@@ -42,6 +55,22 @@ Truffle 的 Migration 機制是我一直以來不太喜歡的地方，大多數�
 
 不過整體來說設定上也滿簡易的，沒什麼太大的問題。如果需要佈署到網路上只要在 truffle.js 設定好即可。
 
+```javascript
+
+    ropsten: {
+      provider: () =>
+        new HDWalletProvider(
+          process.env["MNEMONIC"],
+          `https://ropsten.infura.io/v3/939fb730f6cd4449aeb9f101cca7277e`
+        ),
+      network_id: 3, // Ropsten's id
+      gas: 5500000, // Ropsten has a lower block limit than mainnet
+      confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true // Skip dry run before migrations? (default: false for public nets )
+    }
+```
+
 ### Waffle + ethersjs
 
 Waffle 是相對來說較新的工具集，功能專注在測試上，以下也是使用範例。
@@ -50,9 +79,57 @@ Waffle 是相對來說較新的工具集，功能專注在測試上，以下也�
 
 Waffle 比較是我喜歡的運作方式，看以下的測試範例：
 
+```javascript
+import { use, expect } from "chai";
+import { solidity, MockProvider, deployContract } from "ethereum-waffle";
+import SKETokenArtifact from "../build/SKEToken.json";
+import { SKEToken } from "../types/ethers-contracts/SKEToken";
+
+use(solidity);
+
+describe("Counter smart contract", () => {
+  const provider = new MockProvider();
+  const [wallet] = provider.getWallets();
+
+  async function deployToken(initialValue: string) {
+    const token = (await deployContract(wallet, SKETokenArtifact, [
+      initialValue
+    ])) as SKEToken;
+    return token;
+  }
+
+  it("sets initial balance in the constructor", async () => {
+    const token = await deployToken("10000");
+    expect(await token.balanceOf(wallet.address)).to.equal("10000");
+  });
+});
+```
+
 雖然說乍看之下比起 truffle 的範例長很多，但是其實要做的事情比較明確，比如說存滿錢的帳號用 `MockProvider` 提供，如果需要每次都重新 deploy contract 就提供一個 `deployContract()`，在要撰寫新的測試時做的事情比較明確。
 
 不過相較起來有些功能因為 waffle 主要是專注在測試上，所以就不像 truffle 有內建些功能。比如說佈署上 truffle 可以寫在設定裡面完成，而 waffle 得自己寫一個 script 來完成，不過也滿簡單的：
+
+```javascript
+import dotenv from "dotenv";
+import { getDefaultProvider, Wallet } from "ethers";
+import { deployContract } from "ethereum-waffle";
+import SKETokenArtifact from "../build/SKEToken.json";
+import { SKEToken } from "../types/ethers-contracts/SKEToken";
+
+dotenv.config();
+
+async function deploy() {
+  const mnemonic = process.env["MNEMONIC"] || "";
+  const provider = getDefaultProvider("ropsten");
+  const wallet = Wallet.fromMnemonic(mnemonic).connect(provider);
+  const token = (await deployContract(wallet, SKETokenArtifact, [
+    "100000"
+  ])) as SKEToken;
+  console.log("deployed, address: " + token.address);
+}
+
+deploy();
+```
 
 ### Buidler + Waffle + ethersjs
 
@@ -65,14 +142,17 @@ buidler 其實是一個 ethereum 的 task runner，所以還是會需要 truffle
 #### Error Stack
 
 Error Stack 是 solidity 開發上一直以來一直缺乏的功能，而 Buidler 透過修改了 EVM 的 Buidler VM 來提供這個功能，所以當 solidity 錯誤時會丟出更詳細的錯誤訊息：
-`Error: Transaction reverted: function selector was not recognized and there&#39;s no fallback function
-  at ERC721Mock.&lt;unrecognized-selector&gt; (contracts/mocks/ERC721Mock.sol:9)
+
+```
+Error: Transaction reverted: function selector was not recognized and there's no fallback function
+  at ERC721Mock.<unrecognized-selector> (contracts/mocks/ERC721Mock.sol:9)
   at ERC721Mock._checkOnERC721Received (contracts/token/ERC721/ERC721.sol:334)
   at ERC721Mock._safeTransferFrom (contracts/token/ERC721/ERC721.sol:196)
   at ERC721Mock.safeTransferFrom (contracts/token/ERC721/ERC721.sol:179)
   at ERC721Mock.safeTransferFrom (contracts/token/ERC721/ERC721.sol:162)
   at TruffleContract.safeTransferFrom (node_modules/@nomiclabs/truffle-contract/lib/execute.js:157:24)
-  at Context.&lt;anonymous&gt; (test/token/ERC721/ERC721.behavior.js:321:26)`
+  at Context.<anonymous> (test/token/ERC721/ERC721.behavior.js:321:26)
+```
 
 在其他語言開發上早就每天都在用的功能我們早就習以為常，但是真的在沒這個功能的時候，你才會驚覺他有多重要 🤣
 
@@ -85,6 +165,7 @@ Error Stack 是 solidity 開發上一直以來一直缺乏的功能，而 Buidle
 同時每個 Pull Request 也都會有 codecov 的涵蓋率報告說明這次的修改對於測試涵蓋率的變動增減如何。
 
 ![image](/posts/2020-03-19_ethereum-開發工具比較-truffle-waffle-buidler/images/2.png#layoutTextWidth)
+
 這個範例因為是測試用所以涵蓋率是 100%
 
 不過這功能是透過 solidity-coverage 這個套件完成，所以 truffle 也可以有相同的功能。

@@ -32,11 +32,13 @@ images:
 實際上運作時，不論是 pull request 的頁面或是 commit 列表都可以看到綠色的小勾勾，移到上面會寫 `Success: The Travis CI build passed`。
 
 ![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/2.png#layoutTextWidth)
+
 [https://github.com/yurenju/laborrights/commits/master](https://github.com/yurenju/laborrights/commits/master)
 
 點進去可以看到每次的測試結果，同時也會顯示測試項目通過的狀況：
 
 ![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/3.png#layoutTextWidth)
+
 [https://travis-ci.org/yurenju/laborrights/builds/249925132](https://travis-ci.org/yurenju/laborrights/builds/249925132)
 
 自動軟體測試是開發軟體中非常重要的環節，讓整個開發流程中，每次都需要做的瑣碎步驟如檢查 coding style, auto testing, deploy 等等都自動化，開發者就可以專注在更重要的事情，如 code review 以及討論規格等等。
@@ -80,6 +82,7 @@ BDD 則是比起 TDD 更進一步，除了在實作前先寫測試外，而在�
 以 cucumber 這個 BDD 框架為例，在勞工權益網站裡面有一個跟工會資訊相關的規格：
 
 ![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/4.png#layoutTextWidth)
+
 [https://github.com/yurenju/laborrights/blob/master/features/contact.feature](https://github.com/yurenju/laborrights/blob/master/features/contact.feature)
 
 這段規格以中文書寫，不論是工程師或其他非技術人員都可以理解這段規格，並且可以一同討論這樣的規格有哪些需要修改，利用這樣大家都可以理解的文字，建立大家對規格的共識。
@@ -101,6 +104,7 @@ BDD 則是比起 TDD 更進一步，除了在實作前先寫測試外，而在�
 最後，只要一一的實作目前還被標示 pending 的測試步驟，當所有步驟都被實作時，整個測試案例也就完成了。下面則是一個已經被實作的測試步驟
 
 ![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/8.png#layoutTextWidth)
+
 [https://github.com/yurenju/laborrights/blob/master/features/step_definitions/common-steps.js](https://github.com/yurenju/laborrights/blob/master/features/step_definitions/common-steps.js)
 
 接下來就跟 TDD 一樣，寫完測試之後再寫主程式，一一地通過測試案例，當所有測試案例都通過時，程式也就完成了。

@@ -23,6 +23,7 @@ images:
 ---
 
 ![image](/posts/2018-03-12_透過-metamask-使用-ethertw-tickets-報名活動/images/1.png#layoutTextWidth)
+
 這次 Taipei Ethereum Meetup 使用去中心化技術在 Ethereum 區塊鏈上建立了一個報名機制，並且於 2018/3/21 的活動採用這個報名系統。這篇文章將會講解如何利用 MetaMask 報名。
 
 ### 機制簡介
@@ -40,9 +41,11 @@ EtherTW Tickets 系統是透過 MetaMask 瀏覽器外掛與以太坊區塊鏈整
 請先到 [MetaMask 官方網站](https://metamask.io/)安裝延伸套件，目前 MetaMask 支援 Chrome 以及 Firefox 瀏覽器，經過測試目前 Chrome 瀏覽器的支援程度較佳。
 
 ![image](/posts/2018-03-12_透過-metamask-使用-ethertw-tickets-報名活動/images/2.png#layoutTextWidth)
+
 按下後會導到 Chrome Web Store
 
 ![image](/posts/2018-03-12_透過-metamask-使用-ethertw-tickets-報名活動/images/3.png#layoutTextWidth)
+
 按下「加到 CHROME」來安裝延伸套件
 
 安裝完畢，按下瀏覽器右上角的狐狸圖示後會出現使用者條款，同意後後會進入輸入密碼的畫面，請輸入一組密碼並且妥善保存。

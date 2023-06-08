@@ -20,6 +20,7 @@ images:
 ---
 
 ![image](/posts/2016-06-26_旅行前的好工具-google-flights/images/1.png#layoutTextWidth)
+
 [http://www.google.com/doodles/100th-anniversary-of-the-first-non-stop-flight-across-the-mediterranean-sea](http://www.google.com/doodles/100th-anniversary-of-the-first-non-stop-flight-across-the-mediterranean-sea)
 
 常旅行的朋友應該都知道 [Google Flights](https://google.com/flights/) 這個工具，主要的用途是可以交叉搜尋許多不同網站上面的機票價格。但前幾天跟同事聊天的時候發現有一些非常好用的小功能大家可能沒注意到，這篇就來介紹這些小功能。
@@ -39,7 +40,9 @@ images:
 ![image](/posts/2016-06-26_旅行前的好工具-google-flights/images/3.png#layoutTextWidth)
 
 點選查看目的地後會看到更多價格資訊，如果你想去歐洲的話可以把地圖縮放至歐洲，然後稍微等一下之後會看到每個城市的價錢會慢慢的浮現。
+
 ![image](/posts/2016-06-26_旅行前的好工具-google-flights/images/4.png#layoutTextWidth)
+
 比如說去羅馬是 16,474 元，莫斯科 16,892 元，巴黎 18,218 元，馬德里是 16,163 元，伊斯坦堡 22,471 元等等。你會發現有些機票實在不貴，上面有些工具可以讓你限制價格，航空公司等等，大家就自己玩了。
 
 接著拿伊斯坦堡為例子，點選伊斯坦堡後，選擇顯示航班。這時候會顯示出更多航班讓你選擇。

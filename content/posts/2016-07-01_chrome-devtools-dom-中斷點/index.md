@@ -26,5 +26,7 @@ Chrome DevTools 幾乎是每個前端工程師每天都要用到的東西，程�
 ![image](/posts/2016-07-01_chrome-devtools-dom-中斷點/images/2.png#layoutTextWidth)
 
 選擇 Node Removal 後當 Remove 按鈕點擊時就會觸發中斷並且告知你是哪行程式導致這個元素被移除。
+
 ![image](/posts/2016-07-01_chrome-devtools-dom-中斷點/images/3.gif#layoutTextWidth)
+
 雖然上面舉的這個例子很簡單，但是當專案已經大到你很難搞清楚到底是哪邊的程式移除元素時，這樣的除錯方式就可以讓你快速地知道問題大略出在哪個範圍，再更進一步地追蹤出問題的緣由。

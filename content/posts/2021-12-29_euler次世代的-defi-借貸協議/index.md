@@ -18,6 +18,7 @@ images:
 ---
 
 ![image](/posts/2021-12-29_euler次世代的-defi-借貸協議/images/1.png#layoutTextWidth)
+
 不管是 Compound 或是 Aave 這樣的初代借貸協議幾乎已經是 DeFi 世界的標準配備了，這些協議上面有著相對主流的代幣可以提供或是借出，如 ETH, USDC, MKR, BAT 等，讓借貸協議成為一個去中心化的服務。
 
 但除了主流的代幣外，這些借貸平台並沒有相對非主流的代幣可供給或是借出，而在這些借貸協議中如果要上架一個新的代幣，則需要透過治理框架投票後才可以上架，並不是所有使用者都可以上架任何代幣，也就說不是無需許可 (Permissionless) 的上架模式。比如說我想要在 Compound 上架我自己鑄造的代幣 XYZ 會需要經過 COMP 持有者的投票才能上架。
@@ -89,6 +90,7 @@ Compound 上面因為都是上架主流代幣，每個借出資產的風險可�
 TWAP 在 Uniswap 上面的計算是某種資產在指定的時間間隔下的時間加權平均價格。一般來說 TWAP 會更加的平滑，但是也會帶有部分延遲效果，如下圖的範例，TWAP 是平滑的曲線，而且會根據取樣的時間會有所延遲。
 
 ![image](/posts/2021-12-29_euler次世代的-defi-借貸協議/images/4.png#layoutTextWidth)
+
 [TradingView 上面的 TWAP 模組範例](https://tw.tradingview.com/script/ejpHwk8Y-TWAP-Trend/)
 
 時間太短的 TWAP 比較不平滑但卻即時。長時間間隔會更平滑，但卻不能太即時的反應現況。TWAP 在 Euler 適用的原因有幾個：

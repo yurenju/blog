@@ -16,6 +16,7 @@ images:
 今天早上大致上看過了 Brendan Eich Blog 上的 [From ASM.JS to WebAssembly](https://brendaneich.com/2015/06/from-asm-js-to-webassembly/)，簡單整理一下，有錯跟我說一聲。
 
 ![image](/posts/2015-06-18_webassembly-公佈/images/1.jpeg#layoutTextWidth)
+
 Brendan Eich, 圖片授權為 CC by-nc, 出自 ModernWeb2015 flickr: [https://flic.kr/p/tiEJF8](https://flic.kr/p/tiEJF8)
 
 **tr;dl**: WebAssembly 是一個新的 binary syntax，當瀏覽器支援時，你可以把你的源碼編譯並輸出成 wasm 格式就可以直接在瀏覽器上執行，準備用 C, C++ 或 Python 寫網頁應用了嗎 :-)

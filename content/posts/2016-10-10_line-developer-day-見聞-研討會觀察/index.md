@@ -28,6 +28,7 @@ images:
 ---
 
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/1.jpeg#layoutTextWidth)
+
 之前我在 [COSCUP](http://coscup.org/2016/) 擔任過記錄組長跟議程組長，這次參加 LINE Developer Day 感覺有很多可以作為其他也正在舉辦研討會的夥伴的參考資訊，記錄如下。
 
 ### 訊息傳遞管道
@@ -41,11 +42,15 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 ### 報到
 
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/3.png#layoutTextWidth)
+
 會議前傳遞給我的訊息
 
 在會議開始前我收到了這樣的訊息，點選該連結後會出現一個 QR Code，現場則一字排開有許多機台可以掃描這個 QR Code。
+
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/4.jpeg#layoutTextWidth)
+
 掃描完畢後，你會在收到一個要到哪個閘口報到的訊息，像是我是到 E 閘口，到那邊之後就可以拿到議程資訊以及入場證。
+
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/5.png#layoutTextWidth)
 
 ### 會議直播、簡報
@@ -77,6 +82,7 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 在 Beacon 的演講結束後，講者告知今天有一個獨家限量的 LINE 貼圖，只要開啟 LINE Beacon 功能，並且在三個場地：LINE 包場的咖啡館與兩個演講廳特定地點「經過」後，蒐集到這三個場地感應的 beacon 就可以兌換獨家的 LINE 貼圖。
 
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/10.jpeg#layoutTextWidth)
+
 大家都在看手機可不是在玩 Pokemon Go，而是圍繞在 Beacon 裝置旁邊感應！
 
 話說理論上 Beacon 的範圍應該會設定的剛剛好，比如說在咖啡廳時，只要靠近該咖啡廳或是坐下來就可以感應到。很可惜的我的 iPhone 一直感應不到，不太確定是軟體或是硬體的問題。
@@ -90,10 +96,15 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 ### LINE 包場的咖啡館
 
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/12.jpeg#layoutTextWidth)
+
 除了兩個會議廳外，LINE 這次也包下了在會議廳外的咖啡廳作為給聽眾休息的地方，也預留一個區域供記者寫稿。這邊提供免費的點心與咖啡，在下午其中一場終於忍不住前一天沒休息足夠的疲勞，就到這個咖啡館稍作休息。
+
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/13.jpeg#layoutTextWidth)
+
 而且有室外座位，我當然就在室外挑了一個好位置喝喝咖啡，發呆。原本想說整理一下剛聽的演講訊息，不過我真的是太累了，就在這邊望在外面的景色發呆。
+
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/14.jpeg#layoutTextWidth)
+
 然後其中一種點心是熊大銅鑼燒。
 
 這樣一個咖啡廳的安排感覺很不錯。在 COSCUP 時我也常常坐在會議廳外兩旁的沙發，跟朋友聊天也拿些東西吃。如果可以多安排一些座位跟桌子其實也可以達到類似的效果。
@@ -101,6 +112,7 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 ### 結語
 
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/15.jpeg#layoutTextWidth)
+
 這次 LINE Developer Day 在會議組織方面真的有許多可以好好學習的地方，雖然這次會議的組織是由公司主導，相對於 COSCUP 這樣全由志工組織的研討會，LINE Devloper Day 包括講者的安排上當然有許多方便的地方，不過值得學習的地方也不少。
 
 比如說用單一管道整合所有跟研討會相關的訊息，如果已經有整理好 RWD 的議程表後，剩下的資訊可以直接用訊息傳遞，不論是注意事項、餐飲問題等等都可以透過該管道傳遞，甚至也可以作為工作人員在場地上使用無線電的備用通訊管道。

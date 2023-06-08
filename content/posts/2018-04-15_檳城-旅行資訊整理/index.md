@@ -26,6 +26,7 @@ images:
 ---
 
 ![image](/posts/2018-04-15_檳城-旅行資訊整理/images/1.jpeg#layoutTextWidth)
+
 這次趁著清明連續假期找了個比較近的城市旅行，我們看了許多城市：峴港、釜山、胡志明市、河內等等等。不過後來因為太晚決定要出國，所以以上這些地方的機票都已經太貴，在原本已經要放棄出遊計畫後，沒想到在最後兩個禮拜 [Chialin Shih](https://medium.com/u/914b80767426) 在 Expedia 上面找到了價格還可以的 last minute 的票，我們就臨時決定到檳城玩囉。
 
 其實正確來說應該是只有喬治市 (George Town)，畢竟這次造訪的也不是整個檳城，只有在喬治市裡面。這次來這邊住了四夜，來分享一下這幾天在這個城市閒逛的一些資訊整理。
@@ -33,6 +34,7 @@ images:
 #### 語言
 
 ![image](/posts/2018-04-15_檳城-旅行資訊整理/images/2.jpeg#layoutTextWidth)
+
 檳城街道上常常可以看到中文標示的攤販
 
 這邊可以用英文跟中文，看起來如果是漢人面孔有蠻大的機率都可以用中文溝通。另外因為福建話跟台語有許多共同的地方，所以如果台語不錯的話也可以試著說台語。
@@ -82,6 +84,7 @@ images:
   ![image](/posts/2018-04-15_檳城-旅行資訊整理/images/8.jpeg#layoutTextWidth)
 
 ![image](/posts/2018-04-15_檳城-旅行資訊整理/images/9.jpeg#layoutTextWidth)
+
 左邊是雲吞麵，右邊是炒粿條
 
 另外[吃貨 Mark Wiens](https://www.youtube.com/playlist?list=PLeoy0zUu6bqkXqgaBnplT1M7HeWD8bVOO) 也推薦了很多間，如果有興趣的話可以看看他造訪檳城時吃了哪些店。
@@ -89,6 +92,7 @@ images:
 #### 交通
 
 ![image](/posts/2018-04-15_檳城-旅行資訊整理/images/10.png#layoutTextWidth)
+
 [https://www.grab.com](https://www.grab.com)
 
 George Town 的交通我們用了三種移動方式：公車、走路跟 Grab （一種類似 Uber 的計程車 app）。

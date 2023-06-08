@@ -29,6 +29,7 @@ Serverless 名字聽起來很威，但並不是真的沒有 server，要說 Serv
 ### AWS Lambda / Azure Functions
 
 ![image](/posts/2016-09-21_用-serverless-介接-line-bot-api/images/1.png#layoutTextWidth)
+
 AWS Lambda / Azure Functions
 
 大約在兩年前我注意到了 AWS 開始提供了一個新的服務 “Lambda”，這個服務是可以在不需要 host 伺服器的狀況，由 AWS 提供的伺服器幫開發者執行一個 “function”，最常舉的例子就是圖片縮圖。原因就在於縮圖這件工作在一般的服務中很常抽出來成為另一個獨立的服務。
@@ -38,6 +39,7 @@ AWS Lambda / Azure Functions
 除了不需要自己管理以外，Lambda 的價格非常便宜，以目前來說 AWS 提供了足夠的免費額度來使用：
 
 ![image](/posts/2016-09-21_用-serverless-介接-line-bot-api/images/2.png#layoutTextWidth)
+
 [https://aws.amazon.com/tw/lambda/pricing/](https://aws.amazon.com/tw/lambda/pricing/)
 
 不只 AWS, 微軟也提供了 Azure Functions 這樣類似的服務，所以只要你的服務架構得當，有許多功能可以放到 AWS Lambda/Azure Functions 上執行，在成本與擴展性上都有許多好處。
@@ -59,14 +61,19 @@ Serverless 又是什麼呢？它是一套整合了不同廠商如 AWS Lambda 或
 我們準備實作一個最簡單的 bot 功能  —  使用者傳訊息給 bot，這個 bot 就再把這個訊息回傳給使用者。
 
 ![image](/posts/2016-09-21_用-serverless-介接-line-bot-api/images/4.jpeg#layoutTextWidth)
+
 iOS 隨機選字，所以對話內容怪怪的
 
 整個服務與 LINE service 互動的架構如下
+
 ![image](/posts/2016-09-21_用-serverless-介接-line-bot-api/images/5.png#layoutTextWidth)
+
 乍看之下跟一般使用 EC2 或 heroku 的結構沒什麼兩樣，但是要記住這邊我們沒有 host 任何伺服器，我們提供給 AWS 的只有一個 “function”，所有需要執行這個 function 的伺服器都由 AWS 管理，我們不用管到底開了幾台伺服器來執行這個功能。
 
 而把上圖 serverless 的區塊拆開來看則是這樣：
+
 ![image](/posts/2016-09-21_用-serverless-介接-line-bot-api/images/6.png#layoutTextWidth)
+
 雖然使用 serverless 框架時，其實只會在 serverless.yml 裡面設定一個 https endpoint 資訊，不過實際上部署時 serverless 會使用 AWS API gateway 開設一個 http endpoint，再由這個 endpoint 去觸發 lambda 裡面的 function 執行。
 
 我們先來看看我們提供給 AWS lambda 的那個 “function” 長怎樣。

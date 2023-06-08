@@ -26,6 +26,7 @@ images:
 ---
 
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/1.jpeg#layoutTextWidth)
+
 這次到克羅埃西亞 (Croatia) 旅行了十一天，網路上雖然有些資訊但也稱不上非常多，趁機會整理一下相關資訊。
 
 ### 規劃
@@ -41,7 +42,9 @@ images:
 - 札格瑞布 (Zagreb) —  一晚
 
 每個城市的旅程介紹可以點選上面的連結，至於 Zagreb 我就沒寫了，因為只短暫待在那邊一小段時間。
+
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/2.png#layoutTextWidth)
+
 從這樣的安排大約可以理解到我們把重點放在 Dubrovnik 跟 Rovinj，其他地方的天數都比較少，主要也是我們在搜集資料後覺得這兩個小鎮會是我們比較喜歡的地方，特別是 Dubrovnik 是《冰與火之歌》電視劇中君臨城的拍攝場景，所以才會這樣安排。
 
 但是這樣安排有一個缺點：Rovinj 距離其他景點都很遠，移動上要花非常多的時間，光是從 Plitvice Lakes 到 Rovinj 就沒有直達巴士，要到 Karlovac 轉車總共花上接近七個小時，回到 Zagreb 也要接近五個小時。
@@ -126,6 +129,7 @@ Plitvice Lakes 裡面我們只吃過 Bistro Vučnica 餐廳，每人大約 150 �
 #### Tele2
 
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/6.png#layoutTextWidth)
+
 [https://www.tele2.hr/privatni-korisnici/welcome-to-croatia/](https://www.tele2.hr/privatni-korisnici/welcome-to-croatia/)
 
 10GB 的網路使用量，200 分鐘通話期間（但是我們沒有順利啟用），沒有特別提使用期限，價格 55kn 約 260 台幣。
@@ -133,6 +137,7 @@ Plitvice Lakes 裡面我們只吃過 Bistro Vučnica 餐廳，每人大約 150 �
 #### VIP
 
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/7.png#layoutTextWidth)
+
 [http://www.vipnet.hr/tourist-offer/en](http://www.vipnet.hr/tourist-offer/en)
 
 無限量的網路使用量，100 分鐘通話，只能使用一週，價格是 75kn 約 360 台幣。
@@ -140,14 +145,17 @@ Plitvice Lakes 裡面我們只吃過 Bistro Vučnica 餐廳，每人大約 150 �
 不論是要買 tele2 或 VIP 的方案，你只要找到書報攤就可以買到了，你可以找外面印有 TISAK 的商店通常都買得到。
 
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/8.png#layoutTextWidth)
+
 TISAK 在克羅埃西亞非常普遍，到處都有。圖片出自於 Google 街景
 
 ### 地圖
 
 這邊的 Google Maps 圖資非常的貧瘠（特別是 Rovinj），所以用它不是個好主意。使用 OpenStreetMap 圖資的 maps.me 不僅圖資非常的完整，連階梯都有標示，而且也有非常清楚的介面可以離線下載整個克羅埃西亞的地圖，非常推薦使用 maps.me。你可以看看兩個 app 的比較：
+
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/9.png#layoutTextWidth)
 
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/10.png#layoutTextWidth)
+
 第一張圖是 Google Maps, 第二張圖是 maps.me，詳細程度差太多了。
 
 ### 衣著與氣候
@@ -155,6 +163,7 @@ TISAK 在克羅埃西亞非常普遍，到處都有。圖片出自於 Google 街
 我們到克羅埃西亞時是十月初，這個時候的天氣非常的好不會像夏天一樣太熱，歷史平均溫度約 14 ~ 21 度，但缺點就是有可能會下雨。
 
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/11.png#layoutTextWidth)
+
 Dubrovnik 的歷史降雨量與降雨天數，圖表源於 [Holiday Weather 網站](http://www.holiday-weather.com/dubrovnik/averages/)。
 
 很幸運的我們在那邊的那幾天沒下什麼雨，天氣也很不錯。不過要提醒的是高處風蠻大的，帶個防風帽比較不會吹風吹到頭痛。在這樣的溫度下我通常都是穿一件薄內搭長袖，一件長袖再加上一件秋天的外套，背包裡放個帽子。如果太熱太冷的時候可以隨時調整。
@@ -168,6 +177,7 @@ Dubrovnik 的歷史降雨量與降雨天數，圖表源於 [Holiday Weather 網�
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/12.png#layoutTextWidth)
 
 ![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/13.png#layoutTextWidth)
+
 旅遊資訊大概就這些，如果你想知道什麼問題可以留言，我如果知道的話再加入文章裡面。
 
 享受你的克羅埃西亞旅程吧！

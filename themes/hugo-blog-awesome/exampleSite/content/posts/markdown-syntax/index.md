@@ -43,7 +43,9 @@ You can use the following syntax to include an image. Path of the image should b
 You can also include image from external sources.
 
 ```markdown
+
 ![Image](https://source.unsplash.com/random/600x400/?tech)
+
 ```
 
 ![Image](https://source.unsplash.com/random/600x400/?tech)

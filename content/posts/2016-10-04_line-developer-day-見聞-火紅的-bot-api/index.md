@@ -23,10 +23,13 @@ images:
 ---
 
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/1.jpeg#layoutTextWidth)
+
 感謝 LINE 與 Tech In Asia 的邀請到了東京參加了 [LINE Developer Day 2016](http://linedevday.linecorp.com/jp/2016/en/)，最近正好在研究 Facebook Messenger Platform，這次的 Dev day 正好讓我針對 LINE BOT 好好研究一下與其他解決方案比較的優劣。另外雖然這次有很多其他主題，不過本篇會專注在討論 LINE BOT API。
 
 在來 LINE Developer Day 之前，其實我自己有申請 bot trial account 來試試看開發者預覽的 BOT API，當時已經用 LINE BOT 加上 AWS 的 Lambda 串起來玩玩後也寫了一篇[文章分享相關資訊](https://medium.com/technology-coding/用-serverless-介接-line-bot-api-e46f172e8028)。在出發的前幾天我又寫了一個做旅行記帳的 LINE BOT，可以透過 bot 記帳、轉換貨幣並且記錄在 Google Spreadsheet 上面。
+
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/2.png#layoutTextWidth)
+
 雖然稱不上好用，不過在東京這幾天用這個記帳下來也沒什麼特別的問題，這個小專案待我整理一下會把程式碼放出來。不過藉由寫這樣的小機器人也讓我了解到 LINE BOT API 有幾個不足的地方：
 
 1.  **文件**：這個版本的文件寫得非常的簡略，許多欄位需要摸索才知道要如何正確填入
@@ -35,6 +38,7 @@ images:
 4.  **豐富性**：LINE BOT API 送訊息時的樣板選擇很少，不像 Facebook Messenger Platform 上已經支援了多種訊息樣板，可以做出的變化有限，也不支援選單功能。
 
 而這次在 LINE Developer Day 上所發表的新的 Messaging API 則解決了以上大部分的問題，讓我們來看看這次開發者大會發表了什麼吧！
+
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/3.jpeg#layoutTextWidth)
 
 ### LINE Notify
@@ -50,6 +54,7 @@ images:
 ### Messaging API
 
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/6.png#layoutTextWidth)
+
 來源：投影片 31 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
 LINE 這次將 BOT API 更名為 Messaging API，名稱上比較合理。
@@ -61,6 +66,7 @@ LINE 這次將 BOT API 更名為 Messaging API，名稱上比較合理。
 另外有一個我也覺得很有用的就是 Profile API。這個 API 可以讓你透過 API call 取得使用者的相關資訊。在演講的投影片裡面提到可以在 LINE 登入後取得使用者相關資料後直接填入，不需要重複填寫。
 
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/7.png#layoutTextWidth)
+
 來源：投影片 44 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
 不過就 [API 文件](https://devdocs.line.me/en/?shell#bot-api-get-profile)看起來應該是無法取得如此多的資訊，可能還需要進一步的資訊才知道這邊是要怎麼取得。
@@ -68,6 +74,7 @@ LINE 這次將 BOT API 更名為 Messaging API，名稱上比較合理。
 ### Rich Menu
 
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/8.png#layoutTextWidth)
+
 來源：投影片 43 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
 Rich Menu 目前看起來是只有 LINE@ 可以開啟的功能，而且是直接在帳號設定頁面裡面設定，沒辦法透過 API 啟用。不過確實也是個非常方便的功能，可以設定由這個 menu 去觸發更多的動作，再由 LINE Messaging API 發出進一步的訊息讓使用者使用更多功能。
@@ -77,6 +84,7 @@ Rich Menu 目前看起來是只有 LINE@ 可以開啟的功能，而且是直接
 這是這次大會中非常有意思的一個新功能，也是我完全沒預測到這次會釋出的功能。Beacon 是一種藍芽的裝置，會不斷的發出信號，當手機上有相對應的偵測軟體時可以觸發相對應的行為。而 Beacon 的發送訊號範圍可以調整，就可以進一步的瞭解顧客是否走到特定區域，進而進行更詳細的觸發行為，比如說在超市走到冷飲區可以推送跟冷飲相關的特價訊息。
 
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/9.png#layoutTextWidth)
+
 來源：投影片 47 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
 而這次 LINE Developer Day 大會中就發表了 LINE Beacon 的功能，可以讓使用者走到特定區域後觸發，接著由 Messaging API 傳送相對應的訊息。這個功能讓 LINE Messaging API 跟實體商店的整合更進一步，可以更容易地傳遞訊息給顧客。
@@ -86,6 +94,7 @@ LINE 在亞洲算是相當普及的通訊軟體，實體商店如果採用 LINE 
 以前觀光景點常用的不同地點蓋章稅換贈品也可以移到 LINE 的平台上使用。許多使用情境讓這類型的應用有更多想像空間。
 
 至於這樣的應用要怎麼測試呢？LINE 在這次開發者大會在會後填完問卷後，就會收到一盒贈品，其中就包含了 Beacon 裝置，可以讓開發者利用這個裝置測試！
+
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/10.jpeg#layoutTextWidth)
 
 ### 結論

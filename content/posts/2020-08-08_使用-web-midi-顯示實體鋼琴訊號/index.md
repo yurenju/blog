@@ -19,6 +19,7 @@ images:
 ---
 
 ![image](/posts/2020-08-08_使用-web-midi-顯示實體鋼琴訊號/images/1.png#layoutTextWidth)
+
 最近看了好和弦的《我寫了一個「鋼琴鍵盤顯示 app」，免費送給大家 + 使用教學！》覺得滿有趣的，主要是製作影片的時候可以把實體鋼琴鍵盤彈的按鍵顯示在螢幕，之後可以後製讓觀眾知道彈鋼琴鍵盤的時候按下了什麼按鍵。
 
 之前大約七年前的黑客松（天阿好久了）有做過 [Mozart 專案](https://tech.mozilla.com.tw/?p=3664) 透過 Web Audio 標準來製作音樂指揮家的遊戲。
@@ -38,7 +39,9 @@ images:
 ### 實作
 
 Web MIDI 用於接收 MIDI input 設備信號可以透過 `navigator.requestMIDIAccess()` 這個函式來取得 midi 的存取權限。取得之後可以透過 `access.inputs` 取得所有 midi input 的列表，而只要分配一個函式給 `input.onmidimessage` 就可以在發出訊號時收到事件。
+
 ![image](/posts/2020-08-08_使用-web-midi-顯示實體鋼琴訊號/images/3.png#layoutTextWidth)
+
 至於 onMessage 收到事件後所拿到的 event.data 會是個三個數值陣列，根據 MIDI 規格分別是 channel, number, value，這時候我們透過這三個數據就可以知道是壓下琴鍵、放開琴鍵或是採下踏板等事件。
 
 不過因為我的 Android app 沒有踏板，所以這部份雖然有寫邏輯但沒有真的跑過就是了。
@@ -46,11 +49,15 @@ Web MIDI 用於接收 MIDI input 設備信號可以透過 `navigator.requestMIDI
 ![image](/posts/2020-08-08_使用-web-midi-顯示實體鋼琴訊號/images/4.png#layoutTextWidth)
 
 接下來只要透過這些事件改變按鍵顏色就完成了。不過這次收穫最多的反倒是在 CSS 的寫法。這次用了好幾個寫法以前都沒什麼用過。因為鋼琴鍵盤格局的關係，黑鍵的部分隔幾個會需要一格空白。
+
 ![image](/posts/2020-08-08_使用-web-midi-顯示實體鋼琴訊號/images/5.png#layoutTextWidth)
+
 這時候可以用 nth-child 來控制，像下面的 5n + 2 意思是從第二個黑鍵開始，每五個黑鍵就要留一格大一點的 margin-left。然後 5n + 4 的意思是第四格開始也要留一格。這樣就可以作出鋼琴鍵盤黑鍵的正確布局。
 
 同時 CSS variable 我也是第一次用，看起來沒什麼太大的問題。
+
 ![image](/posts/2020-08-08_使用-web-midi-顯示實體鋼琴訊號/images/6.png#layoutTextWidth)
+
 這次這樣玩下來感覺 Web MIDI 可以作出很多有趣的東西，像是 Youtube 上經常有人的鋼琴影片是有[很多色塊掉下來搭配實際彈奏](https://youtu.be/-8X_aMT5z0A)的影片。這看起來 Web MIDI 大概也可以作得到。
 
 雖然沒用過不過看起來好像也可以把訊號送給其他也採用 MIDI 標準的設備。之後如果有機會的話可以再探索一下可以做到那些事情。

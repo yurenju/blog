@@ -37,6 +37,7 @@ Anthony 九歲的時候母親被謀殺，後來就跟奶奶一起住，但是兩
 在美國有四分之一的成年人有犯罪紀錄。American Bar Association 發現有 44,500 條的州法律或聯邦法律對有前科的人有各式各樣的限制。就業就是最大的限制，但還有其他的限制如取得食物補助或住房補助等。
 
 ![image](/posts/2016-11-22_clear-my-record-清除犯罪紀錄專案/images/2.png#layoutTextWidth)
+
 credit: What if we actually gave people second chances?
 
 這會讓這些人的生活很難回到正軌。好消息是在 2014 年時加州通過了一個法案，讓一些比較輕微的罪如攜帶毒品、輕微竊盜與偽造罪等在記錄上可以被減輕或駁回。

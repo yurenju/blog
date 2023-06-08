@@ -17,6 +17,7 @@ images:
 ---
 
 ![image](/posts/2016-05-21_電影推薦spotlight-驚爆危機/images/1.png#layoutTextWidth)
+
 截自官方網站 [http://spotlightthefilm.com/](http://spotlightthefilm.com/)
 
 Spotlight 這部電影改編自真實事件，劇情大綱是波士頓環球報 2002 年新任主編就任後，察覺到波士頓一宗天主教會的性醜聞案件，並且指示波士頓環球報底下的「焦點小組」(Spotlight team) 開始追查，並且逐漸揭露整個事件的真相。剩下更多資料我就放到最後面才講，不然沒看過的人就被爆雷了。
@@ -37,11 +38,13 @@ Spotlight 這部電影改編自真實事件，劇情大綱是波士頓環球報 
 另外我想誇獎一下 Mark Ruffalo 的演技。大概是從綠巨人浩克變成記者對我來說轉變太大，我很喜歡他在這部電影裡面詮釋一個難纏記者的方式，有點吊兒啷噹的個性，遇到要追查的事情時變得難纏又執著，到最後報導遭受阻撓時卻又變得異常火爆。不太確定這個記者原本的個性是怎樣，但是從 Mark Ruffalo 各式各樣的小動作感覺花了很多心思在揣摩這位記者。
 
 ![image](/posts/2016-05-21_電影推薦spotlight-驚爆危機/images/3.jpeg#layoutTextWidth)
+
 取自電影官網 [http://spotlightthefilm.com/gallery/7](http://spotlightthefilm.com/gallery/7)
 
 另外後來我看了一下有個網站彙整出劇中出現人物，與實際人物的對照，部分選角跟扮演都還蠻像的。
 
 ![image](/posts/2016-05-21_電影推薦spotlight-驚爆危機/images/4.png#layoutTextWidth)
+
 更多請參考 [http://www.historyvshollywood.com/reelfaces/spotlight/](http://www.historyvshollywood.com/reelfaces/spotlight/)
 
 而這樣的長期追蹤報導，讓我想到了台灣的《報導者》，我印象非常深刻他們第一篇追蹤報導《舉牌人》，記者花了兩個月的時間到派報社臥底，取得資料後寫出來的一篇追蹤報導。

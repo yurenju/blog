@@ -24,6 +24,7 @@ images:
 ---
 
 ![image](/posts/2017-08-10_ethereum-smart-contract-入門雜談/images/1.png#layoutTextWidth)
+
 最近想開始試試 Ethereum 的 Smart Contract，入門時卻遇到很多問題，感謝 [Taipei Ethereum Meetup](https://www.meetup.com/Taipei-Ethereum-Meetup/) 與 [Chih-Cheng Liang](https://medium.com/u/5c031577a87d) 的協助，最近終於比較搞清楚一些基礎知識，寫下來分享給其他也想學習 Smart Contract 的新手。
 
 以下的介紹就只包含基礎知識到涵蓋到要如何開始照著官方的 [Create your own crypto-currency](https://ethereum.org/token) 指引開始寫 Smart Contract，剩下的可能之後會再發其他文章介紹。
@@ -70,6 +71,7 @@ Wallet Backend 是負責真正對區塊鏈的操作，目前我有用過的 back
 [Mist](https://github.com/ethereum/mist/): 就是那套可以在 ethereum.org 官網下載的錢包軟體，其中裡面內建了 geth 核心，所以 Wallet backend 是使用 geth，Mist 主要就是 GUI 介面。若沒有更改過 geth 的設定，使用 Mist 第一次同步要花非常久的時間。
 
 ![image](/posts/2017-08-10_ethereum-smart-contract-入門雜談/images/4.png#layoutTextWidth)
+
 使用測試網路的 Mist
 
 [Parity](https://parity.io/): 這是另外一套 Wallet，特點是同步區塊的速度比起 Mist/geth 要更快。其介面是 web。使用 `parity ui` 指令就會直接在你的預設瀏覽器上開啟 Parity Web UI。它的 backend 跟 frontend 放在一起，並沒有特意分成兩個專案，所以在架構圖 backend 那欄也是 parity。
@@ -78,6 +80,7 @@ Wallet Backend 是負責真正對區塊鏈的操作，目前我有用過的 back
 
 geth console: 這是包含在 [geth (ethereum-go)](https://github.com/ethereum/go-ethereum) 的一個指令介面，跟 JavaScript 的 console 非常類似，可以用指令的方式執行各種功能如查看餘額、匯款、讀取 script 等等功能。比如說要匯款就可以用以下指令：
 `eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: 1000})`
+
 ![image](/posts/2017-08-10_ethereum-smart-contract-入門雜談/images/6.png#layoutTextWidth)
 
 #### Wallet Backend

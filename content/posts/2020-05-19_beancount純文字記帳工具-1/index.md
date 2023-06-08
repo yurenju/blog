@@ -21,7 +21,9 @@ images:
 ### Beancount 介紹
 
 Beancount 是一套純文字的記帳工具，也就是你的帳目會記錄在純文字檔當中，透過適當的工具可以讓視覺化的了解自己收入支出的狀況，比如說我自己都是用下圖所示的 fava 作為呈現工具。
+
 ![image](/posts/2020-05-19_beancount純文字記帳工具-1/images/1.png#layoutTextWidth)
+
 beancount 跟市面上絕大多數的記帳軟體不一樣的地方是它是採用純文字的格式紀錄。比如說你要新增一筆房租消費可以這麼寫：
 
 ![image](/posts/2020-05-19_beancount純文字記帳工具-1/images/2.png#layoutTextWidth)
