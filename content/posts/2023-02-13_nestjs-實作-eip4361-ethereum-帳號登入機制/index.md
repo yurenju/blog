@@ -26,33 +26,19 @@ Sign-in with Ethereum (SIWE) 是一個透過 Ethereum 區塊鏈基礎建設的�
 ### EIP-4361 SIWE
 
 Ethereum Foundation 與 ENS (Ethereum Naming Service) 提案了 [EIP-4361: Sign-In with Ethereum](https://eips.ethereum.org/EIPS/eip-4361) 作為採用 Ethereum 基礎建設的登入機制，需要透過 Ethereum 登入的服務，只要請求使用者簽署一個結構化的純文字訊息即可登入：
-`
 
-${domain}
-wants you to sign
-in
-with your Ethereum account:
-
+```
+${domain} wants you to sign in with your Ethereum account:
 ${address}
 
 ${statement}
 
-URI:
-${uri}
-
-Version:
-${version}
-
-Chain ID:
-${chain-id}
-
-Nonce:
-${nonce}
-
-Issued At:
-${issued-at}
-
-`
+URI: ${uri}
+Version: ${version}
+Chain ID: ${chain-id}
+Nonce: ${nonce}
+Issued At: ${issued-at}
+```
 
 當使用者簽章傳回後，只需要檢查傳來的訊息以及簽章是否確實由特定 Ethereum 帳號所簽署就可以確認登入操作是否合法，由於只有簽署者擁有該私鑰才有可能簽署出對應的簽章資訊，所以用這個方法就可以實作登入機制。
 
@@ -87,140 +73,38 @@ NestJS 提供了 `@nestjs/passport` 套件將 passport 策略整合入 NestJS �
 而 `GoogleStrategy`僅是一個非常輕量的類別，主要的用途是提供一個 callback function `validate()`，讓 `passport-google-oidc` 在登入成功後重導使用者到 `/redirect` 時把資訊帶回的 callback，裡面會帶回 issuer 以及 profile 兩樣資訊。
 
 在 Controller 端也只要使用 `@UseGuard()` 裝飾子與 `@nestjs/passport` 提供的 `AuthGuard()` 就可以在 `/login` 與 `/redirect`整端點合 Google 帳號登入，整體概念程式碼約略如下：
-`
 
+```typescript
 // google.strategy.ts
+import { Strategy } from 'passport-google-oidc';
+import { PassportStrategy } from '@nestjs/passport';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { AuthService } from './auth.service';
 
-import
-{
-Strategy
-}
-from
+@Injectable()
+export class GoogleStrategy extends PassportStrategy(Strategy) {
 
-&#39;passport-google-oidc&#39;
-;
-
-import
-{
-PassportStrategy
-}
-from
-
-&#39;@nestjs/passport&#39;
-;
-
-import
-{
-Injectable
-,
-UnauthorizedException
-}
-from
-
-&#39;@nestjs/common&#39;
-;
-
-import
-{
-AuthService
-}
-from
-
-&#39;./auth.service&#39;
-;
-
-@Injectable
-()
-
-export
-
-class
-
-GoogleStrategy
-
-extends
-
-PassportStrategy
-(
-Strategy
-) {
-
-async
-
-validate
-(issuer, profile):
-Promise
-&lt;
-any
-&gt; {
-
-return
-{profile}
-}
+  async validate(issuer, profile): Promise<any> {
+    return {profile}
+  }
 }
 
 // auth.controller.ts
+@Controller('auth')
+export class AuthController {
 
-@Controller
-(
-&#39;auth&#39;
-)
+  @Get('login')
+  @UseGuards(AuthGuard('google'))
+  login(@Req() req) {
+    return req.user;
+  }
 
-export
-
-class
-
-AuthController
-{
-
-@Get
-(
-&#39;login&#39;
-)
-
-@UseGuards
-(
-AuthGuard
-(
-&#39;google&#39;
-))
-
-login
-(
-
-@Req
-() req
-) {
-
-return
-req.
-user
-;
+  @Get('redirect')
+  @UseGuards(AuthGuard('google'))
+  @Redirect('/')
+  redirect() {}
 }
-
-@Get
-(
-&#39;redirect&#39;
-)
-
-@UseGuards
-(
-AuthGuard
-(
-&#39;google&#39;
-))
-
-@Redirect
-(
-&#39;/&#39;
-)
-
-redirect
-(
-
-) {}
-}
-`
+```
 
 要整合 SIWE 也是非常類似的方式，不同之處在於我們會需要在一個 Nonce Store 裡面產生與儲存亂數字串，並且於登入時檢查該亂數是否由系統發出並且使用完畢後刪除，避免攻擊者的重用攻擊：
 
@@ -229,443 +113,107 @@ redirect
 跟 `GoogleStrategy` 一樣我們會先需要實作一個 `EthereumStrategy`，並且在建構子內宣告 `SessionNonceStore` 作為 nonce store 用途，另外新增一個 `challenge()` 準備來承接 `/challenge` POST 端點傳遞過來的 request 物件，並且透過 `store.challenge()` 新增一筆 nonce 亂數字串回傳給 `/challenge` 端點。
 
 至於 `validate()` 函式會在 `passport-ethereum-siwe` 驗證登入訊息成功後作為 callback 函式被呼叫到，其中包含 `address` 資訊。
-`
 
-import
-{
-Injectable
-}
-from
+```typescript
+import { Injectable } from '@nestjs/common';
+import { PassportStrategy } from '@nestjs/passport';
+import { Request } from 'express';
+import { Strategy, SessionNonceStore } from 'passport-ethereum-siwe';
 
-&#39;@nestjs/common&#39;
-;
+@Injectable()
+export class EthereumStrategy extends PassportStrategy(Strategy) {
+  private store;
 
-import
-{
-PassportStrategy
-}
-from
+  constructor() {
+    const store = new SessionNonceStore();
+    super({ store });
+    this.store = store;
+  }
 
-&#39;@nestjs/passport&#39;
-;
+  async validate(address: string): Promise<any> {
+    return { address };
+  }
 
-import
-{
-Request
-}
-from
-
-&#39;express&#39;
-;
-
-import
-{
-Strategy
-,
-SessionNonceStore
-}
-from
-
-&#39;passport-ethereum-siwe&#39;
-;
-
-@Injectable
-()
-
-export
-
-class
-
-EthereumStrategy
-
-extends
-
-PassportStrategy
-(
-Strategy
-) {
-
-private
-store;
-
-constructor
-(
-
-) {
-
-const
-store =
-new
-
-SessionNonceStore
-();
-
-super
-({ store });
-
-this
-.
-store
-= store;
+  challenge(req: Request) {
+    return new Promise((resolve, reject) => {
+      this.store.challenge(req, (err, nonce) => {
+        if (err) {
+          return reject(err);
+        } else {
+          return resolve({ nonce });
+        }
+      });
+    });
+  }
 }
 
-async
-
-validate
-(
-address
-:
-string
-):
-Promise
-&lt;
-any
-&gt; {
-
-return
-{ address };
-}
-
-challenge
-(
-req: Request
-) {
-
-return
-
-new
-
-Promise
-(
-(
-resolve, reject
-) =&gt;
-{
-
-this
-.
-store
-.
-challenge
-(req,
-(
-err, nonce
-) =&gt;
-{
-
-if
-(err) {
-
-return
-
-reject
-(err);
-}
-else
-{
-
-return
-
-resolve
-({ nonce });
-}
-});
-});
-}
-}
-`
+```
 
 接下來在 Controller 上面把 `/challenge` 以及 `/login` 兩個 POST 端點加入即可：
-`
 
-import
-{
-Controller
-,
-Post
-,
-Req
-,
-UseGuards
-}
-from
+```typescript
+import { Controller, Post, Req, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+import { Request } from 'express';
+import { EthereumStrategy } from './ethereum.strategy';
 
-&#39;@nestjs/common&#39;
-;
+@Controller('auth')
+export class AuthController {
+  constructor(private ethereumStrategy: EthereumStrategy) {}
 
-import
-{
-AuthGuard
-}
-from
+  @Post('login')
+  @UseGuards(AuthGuard('ethereum'))
+  login(@Req() req) {
+    return req.user;
+  }
 
-&#39;@nestjs/passport&#39;
-;
-
-import
-{
-Request
-}
-from
-
-&#39;express&#39;
-;
-
-import
-{
-EthereumStrategy
-}
-from
-
-&#39;./ethereum.strategy&#39;
-;
-
-@Controller
-(
-&#39;auth&#39;
-)
-
-export
-
-class
-
-AuthController
-{
-
-constructor
-(
-
-private
-ethereumStrategy: EthereumStrategy
-) {}
-
-@Post
-(
-&#39;login&#39;
-)
-
-@UseGuards
-(
-AuthGuard
-(
-&#39;ethereum&#39;
-))
-
-login
-(
-
-@Req
-() req
-) {
-
-return
-req.
-user
-;
+  @Post('challenge')
+  challenge(@Req() req: Request) {
+    return this.ethereumStrategy.challenge(req);
+  }
 }
 
-@Post
-(
-&#39;challenge&#39;
-)
-
-challenge
-(
-
-@Req
-() req: Request
-) {
-
-return
-
-this
-.
-ethereumStrategy
-.
-challenge
-(req);
-}
-}
-`
+```
 
 在前端實作上需要先透過 `/challenge` 取得 nonce 亂數字串，接著透過 `siwe` 套件建構出符合 EIP-4361 標準的結構化訊息，再透過 Wallet Provider 如 MetaMask 提供的 `personal_sign` 簽名，最後送出 POST 請求到 `/login` 端點就可以完成登入。
-`
 
-import
-{ ethers }
-from
+```javascript
+import { ethers } from 'ethers';
+import { SiweMessage } from 'siwe';
 
-&#39;ethers&#39;
-;
+async function login() {
+  const options = { method: 'POST' };
+  const url = '/api/auth/challenge';
+  const { nonce } = await fetch(url, options).then((res) => res.json());
+  const address = ethers.utils.getAddress(account);
+  const rawMessage = new SiweMessage({
+    domain: window.location.host,
+    address: address,
+    statement: 'Sign in with Ethereum to the app.',
+    uri: window.location.origin,
+    version: '1',
+    chainId: '1',
+    nonce,
+  });
 
-import
-{
-SiweMessage
+  const message = rawMessage.prepareMessage();
+  const signature = await ethereum.request({
+    method: 'personal_sign',
+    params: [message, address],
+  });
+
+  const result = await fetch('/api/auth/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify({ message, signature }),
+  }).then((res) => res.json());
+
+  console.log(result);
 }
-from
-
-&#39;siwe&#39;
-;
-
-async
-
-function
-
-login
-(
-
-) {
-
-const
-options = {
-method
-:
-&#39;POST&#39;
-};
-
-const
-url =
-&#39;/api/auth/challenge&#39;
-;
-
-const
-{ nonce } =
-await
-
-fetch
-(url, options).
-then
-(
-(
-res
-) =&gt;
-res.
-json
-());
-
-const
-address = ethers.
-utils
-.
-getAddress
-(account);
-
-const
-rawMessage =
-new
-
-SiweMessage
-({
-
-domain
-:
-window
-.
-location
-.
-host
-,
-
-address
-: address,
-
-statement
-:
-&#39;Sign in with Ethereum to the app.&#39;
-,
-
-uri
-:
-window
-.
-location
-.
-origin
-,
-
-version
-:
-&#39;1&#39;
-,
-
-chainId
-:
-&#39;1&#39;
-,
-nonce,
-});
-
-const
-message = rawMessage.
-prepareMessage
-();
-
-const
-signature =
-await
-ethereum.
-request
-({
-
-method
-:
-&#39;personal_sign&#39;
-,
-
-params
-: [message, address],
-});
-
-const
-result =
-await
-
-fetch
-(
-&#39;/api/auth/login&#39;
-, {
-
-method
-:
-&#39;POST&#39;
-,
-
-headers
-: {
-
-&#39;Content-Type&#39;
-:
-&#39;application/json&#39;
-,
-
-Accept
-:
-&#39;application/json&#39;
-,
-},
-
-body
-:
-JSON
-.
-stringify
-({ message, signature }),
-}).
-then
-(
-(
-res
-) =&gt;
-res.
-json
-());
-
-console
-.
-log
-(result);
-}
-`
+```
 
 完整的源碼可以在 Github 的 [@yurenju/nestjs-siwe-example](https://github.com/yurenju/nestjs-siwe-example) 找到。
 
