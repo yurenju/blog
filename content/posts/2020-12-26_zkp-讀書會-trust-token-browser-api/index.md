@@ -43,6 +43,8 @@ Trust Token 其實是由 Privacy Pass 延伸而來。Privacy Pass 就是由 Clou
 
 先看一下 Privacy Pass 是如何使用。因為這是實驗性的瀏覽器延伸套件所以看起來有點陽春，不過大致上還是可以了解整個概念。
 
+{{< youtube Zn1ygWSLyzo >}}
+
 以 hCaptcha 跟 Cloudflare 的應用為例，使用者第一次進到由 Cloudflare 提供服務的網站時，網站會跳出一些人類才可以解答的問題比如說「挑出以下是汽車的圖片」。
 ![image](/posts/2020-12-26_zkp-讀書會-trust-token-browser-api/images/3.png#layoutTextWidth)
 當使用者答對問題後，Cloudflare 會回傳若干組 blind token，這些 blind token 還會需要經過 unblind 後才會變成真正可以使用的 token，這個過程為 issue token。如上圖所示假設使用者這次驗證拿到了 30 個 token，在每次造訪由 Cloudflare 服務的網站時就會用掉一個 token，這個步驟稱為 redeem token。
@@ -76,17 +78,23 @@ DLEQ 有一個前提，在系統中的所有人都知道公開的 P 跟 Q 兩個
 另外系統中會有兩個參考值 G 與 sG 會先公布給所有驗證者知道，G 是一個隨機點，sG 則是 Prover 用只有自己知道的祕密純量 s 對 G 運算後產生 sG。所有驗證者都可以再公開的地方得到這兩個點。
 
 假設 Peggy 擁有一個秘密 s 要向 Victor 證明他知道 s 為何，並且在這個過程中不揭露 s 真正的數值，此時 Victor 可以產生一個隨機純量 c 以及另一個隨機點 H 傳送給 Peggy，而 Peggy 則會再產生一個隨機數 v 並且產生 r，並且附上 vG, vH, sG, sH：
-`r = v - cs`
+
+```
+r = v - cs
+```
 
 所以 Victor 會得到 r, sG, sH, vG, vH 再加上他已經知道的 G, H。這個時候如果 Victor 計算出以下兩個等式就代表 Peggy 知道 s 的真正數值：
-`vG = rG + c(sG)
-vH = rH + c(sH)`
+```
+vG = rG + c(sG)
+vH = rH + c(sH)
+```
 
 我們舉第二個等式作為例子化簡：
-`vH = rH + c(sH)         // 把 r 展開成 v - cs
+```vH = rH + c(sH)         // 把 r 展開成 v - cs
 vH = (v - cs)H + c(sH)  // (v - cs)H 展開成 vH - csH
 vH = vH - c(sH) + c(sH) // 正負 c(sH) 消掉
-vH = vH`
+vH = vH
+```
 
 這樣只有 Peggy 知道 s 的狀況下才能給出 r，所以這樣就可以證明 Peggy 確實知道 s。
 
@@ -101,19 +109,28 @@ Privacy Pass 網站上透過了循序漸進的七種情境從最簡單的假設�
 ### Scenario 1
 
 如果我們要設計一個這樣可以兌換 token 來確認身分的系統，其中有一個方法是透過橢圓曲線 (elliptic curve) 完成。Client 挑選一個在橢圓曲線上的點 T 並且傳送給 Server，Server 收到後透過一個只有 Server 知道的純量 (scalar) s 對 T 運算後得到 sT 並且回傳給 Client，這個產生 sT 的過程稱為 Sign Point，不過實際上運作的原理就是橢圓曲線上的連續加法運算。
-`SignPoint(T, s) =&gt; sT`
+
+```
+SignPoint(T, s) =&gt; sT
+```
 
 等到 Client 需要兌換時只要把 T 跟 sT 給 Server，Server 可以收到 T 的時候再 Sign Point 一次看看是不是 sT 就知道是否曾經 issue 過這個 token。
 
 #### Issue
 
 以下的範例，左邊都是 Client, 右邊都是 Server。 `-&gt;` 代表 Client 發送給 Server，反之亦然。
-` // Client 發送 T 給 Server, 然後得到 sT``T -&gt;
-  &lt;-  sT `
+```
+// Client 發送 T 給 Server, 然後得到 sT
+T ->
+  <-  sT
+```
 
 #### Redeem
 
-` // Client 要 redeem token 時，傳出 T 與 sT````T, sT -&gt; `
+```
+// Client 要 redeem token 時，傳出 T 與 sT
+T, sT ->
+```
 
 #### 問題：Linkability
 
@@ -122,32 +139,49 @@ Privacy Pass 網站上透過了循序漸進的七種情境從最簡單的假設�
 ### Scenario 2
 
 要解決上面的問題，其中一個方法是透過 Blind Signature 達成。Client 不送出 T，而是先透過 BlindPoint 的方式產生 bT 跟 b，接下來再送給 Server bT。Server 收到 bT 之後，同樣的透過 Sign Point 的方式產生結果，不一樣的地方是情境 1 是用 T，而這邊則用 bT 來作 Sign Point，所以得出來的結果是 s(bT)。
-`` Client:
-BlindPoint(T) =&gt; (bT, b)```Server:
-SignPoint(bT, s) =&gt; sbT `
+
+```
+Client:
+BlindPoint(T) => (bT, b)
+Server:
+SignPoint(bT, s) => sbT
+```
 
 而 Blind Signature 跟 Sign Point 具備了交換律的特性，所以得到 s(bT) 後可以透過原本 Client 已知的 b 進行 Unblind：
-`UnblindPoint(sbT, b) =&gt; sT`
+
+```
+UnblindPoint(sbT, b) => sT
+```
 
 這樣一來在 Redeem 的時候就可以送出 T, sT 給 Server 了，而且透過 SignPoint(T, s) 得出結果 sT’ 如果符合 Client 傳來的 sT 就代表確實 Server 曾經簽過這個被 blind 的點，同時因為 T 從來都沒有送到 Server 過，所以 Server 也無法將 issue 與 redeem 階段的 Client 連結在一起。
 
 #### Issue
 
-`bT -&gt;
-   &lt;- s(bT)`
+```
+bT ->
+   <- s(bT)
+```
 
 #### Redeem
 
-`T, sT -&gt;`
+```
+T, sT ->
+```
 
 #### 問題：Malleability
 
 以上的流程其實也有另外一個大問題，因為有交換律的關係，當 Client 透過一個任意值 a 放入 BlindPoint 時產生的 a(sT) 就會等於 s(aT)：
-`BlindPoint(sT) =&gt; a(sT), a
-// a(sT) === s(aT)`
+
+```
+BlindPoint(sT) => a(sT), a
+// a(sT) === s(aT)
+```
 
 此時如果將 aT 跟 s(aT) 送給 Server Redeem，此時因為
-`SignPoint(aT, s) =&gt; s(aT)`
+
+```
+SignPoint(aT, s) => s(aT)
+```
 
 所以就可以兌換了，這樣造成 Client 可以無限地用任意數值兌換 token。
 
@@ -159,13 +193,17 @@ SignPoint(bT, s) =&gt; sbT `
 
 #### Issue
 
-`T = Hash(t)
-bT -&gt;
-   &lt;- sbT`
+```
+T = Hash(t)
+bT ->
+   <- sbT
+```
 
 #### Redeem
 
-`t, sT -&gt;`
+```
+t, sT ->
+```
 
 #### 問題：Redemption hijacking
 
@@ -181,13 +219,17 @@ bT -&gt;
 
 #### Issue
 
-`T = Hash(t)
-bT -&gt;
-   &lt;- sbT`
+```
+T = Hash(t)
+bT ->
+   <- sbT
+```
 
 #### Redeem
 
-`t, M, HMAC(sT, M) -&gt;`
+```
+t, M, HMAC(sT, M) ->
+```
 
 #### 問題：Tagging
 
@@ -204,23 +246,30 @@ bT -&gt;
 首先根據 DLEQ 的假設，Server 會需要先公開一組 G, sG 給所有的 Client，並且在證明時傳另外一個點 H 給 Prover。而在 Privacy Pass 的實作中則是將 H 則改用 bT 代替。
 
 回傳的時候 Server 要證明自己仍然使用同一個 s 發出 token，所以附上了一個 DLEQ 的證明 r = v - cs，Client 只要算出以下算式相等就可證明 Server 仍然用同一個 s (記住了 H 已經改用 bT 代替，此時 client 也有 sbT 也就是 sH)：
-`vH = rH + c(sH)             // H 換成 bT
+
+```
+vH = rH + c(sH)             // H 換成 bT
 vbT = rbT + c(sbT)          // 把 r 展開成 v - cs
 vbT = (v - cs)bT + c(sbT)   // (v - cs)bT 展開成 vbT - csbT
 vbT = vbT - c(sbT) + c(sbT) // 正負 c(sbT) 消掉
-vbT = vbT`
+vbT = vbT
+```
 
 這樣就可以證明 Server 在 sbT 上用的 s 跟 sG 上面用的是同一個。
 
 #### Issue
 
-`T = Hash(t)
-bT -&gt;
-   &lt;- sbT, DLEQ(bT:sbT == G:sG)`
+```
+T = Hash(t)
+bT ->
+   <- sbT, DLEQ(bT:sbT == G:sG)
+```
 
 #### Redeem
 
-`t, M, HMAC(sT, M) -&gt;`
+```
+t, M, HMAC(sT, M) ->
+```
 
 #### 問題：only one redemption per issuance
 
@@ -234,21 +283,25 @@ bT -&gt;
 
 #### Issue
 
-`T1 = Hash(t1)
+```
+T1 = Hash(t1)
 T2 = Hash(t2)
 T3 = Hash(t3)
-b1T1 -&gt;
-b2T2 -&gt;
-b3T3 -&gt;
+b1T1 ->
+b2T2 ->
+b3T3 ->
 		c1,c2,c3 = H(G,sG,b1T1,b2T2,b3T3,s(b1T1),s(b2T2),s(b3T3))
-		&lt;- sb1T1
-		&lt;- sb2T2
-		&lt;- sb3T3
-		&lt;- DLEQ(c1b1T1+c2b2T2+c3b3T3:s(c1b1T1+c2b2T2+c3b3T3) == G: sG)`
+		<- sb1T1
+		<- sb2T2
+		<- sb3T3
+		<- DLEQ(c1b1T1+c2b2T2+c3b3T3:s(c1b1T1+c2b2T2+c3b3T3) == G: sG)
+```
 
 #### Redeem
 
-`t1, M, HMAC(sT1, M) -&gt;`
+```
+t1, M, HMAC(sT1, M) ->
+```
 
 ### 結論
 
