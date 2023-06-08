@@ -98,4 +98,6 @@ EtherTW Tickets 系統是透過 MetaMask 瀏覽器外掛與以太坊區塊鏈整
 ![image](/posts/2018-03-12_透過-metamask-使用-ethertw-tickets-報名活動/images/10.png#layoutTextWidth)
 
 如果你報名時遇到任何問題，請直接透過 [Facebook 傳訊](https://www.facebook.com/messages/t/eth.taipei)跟我們聯絡。
-`再次提醒，只有在 Etherscan 頁面的交易顯示「Success」才代表報名成功，如果出現其他訊息都代表報名沒有成功，請聯絡我們取得協助。`
+```
+再次提醒，只有在 Etherscan 頁面的交易顯示「Success」才代表報名成功，如果出現其他訊息都代表報名沒有成功，請聯絡我們取得協助。
+```

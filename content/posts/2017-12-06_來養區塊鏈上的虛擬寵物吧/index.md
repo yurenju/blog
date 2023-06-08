@@ -34,7 +34,9 @@ images:
 剛開始聽到網路上提到這個系統時並沒有太在意，直到昨天 [TechCrunch 報導](https://techcrunch.com/2017/12/03/people-have-spent-over-1m-buying-virtual-cats-on-the-ethereum-blockchain/)在這個遊戲上面的交易量竟然達到了一百萬美金！這麼有意思的事情就跟風來玩一下了 😆
 
 這篇先解釋一下要如何開始購買虛擬貓咪卡片與繁衍，以後如果還有機會可以解釋一下背後的 Smart Contract。
-`註：虛擬寵物卡跟寵物不一樣，虛擬寵物只是虛擬資產，但是寵物並不是資產，而是陪伴你一生的夥伴。如果你想要養真實的寵物的話，請用領養代替購買。`
+```
+註：虛擬寵物卡跟寵物不一樣，虛擬寵物只是虛擬資產，但是寵物並不是資產，而是陪伴你一生的夥伴。如果你想要養真實的寵物的話，請用領養代替購買。
+```
 
 ### 遊戲設定
 
@@ -79,7 +81,9 @@ CryptoKitties 網站是採用 [MetaMask] (https://metamask.io/)與區塊鏈互�
 選好貓咪卡後，按下 Buy now 就可以購買。另外提醒一下目前購買時的 Gas Price 已經到了 25 Wei 了，我最近一次購買實際的交易費是 0.0015111 Ether ($0.69)，也不算太低。
 
 另外一個要注意的點是我之前一直遇到下面這個錯誤：
-`Error: insufficient funds for gas * price + value`
+```
+Error: insufficient funds for gas * price + value
+```
 
 結果是撰寫文章時因為 MetaMask 的以太坊節點過載了。後來在官方的 discord 討論群組跟在 [Reddit](https://www.reddit.com/r/CryptoKitties/comments/7hlpp5/psa_how_to_make_your_transactions_go_through/) 上面看到可以把 MetaMask 的 settings 裡面的 current network 網址改成 [https://mainnet.infura.io](https://mainnet.infura.io) 可以解決這個問題，如果不信任的話也可以自己在本地啟動一個以太坊節點並且連到上面的 RPC API。這應該只是個暫時的現象，所以如果你沒遇到跟我上面一樣的問題，就不需要切換 RPC 節點。
 

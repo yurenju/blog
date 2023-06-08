@@ -62,14 +62,18 @@ Nightwatch.js 的設定我就不細說了，請上官方網站閱讀一下就可
 首先到 pocket 登入帳號的頁面，並且使用環境變數裡面的 POCKET_USER 跟 POCKET_PASS 帳號密碼登入，並且等待 “bulk edit” 這個按鈕出現。
 
 第二段有點長，首先 async.doWhilst 是個非同步的流程控制工具，其實就是 do…while 的非同步版。
-`doWhilst(fn, test, callback)`
+```
+doWhilst(fn, test, callback)
+```
 
 第一個參數是 do {} 本身，第二個是測試的 condition，如果為 true 就繼續跑，false 則停。第三個 callback 是當這個 do…while 跑完之後會呼叫的 callback。
 
 接下來我們先來看第一個參數 fn：
 
 第一個是直接輸入網址到未讀清單。會這樣做的原因有兩個。第一個是當按下 archive 時，其實文章只是被隱藏起來，但是卻沒有消失，所以用 css selector “a.item_link.start_articleview” 計算剩餘還有幾篇文章時會失準，重新整理頁面才可以得到正確的數字。但是重新整理頁面之後又不會回到頁面的開頭，而 pocket 的設計是往下捲動之後 bulk edit 按鈕就會隱藏，所以會點不到。最好的做法就是直接在前往該頁面一次，就不用 refresh 而且位置也會在最上面了。
-`client.keys([client.Keys.END])`
+```
+client.keys([client.Keys.END])
+```
 
 .keys 是個可以使用鍵盤按鍵的 function，所有的按鍵列表可以到源碼內的 [keys.json](https://github.com/nightwatchjs/nightwatch/blob/master/lib/util/keys.json) 查詢。
 

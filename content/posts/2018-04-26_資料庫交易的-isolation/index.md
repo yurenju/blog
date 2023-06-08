@@ -79,6 +79,8 @@ COMMIT;`
 ![image](/posts/2018-04-26_資料庫交易的-isolation/images/5.png#layoutTextWidth)
 
 順道一提 MySQL 預設的等級是 Repeatable Read，但是也可以透過下面的指令調整：
-`SET SESSION transaction_isolation=&#39;SERIALIZABLE&#39;;`
+```
+SET SESSION transaction_isolation=&#39;SERIALIZABLE&#39;;
+```
 
 如果你對這個主題有興趣的話，也可以讀讀 Gea-Suan Lin 的 [從頭學一次 Isolation level 的 REPEATABLE-READ 與 SERIALIZABLE](https://blog.gslin.org/archives/2015/09/18/5989/%E5%BE%9E%E9%A0%AD%E5%AD%B8%E4%B8%80%E6%AC%A1-isolation-level-%E7%9A%84-repeatable-read-%E8%88%87-serializable/)。

@@ -32,7 +32,9 @@ images:
 ### git
 
 AWS Lambda instance 是 Amazon Linux AMI，雖然上面提供了一些基本的工具如 curl，但是卻沒有提供 git。好心人士包了一個可以在 lambda 中使用的 node.js git 模組 [lambda-git](https://www.npmjs.com/package/lambda-git)，安裝後用下面的指令就可以設定好 git 執行環境，直接執行指令就可以使用。
-`require(&#39;lambda-git&#39;)();`
+```
+require(&#39;lambda-git&#39;)();
+```
 
 ### 環境變數
 

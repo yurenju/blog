@@ -26,13 +26,19 @@ Storybook 是個好東西，可以讓你在製作 UI 元件的時候有個地方
 其實解決方法說起來也不難，其實只要把兩邊的 webpack 拿出來比較一下，把關鍵的部分加入 storybook 就可以解決問題了。
 
 根據[官方文件](https://cli.vuejs.org/guide/cli-service.html#vue-cli-service-inspect)， vue 這邊用 `inspect` 來印出目前的設定：
-`$ vue-cli-service inspect`
+```
+$ vue-cli-service inspect
+```
 
 而 storybook 也一樣[官方文件](https://storybook.js.org/docs/configurations/custom-webpack-config/#debug-the-default-webpack-config)內有寫，新增 `.storybook/webpack.config.js` 後加入：
-`module.exports = **async** ({ config }) =&gt; console.dir(config.plugins, { depth: null }) || config;`
+```
+module.exports = **async** ({ config }) =&gt; console.dir(config.plugins, { depth: null }) || config;
+```
 
 接著用以下指令即可列出 webpack 設定組態：
-`$ yarn storybook --debug-webpack`
+```
+$ yarn storybook --debug-webpack
+```
 
 剩下就是見招拆招了，以我的狀況我是搜尋 .ts 去找到 vue 那邊的設定，然後再自行簡化一下寫到 `.storybook/webpack.config.js` 裡面。以我的狀況來說，比較了兩邊之後，我發現 js, ts 跟 scss 的部分都要額外設定，找出來之後就再把下面這些東西加回 `.storybook/webpack.config.js`：
 
