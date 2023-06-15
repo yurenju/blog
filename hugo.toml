@@ -19,6 +19,7 @@ url = "/index.xml"
 
 [params]
   goToTop = true
+  ogimage = "cover.jpg"
 
 [params.author]
   avatar = "avatar.jpg"
