@@ -19,7 +19,7 @@ url = "/index.xml"
 
 [params]
   goToTop = true
-  ogimage = "cover.jpg"
+  images = ["cover.jpg"]
   description = "撰寫就是一種思考方式，發佈與分享只是副產品，而真正的意義是在自我的知識脈絡裡面有了歸屬與連結。"
 
 [params.author]
