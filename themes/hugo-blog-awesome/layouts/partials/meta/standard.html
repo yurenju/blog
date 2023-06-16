@@ -2,12 +2,22 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
-<meta property="og:title" content="{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}" />
-<meta name="twitter:title" content="{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}" />
-<meta itemprop="name" content="{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}" />
-<meta name="application-name" content="{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}" />
-<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+{{/* Define variable title */}}
+{{- $title := "" -}}
+{{ if .IsHome }}
+  {{- $title = site.Title -}}
+{{ else }}
+  {{ if .Title }}
+    {{ $title = printf "%s | %s" .Title site.Title }}
+  {{ end }}
+{{ end }}
+
+<title itemprop="name">{{ $title }}</title>
+<meta property="og:title" content="{{ $title }}" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta itemprop="name" content="{{ $title }}" />
+<meta name="application-name" content="{{ site.Title }}" />
+<meta property="og:site_name" content="{{ site.Title }}" />
 
 {{/*  Define empty variable description  */}}
 {{- $description := "" -}}
