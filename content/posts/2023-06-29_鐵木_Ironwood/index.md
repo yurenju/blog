@@ -10,6 +10,7 @@ tags:
 - coffee
 ---
 
+
 ![cover_ironwood.jpg](cover_ironwood.jpg)
 
 沒有刻意阻擋來自街道的聲音，位於二樓的鐵木在清幽的音樂聲中還可以微微的聽到蟲鳴、機車呼嘯而過以及對面學校裡學生們的交談聲。
