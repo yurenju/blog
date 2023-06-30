@@ -1,6 +1,6 @@
 ---
 slug: sanctuary
-title: 相撲聖域
+title: 《相撲聖域》短文推薦
 date: 2023-06-30
 image: cover_sanctuary.jpg
 description: 無雷推薦《相撲聖域》。
