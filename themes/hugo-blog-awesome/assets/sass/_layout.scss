@@ -51,36 +51,18 @@
   flex-direction: row;
   align-items: center;
 
-  @include media-query($on-mobile) {
-    display: block;
-  }
-
   &:not(:first-child) {
     border-top: 1px solid $light;
   }
 
-  .post-item-date {
-    @include media-query($on-mobile) {
-      font-size: $small-font-size;
-      color: $smoke;
-
-      &::before {
-        content: "-";
-      }
-    }
-  }
-
   .post-item-title {
+    display: flex;
     margin: 0;
     border: 0;
     padding: 0;
     font-size: $base-font-size;
     font-weight: normal;
     letter-spacing: 0.1px;
-
-    @include media-query($on-mobile) {
-      display: inline;
-    }
 
     a {
       color: $text-base-color;
@@ -90,6 +72,15 @@
         color: $black;
       }
     }
+  }
+
+  .post-item-date {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: $tiny-font-size;
+    color: $smoke;
+    margin-left: auto;
   }
 }
 
@@ -134,7 +125,7 @@
     a {
       text-decoration: none;
       margin-right: .31rem;
-      
+
     }
     svg {
       color: #888a90;
