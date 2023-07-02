@@ -45,3 +45,6 @@
 
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
+{{ with .Site.Params.author}}
+  <meta name="twitter:creator" content="{{ .twitter }}"/>
+{{ end }}
