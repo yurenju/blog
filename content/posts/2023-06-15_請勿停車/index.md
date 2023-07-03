@@ -1,6 +1,6 @@
 ---
 categories:
-- life
+- shorts
 slug: no-parking
 title: 請勿停車
 date: 2023-06-15
