@@ -22,6 +22,11 @@
         {{ $custom = $custom | resources.Concat "js/custom.js" | resources.Minify | resources.Fingerprint }}
         <script src="{{  $custom.Permalink }}" integrity="{{ $custom.Data.Integrity }}"></script>
     {{ end }}
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "635d5548a34641ac8270eae0fd65de23"}'></script>
+    <!-- End Cloudflare Web Analytics -->
 {{ else }}
     {{ $main = $main | resources.Concat "js/main.js" }}
     <script async src="{{  $main.Permalink }}" ></script>
