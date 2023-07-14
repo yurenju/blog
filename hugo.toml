@@ -1,5 +1,6 @@
 baseURL = 'http://yurenju.blog/'
 languageCode = 'zh-hant-tw'
+rssLimit = 50
 defaultContentLanguage = "zh-hant-tw"
 title = "Yuren's Blog"
 theme = "hugo-blog-awesome"
@@ -40,6 +41,11 @@ url = "/index.xml"
     name = '所有文章'
     url = '/posts/'
     weight = 20
+  [[menu.main]]
+    pageRef = "subscription"
+    name = '訂閱'
+    url = '/subscription/'
+    weight = 25
   [[menu.main]]
     pageRef="about"
     name = '關於'
