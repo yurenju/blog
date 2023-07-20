@@ -233,3 +233,18 @@
 .post-updated-at {
   font-family: "Ubuntu mono", "monospace";
 }
+
+.comment-divider {
+  margin-top: 3em;
+}
+
+
+h5.reader-feedback-title {
+  margin-top: 1em;
+  font-size: $small-font-size;
+}
+
+
+.reader-feedback-content {
+  font-size: $tiny-font-size;
+}

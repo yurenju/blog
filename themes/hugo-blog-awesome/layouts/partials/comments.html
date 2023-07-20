@@ -2,3 +2,8 @@
 <hr style="margin-top: 40px; margin-bottom: 40px;" />
 {{ template "_internal/disqus.html" . }}
 {{- end -}}
+
+<hr class="comment-divider" />
+
+<h5 class="reader-feedback-title">讀者回函</h5>
+<div class="reader-feedback-content">讀完本文之後有什麼建議或回饋嗎？請按此在 <a target="_blank" href="https://twitter.com/intent/tweet?text=針對《{{ .Title }}》的回饋&via=yurenju&url={{ .Permalink | safeURL }}">Twitter 上面分享此文並且提及我</a>，或是透過<a target="_blank" href="mailto:kind.oil9063@fastmail.com">寄送電子郵件</a>分享你的看法 😎</div>
