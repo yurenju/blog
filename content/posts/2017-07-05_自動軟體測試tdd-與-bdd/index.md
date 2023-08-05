@@ -52,16 +52,20 @@ TDD 是一種開發的流程。許多專案在開發時，通常會邊寫程式�
 TDD 則是「**先寫測試再開發程式**」。沒有程式要怎麼寫測試呢？除了有些工具可以讓你寫測試時，一邊幫你產生空的類別與方法外（如 Eclipse 撰寫 Java 時就有類似的功能），一般來說也可以直接假設你已經撰寫好了程式，先揣摩如果已經寫好了這個程式該要如何使用。
 
 舉個例子，在[勞基法函式庫](https://github.com/g0v/labor-standards-tw)這個專案裡面的測試案例在還沒開始實作前，可以寫成這樣：
-` // 一個月薪 25000 男性，今天剛上班的勞工，在平常日從八點工作十一個小時
+
+```javascript
+// 一個月薪 25000 男性，今天剛上班的勞工，在平常日從八點工作十一個小時
 // 他的加班費應該為 451 元``const labor = new Labor()
 labor.setAge(20)
      .setGender(Gender.MALE)
      .onBoard(new Date())
-     .setMonthlySalary(25000)``const worktime = new WorkTime(Duration.DAY, labor)
+     .setMonthlySalary(25000)
+const worktime = new WorkTime(Duration.DAY, labor)
 const start = new Date(2017, 6, 5, 8)
 worktime.add(start, 11)
 const result = worktime.overtimePay()
-expect(result.value.overtimePay).eq(451) `
+expect(result.value.overtimePay).eq(451)
+``````
 
 當我們在還沒開始寫程式之前就開始寫測試有什麼好處呢？其中一個最大的好處是開發者當寫出測試時，就可以瞭解這一個元件最後會怎麼使用，同時也釐清的程式的介面會如何定義。
 
