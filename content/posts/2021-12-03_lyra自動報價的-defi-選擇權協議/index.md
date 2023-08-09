@@ -39,7 +39,7 @@ Lyra 協議有兩種參與角色：
 
 接下來我們就從流動性提供者與交易者參與系統時所發生的事情來講解系統。如果你對選擇權沒有概念，建議先閱讀前導文《選擇權簡介》來了解選擇權。
 
-[選擇權簡介](https://yurenju.medium.com/option-intro-23f47e8f3a4a)
+[選擇權簡介](/posts/2021-12-02_%E9%81%B8%E6%93%87%E6%AC%8A%E7%B0%A1%E4%BB%8B/)
 
 同時你也會需要選擇權中關於希臘字母 (Greeks) 的知識，建議也先閱讀由 Anton 撰寫的《[選擇權的定價與避險參數](https://antonassocareer.medium.com/%E9%82%A3%E4%BA%9B%E5%B9%B4-%E6%B2%92%E5%AD%B8%E5%A5%BD%E7%9A%84%E9%81%B8%E6%93%87%E6%AC%8A-2-6934483b2f78)》。
 
@@ -83,7 +83,7 @@ Lyra Protocol 在介紹時經常會介紹自己是個 AMM (Automated market make
 
 ![image](/posts/2021-12-03_lyra自動報價的-defi-選擇權協議/images/3.png#layoutTextWidth)
 
-中間的選擇權定價 (Pricing) 方法我們在前一篇《[選擇權簡介](https://yurenju.medium.com/option-intro-23f47e8f3a4a)》裡面有提到選擇權有一個常用的定價模型 Black-Scholes Model，其中定價會需要以下幾個輸入參數：Underlying Price, Strike Price, Expiry, Volatility, Risk-free interest rate，欲知詳情請閱讀前導文。
+中間的選擇權定價 (Pricing) 方法我們在前一篇《[選擇權簡介](/posts/2021-12-02_%E9%81%B8%E6%93%87%E6%AC%8A%E7%B0%A1%E4%BB%8B/)》裡面有提到選擇權有一個常用的定價模型 Black-Scholes Model，其中定價會需要以下幾個輸入參數：Underlying Price, Strike Price, Expiry, Volatility, Risk-free interest rate，欲知詳情請閱讀前導文。
 
 這些參數裡面其實就只有 Volatility 是比較難以直接觀測，其他都是可觀測因素。那在 Lyra 中是怎麼計算出 Volatility 呢？這個時候就要講第一個步驟 “Decide IV”。
 
@@ -148,7 +148,7 @@ IV 會在兩個時間點調整：初始化 Board 與每次交易時都會調整 
 
 作為賣選擇權的角色，不管是賣 Call option 或是 Put option 都會承擔風險，所以 Lyra 在賣選擇權時會透過 Synthetix 進行避險，在賣 Call Option 的時候買現貨，並且在賣 Put Option 時做空標的資產。
 
-比如說交易者買 1 ETH Call Option 時，Lyra 會從流動性提供者取得 sUSD 資金並且買 sETH，而交易者買 1 ETH Put Option 時，Lyra 會抵押 sUSD，借出 sETH 並且在市場上賣掉。關於避險方式可以參考《[選擇權簡介](https://yurenju.medium.com/option-intro-23f47e8f3a4a)》的「賣方的風險」一節。
+比如說交易者買 1 ETH Call Option 時，Lyra 會從流動性提供者取得 sUSD 資金並且買 sETH，而交易者買 1 ETH Put Option 時，Lyra 會抵押 sUSD，借出 sETH 並且在市場上賣掉。關於避險方式可以參考《[選擇權簡介](/posts/2021-12-02_%E9%81%B8%E6%93%87%E6%AC%8A%E7%B0%A1%E4%BB%8B/)》的「賣方的風險」一節。
 
 當 Lyra 執行以上的避險時，結算所需的資金風險就被抵銷了，但是這樣的避險方式其實是會花比較多資金在避險上面同時也有可能避險不足，如果考慮 Delta 的情形就可以解決上述問題，也就是下個章節會講解的 delta hedge。
 

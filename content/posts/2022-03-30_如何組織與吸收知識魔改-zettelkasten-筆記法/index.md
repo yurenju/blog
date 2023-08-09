@@ -24,7 +24,7 @@ images:
 
 如果你對如何用筆記管理工作事項，請見上篇魔改系列文章。
 
-[如何梳理我的待辦事項  —  魔改子彈筆記法](https://yurenju.medium.com/modified-bullet-journal-e0cccab3600)
+[如何梳理我的待辦事項  —  魔改子彈筆記法](/posts/2022-01-23_%E5%A6%82%E4%BD%95%E6%A2%B3%E7%90%86%E6%88%91%E7%9A%84%E5%BE%85%E8%BE%A6%E4%BA%8B%E9%A0%85%E9%AD%94%E6%94%B9%E5%AD%90%E5%BD%88%E7%AD%86%E8%A8%98%E6%B3%95/)
 
 ### 學習知識
 

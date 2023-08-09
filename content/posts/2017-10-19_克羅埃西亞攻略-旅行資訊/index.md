@@ -35,10 +35,10 @@ images:
 
 這次由於中秋加上雙十連假的關係機票都還蠻貴的，所以我們也在不停的調動行程看看有沒有辦法擠出比較便宜的機票但是行程上又不會太複雜，最後看了很久決定 Dubrovnik 進 Zagreb 出，並且安排十一天的行程造訪：
 
-- [杜布羅夫尼克 (Dubrovnik)](https://medium.com/@yurenju/%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-dubrovnik-12e14b500465) —  三晚
-- [斯普利特 (Split)](https://medium.com/@yurenju/%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-split-%E6%96%AF%E6%99%AE%E5%88%A9%E7%89%B9-a77ebc69f1e9) —  兩晚
-- [十六湖國家公園 (Plitvice Lakes)](https://medium.com/@yurenju/%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-%E5%8D%81%E5%85%AD%E6%B9%96%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92-e1b72af4067a) —  一晚
-- [羅維尼 (Rovinj)](https://medium.com/@yurenju/%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%97%85%E7%A8%8B%E7%9A%84%E5%B0%BE%E7%AB%AF-rovinj-39a1dddc9a7b) —  三晚
+- [杜布羅夫尼克 (Dubrovnik)](/posts/2017-10-21_%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-dubrovnik/) —  三晚
+- [斯普利特 (Split)](/posts/2017-11-05_%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-split-%E6%96%AF%E6%99%AE%E5%88%A9%E7%89%B9/) —  兩晚
+- [十六湖國家公園 (Plitvice Lakes)](/posts/2018-01-07_%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-%E5%8D%81%E5%85%AD%E6%B9%96%E5%9C%8B%E5%AE%B6%E5%85%AC%E5%9C%92/) —  一晚
+- [羅維尼 (Rovinj)](/posts/2018-01-14_%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%97%85%E7%A8%8B%E7%9A%84%E5%B0%BE%E7%AB%AF-rovinj/) —  三晚
 - 札格瑞布 (Zagreb) —  一晚
 
 每個城市的旅程介紹可以點選上面的連結，至於 Zagreb 我就沒寫了，因為只短暫待在那邊一小段時間。
@@ -89,7 +89,7 @@ images:
 
 寫到一半發現太長了，後來決定把它放到另外一篇文章裡。
 
-[克羅埃西亞攻略  —  住宿](https://medium.com/@yurenju/%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-%E4%BD%8F%E5%AE%BF-ef257ec90190)
+[克羅埃西亞攻略  —  住宿](/posts/2017-10-19_%E5%85%8B%E7%BE%85%E5%9F%83%E8%A5%BF%E4%BA%9E%E6%94%BB%E7%95%A5-%E4%BD%8F%E5%AE%BF/)
 
 ### 貨幣、換錢與消費方式
 

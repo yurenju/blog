@@ -26,7 +26,7 @@ images:
 
 感謝 LINE 與 Tech In Asia 的邀請到了東京參加了 [LINE Developer Day 2016](http://linedevday.linecorp.com/jp/2016/en/)，最近正好在研究 Facebook Messenger Platform，這次的 Dev day 正好讓我針對 LINE BOT 好好研究一下與其他解決方案比較的優劣。另外雖然這次有很多其他主題，不過本篇會專注在討論 LINE BOT API。
 
-在來 LINE Developer Day 之前，其實我自己有申請 bot trial account 來試試看開發者預覽的 BOT API，當時已經用 LINE BOT 加上 AWS 的 Lambda 串起來玩玩後也寫了一篇[文章分享相關資訊](https://medium.com/technology-coding/用-serverless-介接-line-bot-api-e46f172e8028)。在出發的前幾天我又寫了一個做旅行記帳的 LINE BOT，可以透過 bot 記帳、轉換貨幣並且記錄在 Google Spreadsheet 上面。
+在來 LINE Developer Day 之前，其實我自己有申請 bot trial account 來試試看開發者預覽的 BOT API，當時已經用 LINE BOT 加上 AWS 的 Lambda 串起來玩玩後也寫了一篇[文章分享相關資訊](/posts/2016-09-21_%E7%94%A8-serverless-%E4%BB%8B%E6%8E%A5-line-bot-api/)。在出發的前幾天我又寫了一個做旅行記帳的 LINE BOT，可以透過 bot 記帳、轉換貨幣並且記錄在 Google Spreadsheet 上面。
 
 ![image](/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/2.png#layoutTextWidth)
 

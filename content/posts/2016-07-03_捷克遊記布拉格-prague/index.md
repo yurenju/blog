@@ -122,4 +122,4 @@ images:
 - [Flickr 相簿](https://www.flickr.com/photos/yurenju/sets/72157644187458437/)
 - Foursquare list: [Prague](https://foursquare.com/yurenju/list/prague), [Český Krumlov](https://foursquare.com/yurenju/list/%C4%8Desk%C3%BD-krumlov)
 - 捷克遊記：序曲  —  行前準備
-- [捷克遊記：庫侖諾夫 (Český Krumlov)](https://medium.com/p/a11f91ad919d)
+- [捷克遊記：庫侖諾夫 (Český Krumlov)](/posts/2014-05-18_%E6%8D%B7%E5%85%8B%E9%81%8A%E8%A8%98%E5%BA%AB%E4%BE%96%E8%AB%BE%E5%A4%AB-%C4%8Desk%C3%BD-krumlov/)

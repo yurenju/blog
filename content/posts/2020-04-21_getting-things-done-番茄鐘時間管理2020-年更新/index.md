@@ -20,7 +20,7 @@ images:
 
 之前寫的文章《Getting Things Done + 番茄鐘時間管理》不知不覺也是兩年前的事情了，目前每天的工作流程也變了一些，來更新一下。如果你想知道番茄鐘跟 GTD 是怎樣的工具，請參考前一篇文章。
 
-[Getting Things Done + 番茄鐘時間管理](https://medium.com/@yurenju/getting-things-done-%E7%95%AA%E8%8C%84%E9%90%98%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86-e729093b3ec0)
+[Getting Things Done + 番茄鐘時間管理](/posts/2018-06-17_getting-things-done-%E7%95%AA%E8%8C%84%E9%90%98%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86/)
 
 跟以前一樣，我並不是很嚴格的執行番茄鐘跟 GTD，大致上都是用一個鬆散的方式在作工作管理，不一樣的是執行的細節跟以前不太一樣了。Todo 軟體部分跟以前一樣，主要採用的是 Todoist，自從 OmniFocus 轉換到 Todoist 後就沒有再換過，這套軟體的設計真的很適合我。
 

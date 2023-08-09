@@ -15,11 +15,11 @@ images:
   - "/posts/2019-04-22_vault-與-kubernetes-的深度整合/images/3.png"
 ---
 
-在上一篇 Vault 相關的文章《[透過 Vault 定期 rotate credentials](https://medium.com/getamis/vault-dynamic-credentials-fd651d6c28a9)》解釋了如何使用 vault 動態管理 credentials，透過每次都發出有時效性的帳號密碼來減低安全風險。
+在上一篇 Vault 相關的文章《[透過 Vault 定期 rotate credentials](/posts/2018-11-13_%E9%80%8F%E9%81%8E-vault-%E5%AE%9A%E6%9C%9F-rotate-credentials/)》解釋了如何使用 vault 動態管理 credentials，透過每次都發出有時效性的帳號密碼來減低安全風險。
 
 本篇文章則更進一步的解釋要如何透過 Kubernetes 的 Service Account 整合登入驗證，並且針對不同 Account 管理權限範圍讓特定 deployment 僅能存取特定 credentials。
 
-本文將不會介紹 Kubernetes，請先到 [Kubernetes 官網](http://kubernetes.io) 了解此工具。如果想了解 Vault 如何動態管理 Credentials，請先閱讀《[透過 Vault 定期 rotate credentials](https://medium.com/getamis/vault-dynamic-credentials-fd651d6c28a9)》。
+本文將不會介紹 Kubernetes，請先到 [Kubernetes 官網](http://kubernetes.io) 了解此工具。如果想了解 Vault 如何動態管理 Credentials，請先閱讀《[透過 Vault 定期 rotate credentials](/posts/2018-11-13_%E9%80%8F%E9%81%8E-vault-%E5%AE%9A%E6%9C%9F-rotate-credentials/)》。
 
 ### 使用情境與問題
 

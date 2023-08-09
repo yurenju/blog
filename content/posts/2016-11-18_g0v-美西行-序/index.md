@@ -33,9 +33,9 @@ images:
 本系列文章總共有七篇，11/18 到 11/24 每日連載 XDDD
 
 - 本文
-- [g0v 美西行  — Stanford x g0v 分享會](https://medium.com/technology-coding/c1b544f5bf6d)
-- [g0v 美西行  — Code For All](https://medium.com/technology-coding/9414333610b)
-- [g0v 美西行  — Code For America Summit](https://medium.com/technology-coding/3287d75382eb)
-- [Clear my record —  清除犯罪紀錄專案](https://medium.com/technology-coding/e8bbc65a53b4)
-- [GetCalFresh —  食物卷改善計畫](https://medium.com/technology-coding/6cbb3cd3a4d)
-- [21 世紀社會安全網](https://medium.com/technology-coding/f39b2c2f82f5)
+- [g0v 美西行  — Stanford x g0v 分享會](/posts/2016-11-19_g0v-%E7%BE%8E%E8%A5%BF%E8%A1%8C-stanford-x-g0v-%E5%88%86%E4%BA%AB%E6%9C%83/)
+- [g0v 美西行  — Code For All](/posts/2016-11-20_g0v-%E7%BE%8E%E8%A5%BF%E8%A1%8C-code-for-all/)
+- [g0v 美西行  — Code For America Summit](/posts/2016-11-21_g0v-%E7%BE%8E%E8%A5%BF%E8%A1%8C-code-for-america-summit/)
+- [Clear my record —  清除犯罪紀錄專案](/posts/2016-11-22_clear-my-record-%E6%B8%85%E9%99%A4%E7%8A%AF%E7%BD%AA%E7%B4%80%E9%8C%84%E5%B0%88%E6%A1%88/)
+- [GetCalFresh —  食物卷改善計畫](/posts/2016-11-23_getcalfresh-%E9%A3%9F%E7%89%A9%E5%8D%B7%E6%94%B9%E5%96%84%E8%A8%88%E7%95%AB/)
+- [21 世紀社會安全網](/posts/2016-11-24_21-%E4%B8%96%E7%B4%80%E7%A4%BE%E6%9C%83%E5%AE%89%E5%85%A8%E7%B6%B2/)

@@ -93,4 +93,4 @@ Chialin
 
 交通工具圖示取自 [flaticon](http://www.flaticon.com/) 與 [wikipedia](http://commons.wikimedia.org/wiki/File:BSicon_AETRAM.svg)。
 
-相關閱讀：[日本中部地方之旅 (2) —  高山](https://medium.com/@yurenju/2-1dea40be5c2c)
+相關閱讀：[日本中部地方之旅 (2) —  高山](/posts/2014-10-19_%E6%97%A5%E6%9C%AC%E4%B8%AD%E9%83%A8%E5%9C%B0%E6%96%B9%E4%B9%8B%E6%97%85-2%E9%AB%98%E5%B1%B1/)

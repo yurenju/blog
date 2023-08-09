@@ -32,7 +32,7 @@ Emery 是公司的 CTO，當我第一次打開 Vectr 的源碼時，我真不敢
 
 雖然剛開始有點痛苦，但也慢慢習慣了。我自己也是很享受遠端工作的樂趣。因為遠端工作的關係，省去了我許多上下班通勤的珍貴時光，也因為遠端工作的關係，在這兩年造訪了很多咖啡館。
 
-[遠距工作一年多的經驗](https://medium.com/@yurenju/%E9%81%A0%E8%B7%9D%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%A4%9A%E7%9A%84%E7%B6%93%E9%A9%97-2134e2583e85)
+[遠距工作一年多的經驗](/posts/2016-10-18_%E9%81%A0%E8%B7%9D%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%A4%9A%E7%9A%84%E7%B6%93%E9%A9%97/)
 
 過了一陣子，有更多的人手加入了公司，像是 [EJ](https://eragonj.me/), [hychen](https://medium.com/u/2df947a2dcf6) 跟 [Pomin Wu](https://medium.com/u/10fd45af0204)。
 

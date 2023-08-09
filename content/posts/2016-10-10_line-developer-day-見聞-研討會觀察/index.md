@@ -77,7 +77,7 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 
 ![image](/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/9.png#layoutTextWidth)
 
-之前辦理 COSCUP 時有好幾屆攤位廠商或社群都會在當天舉辦一些活動，贈送贈品來吸引參與者的目光。這次 LINE Developer Day 也有類似的作法。不過更進一步的是這個遊戲是由 Beacon 所構成的。關於 Beacon 可以參考[前篇文章](https://medium.com/technology-coding/bfbf1b97b0b4)的最後一節。
+之前辦理 COSCUP 時有好幾屆攤位廠商或社群都會在當天舉辦一些活動，贈送贈品來吸引參與者的目光。這次 LINE Developer Day 也有類似的作法。不過更進一步的是這個遊戲是由 Beacon 所構成的。關於 Beacon 可以參考[前篇文章](/posts/2016-10-04_line-developer-day-%E8%A6%8B%E8%81%9E-%E7%81%AB%E7%B4%85%E7%9A%84-bot-api/)的最後一節。
 
 在 Beacon 的演講結束後，講者告知今天有一個獨家限量的 LINE 貼圖，只要開啟 LINE Beacon 功能，並且在三個場地：LINE 包場的咖啡館與兩個演講廳特定地點「經過」後，蒐集到這三個場地感應的 beacon 就可以兌換獨家的 LINE 貼圖。
 
@@ -121,4 +121,4 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 
 回過頭來看其實也可以感覺到 LINE 準備這次 Developer Day 用心的地方，有許多小細節都準備的相當不錯，資訊包山包海的 LINE 頻道、口譯機方面準備了英文跟日文頻道，在這個大部分都是日文演講的場合這個還蠻實用的。利用咖啡館作為休息區，還有配合新推出的功能 Beacon 做的獨佔貼圖等，都讓人感到舉辦這場活動的用心，也值得學習，或許在下次舉辦研討會時可以參考他們的做法。
 
-另外，如果你對當天發表的 BOT API 有興趣的也可以參考另外一篇文章：[LINE Developer Day 見聞  —  火紅的 BOT API](https://medium.com/technology-coding/bfbf1b97b0b4)
+另外，如果你對當天發表的 BOT API 有興趣的也可以參考另外一篇文章：[LINE Developer Day 見聞  —  火紅的 BOT API](/posts/2016-10-04_line-developer-day-%E8%A6%8B%E8%81%9E-%E7%81%AB%E7%B4%85%E7%9A%84-bot-api/)

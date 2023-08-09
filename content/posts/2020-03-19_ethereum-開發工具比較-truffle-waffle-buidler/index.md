@@ -18,7 +18,7 @@ images:
 
 擷取自 [Buidler](https://buidler.dev/) 首頁
 
-這是延續上篇文章《[Solidity 的新開發工具集：Buidler, Waffle, ethers](https://medium.com/@yurenju/ethersjs-waffle-buidler-6e67df037800)》，實際把 Truffle, Waffle 與 Buidler 都設定了一下比較之間的差異。我們的開發環境是 TypeScript，所以設定上也會以支援 TypeScript 為主，同時也看看不同工具有支援那些有利於開發的功能比如說可不可以設定 coverage 等。
+這是延續上篇文章《[Solidity 的新開發工具集：Buidler, Waffle, ethers](/posts/2019-12-26_solidity-%E7%9A%84%E6%96%B0%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E9%9B%86buidler-waffle-ethers/)》，實際把 Truffle, Waffle 與 Buidler 都設定了一下比較之間的差異。我們的開發環境是 TypeScript，所以設定上也會以支援 TypeScript 為主，同時也看看不同工具有支援那些有利於開發的功能比如說可不可以設定 coverage 等。
 
 本篇文章使用了 Truffle, Waffle 跟 Buidler 都引用 openzelpilin 建立了一個 ERC20 與加入基本的測試。
 
