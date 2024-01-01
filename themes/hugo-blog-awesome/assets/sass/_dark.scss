@@ -14,17 +14,25 @@
     color: $dark-white;
   }
 
+  h3 {
+    color: $blue;
+  }
+
+  h4 {
+    color: $yellow
+  }
+
   // Table
   table {
     thead {
       color: $dark-white;
-      border-color: $dark-light;
+      border-color: $dark-smoke;
     }
 
     th,
     td,
     tr {
-      border-color: $dark-light;
+      border-color: $dark-smoke;
     }
   }
 

@@ -141,19 +141,21 @@
   }
 
   h1 {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1.7);
   }
 
   h2 {
-    @include relative-font-size(1.375);
+    @include relative-font-size(1.7);
   }
 
   h3 {
-    @include relative-font-size(1.25);
+    @include relative-font-size(1.375);
+    color: $blue;
   }
 
   h4 {
-    @include relative-font-size(1.25);
+    @include relative-font-size(1.1);
+    color: $yellow
   }
 
   h5 {
