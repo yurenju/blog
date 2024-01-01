@@ -35,9 +35,9 @@ W3C 去中心化身分識別（Decentralized Identifiers, DIDs）是一個**去�
 
 ![VC 與 DID 使用遊戲購買的範例](./did-game-example.png)
 
-這個情境底下 Stream 作為平台方會擁有一個 DID 身分識別，而 Alice 也會有一個作為個人的 DID 身分識別。這個 DID 身分識別裡面紀錄了要怎麼驗證 Alice 的數位身分，比如說裡面會紀錄了 Alice 是用哪加密演算法，把公鑰資訊放在哪裡等等，這是 DID 標準的功能。
+這個情境底下 Stream 作為平台方會擁有一個 DID 身分識別，而 Alice 也會有一個作為個人的 DID 身分識別。Stream 在 Alice 購買遊戲之前，會先從 Alice 的 DID 識別裡面找出如何驗證的資訊，並且驗證這個 Alice DID 識別，DID 標準就是制定這些要如何驗證的資訊。
 
-至於 Stream 會發給 Alice 一個遊戲購買證明，裡面由 Stream 的 DID 作為發行者（Issuer）證明 Alice 在 Stream 上面購買了遊戲《最先幻想》，這樣針對一個聲明背書所產生的憑證，就是 VC 標準的功能。
+當 Alice 通過 DID 驗證並且購買遊戲後，Stream 會發給 Alice 一個採用 VC 標準格式的遊戲購買證明，裡面由 Stream 的 DID 作為發行者（Issuer）證明 Alice 在 Stream 上面購買了遊戲《最先幻想》，這樣針對一個聲明背書所產生的憑證。往後收到這個憑證的系統可以根據裡面的資訊驗證 VC 裡面記載的資訊是否正確無誤，這就是 VC 標準所提供的功能。
 
 一個 DID 識別長得像這樣：
 
