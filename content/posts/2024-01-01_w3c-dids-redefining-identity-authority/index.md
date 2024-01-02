@@ -188,3 +188,11 @@ DIDs 是一個剛成形不久的標準協議，其實還是有很多不足的地
 當然我們對於未來的想像也可不止於此，我們可以再推進一步來看：如果還想要更好的隱私，現在有什麼解決方案可以達成？舉例來說，如果我們驗證使用者是否曾經在 Stream 購買過《最先幻想》時，是不是連自己的 DID 識別都不用揭露，也可以驗證使用者確實購買過該遊戲呢？
 
 下一篇文章將會講解 [Semaphore](https://semaphore.appliedzkp.org/) 這個零知識證明的框架如何達成更進一步的隱私應用，我們下回分曉！
+
+## 補充資訊
+### did:web 無痕更換鑰匙的問題
+Luoh Ren-Shan 在 [Facebook 的評論](https://www.facebook.com/yurenju/posts/pfbid0916c4YdTULXymUW68pE32nuNTYVHAXcpkV4NZEuM7ZodGBHz1NEKpaBgrmLLG6VEl?comment_id=881600443684722) 提到如果發行方 Stream 採用 `did:web` 作為 DID 時，發行方是可以無痕的更改自己的鑰匙資訊，來讓 Alice 手上的憑證失效。
+
+這確實是一個問題，但是這樣更新鑰匙資訊時，Stream 其他用原本鑰匙簽發的憑證也會一併失效，並不能只限制在 Alice 的憑證，這就會產生對於 Stream 發行方的信任危機，身為使用 `did:web` 的發行方就會需要在好壞權衡裡面考量是否要這麼做。當然如果出大包的時候發行方可能還是會出這招來激進的處理棘手問題，但相較於傳統的方法可以輕易的操縱結果，使用 `did:web` 還是會更值得信任一些，但並不完美。
+
+回過頭來如果使用的是 `did:ethr` 時，當 DID 擁有者更新鑰匙資訊的時候會留下歷史紀錄，並且可以透過 [參數查詢](https://github.com/decentralized-identity/ethr-did-resolver/blob/master/doc/did-method-spec.md#versionid-query-string-parameter) 之前版本的 DID 文件，相較於 `did:web` 又會更值得信賴一些。
