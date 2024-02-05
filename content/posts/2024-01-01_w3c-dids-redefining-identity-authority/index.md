@@ -71,6 +71,8 @@ DID 識別由三個欄位組成並且以冒號分隔欄位。第一個欄位固�
 
 另外一個缺點是 `did:key` 目前的格式並不支援 [WebAuthn](https://webauthn.io/) 的格式，所以沒辦法在網頁上直接用生物識別裝置來管理 `did:key`，必須要包裝成 mobile app。
 
+**2024-02-05 更新**：最近看到 [ceramicnetwork/js-did/key-webauthn](https://github.com/ceramicnetwork/js-did/tree/main/packages/key-webauthn) 看起來有可能用 WebAuthn 來產生與驗證 `did:key`。
+
 ### did:web
 `did:web` 是使用者透過上傳一個 JSON 到特定網址來提供 DID 互動資訊的方式，舉例來說 DID 識別 `did:web:mattr.global` 實際上會從網址 https://mattr.global/.well-known/did.json 獲得 DID 識別資訊。這個 DID 的擁有者可以藉由改變這個放在網站上面的 JSON 檔案來調整他對身分驗證的需求，比如說他可以在多個裝置都擁有不同的密碼學鑰匙，讓他可以在手機、電腦、平板電腦上面都可以登入，或是他想要定期的汰換更新鑰匙來保持安全性也都可以做到。
 
