@@ -18,7 +18,7 @@ tags:
 
 感謝 Ethereum Foundation 的 Phini 的邀請，我在 2023 下半年接受了基金會的 Grant Program，參與一個多方合作計畫並且開發一套整合台灣行動自然人憑證、W3C DIDs/VC 與 Semaphore 零知識證明框架的實驗性專案 [tw-did](https://github.com/moda-gov-tw/tw-did)，改善集中式數位身分解決方案目前在自主權與隱私權的問題。
 
-此專案目前已經轉移給數位發展部，這個專案的合作結構有點複雜，我會在後續的短文補充細節。
+此專案目前已經轉移給數位發展部，這個專案的合作結構有點複雜，我會在後續的[短文](https://yurenju.blog/posts/2024-02-08_tw-did-additional-info/)補充細節。
 
 首先先介紹一下之前都還沒提到的**行動自然人憑證**。
 ## 行動自然人憑證
