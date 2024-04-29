@@ -250,3 +250,18 @@ h5.reader-feedback-title {
 .reader-feedback-content {
   font-size: $tiny-font-size;
 }
+
+
+.footnotes::before {
+  content: "注釋";
+  font-weight: $bold-weight;
+}
+
+.footnotes {
+  margin-top: 2em;
+  font-size: $tiny-font-size;
+}
+
+.footnotes hr {
+  display: none;
+}
