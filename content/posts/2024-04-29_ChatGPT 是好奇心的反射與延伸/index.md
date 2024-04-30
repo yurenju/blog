@@ -5,7 +5,6 @@ date: 2024-04-29
 image: cover_chatgpt-curiosity-reflection.jpg
 description: 表面上來看使用 ChatGPT 是想要尋求解答，但背後的力量泉源是好奇心與提問。
 categories:
-  - life
   - tech
 tags:
   - ChatGPT
