@@ -72,7 +72,7 @@ export async function getPostData(filePath: string) {
     slug,
     title: matterResult.data.title || "無標題",
     date,
-    contentHtml: matterResult.content,
+    content: matterResult.content,
   };
 }
 
