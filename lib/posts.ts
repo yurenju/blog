@@ -83,7 +83,9 @@ export function decodeSlug(slug: string) {
 }
 
 export function encodeSlug(slug: string) {
+  const updatedSlug = slug.replaceAll(" ", "").toLowerCase();
+
   return process.env.NODE_ENV === "development"
-    ? encodeURIComponent(slug)
-    : slug;
+    ? encodeURIComponent(updatedSlug)
+    : updatedSlug;
 }
