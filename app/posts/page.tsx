@@ -6,6 +6,9 @@ export default async function PostsPage() {
     Object.values(allPostMetadata).map((post) => getPostData(post.filePath))
   );
 
+  // Sort posts by date in descending order
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">All Posts</h1>
