@@ -1,4 +1,7 @@
 {
   "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
   "explorer.sortOrder": "modified"
 }

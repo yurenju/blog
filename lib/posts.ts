@@ -44,7 +44,7 @@ async function getAllPostMetadata(): Promise<Record<string, PostMetadata>> {
       const fileContents = await fs.promises.readFile(fullPath, "utf8");
       const matterResult = matter(fileContents);
 
-      const slug = matterResult.data.slug || directory.name;
+      const slug = encodeSlug(matterResult.data.slug || directory.name);
 
       posts[slug] = {
         slug,
@@ -60,9 +60,9 @@ export async function getPostData(filePath: string) {
   const fileContents = await fs.promises.readFile(filePath, "utf8");
   const matterResult = matter(fileContents);
 
-  const slug =
-    matterResult.data.slug ||
-    encodeURIComponent(path.basename(path.dirname(filePath)));
+  const slug = encodeSlug(
+    matterResult.data.slug || path.basename(path.dirname(filePath))
+  );
 
   const date = matterResult.data.date
     ? new Date(matterResult.data.date).toISOString()
@@ -74,4 +74,16 @@ export async function getPostData(filePath: string) {
     date,
     contentHtml: matterResult.content,
   };
+}
+
+export function decodeSlug(slug: string) {
+  return process.env.NODE_ENV === "development"
+    ? slug
+    : decodeURIComponent(slug);
+}
+
+export function encodeSlug(slug: string) {
+  return process.env.NODE_ENV === "development"
+    ? encodeURIComponent(slug)
+    : slug;
 }

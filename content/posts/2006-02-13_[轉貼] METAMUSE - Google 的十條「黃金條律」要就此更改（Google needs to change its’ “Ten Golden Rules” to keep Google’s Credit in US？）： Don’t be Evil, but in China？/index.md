@@ -3,6 +3,7 @@ title: >-
   [轉貼] METAMUSE - Google 的十條「黃金條律」要就此更改（Google needs to change its’ “Ten Golden
   Rules” to keep Google’s Credit in US?）： Don’t be Evil, but in China?
 date: '2006-02-13'
+slug: 2006-02-13_google-ten-golden-rules
 tags:
   - other
 categories:

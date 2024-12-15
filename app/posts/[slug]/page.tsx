@@ -1,4 +1,8 @@
-import { getPostData, getSingletonPostMetadata } from "../../../lib/posts";
+import {
+  decodeSlug,
+  getPostData,
+  getSingletonPostMetadata,
+} from "../../../lib/posts";
 export default async function PostPage({
   params,
 }: {
@@ -6,8 +10,8 @@ export default async function PostPage({
 }) {
   const { slug } = await params;
   const allPostMetadata = await getSingletonPostMetadata();
-  const decodeSlug = decodeURIComponent(slug);
-  const postData = await getPostData(allPostMetadata[decodeSlug].filePath);
+  const decodedSlug = decodeSlug(slug);
+  const postData = await getPostData(allPostMetadata[decodedSlug].filePath);
 
   return (
     <div className="container mx-auto p-4">

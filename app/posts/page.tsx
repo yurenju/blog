@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getSingletonPostMetadata, getPostData } from "../../lib/posts";
 
 export default async function PostsPage() {
@@ -15,12 +16,12 @@ export default async function PostsPage() {
       <ul>
         {posts.map((post) => (
           <li key={post.slug} className="mb-2">
-            <a
+            <Link
               href={`/posts/${post.slug}`}
               className="text-blue-500 hover:underline"
             >
               {post.title}
-            </a>
+            </Link>
             <span className="text-gray-500 ml-2">{post.date}</span>
           </li>
         ))}
