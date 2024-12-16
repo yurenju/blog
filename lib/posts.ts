@@ -64,15 +64,28 @@ export async function getPostData(filePath: string) {
     matterResult.data.slug || path.basename(path.dirname(filePath))
   );
 
-  const date = matterResult.data.date
+  let date = matterResult.data.date
     ? new Date(matterResult.data.date).toISOString()
     : "未知日期";
 
+  if (date === "未知日期") {
+    const slugParts = slug.split("_");
+    const potentialDate = slugParts[0];
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+    if (dateRegex.test(potentialDate)) {
+      date = new Date(potentialDate).toISOString();
+    }
+  }
+
   const categories = matterResult.data.categories || [];
+
+  const title =
+    matterResult.data.title || path.basename(filePath, path.extname(filePath));
 
   return {
     slug,
-    title: matterResult.data.title || "無標題",
+    title,
     date,
     content: matterResult.content,
     categories,
