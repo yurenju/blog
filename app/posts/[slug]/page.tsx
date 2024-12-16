@@ -5,7 +5,7 @@ import {
 } from "../../../lib/posts";
 import { remark } from "remark";
 import html from "remark-html";
-import { remarkImagePath } from "../../../lib/image";
+import { remarkImagePath } from "@/lib/image";
 import path from "path";
 
 export default async function PostPage({

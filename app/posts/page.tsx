@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getSingletonPostMetadata, getPostData } from "../../lib/posts";
+import { getSingletonPostMetadata, getPostData } from "@/lib/posts";
 
 export default async function PostsPage() {
   const allPostMetadata = await getSingletonPostMetadata();

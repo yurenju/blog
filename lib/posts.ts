@@ -68,11 +68,14 @@ export async function getPostData(filePath: string) {
     ? new Date(matterResult.data.date).toISOString()
     : "未知日期";
 
+  const categories = matterResult.data.categories || [];
+
   return {
     slug,
     title: matterResult.data.title || "無標題",
     date,
     content: matterResult.content,
+    categories,
   };
 }
 
@@ -89,3 +92,12 @@ export function encodeSlug(slug: string) {
     ? encodeURIComponent(updatedSlug)
     : updatedSlug;
 }
+
+export const fetchCategoryPosts = async (category: string) => {
+  const allPostMetadata = await getSingletonPostMetadata();
+  const posts = await Promise.all(
+    Object.values(allPostMetadata).map((post) => getPostData(post.filePath))
+  );
+
+  return posts.filter((post) => post.categories.includes(category));
+};
