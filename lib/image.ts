@@ -46,12 +46,17 @@ function findImagePath(baseDir: string, imageName: string): string | null {
 export function remarkImagePath(baseDir: string) {
   return () => (tree: Node) => {
     visit(tree, "image", (node: Image) => {
-      if (!node.url.startsWith("http") && !node.url.startsWith("https")) {
-        const absolutePath = path.join(baseDir, node.url);
-        const publicIndex = absolutePath.lastIndexOf("public");
-        if (publicIndex !== -1) {
-          node.url = absolutePath.substring(publicIndex + "public".length);
-        }
+      if (
+        node.url.startsWith("/") ||
+        node.url.startsWith("http") ||
+        node.url.startsWith("https")
+      ) {
+        return;
+      }
+      const absolutePath = path.join(baseDir, node.url);
+      const publicIndex = absolutePath.lastIndexOf("public");
+      if (publicIndex !== -1) {
+        node.url = absolutePath.substring(publicIndex + "public".length);
       }
     });
   };
