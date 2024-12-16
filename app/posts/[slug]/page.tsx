@@ -5,7 +5,7 @@ import {
 } from "../../../lib/posts";
 import { remark } from "remark";
 import html from "remark-html";
-import { remarkImagePath } from "@/lib/image";
+import { remarkImagePath, remarkCustomImageSyntax } from "@/lib/image";
 import path from "path";
 
 export default async function PostPage({
@@ -23,8 +23,9 @@ export default async function PostPage({
 
   // Process markdown content to HTML with image path correction
   const processedContent = await remark()
-    .use(html)
+    .use(remarkCustomImageSyntax(markdownDir))
     .use(remarkImagePath(markdownDir))
+    .use(html)
     .process(postData.content);
   const contentHtml = processedContent.toString();
 
