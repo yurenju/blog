@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { processMarkdownContent } from "./markdown";
 
 const postsDirectory = path.join(process.cwd(), "public/posts");
 
@@ -83,11 +84,13 @@ export async function getPostData(filePath: string) {
   const title =
     matterResult.data.title || path.basename(filePath, path.extname(filePath));
 
+  const content = await processMarkdownContent(filePath, matterResult.content);
+
   return {
     slug,
     title,
     date,
-    content: matterResult.content,
+    content,
     categories,
     filePath,
   };

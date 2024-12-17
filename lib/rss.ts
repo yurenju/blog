@@ -26,7 +26,7 @@ export const generateRSSFeed = async () => {
       title: post.title,
       id: `${siteConfig.id}/posts/${encodeURIComponent(post.slug)}`,
       link: `${siteConfig.link}/posts/${encodeURIComponent(post.slug)}`,
-      description: post.content.substring(0, 200),
+      description: post.content,
       date: new Date(post.date),
     });
   });

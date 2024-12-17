@@ -1,4 +1,3 @@
-import { processMarkdownContent } from "@/lib/markdown";
 import { decodeSlug, getPostData, getSingletonPostMetadata } from "@/lib/posts";
 
 export default async function PostPage({
@@ -11,18 +10,12 @@ export default async function PostPage({
   const decodedSlug = decodeSlug(slug);
   const postData = await getPostData(allPostMetadata[decodedSlug].filePath);
 
-  // Use the new function to process markdown content
-  const contentHtml = await processMarkdownContent(
-    allPostMetadata[decodedSlug].filePath,
-    postData.content
-  );
-
   return (
     <>
       <div className="container mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">{postData.title}</h1>
         <p className="text-gray-500">{postData.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: postData.content }} />
       </div>
     </>
   );

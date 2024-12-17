@@ -7,8 +7,7 @@ import html from "remark-html";
 
 export const processMarkdownContent = async (
   filePath: string,
-  content: string,
-  outputFormat: "text" | "html" = "html"
+  content: string
 ): Promise<string> => {
   const markdownDir = path.dirname(filePath);
 
@@ -18,11 +17,5 @@ export const processMarkdownContent = async (
     .use(html)
     .process(content);
 
-  const result = processedContent.toString();
-
-  if (outputFormat === "text") {
-    return result.replace(/<[^>]+>/g, "");
-  }
-
-  return result;
+  return processedContent.toString();
 };
