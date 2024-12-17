@@ -4,17 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "ts-node scripts/generate-rss.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

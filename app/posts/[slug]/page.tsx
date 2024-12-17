@@ -1,12 +1,5 @@
-import {
-  decodeSlug,
-  getPostData,
-  getSingletonPostMetadata,
-} from "../../../lib/posts";
-import { remark } from "remark";
-import html from "remark-html";
-import { remarkImagePath, remarkCustomImageSyntax } from "@/lib/image";
-import path from "path";
+import { processMarkdownContent } from "@/lib/markdown";
+import { decodeSlug, getPostData, getSingletonPostMetadata } from "@/lib/posts";
 
 export default async function PostPage({
   params,
@@ -18,16 +11,11 @@ export default async function PostPage({
   const decodedSlug = decodeSlug(slug);
   const postData = await getPostData(allPostMetadata[decodedSlug].filePath);
 
-  // Extract the directory of the markdown file
-  const markdownDir = path.dirname(allPostMetadata[decodedSlug].filePath);
-
-  // Process markdown content to HTML with image path correction
-  const processedContent = await remark()
-    .use(remarkCustomImageSyntax(markdownDir))
-    .use(remarkImagePath(markdownDir))
-    .use(html)
-    .process(postData.content);
-  const contentHtml = processedContent.toString();
+  // Use the new function to process markdown content
+  const contentHtml = await processMarkdownContent(
+    allPostMetadata[decodedSlug].filePath,
+    postData.content
+  );
 
   return (
     <>

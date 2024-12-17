@@ -89,6 +89,7 @@ export async function getPostData(filePath: string) {
     date,
     content: matterResult.content,
     categories,
+    filePath,
   };
 }
 
