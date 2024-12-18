@@ -8,10 +8,6 @@
     font-family: var(--font-noto-sans-tc), sans-serif;
   }
 
-  .article {
-    @apply font-light leading-8 tracking-wide;
-  }
-
   .article strong {
     @apply font-bold;
   }
