@@ -7,7 +7,7 @@ export const siteConfig = {
   id: baseUrl,
   link: baseUrl,
   language: "zh-tw",
-  image: `${baseUrl}/logo.png`,
+  image: `${baseUrl}/logo.jpg`,
   favicon: `${baseUrl}/favicon.ico`,
   copyright: "All rights reserved 2023, Yuren",
 };
