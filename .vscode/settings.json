@@ -3,5 +3,10 @@
   "[markdown]": {
     "editor.formatOnSave": false
   },
-  "explorer.sortOrder": "modified"
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }

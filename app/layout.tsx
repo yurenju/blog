@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_TC } from "next/font/google";
+import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSansTC = Noto_Sans_TC({
+  variable: "--font-noto-sans-tc",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const sourceHanSerifTC = localFont({
+  src: "../public/fonts/SourceHanSerifTC-Bold.otf",
+  variable: "--font-source-han-serif-tc",
 });
 
 export const metadata: Metadata = {
@@ -27,11 +28,13 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="zh-Hant-TW">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${notoSansTC.variable} ${sourceHanSerifTC.variable} antialiased text-base sm:text-lg leading-relaxed`}
       >
         <ThemeProvider attribute="class">
-          <Navbar />
-          {children}
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <Navbar />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
