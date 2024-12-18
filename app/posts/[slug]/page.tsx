@@ -13,7 +13,7 @@ export default async function PostPage({
   return (
     <>
       <div className="container mx-auto p-4">
-        <h1 className="article-title text-3xl font-bold mb-4">
+        <h1 className="article-title text-3xl font-semibold mb-4">
           {postData.title}
         </h1>
         <p className="text-gray-500">{postData.date}</p>
