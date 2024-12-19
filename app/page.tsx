@@ -1,30 +1,44 @@
 import Link from "next/link";
+import Image from "next/image";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function Home() {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Hello World</h1>
-      <div className="mb-4">
-        <Link href="/posts" className="text-blue-500 hover:underline">
-          Posts
-        </Link>
-      </div>
+    <div className="container mx-auto p-4 text-xl tracking-wide">
+      <section className="flex flex-col items-center gap-4 mt-20 mb-4 max-w-sm mx-auto">
+        <Image
+          src={siteConfig.image}
+          alt={siteConfig.title}
+          width={100}
+          height={100}
+          className="rounded-full"
+          priority
+        />
+        <h1 className="mt-4 text-4xl font-bold homepage-title">
+          {siteConfig.title}
+        </h1>
+        <p className="text-gray-700 dark:text-gray-400 mb-4 homepage-description leading-9 font-medium">
+          {siteConfig.description}
+        </p>
+      </section>
+
       <div>
-        <h2 className="text-xl font-semibold mb-2">Categories</h2>
-        <ul>
+        <ul className="flex items-center justify-center gap-2 text-md">
           <li>
-            <Link href="/shorts" className="text-blue-500 hover:underline">
-              Shorts
+            <Link href="/shorts" className="function-link">
+              照片
             </Link>
           </li>
+          <span className="dark:text-gray-300 text-gray-500">•</span>
           <li>
-            <Link href="/tech" className="text-blue-500 hover:underline">
-              Tech
+            <Link href="/life" className="function-link">
+              生活
             </Link>
           </li>
+          <span className="dark:text-gray-300 text-gray-500">•</span>
           <li>
-            <Link href="/life" className="text-blue-500 hover:underline">
-              Life
+            <Link href="/tech" className="function-link">
+              技術
             </Link>
           </li>
         </ul>

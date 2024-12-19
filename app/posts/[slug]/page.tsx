@@ -18,7 +18,7 @@ export default async function PostPage({
         </h1>
         <p className="text-gray-500">{postData.date}</p>
         <div
-          className="article font-light leading-9 md:tracking-wide md:leading-8"
+          className="article font-light"
           dangerouslySetInnerHTML={{ __html: postData.content }}
         />
       </div>

@@ -4,8 +4,20 @@
 
 @layer base {
   body {
-    @apply font-sans;
+    @apply font-sans leading-9 md:tracking-wide md:leading-8;
     font-family: var(--font-noto-sans-tc), sans-serif;
+  }
+
+  .function-link {
+    @apply text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors;
+  }
+
+  h1.homepage-title {
+    font-family: var(--font-noto-serif-tc);
+  }
+
+  p.homepage-description {
+    font-family: var(--font-noto-serif-tc);
   }
 
   .article strong {
