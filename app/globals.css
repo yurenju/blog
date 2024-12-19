@@ -23,6 +23,35 @@
   .article-title {
     font-family: var(--font-noto-serif-tc);
   }
+
+  .article blockquote {
+    @apply border-l-4 border-gray-400 pt-3 pb-3 pl-6 ml-1 mr-6 mb-6 text-gray-500 dark:text-gray-400 font-bold;
+    font-family: var(--font-noto-serif-tc);
+  }
+
+  .article h2 {
+    @apply text-2xl font-semibold mb-4 mt-10;
+  }
+
+  .article h3 {
+    @apply text-xl font-semibold mb-4 mt-8;
+  }
+
+  .article h4 {
+    @apply text-lg font-semibold mb-1 mt-6;
+  }
+
+  .article ul {
+    @apply list-disc list-inside mb-6 ml-4;
+  }
+
+  .article ol {
+    @apply list-decimal list-inside mb-6 ml-4;
+  }
+
+  .article a {
+    @apply dark:text-blue-400 text-blue-500  hover:underline font-medium;
+  }
 }
 
 :root {

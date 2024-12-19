@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="zh-Hant-TW">
       <body
-        className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base sm:text-lg leading-relaxed`}
+        className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base sm:text-lg leading-relaxed  dark:text-slate-200 dark:bg-gray-900 bg-stone-200`}
       >
         <ThemeProvider attribute="class">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
