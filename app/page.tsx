@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/siteConfig";
 
 export default function Home() {
   return (
-    <div className="container mx-auto p-4 text-xl tracking-wide">
+    <div className="container mx-auto text-xl tracking-wide">
       <section className="flex flex-col items-center gap-4 mt-20 mb-4 max-w-sm mx-auto">
         <Image
           src={siteConfig.image}

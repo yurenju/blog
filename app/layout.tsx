@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  width: "width=device-width, initial-scale=1.0"
-}
+  width: "width=device-width, initial-scale=1.0",
+};
 
 export default function RootLayout({
   children,
@@ -35,7 +35,7 @@ export default function RootLayout({
         className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base dark:text-slate-200 dark:bg-gray-900 bg-stone-200 leading-relaxed tracking-wide md:tracking-wide md:leading-8 `}
       >
         <ThemeProvider attribute="class">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
             <Navbar />
             {children}
           </div>

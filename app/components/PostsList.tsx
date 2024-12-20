@@ -47,16 +47,16 @@ const PostsList = ({
       {years.map((year) => (
         <div key={year} className="mb-8">
           <h2 className="text-xl font-semibold mb-4">{year} 年</h2>
-          <ul>
+          <ul className="text-lg">
             {groupedPosts[year].map((post) => (
               <li key={post.slug}>
                 <Link
                   href={`/posts/${post.slug}`}
-                  className="flex items-center gap-4 hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
+                  className="flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-800 p-1 pl-3 rounded-lg transition-colors"
                   tabIndex={0}
                   aria-label={`閱讀文章: ${post.title}`}
                 >
-                  <span className="text-gray-500 text-sm min-w-[100px]">
+                  <span className="text-gray-500 text-sm min-w-[80px]">
                     {new Date(post.date).toLocaleDateString("zh-TW", {
                       month: "long",
                       day: "numeric",
