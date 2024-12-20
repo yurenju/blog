@@ -10,5 +10,5 @@ export const siteConfig = {
   image: `${baseUrl}/logo.jpg`,
   favicon: `${baseUrl}/favicon.ico`,
   copyright: "All rights reserved 2023, Yuren",
-  author: "Yuren",
+  author: { name: "Yuren" },
 };

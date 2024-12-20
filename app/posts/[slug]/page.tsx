@@ -30,7 +30,7 @@ export default async function PostPage({
         <p
           className={`text-gray-400 dark:text-gray-500 text-right mt-4 ${notoSerifTC.className}`}
         >
-          {siteConfig.author} 撰於{" "}
+          {siteConfig.author.name} 撰於{" "}
           {formatDate(postData.date, { withYear: true })}
         </p>
       </div>
