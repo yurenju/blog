@@ -1,9 +1,13 @@
 import { fetchCategoryPosts } from "@/lib/posts";
-import { CategoryPageComponent } from "../components/CategoryPageComponent";
+import PostsList from "../components/PostsList";
 
 const TechPage = async () => {
   const posts = await fetchCategoryPosts("tech");
-  return <CategoryPageComponent category="Tech" posts={posts} />;
+  return (
+    <div className="container mx-auto p-4">
+      <PostsList posts={posts} title="科技" />
+    </div>
+  );
 };
 
 export default TechPage;
