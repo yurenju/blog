@@ -2,14 +2,30 @@ import fs from "fs";
 import path from "path";
 import { generateRSSFeed } from "../lib/rss";
 
+const CATEGORIES = ["all", "shorts", "life", "tech"] as const;
+
 const generateRSSFile = async () => {
   try {
-    const rssContent = await generateRSSFeed();
-    const outputPath = path.join(process.cwd(), "public", "rss.xml");
-    fs.writeFileSync(outputPath, rssContent);
-    console.log("RSS feed generated successfully at:", outputPath);
+    const rssDir = path.join(process.cwd(), "public", "rss");
+    if (!fs.existsSync(rssDir)) {
+      fs.mkdirSync(rssDir, { recursive: true });
+    }
+
+    for (const category of CATEGORIES) {
+      const rssContent = await generateRSSFeed(category);
+      const outputPath =
+        category === "all"
+          ? path.join(process.cwd(), "public", "rss.xml")
+          : path.join(process.cwd(), "public", "rss", `${category}.xml`);
+
+      fs.writeFileSync(outputPath, rssContent);
+      console.log(
+        `RSS feed for ${category} generated successfully at:`,
+        outputPath
+      );
+    }
   } catch (error) {
-    console.error("Error generating RSS feed:", error);
+    console.error("Error generating RSS feeds:", error);
   }
 };
 

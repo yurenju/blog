@@ -12,7 +12,15 @@ const Navbar = () => {
             首頁
           </Link>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-1">
+          <Link href="/about" className="function-link">
+            關於
+          </Link>
+          <span className="dark:text-gray-500 text-gray-500">•</span>
+          <Link href="/subscription" className="function-link">
+            訂閱
+          </Link>
+          <span className="dark:text-gray-500 text-gray-500">•</span>
           <Link href="/posts" className="function-link">
             全部文章
           </Link>

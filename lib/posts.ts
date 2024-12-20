@@ -57,7 +57,18 @@ async function getAllPostMetadata(): Promise<Record<string, PostMetadata>> {
   return posts;
 }
 
-export async function getPostData(filePath: string) {
+export type PostData = {
+  slug: string;
+  title: string;
+  date: string;
+  content: string;
+  categories: Category[];
+  filePath: string;
+};
+
+export type Category = "shorts" | "life" | "tech";
+
+export async function getPostData(filePath: string): Promise<PostData> {
   const fileContents = await fs.promises.readFile(filePath, "utf8");
   const matterResult = matter(fileContents);
 
@@ -110,7 +121,7 @@ export function encodeSlug(slug: string) {
     : updatedSlug;
 }
 
-export const fetchCategoryPosts = async (category: string) => {
+export const fetchCategoryPosts = async (category: Category) => {
   const allPostMetadata = await getSingletonPostMetadata();
   const posts = await Promise.all(
     Object.values(allPostMetadata).map((post) => getPostData(post.filePath))
