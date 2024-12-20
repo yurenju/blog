@@ -4,7 +4,6 @@
 
 @layer base {
   body {
-    @apply font-sans leading-9 md:tracking-wide md:leading-8;
     font-family: var(--font-noto-sans-tc), sans-serif;
   }
 

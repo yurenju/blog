@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_TC, Noto_Serif_TC } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
+export const viewport: Viewport = {
+  width: "width=device-width, initial-scale=1.0"
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +32,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="zh-Hant-TW">
       <body
-        className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base leading-relaxed  dark:text-slate-200 dark:bg-gray-900 bg-stone-200`}
+        className={`${notoSansTC.variable} ${notoSerifTC.variable} antialiased text-base dark:text-slate-200 dark:bg-gray-900 bg-stone-200 leading-relaxed tracking-wide md:tracking-wide md:leading-8 `}
       >
         <ThemeProvider attribute="class">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
