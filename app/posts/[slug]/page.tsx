@@ -24,13 +24,13 @@ export default async function PostPage({
           {postData.title}
         </h1>
         <div
-          className="article font-light text-lg leading-10"
+          className="article font-light text-lg leading-10 md:leading-relaxed"
           dangerouslySetInnerHTML={{ __html: postData.content }}
         />
         <p
           className={`text-gray-400 dark:text-gray-500 text-right mt-4 ${notoSerifTC.className}`}
         >
-          {siteConfig.author.name} 撰於{" "}
+          ⸺ {siteConfig.author.name} 撰於{" "}
           {formatDate(postData.date, { withYear: true })}
         </p>
       </div>
