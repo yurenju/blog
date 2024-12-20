@@ -60,10 +60,16 @@ export async function generateMetadata({
     openGraph: {
       title: `${postData.title}`,
       description: postData.description,
+      ...(postData.coverImage && {
+        images: [{ url: postData.coverImage }],
+      }),
     },
     twitter: {
       title: `${postData.title}`,
       description: postData.description,
+      ...(postData.coverImage && {
+        images: [{ url: postData.coverImage }],
+      }),
     },
   };
 }

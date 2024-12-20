@@ -6,7 +6,8 @@ import html from "remark-html";
 import { Plugin } from "unified";
 import { Node, Parent } from "unist";
 import { visit } from "unist-util-visit";
-import { Text } from "mdast";
+import { Text, Image } from "mdast";
+import { siteConfig } from "./siteConfig";
 
 const remarkExtractText: Plugin = () => {
   return (tree: Node) => {
@@ -71,4 +72,41 @@ export const processMarkdownContent = async (
     .process(content);
 
   return processedContent.toString();
+};
+
+export const extractFirstImage = async (
+  content: string,
+  filePath: string
+): Promise<string | null> => {
+  let firstImageUrl: string | null = null;
+  const markdownDir = path.dirname(filePath);
+
+  const extractImagePlugin: Plugin = () => {
+    return (tree: Node) => {
+      visit(tree, "image", (node: Image) => {
+        if (!firstImageUrl) {
+          if (
+            node.url.startsWith("/") ||
+            node.url.startsWith("http") ||
+            node.url.startsWith("https")
+          ) {
+            firstImageUrl = node.url;
+          } else {
+            const absolutePath = path.join(markdownDir, node.url);
+            const publicIndex = absolutePath.lastIndexOf("public");
+            if (publicIndex !== -1) {
+              const relativePath = absolutePath.substring(
+                publicIndex + "public".length
+              );
+              firstImageUrl = `${siteConfig.link}${relativePath}`;
+            }
+          }
+          return false;
+        }
+      });
+    };
+  };
+
+  await remark().use(extractImagePlugin).process(content);
+  return firstImageUrl;
 };

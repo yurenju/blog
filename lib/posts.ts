@@ -1,7 +1,11 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { processMarkdownContent, stripMarkdownToText } from "./markdown";
+import {
+  processMarkdownContent,
+  stripMarkdownToText,
+  extractFirstImage,
+} from "./markdown";
 
 const postsDirectory = path.join(process.cwd(), "public/posts");
 
@@ -65,6 +69,7 @@ export type PostData = {
   categories: Category[];
   filePath: string;
   description: string;
+  coverImage: string | null;
 };
 
 export type Category = "shorts" | "life" | "tech";
@@ -98,6 +103,7 @@ export async function getPostData(filePath: string): Promise<PostData> {
 
   const content = await processMarkdownContent(filePath, matterResult.content);
   const description = await stripMarkdownToText(matterResult.content, 200);
+  const coverImage = await extractFirstImage(matterResult.content, filePath);
 
   return {
     slug,
@@ -107,6 +113,7 @@ export async function getPostData(filePath: string): Promise<PostData> {
     categories,
     filePath,
     description,
+    coverImage,
   };
 }
 
