@@ -1,6 +1,7 @@
 import { decodeSlug, getPostData, getSingletonPostMetadata } from "@/lib/posts";
 import { siteConfig } from "@/lib/siteConfig";
 import { formatDate } from "@/lib/utils";
+import { Metadata } from "next";
 import { Noto_Serif_TC } from "next/font/google";
 
 const notoSerifTC = Noto_Serif_TC({
@@ -47,13 +48,22 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const allPostMetadata = await getSingletonPostMetadata();
   const decodedSlug = decodeSlug(slug);
   const postData = await getPostData(allPostMetadata[decodedSlug].filePath);
 
   return {
-    title: `${postData.title} - Yuren`,
+    title: `${postData.title}`,
+    description: postData.description,
+    openGraph: {
+      title: `${postData.title}`,
+      description: postData.description,
+    },
+    twitter: {
+      title: `${postData.title}`,
+      description: postData.description,
+    },
   };
 }

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { processMarkdownContent } from "./markdown";
+import { processMarkdownContent, stripMarkdownToText } from "./markdown";
 
 const postsDirectory = path.join(process.cwd(), "public/posts");
 
@@ -64,6 +64,7 @@ export type PostData = {
   content: string;
   categories: Category[];
   filePath: string;
+  description: string;
 };
 
 export type Category = "shorts" | "life" | "tech";
@@ -96,6 +97,7 @@ export async function getPostData(filePath: string): Promise<PostData> {
     matterResult.data.title || path.basename(filePath, path.extname(filePath));
 
   const content = await processMarkdownContent(filePath, matterResult.content);
+  const description = await stripMarkdownToText(matterResult.content, 200);
 
   return {
     slug,
@@ -104,6 +106,7 @@ export async function getPostData(filePath: string): Promise<PostData> {
     content,
     categories,
     filePath,
+    description,
   };
 }
 
