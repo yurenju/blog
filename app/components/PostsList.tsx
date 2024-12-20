@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { formatDate } from "@/lib/utils";
 
 type Post = {
   slug: string;
@@ -52,15 +53,12 @@ const PostsList = ({
               <li key={post.slug}>
                 <Link
                   href={`/posts/${post.slug}`}
-                  className="flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-800 p-1 pl-3 rounded-lg transition-colors"
+                  className="flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-800 p-1 pl-3 mb-2 rounded-lg transition-colors"
                   tabIndex={0}
                   aria-label={`閱讀文章: ${post.title}`}
                 >
-                  <span className="text-gray-500 text-sm min-w-[80px]">
-                    {new Date(post.date).toLocaleDateString("zh-TW", {
-                      month: "long",
-                      day: "numeric",
-                    })}
+                  <span className="text-gray-500 text-sm min-w-[80px] text-center">
+                    {formatDate(post.date, { withYear: false })}
                   </span>
                   <span className="text-blue-600 group-hover:text-blue-700">
                     {post.title}

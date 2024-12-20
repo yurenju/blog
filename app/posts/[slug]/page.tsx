@@ -1,4 +1,11 @@
 import { decodeSlug, getPostData, getSingletonPostMetadata } from "@/lib/posts";
+import { siteConfig } from "@/lib/siteConfig";
+import { formatDate } from "@/lib/utils";
+import { Noto_Serif_TC } from "next/font/google";
+
+const notoSerifTC = Noto_Serif_TC({
+  subsets: ["latin"],
+});
 
 export default async function PostPage({
   params,
@@ -12,15 +19,20 @@ export default async function PostPage({
 
   return (
     <>
-      <div className="container mx-auto p-4">
-        <h1 className="article-title text-3xl font-semibold mb-4">
+      <div className="container mx-auto p-4 mb-48">
+        <h1 className="article-title text-3xl font-semibold mb-6">
           {postData.title}
         </h1>
-        <p className="text-gray-500">{postData.date}</p>
         <div
           className="article font-light text-lg leading-10"
           dangerouslySetInnerHTML={{ __html: postData.content }}
         />
+        <p
+          className={`text-gray-400 dark:text-gray-500 text-right mt-4 ${notoSerifTC.className}`}
+        >
+          {siteConfig.author} 撰於{" "}
+          {formatDate(postData.date, { withYear: true })}
+        </p>
       </div>
     </>
   );
