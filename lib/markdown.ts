@@ -7,7 +7,7 @@ import { Plugin } from "unified";
 import { Node, Parent } from "unist";
 import { visit } from "unist-util-visit";
 import { Text, Image } from "mdast";
-import { siteConfig } from "./siteConfig";
+import fs from "fs";
 
 const remarkExtractText: Plugin = () => {
   return (tree: Node) => {
@@ -74,39 +74,51 @@ export const processMarkdownContent = async (
   return processedContent.toString();
 };
 
-export const extractFirstImage = async (
+export const extractFirstJpegImage = async (
   content: string,
   filePath: string
 ): Promise<string | null> => {
-  let firstImageUrl: string | null = null;
+  let firstJpegPath: string | null = null;
   const markdownDir = path.dirname(filePath);
+  const publicDir = path.join(process.cwd(), "public");
 
-  const extractImagePlugin: Plugin = () => {
+  const extractJpegPlugin: Plugin = () => {
     return (tree: Node) => {
       visit(tree, "image", (node: Image) => {
-        if (!firstImageUrl) {
-          if (
-            node.url.startsWith("/") ||
-            node.url.startsWith("http") ||
-            node.url.startsWith("https")
-          ) {
-            firstImageUrl = node.url;
-          } else {
-            const absolutePath = path.join(markdownDir, node.url);
-            const publicIndex = absolutePath.lastIndexOf("public");
-            if (publicIndex !== -1) {
-              const relativePath = absolutePath.substring(
-                publicIndex + "public".length
-              );
-              firstImageUrl = `${siteConfig.link}${relativePath}`;
-            }
+        if (firstJpegPath) return false;
+
+        const cleanUrl = node.url.split("#")[0];
+
+        if (cleanUrl.startsWith("http") || cleanUrl.startsWith("https")) {
+          return;
+        }
+
+        const ext = path.extname(cleanUrl).toLowerCase();
+        if (ext !== ".jpg" && ext !== ".jpeg") {
+          return;
+        }
+
+        let imagePath: string;
+        if (cleanUrl.startsWith("/")) {
+          const relativePath = cleanUrl.slice(1);
+          imagePath = path.join(publicDir, relativePath);
+        } else {
+          imagePath = path.join(markdownDir, cleanUrl);
+        }
+
+        try {
+          if (fs.existsSync(imagePath)) {
+            firstJpegPath = imagePath;
+            return false;
           }
-          return false;
+        } catch (error) {
+          console.log("jpeg image not found", imagePath, error);
+          return;
         }
       });
     };
   };
 
-  await remark().use(extractImagePlugin).process(content);
-  return firstImageUrl;
+  await remark().use(extractJpegPlugin).process(content);
+  return firstJpegPath;
 };

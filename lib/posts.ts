@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import {
   processMarkdownContent,
   stripMarkdownToText,
-  extractFirstImage,
+  extractFirstJpegImage,
 } from "./markdown";
 
 const postsDirectory = path.join(process.cwd(), "public/posts");
@@ -103,7 +103,10 @@ export async function getPostData(filePath: string): Promise<PostData> {
 
   const content = await processMarkdownContent(filePath, matterResult.content);
   const description = await stripMarkdownToText(matterResult.content, 200);
-  const coverImage = await extractFirstImage(matterResult.content, filePath);
+  const coverImage = await extractFirstJpegImage(
+    matterResult.content,
+    filePath
+  );
 
   return {
     slug,

@@ -61,14 +61,14 @@ export async function generateMetadata({
       title: `${postData.title}`,
       description: postData.description,
       ...(postData.coverImage && {
-        images: [{ url: postData.coverImage }],
+        images: `/posts/${decodedSlug}/cover.jpg`,
       }),
     },
     twitter: {
       title: `${postData.title}`,
       description: postData.description,
       ...(postData.coverImage && {
-        images: [{ url: postData.coverImage }],
+        images: `/posts/${decodedSlug}/cover.jpg`,
       }),
     },
   };
