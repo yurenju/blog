@@ -17,7 +17,7 @@ export default function Home() {
         <h1 className="mt-4 text-4xl font-bold homepage-title">
           {siteConfig.title}
         </h1>
-        <p className="text-gray-700 dark:text-gray-400 mb-4 homepage-description leading-9 font-medium">
+        <p className="text-gray-700 dark:text-gray-400 mb-4 homepage-description leading-9 font-medium md:font-normal">
           {siteConfig.description}
         </p>
       </section>
