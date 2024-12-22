@@ -102,7 +102,11 @@ export async function getPostData(filePath: string): Promise<PostData> {
     matterResult.data.title || path.basename(filePath, path.extname(filePath));
 
   const content = await processMarkdownContent(filePath, matterResult.content);
-  const description = await stripMarkdownToText(matterResult.content, 200);
+  const description = await stripMarkdownToText(
+    filePath,
+    matterResult.content,
+    200
+  );
   const coverImage = await extractFirstJpegImage(
     matterResult.content,
     filePath

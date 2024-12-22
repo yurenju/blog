@@ -46,10 +46,16 @@ const remarkExtractText: Plugin = () => {
 };
 
 export const stripMarkdownToText = async (
+  filePath: string,
   content: string,
   maxLength?: number
 ): Promise<string> => {
-  const result = await remark().use(remarkExtractText).process(content);
+  const markdownDir = path.dirname(filePath);
+
+  const result = await remark()
+    .use(remarkCustomImageSyntax(markdownDir))
+    .use(remarkExtractText)
+    .process(content);
   const text = result.toString().trim();
 
   if (maxLength && text.length > maxLength) {
@@ -119,6 +125,9 @@ export const extractFirstJpegImage = async (
     };
   };
 
-  await remark().use(extractJpegPlugin).process(content);
+  await remark()
+    .use(remarkCustomImageSyntax(markdownDir))
+    .use(extractJpegPlugin)
+    .process(content);
   return firstJpegPath;
 };
