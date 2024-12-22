@@ -61,14 +61,22 @@ export async function generateMetadata({
       title: `${postData.title}`,
       description: postData.description,
       ...(postData.coverImage && {
-        images: `${siteConfig.link}/posts/${decodedSlug}/cover.jpg`,
+        images: {
+          url: `${siteConfig.link}/posts/${decodedSlug}/cover.jpg`,
+          width: postData.coverImage.width,
+          height: postData.coverImage.height,
+        },
       }),
     },
     twitter: {
       title: `${postData.title}`,
       description: postData.description,
       ...(postData.coverImage && {
-        images: `${siteConfig.link}/posts/${decodedSlug}/cover.jpg`,
+        images: {
+          url: `${siteConfig.link}/posts/${decodedSlug}/cover.jpg`,
+          width: postData.coverImage.width,
+          height: postData.coverImage.height,
+        },
       }),
     },
   };

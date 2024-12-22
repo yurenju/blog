@@ -14,5 +14,3 @@ categories:
   
 算了。放張最近的 Screenshot 當作近況吧。雙螢幕是很爽快的事情呢，哼哼。  
   
-
-[![screenshot](images/0.jpg)](http://beta.zooomr.com/photos/23014@Z01/716122/ "Zooomr Photo Sharing :: Photo Sharing")screenshot Hosted on **Zooomr**

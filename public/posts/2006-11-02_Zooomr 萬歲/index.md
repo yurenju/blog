@@ -9,5 +9,3 @@ categories:
 ---
 聽說只要貼一張圖就可以變成 Pro User，所以就很沒誠意的貼一張來看看了。  
   
-
-[![NDSL](images/0.jpg)](http://beta.zooomr.com/photos/23014@Z01/323435/ "Zooomr Photo Sharing :: Photo Sharing")

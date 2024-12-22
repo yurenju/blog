@@ -4,6 +4,33 @@ import fs from "fs";
 import { Node, Literal, Parent } from "unist";
 import { Image } from "mdast";
 
+interface ImageDimensions {
+  width: number;
+  height: number;
+}
+
+export const calculateResizedDimensions = (
+  originalWidth: number,
+  originalHeight: number,
+  maxDimension: number = 1200
+): ImageDimensions => {
+  if (originalWidth <= maxDimension && originalHeight <= maxDimension) {
+    return { width: originalWidth, height: originalHeight };
+  }
+
+  const aspectRatio = originalWidth / originalHeight;
+  const newWidth =
+    originalWidth > originalHeight
+      ? maxDimension
+      : Math.round(maxDimension * aspectRatio);
+  const newHeight =
+    originalHeight > originalWidth
+      ? maxDimension
+      : Math.round(maxDimension / aspectRatio);
+
+  return { width: newWidth, height: newHeight };
+};
+
 export function remarkCustomImageSyntax(baseDir: string) {
   return () => (tree: Node) => {
     visit(tree, "text", (node: Literal, index, parent: Parent) => {

@@ -61,6 +61,14 @@ async function getAllPostMetadata(): Promise<Record<string, PostMetadata>> {
   return posts;
 }
 
+interface JpegImage {
+  path: string;
+  width: number;
+  height: number;
+  originalWidth: number;
+  originalHeight: number;
+}
+
 export type PostData = {
   slug: string;
   title: string;
@@ -69,7 +77,7 @@ export type PostData = {
   categories: Category[];
   filePath: string;
   description: string;
-  coverImage: string | null;
+  coverImage: JpegImage | null;
 };
 
 export type Category = "shorts" | "life" | "tech";

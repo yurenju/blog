@@ -1,5 +1,7 @@
 import { getSingletonPostMetadata, getPostData } from "@/lib/posts";
 import fs from "fs";
+import sharp from "sharp";
+import { calculateResizedDimensions } from "@/lib/image";
 
 export async function generateStaticParams() {
   const allPostMetadata = await getSingletonPostMetadata();
@@ -25,7 +27,23 @@ export async function GET(
       return new Response("No cover image found", { status: 404 });
     }
 
-    const imageBuffer = await fs.promises.readFile(postData.coverImage);
+    let imageBuffer = await fs.promises.readFile(postData.coverImage.path);
+    const { originalWidth, originalHeight } = postData.coverImage;
+
+    const { width, height } = calculateResizedDimensions(
+      originalWidth,
+      originalHeight
+    );
+
+    if (width !== originalWidth || height !== originalHeight) {
+      imageBuffer = await sharp(imageBuffer)
+        .resize(width, height, {
+          fit: "inside",
+          withoutEnlargement: true,
+        })
+        .jpeg({ quality: 85 })
+        .toBuffer();
+    }
 
     return new Response(imageBuffer, {
       headers: {

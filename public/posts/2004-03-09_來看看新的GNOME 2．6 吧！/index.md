@@ -14,6 +14,3 @@ categories:
   
 這幾天GNOME 2.6就會釋出囉！  
   
-![](images/0.jpg)  
-![](images/1.jpg)  
-![](images/2.jpg)

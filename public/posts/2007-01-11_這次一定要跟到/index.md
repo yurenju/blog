@@ -8,7 +8,7 @@ categories:
 
 ---
 通緝  
-![kyozi 照片](images/0.jpg) ![znikang 照片](images/1.jpg)  
+![znikang 照片](images/1.jpg)  
   
 OD “又” 入伍了，所以過幾天要去成功嶺探監。順便問問 [kyozi](http://kyozi.blogspot.com/), [znikang](http://znikang.blogspot.com/) 有沒有什麼行程。  
   

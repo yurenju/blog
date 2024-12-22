@@ -8,6 +8,8 @@ import { Node, Parent } from "unist";
 import { visit } from "unist-util-visit";
 import { Text, Image } from "mdast";
 import fs from "fs";
+import sharp from "sharp";
+import { calculateResizedDimensions } from "./image";
 
 const remarkExtractText: Plugin = () => {
   return (tree: Node) => {
@@ -80,10 +82,18 @@ export const processMarkdownContent = async (
   return processedContent.toString();
 };
 
+interface JpegImage {
+  path: string;
+  width: number;
+  height: number;
+  originalWidth: number;
+  originalHeight: number;
+}
+
 export const extractFirstJpegImage = async (
   content: string,
   filePath: string
-): Promise<string | null> => {
+): Promise<JpegImage | null> => {
   let firstJpegPath: string | null = null;
   const markdownDir = path.dirname(filePath);
   const publicDir = path.join(process.cwd(), "public");
@@ -129,5 +139,30 @@ export const extractFirstJpegImage = async (
     .use(remarkCustomImageSyntax(markdownDir))
     .use(extractJpegPlugin)
     .process(content);
-  return firstJpegPath;
+
+  if (!firstJpegPath) {
+    return null;
+  }
+
+  try {
+    const metadata = await sharp(firstJpegPath).metadata();
+    const originalWidth = metadata.width || 0;
+    const originalHeight = metadata.height || 0;
+
+    const { width, height } = calculateResizedDimensions(
+      originalWidth,
+      originalHeight
+    );
+
+    return {
+      path: firstJpegPath,
+      width,
+      height,
+      originalWidth,
+      originalHeight,
+    };
+  } catch (error) {
+    console.error("Error getting image metadata:", firstJpegPath, error);
+    return null;
+  }
 };
