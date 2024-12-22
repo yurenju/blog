@@ -1,4 +1,12 @@
 {
-  "editor.formatOnSave": false,
-  "explorer.sortOrder": "modified"
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }
