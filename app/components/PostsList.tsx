@@ -52,7 +52,7 @@ const PostsList = ({
             {groupedPosts[year].map((post) => (
               <li key={post.slug}>
                 <Link
-                  href={`/posts/${post.slug}`}
+                  href={`/posts/${encodeURIComponent(post.slug)}`}
                   className="flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-800 p-1 pl-3 mb-2 rounded-lg transition-colors"
                   tabIndex={0}
                   aria-label={`閱讀文章: ${post.title}`}
