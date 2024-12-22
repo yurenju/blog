@@ -60,6 +60,8 @@ export async function generateMetadata({
     openGraph: {
       title: `${postData.title}`,
       description: postData.description,
+      url: `${siteConfig.link}/posts/${decodedSlug}`,
+      type: "article",
       ...(postData.coverImage && {
         images: {
           url: `${siteConfig.link}/posts/${decodedSlug}/cover.jpg`,
