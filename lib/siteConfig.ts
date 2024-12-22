@@ -1,4 +1,7 @@
-const baseUrl = process.env.CF_PAGES_URL || "http://localhost:3000";
+const baseUrl =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000"
+    : "https://yurenju.blog";
 
 export const siteConfig = {
   title: "Yuren's Blog",
