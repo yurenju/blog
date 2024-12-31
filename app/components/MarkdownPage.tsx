@@ -31,7 +31,7 @@ export default async function MarkdownPage({
       />
       {(showAuthor || showDate) && (
         <p
-          className={`text-gray-400 dark:text-gray-500 text-right mt-4 ${notoSerifTC.className}`}
+          className={`text-gray-400 dark:text-gray-500 text-right mt-6 ${notoSerifTC.className}`}
         >
           {showAuthor && (
             <>

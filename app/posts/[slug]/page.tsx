@@ -29,7 +29,7 @@ export default async function PostPage({
           dangerouslySetInnerHTML={{ __html: postData.content }}
         />
         <p
-          className={`text-gray-400 dark:text-gray-500 text-right mt-4 ${notoSerifTC.className}`}
+          className={`text-gray-400 dark:text-gray-500 text-right mt-6 ${notoSerifTC.className}`}
         >
           ⸺ {siteConfig.author.name} 撰於{" "}
           {formatDate(postData.date, { withYear: true })}
