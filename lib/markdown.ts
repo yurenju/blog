@@ -82,7 +82,7 @@ export const processMarkdownContent = async (
   return processedContent.toString();
 };
 
-interface JpegImage {
+interface ImageInfo {
   path: string;
   width: number;
   height: number;
@@ -90,18 +90,18 @@ interface JpegImage {
   originalHeight: number;
 }
 
-export const extractFirstJpegImage = async (
+export const extractFirstImage = async (
   content: string,
   filePath: string
-): Promise<JpegImage | null> => {
-  let firstJpegPath: string | null = null;
+): Promise<ImageInfo | null> => {
+  let firstImagePath: string | null = null;
   const markdownDir = path.dirname(filePath);
   const publicDir = path.join(process.cwd(), "public");
 
-  const extractJpegPlugin: Plugin = () => {
+  const extractImagePlugin: Plugin = () => {
     return (tree: Node) => {
       visit(tree, "image", (node: Image) => {
-        if (firstJpegPath) return false;
+        if (firstImagePath) return false;
 
         const cleanUrl = node.url.split("#")[0];
 
@@ -110,7 +110,7 @@ export const extractFirstJpegImage = async (
         }
 
         const ext = path.extname(cleanUrl).toLowerCase();
-        if (ext !== ".jpg" && ext !== ".jpeg") {
+        if (ext !== ".jpg" && ext !== ".jpeg" && ext !== ".png") {
           return;
         }
 
@@ -124,11 +124,11 @@ export const extractFirstJpegImage = async (
 
         try {
           if (fs.existsSync(imagePath)) {
-            firstJpegPath = imagePath;
+            firstImagePath = imagePath;
             return false;
           }
         } catch (error) {
-          console.log("jpeg image not found", imagePath, error);
+          console.log("image not found", imagePath, error);
           return;
         }
       });
@@ -137,15 +137,15 @@ export const extractFirstJpegImage = async (
 
   await remark()
     .use(remarkCustomImageSyntax(markdownDir))
-    .use(extractJpegPlugin)
+    .use(extractImagePlugin)
     .process(content);
 
-  if (!firstJpegPath) {
+  if (!firstImagePath) {
     return null;
   }
 
   try {
-    const metadata = await sharp(firstJpegPath).metadata();
+    const metadata = await sharp(firstImagePath).metadata();
     const originalWidth = metadata.width || 0;
     const originalHeight = metadata.height || 0;
 
@@ -155,14 +155,14 @@ export const extractFirstJpegImage = async (
     );
 
     return {
-      path: firstJpegPath,
+      path: firstImagePath,
       width,
       height,
       originalWidth,
       originalHeight,
     };
   } catch (error) {
-    console.error("Error getting image metadata:", firstJpegPath, error);
+    console.error("Error getting image metadata:", firstImagePath, error);
     return null;
   }
 };

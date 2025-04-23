@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import {
   processMarkdownContent,
   stripMarkdownToText,
-  extractFirstJpegImage,
+  extractFirstImage,
 } from "./markdown";
 
 const postsDirectory = path.join(process.cwd(), "public/posts");
@@ -61,7 +61,7 @@ async function getAllPostMetadata(): Promise<Record<string, PostMetadata>> {
   return posts;
 }
 
-interface JpegImage {
+interface ImageInfo {
   path: string;
   width: number;
   height: number;
@@ -77,7 +77,7 @@ export type PostData = {
   categories: Category[];
   filePath: string;
   description: string;
-  coverImage: JpegImage | null;
+  coverImage: ImageInfo | null;
 };
 
 export type Category = "shorts" | "life" | "tech";
@@ -115,10 +115,7 @@ export async function getPostData(filePath: string): Promise<PostData> {
     matterResult.content,
     200
   );
-  const coverImage = await extractFirstJpegImage(
-    matterResult.content,
-    filePath
-  );
+  const coverImage = await extractFirstImage(matterResult.content, filePath);
 
   return {
     slug,

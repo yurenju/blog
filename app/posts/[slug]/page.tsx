@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/siteConfig";
 import { formatDate } from "@/lib/utils";
 import { Metadata } from "next";
 import { Noto_Serif_TC } from "next/font/google";
+import path from "path";
 
 const notoSerifTC = Noto_Serif_TC({
   subsets: ["latin"],
@@ -64,7 +65,9 @@ export async function generateMetadata({
       type: "article",
       ...(postData.coverImage && {
         images: {
-          url: `${siteConfig.link}/posts/${decodedSlug}/cover.jpg`,
+          url: `${siteConfig.link}/posts/${decodedSlug}/cover${path.extname(
+            postData.coverImage.path
+          )}`,
           width: postData.coverImage.width,
           height: postData.coverImage.height,
         },
@@ -75,7 +78,9 @@ export async function generateMetadata({
       description: postData.description,
       ...(postData.coverImage && {
         images: {
-          url: `${siteConfig.link}/posts/${decodedSlug}/cover.jpg`,
+          url: `${siteConfig.link}/posts/${decodedSlug}/cover${path.extname(
+            postData.coverImage.path
+          )}`,
           width: postData.coverImage.width,
           height: postData.coverImage.height,
         },
