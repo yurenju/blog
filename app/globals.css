@@ -134,6 +134,18 @@
   .article [data-line-numbers-max-digits="3"] > [data-line]::before {
     width: 3rem;
   }
+  
+  /* YouTube embed styles */
+  .article .youtube-embed {
+    @apply relative w-full my-6;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .article .youtube-embed iframe {
+    @apply absolute top-0 left-0 w-full h-full rounded-lg;
+  }
 }
 
 :root {

@@ -66,7 +66,7 @@ Then('the input field should be cleared', async function () {
 
 而 Gherkin 語法就可以當作一個很好的橋樑，他是一個標準語法可以讓人類與 LLM 都可以讀懂，所以我們就可以在開發前透過這份規格來確認實作內容，而在開發完成之後可以讓 LLM 執行閱讀這份規格，並且使用 MCP 操作瀏覽器、手機來進行驗收，詳細的展示可以看點選到下面的 Youtube 影片觀看。
 
-[![youtube-thumbnail.jpg](./assets/youtube-thumbnail.jpg)](https://www.youtube.com/watch?v=WvGY_Jcm_kY)
+!youtube[WvGY_Jcm_kY]
 
 
 這樣除了可以拿來跟 LLM 溝通以外，當它發現不符合驗收條件時，也可以觀察並且修改實作。

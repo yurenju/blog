@@ -12,6 +12,8 @@ import { calculateResizedDimensions } from "./image";
 import remarkRehype from "remark-rehype";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeStringify from "rehype-stringify";
+import rehypeRaw from "rehype-raw";
+import { remarkYouTubeEmbed } from "./youtube";
 
 const remarkExtractText: Plugin = () => {
   return (tree: Node) => {
@@ -78,7 +80,9 @@ export const processMarkdownContent = async (
   const processedContent = await remark()
     .use(remarkCustomImageSyntax(markdownDir))
     .use(remarkImagePath(markdownDir))
-    .use(remarkRehype)
+    .use(remarkYouTubeEmbed)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypePrettyCode, {
       theme: {
         dark: "github-dark",
