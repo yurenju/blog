@@ -43,7 +43,7 @@ export const remarkYouTubeEmbed: Plugin = () => {
         }
         // Check for standalone YouTube links
         else if (child.type === "link") {
-          const linkNode = child as any;
+          const linkNode = child as Literal & { url: string };
           const videoId = extractVideoId(linkNode.url);
           
           if (videoId && isYouTubeUrl(linkNode.url)) {
