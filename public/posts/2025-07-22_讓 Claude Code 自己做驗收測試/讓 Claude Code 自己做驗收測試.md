@@ -62,7 +62,7 @@ Then('the input field should be cleared', async function () {
 
 另外也跟我經常是在新創團隊工作有關，通常新創團隊不會有那麼長的時間可以實踐規格到測試的週期規劃。
 
-但到了 LLM 進行軟體開發的年代，我發現這個遠古時學習的工具又可以拿出來用了。在 Cursor 或是 Claude Code 裡面，由於有  Model Context Protocol (MCP) 的關係，我們可以直接讓 Claude Code 來操作瀏覽器來輔助開發，甚至也可以操作 Android 或是 iOS 模擬器，這也代表我們可以告訴他預期的行為是怎樣後，我們就可以透過 MCP 來讓 Claude 自行確認他的開發成果是否可以通過驗收。
+但到了 LLM 進行軟體開發的年代，我發現這個遠古時學習的工具又可以拿出來用了。在 Cursor 或是 Claude Code 裡面，由於有  Model Context Protocol (MCP) 的關係，我們可以直接讓 Claude Code 來操作瀏覽器來輔助開發，其中**完全不需要寫 glue code**，甚至也可以操作 Android 或是 iOS 模擬器，這也代表我們可以告訴他預期的行為是怎樣後，我們就可以透過 MCP 來讓 Claude 自行確認他的開發成果是否可以通過驗收。
 
 而 Gherkin 語法就可以當作一個很好的橋樑，他是一個標準語法可以讓人類與 LLM 都可以讀懂，所以我們就可以在開發前透過這份規格來確認實作內容，而在開發完成之後可以讓 LLM 執行閱讀這份規格，並且使用 MCP 操作瀏覽器、手機來進行驗收，詳細的展示可以看點選到下面的 Youtube 影片觀看。
 
@@ -70,6 +70,8 @@ Then('the input field should be cleared', async function () {
 
 
 這樣除了可以拿來跟 LLM 溝通以外，當它發現不符合驗收條件時，也可以觀察並且修改實作。
+
+有興趣的話可以到 github 自己試試看： [yurenju/llm-bdd-coding-demo](https://github.com/yurenju/llm-bdd-coding-demo)
 
 ## BDD + TDD
 當我自己在開發 production 專案時，我現在也嘗試著使用 BDD 加上 TDD。當我們使用 BDD 時，就可以很好的確定開發規格以及驗收標準，但是另外一個是 LLM 開發現在很經常遇到的狀況，就是 LLM 寫得太快了，當一次產出的內容大過我的認知負擔後，我就會經不起誘惑，直接按下 **確定**，但很常又會因此出問題。
