@@ -63,6 +63,77 @@
   .article a {
     @apply dark:text-blue-400 text-blue-500  hover:underline font-medium;
   }
+  
+  /* Syntax highlighting styles */
+  .article pre {
+    @apply rounded-lg overflow-x-auto my-6;
+  }
+  
+  .article pre code {
+    @apply text-sm block p-4;
+    background: none;
+  }
+  
+  /* Inline code */
+  .article :not(pre) > code {
+    @apply text-sm px-1 py-0.5 rounded;
+    background-color: #f3f4f6;
+  }
+  
+  .dark .article :not(pre) > code {
+    background-color: #374151;
+  }
+  
+  /* Theme color variables */
+  .article code[data-theme*=' '],
+  .article code[data-theme*=' '] span {
+    color: var(--shiki-light);
+    background-color: var(--shiki-light-bg);
+  }
+  
+  .dark .article code[data-theme*=' '],
+  .dark .article code[data-theme*=' '] span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+  
+  /* Line highlighting */
+  .article [data-highlighted-line] {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: block;
+    margin: 0 -1rem;
+    padding: 0 1rem;
+  }
+  
+  /* Character highlighting */
+  .article [data-highlighted-chars] {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+  
+  /* Line numbers */
+  .article [data-line-numbers] {
+    counter-reset: line;
+  }
+  
+  .article [data-line-numbers] > [data-line]::before {
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    width: 1rem;
+    margin-right: 2rem;
+    text-align: right;
+    color: gray;
+  }
+  
+  .article [data-line-numbers-max-digits="2"] > [data-line]::before {
+    width: 2rem;
+  }
+  
+  .article [data-line-numbers-max-digits="3"] > [data-line]::before {
+    width: 3rem;
+  }
 }
 
 :root {

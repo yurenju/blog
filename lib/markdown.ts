@@ -2,7 +2,6 @@ import { remarkCustomImageSyntax } from "./image";
 import { remark } from "remark";
 import { remarkImagePath } from "./image";
 import path from "path";
-import html from "remark-html";
 import { Plugin } from "unified";
 import { Node, Parent } from "unist";
 import { visit } from "unist-util-visit";
@@ -10,6 +9,9 @@ import { Text, Image } from "mdast";
 import fs from "fs";
 import sharp from "sharp";
 import { calculateResizedDimensions } from "./image";
+import remarkRehype from "remark-rehype";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeStringify from "rehype-stringify";
 
 const remarkExtractText: Plugin = () => {
   return (tree: Node) => {
@@ -76,7 +78,15 @@ export const processMarkdownContent = async (
   const processedContent = await remark()
     .use(remarkCustomImageSyntax(markdownDir))
     .use(remarkImagePath(markdownDir))
-    .use(html)
+    .use(remarkRehype)
+    .use(rehypePrettyCode, {
+      theme: {
+        dark: "github-dark",
+        light: "github-light",
+      },
+      keepBackground: true,
+    })
+    .use(rehypeStringify)
     .process(content);
 
   return processedContent.toString();
