@@ -130,7 +130,7 @@
   - 4.11 在 `app/[locale]/` 下的所有頁面的 `generateMetadata()` 函式中，使用對應語言的翻譯來設定 title 和 description。`app/` 下的頁面保持使用中文 metadata
   - 4.12 在 `public/pages/` 目錄下建立測試用的多語言靜態頁面（例如 `about.ja.md`、`subscription.en.md`），驗證靜態頁面多語言功能正確運作
 
-- [ ] 5. 修正根路徑重新導向架構
+- [x] 5. 修正根路徑重新導向架構
   - 5.1 將 `app/` 下的所有頁面改為重新導向到 `/zh/` 對應路徑
   - 5.2 修改 `app/page.tsx`，使用 Next.js `redirect()` 重新導向到 `/zh/`
   - 5.3 修改 `app/posts/page.tsx`，重新導向到 `/zh/posts`
@@ -140,8 +140,9 @@
   - 5.7 修改 `app/shorts/page.tsx`，重新導向到 `/zh/shorts`
   - 5.8 修改 `app/about/page.tsx`，重新導向到 `/zh/about`
   - 5.9 修改 `app/subscription/page.tsx`，重新導向到 `/zh/subscription`
-  - 5.10 修改 `app/[locale]/layout.tsx`，使用 RootLayoutContent 並傳入正確的 locale 和 htmlLang
-  - 5.11 測試所有根路徑（`/`, `/posts`, `/tech` 等）是否正確重新導向到對應的 `/zh/` 路徑
+  - 5.10 修改架構：移除 `lang` 屬性，將 Navbar 移至 `app/[locale]/layout.tsx`，`app/layout.tsx` 只保留基本結構
+  - 5.11 新增 `site.description` 和 `theme` 翻譯，讓所有 UI 元素完全多語言化
+  - **驗證結果**: 所有根路徑重新導向正常，架構調整完成，所有語言版本的 UI 完全翻譯
 
 - [ ] 6. 實作多語言 RSS 與 SEO 優化
   - 6.1 修改 `lib/rss.ts` 中的 `generateRSSFeed()` 函式，接受 `locale?: Locale` 參數，過濾指定語言的文章

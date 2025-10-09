@@ -1,5 +1,5 @@
-import { CategoryPage } from "@/components/pages/CategoryPage";
+import { redirect } from "next/navigation";
 
 export default function TechPage() {
-  return <CategoryPage category="tech" locale="zh" />;
+  redirect("/zh/tech");
 }

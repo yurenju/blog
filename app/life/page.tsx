@@ -1,5 +1,5 @@
-import { CategoryPage } from "@/components/pages/CategoryPage";
+import { redirect } from "next/navigation";
 
 export default function LifePage() {
-  return <CategoryPage category="life" locale="zh" />;
+  redirect("/zh/life");
 }

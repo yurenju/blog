@@ -1,5 +1,5 @@
-import { CategoryPage } from "@/components/pages/CategoryPage";
+import { redirect } from "next/navigation";
 
 export default function ShortsPage() {
-  return <CategoryPage category="shorts" locale="zh" />;
+  redirect("/zh/shorts");
 }

@@ -1,5 +1,5 @@
-import { PostsPage as PostsPageComponent } from "@/components/pages/PostsPage";
+import { redirect } from "next/navigation";
 
 export default function PostsPage() {
-  return <PostsPageComponent locale="zh" />;
+  redirect("/zh/posts");
 }

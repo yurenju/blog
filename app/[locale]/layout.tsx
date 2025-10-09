@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { locales, type Locale } from "@/lib/i18n/locales";
 import { siteConfig } from "@/lib/siteConfig";
+import Navbar from "@/components/Navbar";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -29,11 +30,17 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: Locale }>;
 }>) {
-  // Nested layout should not render html/body tags
-  // Those are handled by the root app/layout.tsx
-  return <>{children}</>;
+  const { locale } = await params;
+
+  return (
+    <div className="mx-auto max-w-3xl">
+      <Navbar locale={locale} />
+      {children}
+    </div>
+  );
 }

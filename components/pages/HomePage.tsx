@@ -24,7 +24,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           {siteConfig.title}
         </h1>
         <p className="text-gray-700 dark:text-gray-400 mb-4 homepage-description leading-9 font-medium md:font-normal">
-          {siteConfig.description}
+          {t.site.description}
         </p>
       </section>
 

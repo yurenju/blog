@@ -27,6 +27,13 @@ export type Translations = {
     articles: string
     switchToChinese: string
   }
+  site: {
+    description: string
+  }
+  theme: {
+    toggleToDark: string
+    toggleToLight: string
+  }
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -57,6 +64,13 @@ export const translations: Record<Locale, Translations> = {
       articles: '篇文章',
       switchToChinese: '切換到中文版以瀏覽所有內容',
     },
+    site: {
+      description: '撰寫就是一種思考方式，發佈與分享只是副產品，而真正的意義是在自我的知識脈絡裡面有了歸屬與連結。',
+    },
+    theme: {
+      toggleToDark: '切換至暗色模式',
+      toggleToLight: '切換至亮色模式',
+    },
   },
   ja: {
     nav: {
@@ -85,6 +99,13 @@ export const translations: Record<Locale, Translations> = {
       articles: '件の記事があります',
       switchToChinese: '中国語版に切り替えるとすべてのコンテンツをご覧いただけます',
     },
+    site: {
+      description: '書くことは思考の一形態であり、公開と共有は副産物に過ぎません。真の意味は、自己の知識体系における帰属とつながりにあります。',
+    },
+    theme: {
+      toggleToDark: 'ダークモードに切り替え',
+      toggleToLight: 'ライトモードに切り替え',
+    },
   },
   en: {
     nav: {
@@ -112,6 +133,13 @@ export const translations: Record<Locale, Translations> = {
       currentlyHas: 'Currently there are',
       articles: 'articles',
       switchToChinese: 'Switch to the Chinese version to browse all content',
+    },
+    site: {
+      description: 'Writing is a form of thinking. Publishing and sharing are just byproducts. The real meaning lies in finding belonging and connections within one\'s own knowledge framework.',
+    },
+    theme: {
+      toggleToDark: 'Switch to dark mode',
+      toggleToLight: 'Switch to light mode',
     },
   },
 }

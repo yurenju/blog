@@ -1,8 +1,8 @@
+import { redirect } from "next/navigation";
 import { decodeSlug, getPostData, getSingletonPostMetadata } from "@/lib/posts";
 import { siteConfig } from "@/lib/siteConfig";
 import { Metadata } from "next";
 import path from "path";
-import { PostDetailPage } from "@/components/pages/PostDetailPage";
 
 export default async function PostPage({
   params,
@@ -10,7 +10,7 @@ export default async function PostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  return <PostDetailPage slug={slug} locale="zh" />;
+  redirect(`/zh/posts/${slug}`);
 }
 
 export async function generateStaticParams() {

@@ -31,7 +31,7 @@ const Navbar = ({ locale = 'zh' }: { locale?: Locale }) => {
           <Button variant="ghost" asChild>
             <Link href={`${prefix}/posts`}>{t.nav.allPosts}</Link>
           </Button>
-          <ThemeToggleButton />
+          <ThemeToggleButton locale={locale} />
           <LanguageSwitcher locale={locale} />
         </div>
       </div>

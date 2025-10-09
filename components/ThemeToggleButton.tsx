@@ -3,11 +3,14 @@
 import { useTheme } from "next-themes";
 import { IconSun, IconMoon } from "@tabler/icons-react";
 import { useEffect, useState } from "react";
+import { getTranslation } from "@/lib/i18n/translations";
+import type { Locale } from "@/lib/i18n/locales";
 
 type Theme = "dark" | "light";
 type ThemeWithSystem = Theme | "system";
 
-const ThemeToggleButton = () => {
+const ThemeToggleButton = ({ locale = 'zh' }: { locale?: Locale }) => {
+  const t = getTranslation(locale);
   const [mounted, setMounted] = useState(false);
   const { theme = "system", setTheme } = useTheme() as {
     theme: ThemeWithSystem;
@@ -45,7 +48,7 @@ const ThemeToggleButton = () => {
     <button
       onClick={handleToggleTheme}
       className="p-2 rounded-lg "
-      aria-label={currentTheme === "dark" ? "切換至亮色模式" : "切換至暗色模式"}
+      aria-label={currentTheme === "dark" ? t.theme.toggleToLight : t.theme.toggleToDark}
     >
       {currentTheme === "dark" ? (
         <IconSun className="w-5 h-5 text-gray-400 hover:text-gray-100" />

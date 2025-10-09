@@ -1,5 +1,5 @@
-import { StaticMarkdownPage } from "@/components/pages/StaticMarkdownPage";
+import { redirect } from "next/navigation";
 
 export default function AboutPage() {
-  return <StaticMarkdownPage pageName="about" locale="zh" />;
+  redirect("/zh/about");
 }

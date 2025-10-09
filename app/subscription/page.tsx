@@ -1,5 +1,5 @@
-import { StaticMarkdownPage } from "@/components/pages/StaticMarkdownPage";
+import { redirect } from "next/navigation";
 
 export default function SubscriptionPage() {
-  return <StaticMarkdownPage pageName="subscription" locale="zh" />;
+  redirect("/zh/subscription");
 }
