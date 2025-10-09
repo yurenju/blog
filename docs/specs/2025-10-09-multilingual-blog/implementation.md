@@ -100,11 +100,11 @@
 
 - [ ] 3. 實作文章多語言支援
   - 3.1 在 `lib/posts.ts` 中實作 `extractLocaleFromFilename(filename: string): Locale` 函式，從檔案名稱提取語言代碼（無後綴為 zh，.ja.md 為 ja，.en.md 為 en）
-  - 3.2 擴展 `PostData` 型別，加入 `locale: Locale`、`availableLocales: Locale[]`、`translationSlugs: Record<Locale, string>` 欄位
+  - 3.2 擴展 `PostData` 型別，加入 `locale: Locale`、`availableLocales: Locale[]` 欄位
   - 3.3 修改 `getAllPostMetadata()` 函式，在每個目錄中找到所有語言版本的 markdown 檔案（而非只找第一個），為每個語言版本建立獨立的 metadata 條目
   - 3.4 修改 `getPostData()` 函式，根據檔案名稱設定 `locale` 欄位
   - 3.5 實作 `findTranslations(dirPath: string): Record<Locale, string>` 函式，在同一目錄下找到所有語言版本的檔案路徑
-  - 3.6 在 `getPostData()` 中呼叫 `findTranslations()`，填充 `availableLocales` 和 `translationSlugs` 欄位
+  - 3.6 在 `getPostData()` 中呼叫 `findTranslations()`，填充 `availableLocales` 欄位
   - 3.7 實作 `getPostsByLocale(locale: Locale): Promise<PostData[]>` 函式，過濾並返回指定語言的所有文章
   - 3.8 修改 `fetchCategoryPosts(category: Category)` 函式簽章為 `fetchCategoryPosts(category: Category, locale: Locale)`，加入語言過濾
   - 3.9 實作 `getPostCountByLocale(locale: Locale): Promise<number>` 函式，返回指定語言的文章總數
@@ -213,7 +213,6 @@ export type PostData = {
   // ... 現有欄位
   locale: Locale;
   availableLocales: Locale[];
-  translationSlugs: Record<Locale, string>;
 }
 ```
 

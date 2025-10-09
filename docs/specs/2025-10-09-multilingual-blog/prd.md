@@ -157,12 +157,10 @@ export type PostData = {
   // ... 現有欄位
   locale: Locale;
   availableLocales: Locale[];
-  translationSlugs: Record<Locale, string>;
 }
 ```
 - `locale`: 當前文章的語言
-- `availableLocales`: 此文章可用的所有語言版本
-- `translationSlugs`: 各語言版本的 slug 對應
+- `availableLocales`: 此文章可用的所有語言版本（所有語言版本使用相同的 slug）
 
 #### FR-2.4 文章語言關聯邏輯
 系統必須自動關聯同一篇文章的不同語言版本：
