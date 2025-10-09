@@ -41,7 +41,7 @@ export function remarkCustomImageSyntax(baseDir: string) {
           const imageName = match[1];
           const imagePath = findImagePath(baseDir, imageName);
           if (imagePath) {
-            const relativePath = path.relative(baseDir, imagePath);
+            const relativePath = path.relative(baseDir, imagePath).replace(/\\/g, '/');
             const imageNode: Image = {
               type: "image",
               url: relativePath,
@@ -83,7 +83,8 @@ export function remarkImagePath(baseDir: string) {
       const absolutePath = path.join(baseDir, node.url);
       const publicIndex = absolutePath.lastIndexOf("public");
       if (publicIndex !== -1) {
-        node.url = absolutePath.substring(publicIndex + "public".length);
+        // Convert Windows backslashes to forward slashes for URLs
+        node.url = absolutePath.substring(publicIndex + "public".length).replace(/\\/g, '/');
       }
     });
   };
