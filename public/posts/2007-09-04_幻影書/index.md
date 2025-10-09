@@ -7,7 +7,7 @@ categories:
   - life
 
 ---
-[![幻影書的圖像](images/0.php?type=4&isbn=9573321270 "更多關於幻影書")](http://www.anobii.com/books/00e8451f16d284b11d/ "更多關於幻影書")  
+[![幻影書的圖像](images/0.php "更多關於幻影書")](http://www.anobii.com/books/00e8451f16d284b11d/ "更多關於幻影書")
   
 這是我繼《布魯克林的納善先生》後，第二本保羅．奧斯特的書。  
   

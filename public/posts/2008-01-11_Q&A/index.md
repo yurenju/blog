@@ -7,7 +7,7 @@ categories:
   - life
 
 ---
-[![Q&A的圖像](images/0.php?type=4&item_id=018f40c718f19bf705&time=0 "更多關於Q&A")](http://www.anobii.com/books/018f40c718f19bf705/ "更多關於Q&A")  
+[![Q&A的圖像](images/0.php "更多關於Q&A")](http://www.anobii.com/books/018f40c718f19bf705/ "更多關於Q&A")
   
   
 這本書是閱讀試閱本後決定要購買的。作者藉由一個少年意外獲得益智 問答遊戲得到巨額獎金作為引導，反敘少年的故事。  
