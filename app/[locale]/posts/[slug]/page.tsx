@@ -16,7 +16,21 @@ export default async function LocalePostPage({
 
 export async function generateStaticParams() {
   const allPostMetadata = await getSingletonPostMetadata();
-  return Object.keys(allPostMetadata).map((slug) => ({ slug }));
+  const params: { locale: Locale; slug: string }[] = [];
+
+  for (const [postKey, metadata] of Object.entries(allPostMetadata)) {
+    // postKey format: "slug" for zh, "slug-locale" for other locales
+    if (postKey.endsWith('-ja')) {
+      params.push({ locale: 'ja', slug: metadata.slug });
+    } else if (postKey.endsWith('-en')) {
+      params.push({ locale: 'en', slug: metadata.slug });
+    } else if (!postKey.includes('-')) {
+      // This is a zh post (no locale suffix)
+      params.push({ locale: 'zh', slug: metadata.slug });
+    }
+  }
+
+  return params;
 }
 
 export async function generateMetadata({
