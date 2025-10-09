@@ -1,16 +1,10 @@
-import type { Metadata, Viewport } from "next";
-import { locales, htmlLangMap, type Locale } from "@/lib/i18n/locales";
+import type { Metadata } from "next";
+import { locales, type Locale } from "@/lib/i18n/locales";
 import { siteConfig } from "@/lib/siteConfig";
-import { RootLayoutContent } from "@/components/RootLayoutContent";
-import "../globals.css";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
-
-export const viewport: Viewport = {
-  width: "width=device-width, initial-scale=1.0",
-};
 
 export async function generateMetadata({
   params,
@@ -35,17 +29,11 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: Locale }>;
 }>) {
-  const { locale } = await params;
-  const htmlLang = htmlLangMap[locale];
-
-  return (
-    <RootLayoutContent locale={locale} htmlLang={htmlLang}>
-      {children}
-    </RootLayoutContent>
-  );
+  // Nested layout should not render html/body tags
+  // Those are handled by the root app/layout.tsx
+  return <>{children}</>;
 }
