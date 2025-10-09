@@ -19,7 +19,9 @@ export async function PostDetailPage({
   const t = getTranslation(locale);
   const allPostMetadata = await getSingletonPostMetadata();
   const decodedSlug = decodeSlug(slug);
-  const postData = await getPostData(allPostMetadata[decodedSlug].filePath);
+  // For non-zh locales, the key format is `${slug}-${locale}`
+  const postKey = locale === 'zh' ? decodedSlug : `${decodedSlug}-${locale}`;
+  const postData = await getPostData(allPostMetadata[postKey].filePath);
 
   return (
     <div className="container mx-auto p-4 mb-48">

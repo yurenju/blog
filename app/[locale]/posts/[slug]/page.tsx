@@ -27,7 +27,9 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const allPostMetadata = await getSingletonPostMetadata();
   const decodedSlug = decodeSlug(slug);
-  const postData = await getPostData(allPostMetadata[decodedSlug].filePath);
+  // For non-zh locales, the key format is `${slug}-${locale}`
+  const postKey = locale === 'zh' ? decodedSlug : `${decodedSlug}-${locale}`;
+  const postData = await getPostData(allPostMetadata[postKey].filePath);
 
   return {
     title: `${postData.title}`,

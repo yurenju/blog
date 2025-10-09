@@ -98,17 +98,18 @@
   - 2.10 執行建置測試，驗證 `app/` 下的頁面顯示中文，`app/[locale]/` 下的頁面根據語言參數顯示對應語言
   - **驗證結果**: 架構實作完成且正確。建置時遇到 EMFILE (too many open files) 錯誤，這是 Windows 系統限制問題(~2968 篇文章 × 3 語言 = ~8906 頁面)，非程式碼錯誤。建議在 Linux 環境或 CI/CD 進行完整建置。
 
-- [ ] 3. 實作文章多語言支援
+- [x] 3. 實作文章多語言支援
   - 3.1 在 `lib/posts.ts` 中實作 `extractLocaleFromFilename(filename: string): Locale` 函式，從檔案名稱提取語言代碼（無後綴為 zh，.ja.md 為 ja，.en.md 為 en）
   - 3.2 擴展 `PostData` 型別，加入 `locale: Locale`、`availableLocales: Locale[]` 欄位
   - 3.3 修改 `getAllPostMetadata()` 函式，在每個目錄中找到所有語言版本的 markdown 檔案（而非只找第一個），為每個語言版本建立獨立的 metadata 條目
-  - 3.4 修改 `getPostData()` 函式，根據檔案名稱設定 `locale` 欄位
+  - 3.4 修改 `getPostData()` 函式，根據檔案名稱設定 `locale` 欄位，並支援翻譯文章從主文章繼承 metadata（同時允許 frontmatter 覆寫）
   - 3.5 實作 `findTranslations(dirPath: string): Record<Locale, string>` 函式，在同一目錄下找到所有語言版本的檔案路徑
   - 3.6 在 `getPostData()` 中呼叫 `findTranslations()`，填充 `availableLocales` 欄位
   - 3.7 實作 `getPostsByLocale(locale: Locale): Promise<PostData[]>` 函式，過濾並返回指定語言的所有文章
   - 3.8 修改 `fetchCategoryPosts(category: Category)` 函式簽章為 `fetchCategoryPosts(category: Category, locale: Locale)`，加入語言過濾
   - 3.9 實作 `getPostCountByLocale(locale: Locale): Promise<number>` 函式，返回指定語言的文章總數
   - 3.10 建立測試文章（在某個文章目錄加入 `index.ja.md` 和 `index.en.md`），驗證語言識別和關聯功能正確運作
+  - 3.11 修正 `app/[locale]/posts/[slug]/page.tsx` 和 `components/pages/PostDetailPage.tsx` 中的 postKey 查找邏輯，確保正確載入對應語言版本
 
 - [ ] 4. 實作 UI 多語言化
   - 4.1 完成 `lib/i18n/translations.ts` 中所有 UI 元素的日文和英文翻譯
