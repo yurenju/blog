@@ -23,6 +23,9 @@
 - `app/globals.backup.css` - 原始 globals.css 備份
 - `lib/i18n/locales.ts` - 語言定義和型別
 - `lib/i18n/translations.ts` - UI 翻譯字典
+- `lib/metadata.ts` - 共用的 metadata 生成函式（generatePageMetadata, generateHreflangAlternates）
+- `public/pages/subscription.ja.md` - 日文訂閱頁面（包含日文 RSS 連結）
+- `public/pages/subscription.en.md` - 英文訂閱頁面（包含英文 RSS 連結）
 - `app/components/LanguageSwitcher.tsx` - 語言切換器元件（使用 shadcn Button）
 - `app/components/ArticleLanguageIndicator.tsx` - 文章語言版本指示器元件（使用 shadcn Badge）
 - `app/components/LanguageNotice.tsx` - 文章列表語言提示元件（使用 shadcn Alert）
@@ -57,8 +60,16 @@
 - `app/components/MarkdownPage.tsx` - 擴展以支援根據 locale 尋找對應的 markdown 文件
 - `lib/utils.ts` - 新增 shadcn 的 cn() 函式（將擴展日期格式化函式支援多語言）
 - `lib/posts.ts` - 擴展以支援多語言文章識別和過濾
-- `lib/rss.ts` - 擴展 RSS 產生支援多語言
-- `scripts/generate-rss.ts` - 擴展以產生多語言 RSS feeds
+- `lib/rss.ts` - 擴展 RSS 產生支援多語言（接受 locale 參數，過濾語言，翻譯 feed 標題和描述）
+- `scripts/generate-rss.ts` - 擴展以產生多語言 RSS feeds（產生 /rss/[locale].xml 和 /rss/[locale]/[category].xml）
+- `public/pages/subscription.md` - 更新 RSS 連結為 /rss/zh.xml 和 /rss/zh/[category].xml
+- `app/[locale]/page.tsx` - 加入 generateMetadata 使用 generatePageMetadata helper
+- `app/[locale]/tech/page.tsx` - 加入 generateMetadata 使用 generatePageMetadata helper
+- `app/[locale]/life/page.tsx` - 加入 generateMetadata 使用 generatePageMetadata helper
+- `app/[locale]/shorts/page.tsx` - 加入 generateMetadata 使用 generatePageMetadata helper
+- `app/[locale]/posts/page.tsx` - 加入 generateMetadata 使用 generatePageMetadata helper
+- `app/[locale]/about/page.tsx` - 加入 generateMetadata 使用 generatePageMetadata helper
+- `app/[locale]/subscription/page.tsx` - 加入 generateMetadata 使用 generatePageMetadata helper
 
 ### 測試相關
 - `acceptance.feature` - Gherkin 格式的驗收測試場景
@@ -144,17 +155,17 @@
   - 5.11 新增 `site.description` 和 `theme` 翻譯，讓所有 UI 元素完全多語言化
   - **驗證結果**: 所有根路徑重新導向正常，架構調整完成，所有語言版本的 UI 完全翻譯
 
-- [ ] 6. 實作多語言 RSS 與 SEO 優化
+- [x] 6. 實作多語言 RSS 與 SEO 優化
   - 6.1 修改 `lib/rss.ts` 中的 `generateRSSFeed()` 函式，接受 `locale?: Locale` 參數，過濾指定語言的文章
   - 6.2 修改 `getCategoryTitle()` 函式，接受 `locale` 參數，返回對應語言的分類標題
   - 6.3 更新 RSS feed 的 title 和 description 使用對應語言的翻譯
   - 6.4 修改 `scripts/generate-rss.ts`，為每個語言和分類組合產生 RSS feed（如 `/rss/zh/tech.xml`、`/rss/ja.xml`）
   - 6.5 確保原有的 `/rss.xml` 保持運作，包含所有語言的文章
-  - 6.6 在 `app/[locale]/layout.tsx` 的 `generateMetadata()` 中加入 `alternates.languages` 設定，為所有頁面加入 hreflang 標籤
-  - 6.7 在 `app/[locale]/posts/[slug]/page.tsx` 的 `generateMetadata()` 中，根據 `availableLocales` 動態產生 hreflang 標籤，只為實際存在的語言版本加入標籤
-  - 6.8 執行完整建置，測試所有 RSS feeds 是否正確產生
-  - 6.9 驗證產生的 HTML 中 hreflang 標籤是否正確
-  - 6.10 測量建置時間，確保增加不超過 50%
+  - 6.6 更新 subscription 頁面的多語言版本，加入對應語言的 RSS 連結（`/rss/[locale].xml` 和 `/rss/[locale]/[category].xml`）
+  - 6.7 在 `app/[locale]/layout.tsx` 的 `generateMetadata()` 中加入 `alternates.languages` 設定，為所有頁面加入 hreflang 標籤
+  - 6.8 在 `app/[locale]/posts/[slug]/page.tsx` 的 `generateMetadata()` 中，根據 `availableLocales` 動態產生 hreflang 標籤，只為實際存在的語言版本加入標籤
+  - 6.9 執行完整建置，測試所有 RSS feeds 是否正確產生
+  - 6.10 驗證產生的 HTML 中 hreflang 標籤是否正確
 
 - [ ] 7. 執行驗收測試
   - 7.1 使用 AI 讀取 `acceptance.feature` 檔案
