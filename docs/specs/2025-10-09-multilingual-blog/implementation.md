@@ -26,18 +26,39 @@
 - `app/components/LanguageSwitcher.tsx` - 語言切換器元件（使用 shadcn Button）
 - `app/components/ArticleLanguageIndicator.tsx` - 文章語言版本指示器元件（使用 shadcn Badge）
 - `app/components/LanguageNotice.tsx` - 文章列表語言提示元件（使用 shadcn Alert）
+- `app/components/pages/HomePage.tsx` - 首頁共用元件（接收 locale 參數）
+- `app/components/pages/CategoryPage.tsx` - 分類頁面共用元件（tech/life/shorts 共用，接收 category 和 locale 參數）
+- `app/components/pages/PostsPage.tsx` - 所有文章頁面共用元件（接收 locale 參數）
+- `app/components/pages/PostDetailPage.tsx` - 文章詳細頁面共用元件（接收 slug 和 locale 參數）
+- `app/components/pages/StaticMarkdownPage.tsx` - 靜態 Markdown 頁面共用元件（about/subscription 共用，接收 pageName 和 locale 參數）
+- `app/[locale]/layout.tsx` - 多語言路由的 layout（設定各語言的 lang 屬性）
+- `app/[locale]/page.tsx` - 多語言首頁（使用 HomePage 元件）
+- `app/[locale]/tech/page.tsx` - 多語言技術分類頁面（使用 CategoryPage 元件）
+- `app/[locale]/life/page.tsx` - 多語言生活分類頁面（使用 CategoryPage 元件）
+- `app/[locale]/shorts/page.tsx` - 多語言照片分類頁面（使用 CategoryPage 元件）
+- `app/[locale]/posts/page.tsx` - 多語言所有文章頁面（使用 PostsPage 元件）
+- `app/[locale]/posts/[slug]/page.tsx` - 多語言文章詳細頁面（使用 PostDetailPage 元件）
+- `app/[locale]/about/page.tsx` - 多語言關於頁面（使用 StaticMarkdownPage 元件）
+- `app/[locale]/subscription/page.tsx` - 多語言訂閱頁面（使用 StaticMarkdownPage 元件）
 
 ### 修改檔案
 - `app/globals.css` - 整合 shadcn CSS variables，移除自訂 .function-link 類別
-- `app/layout.tsx` - 移除硬編碼的 body 顏色類別，使用 shadcn 的 bg-background/text-foreground（將移動到 `app/[locale]/layout.tsx`）
+- `app/layout.tsx` - 移除硬編碼的 `lang` 屬性，暫時不設定語言
 - `app/components/Navbar.tsx` - 使用 shadcn Button 元件替代自訂連結樣式
-- `app/page.tsx` - 使用 shadcn Button 元件（將實作根路徑重新導向到 `/zh/`）
+- `app/page.tsx` - 將改為使用共用的首頁元件（預設顯示中文內容）
+- `app/tech/page.tsx` - 改為使用 CategoryPage 共用元件
+- `app/life/page.tsx` - 改為使用 CategoryPage 共用元件
+- `app/shorts/page.tsx` - 改為使用 CategoryPage 共用元件
+- `app/posts/page.tsx` - 改為使用 PostsPage 共用元件
+- `app/posts/[slug]/page.tsx` - 改為使用 PostDetailPage 共用元件
+- `app/about/page.tsx` - 改為使用 StaticMarkdownPage 共用元件
+- `app/subscription/page.tsx` - 改為使用 StaticMarkdownPage 共用元件
 - `app/components/PostsList.tsx` - 改善暗色模式對比度（將支援多語言顯示）
+- `app/components/MarkdownPage.tsx` - 擴展以支援根據 locale 尋找對應的 markdown 文件
 - `lib/utils.ts` - 新增 shadcn 的 cn() 函式（將擴展日期格式化函式支援多語言）
 - `lib/posts.ts` - 擴展以支援多語言文章識別和過濾
 - `lib/rss.ts` - 擴展 RSS 產生支援多語言
 - `scripts/generate-rss.ts` - 擴展以產生多語言 RSS feeds
-- 所有頁面檔案 - 移動到 `app/[locale]/` 下並支援多語言
 
 ### 測試相關
 - `acceptance.feature` - Gherkin 格式的驗收測試場景
@@ -55,13 +76,26 @@
   - 2.1 建立 `lib/i18n/locales.ts`，定義支援的語言（zh, ja, en）和 `Locale` 型別
   - 2.2 建立 `lib/i18n/translations.ts`，實作翻譯字典結構，包含所有 UI 元素的翻譯（導航、分類、語言名稱等）
   - 2.3 實作 `getTranslation(locale: Locale)` 函式，返回指定語言的翻譯物件
-  - 2.4 建立 `app/[locale]/` 目錄結構
-  - 2.5 將現有的 `app/layout.tsx` 移動到 `app/[locale]/layout.tsx`
-  - 2.6 在 `app/[locale]/layout.tsx` 中實作 `generateStaticParams()` 函式，返回所有支援的語言代碼
-  - 2.7 修改 `app/[locale]/layout.tsx` 的 metadata，根據 locale 設定正確的 `lang` 屬性（zh-Hant-TW, ja, en）
-  - 2.8 將所有現有頁面（`page.tsx`）移動到 `app/[locale]/` 下對應的位置
-  - 2.9 修改根路徑的 `app/page.tsx`，實作重新導向邏輯，使用 `redirect('/zh/')` 將訪客導向繁體中文版
-  - 2.10 執行建置測試，驗證所有語言版本的靜態頁面都正確產生
+  - 2.4 修改 `app/layout.tsx`，移除硬編碼的 `lang` 屬性（例如 `<html lang="zh-tw">`），暫時改為 `<html>`
+  - 2.5 建立 `app/[locale]/` 目錄結構
+  - 2.6 建立 `app/[locale]/layout.tsx`，設定 `lang` 屬性（zh-Hant-TW, ja, en）並實作 `generateStaticParams()` 函式返回所有支援的語言代碼
+  - 2.7 建立共用頁面元件：
+    - `app/components/pages/HomePage.tsx`（接收 `locale` 參數）
+    - `app/components/pages/CategoryPage.tsx`（接收 `category` 和 `locale` 參數，tech/life/shorts 共用）
+    - `app/components/pages/PostsPage.tsx`（接收 `locale` 參數）
+    - `app/components/pages/PostDetailPage.tsx`（接收 `slug` 和 `locale` 參數）
+    - `app/components/pages/StaticMarkdownPage.tsx`（接收 `pageName` 和 `locale` 參數，about/subscription 共用）
+  - 2.8 修改 `app/` 下的現有頁面使用共用元件：
+    - `app/page.tsx` → 使用 `HomePage` 傳入 `locale='zh'`
+    - `app/tech/page.tsx` → 使用 `CategoryPage` 傳入 `category='tech', locale='zh'`
+    - `app/life/page.tsx` → 使用 `CategoryPage` 傳入 `category='life', locale='zh'`
+    - `app/shorts/page.tsx` → 使用 `CategoryPage` 傳入 `category='shorts', locale='zh'`
+    - `app/posts/page.tsx` → 使用 `PostsPage` 傳入 `locale='zh'`
+    - `app/posts/[slug]/page.tsx` → 使用 `PostDetailPage` 傳入 `slug` 和 `locale='zh'`
+    - `app/about/page.tsx` → 使用 `StaticMarkdownPage` 傳入 `pageName='about', locale='zh'`
+    - `app/subscription/page.tsx` → 使用 `StaticMarkdownPage` 傳入 `pageName='subscription', locale='zh'`
+  - 2.9 在 `app/[locale]/` 下建立對應的頁面（包括 about 和 subscription），使用相同的共用元件但傳入路由參數的 `locale`
+  - 2.10 執行建置測試，驗證 `app/` 下的頁面顯示中文，`app/[locale]/` 下的頁面根據語言參數顯示對應語言
 
 - [ ] 3. 實作文章多語言支援
   - 3.1 在 `lib/posts.ts` 中實作 `extractLocaleFromFilename(filename: string): Locale` 函式，從檔案名稱提取語言代碼（無後綴為 zh，.ja.md 為 ja，.en.md 為 en）
@@ -77,17 +111,22 @@
 
 - [ ] 4. 實作 UI 多語言化
   - 4.1 完成 `lib/i18n/translations.ts` 中所有 UI 元素的日文和英文翻譯
-  - 4.2 建立 `app/components/LanguageSwitcher.tsx` 元件，使用 shadcn Button 元件顯示所有支援的語言（中文、日本語、English），當前語言使用 variant="default"，其他語言使用 variant="ghost"，點擊切換語言時保持當前頁面路徑
-  - 4.3 修改 `app/components/Navbar.tsx`，從 URL 提取當前 locale，整合 `LanguageSwitcher` 元件（放在主題切換按鈕旁），所有導航連結加入 locale 前綴
-  - 4.4 建立 `app/components/ArticleLanguageIndicator.tsx` 元件，接收 `availableLocales` 和 `currentLocale` props，使用 shadcn Badge 元件顯示「Also available in: [繁體中文] [日本語] [English]」格式的連結
+  - 4.2 建立 `app/components/LanguageSwitcher.tsx` 元件，使用 shadcn Button 元件顯示所有支援的語言（中文、日本語、English），當前語言使用 variant="default"，其他語言使用 variant="ghost"。對於 `app/` 下的頁面，點擊切換會導向 `/[locale]/相同路徑`；對於 `app/[locale]/` 下的頁面，點擊切換會導向 `/[新語言]/相同路徑`
+  - 4.3 修改 `app/components/Navbar.tsx`，接收 `locale` prop（可選，預設為 'zh'），整合 `LanguageSwitcher` 元件（放在主題切換按鈕旁）。如果 locale 為 'zh'，導航連結不加前綴；否則加入 `/[locale]` 前綴
+  - 4.4 建立 `app/components/ArticleLanguageIndicator.tsx` 元件，接收 `availableLocales`、`currentLocale` 和 `slug` props，使用 shadcn Badge 元件顯示「Also available in: [繁體中文] [日本語] [English]」格式的連結，連結會導向對應語言版本的文章
   - 4.5 建立 `app/components/LanguageNotice.tsx` 元件，使用 shadcn Alert 元件，接收當前 locale 和中文文章總數，顯示「本站主要以繁體中文撰寫，目前有 X 篇文章。切換到中文版以瀏覽所有內容。」提示訊息
-  - 4.6 修改 `app/[locale]/page.tsx`（首頁），使用 `getTranslation(locale)` 取得翻譯，替換所有硬編碼的中文文字
-  - 4.7 修改 `app/[locale]/posts/page.tsx` 等列表頁面，呼叫 `getPostsByLocale(locale)` 或 `fetchCategoryPosts(category, locale)` 過濾文章
-  - 4.8 在 `app/[locale]/posts/page.tsx` 和分類頁面中，當 locale 不是 'zh' 時顯示 `LanguageNotice` 元件
+  - 4.6 在共用頁面元件中實作多語言：
+    - `HomePage.tsx`：使用 `getTranslation(locale)` 取得翻譯，替換硬編碼的分類名稱（"照片"、"生活"、"技術"）
+    - `CategoryPage.tsx`：使用翻譯字典取得分類標題，呼叫 `fetchCategoryPosts(category, locale)` 過濾文章
+    - `PostsPage.tsx`：使用翻譯字典取得頁面標題，呼叫 `getPostsByLocale(locale)` 過濾文章
+    - `PostDetailPage.tsx`：使用翻譯字典顯示作者署名（"撰於" → "Written on"），加入 `ArticleLanguageIndicator` 元件
+    - `StaticMarkdownPage.tsx`：根據 `pageName` 和 `locale` 尋找對應的 markdown 文件（例如 `about.ja.md`、`subscription.en.md`），如果找不到對應語言版本則 fallback 到預設的中文版本
+  - 4.7 修改 `app/components/MarkdownPage.tsx`，擴展以支援接收 `locale` 參數，根據 locale 尋找對應語言的 markdown 文件（檔名格式：`about.ja.md`、`about.en.md`），使用翻譯字典顯示作者署名文字
+  - 4.8 在列表頁面元件（`CategoryPage.tsx`、`PostsPage.tsx`）中，當 locale 不是 'zh' 時顯示 `LanguageNotice` 元件
   - 4.9 修改 `app/components/PostsList.tsx`，接收 `locale` prop，使用翻譯字典顯示「年」、aria-label 等文字
-  - 4.10 修改 `app/[locale]/posts/[slug]/page.tsx`，在文章標題下方加入 `ArticleLanguageIndicator` 元件，使用翻譯字典顯示作者署名
-  - 4.11 擴展 `lib/utils.ts` 中的 `formatDate()` 函式，接受 `locale` 參數，根據不同語言返回正確的日期格式（zh: "2024 年 1 月 1 日", ja: "2024年1月1日", en: "January 1, 2024"）
-  - 4.12 更新所有頁面的 `generateMetadata()` 函式，使用對應語言的翻譯來設定 title 和 description
+  - 4.10 擴展 `lib/utils.ts` 中的 `formatDate()` 函式，接受 `locale` 參數，根據不同語言返回正確的日期格式（zh: "2024 年 1 月 1 日", ja: "2024年1月1日", en: "January 1, 2024"）
+  - 4.11 在 `app/[locale]/` 下的所有頁面的 `generateMetadata()` 函式中，使用對應語言的翻譯來設定 title 和 description。`app/` 下的頁面保持使用中文 metadata
+  - 4.12 在 `public/pages/` 目錄下建立測試用的多語言靜態頁面（例如 `about.ja.md`、`subscription.en.md`），驗證靜態頁面多語言功能正確運作
 
 - [ ] 5. 實作多語言 RSS 與 SEO 優化
   - 5.1 修改 `lib/rss.ts` 中的 `generateRSSFeed()` 函式，接受 `locale?: Locale` 參數，過濾指定語言的文章
@@ -207,3 +246,9 @@ formatDate('2024-01-01', { locale: 'en', withYear: true }) // 'January 1, 2024'
 6. **建置效能目標：** 建置時間增加不超過 50%，bundle size 增加少於 10KB，確保多語言功能不影響網站效能
 
 7. **靜態參數產生：** 使用 `generateStaticParams()` 為所有語言產生靜態頁面，確保完全靜態導出而無需伺服器端處理
+
+8. **雙路徑架構取代重導向：** 不使用根路徑重導向到 `/zh/`，而是在 `app/` 和 `app/[locale]/` 下都建立頁面，透過共用元件實現邏輯複用。這個方案雖然有少量程式碼重複，但避免了以下問題：
+   - 靜態導出環境下重導向的複雜性（需要客戶端 JavaScript 或 meta refresh）
+   - 移動大量檔案可能造成的錯誤
+   - `app/layout.tsx` 中的 `lang` 屬性設定問題（`app/` 下保持預設，`app/[locale]/layout.tsx` 中設定各語言的 lang）
+   - 更容易維護現有的中文內容路徑（如 `/tech`、`/posts` 等保持不變）
