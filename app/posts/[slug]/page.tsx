@@ -15,7 +15,10 @@ export default async function PostPage({
 
 export async function generateStaticParams() {
   const allPostMetadata = await getSingletonPostMetadata();
-  return Object.keys(allPostMetadata).map((slug) => ({ slug }));
+  // Only generate params for Chinese posts (postKey without language suffix)
+  return Object.keys(allPostMetadata)
+    .filter((postKey) => !postKey.match(/-(?:ja|en)$/))
+    .map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({

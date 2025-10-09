@@ -24,7 +24,7 @@ export async function generateStaticParams() {
       params.push({ locale: 'ja', slug: metadata.slug });
     } else if (postKey.endsWith('-en')) {
       params.push({ locale: 'en', slug: metadata.slug });
-    } else if (!postKey.includes('-')) {
+    } else if (!postKey.endsWith('-ja') && !postKey.endsWith('-en')) {
       // This is a zh post (no locale suffix)
       params.push({ locale: 'zh', slug: metadata.slug });
     }
