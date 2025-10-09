@@ -216,11 +216,21 @@ export function encodeSlug(slug: string) {
 
 export const fetchCategoryPosts = async (category: Category, locale: Locale = 'zh') => {
   const allPostMetadata = await getSingletonPostMetadata();
+
+  // First, filter by locale before loading full post data
+  const localeFilteredMetadata = Object.values(allPostMetadata).filter((post) => {
+    const filename = path.basename(post.filePath);
+    const postLocale = extractLocaleFromFilename(filename);
+    return postLocale === locale;
+  });
+
+  // Load full post data only for locale-filtered posts
   const posts = await Promise.all(
-    Object.values(allPostMetadata).map((post) => getPostData(post.filePath))
+    localeFilteredMetadata.map((post) => getPostData(post.filePath))
   );
 
-  return posts.filter((post) => post.categories.includes(category) && post.locale === locale);
+  // Finally filter by category
+  return posts.filter((post) => post.categories.includes(category));
 };
 
 /**
@@ -228,11 +238,18 @@ export const fetchCategoryPosts = async (category: Category, locale: Locale = 'z
  */
 export async function getPostsByLocale(locale: Locale): Promise<PostData[]> {
   const allPostMetadata = await getSingletonPostMetadata();
-  const posts = await Promise.all(
-    Object.values(allPostMetadata).map((post) => getPostData(post.filePath))
-  );
 
-  return posts.filter((post) => post.locale === locale);
+  // Filter by locale before loading full post data
+  const localeFilteredMetadata = Object.values(allPostMetadata).filter((post) => {
+    const filename = path.basename(post.filePath);
+    const postLocale = extractLocaleFromFilename(filename);
+    return postLocale === locale;
+  });
+
+  // Load full post data only for locale-filtered posts
+  return Promise.all(
+    localeFilteredMetadata.map((post) => getPostData(post.filePath))
+  );
 }
 
 /**
