@@ -12,4 +12,4 @@ categories:
   
 [![DSC_7935](images/0.jpg)](http://www.flickr.com/photos/znikang/406258699/ "Photo Sharing")  
   
-![給我一點 Tempo](images/1.JPG?imgmax=512)
+![給我一點 Tempo](images/1.JPG)

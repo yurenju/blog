@@ -8,7 +8,7 @@ categories:
   - life
 
 ---
-[![](images/0.JPG?imgmax=512)](http://picasaweb.google.com/yurenju/TravelOfFencihu/photo#5007134733771287586)
+[![](images/0.JPG)](http://picasaweb.google.com/yurenju/TravelOfFencihu/photo#5007134733771287586)
 
 From [獵戶座](http://picasaweb.google.com/yurenju/TravelOfFencihu)
 

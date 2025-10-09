@@ -8,7 +8,7 @@ categories:
   - life
 
 ---
-[![](images/0.jpg?imgmax=288)](http://picasaweb.google.com/yurenju/Unnamed05/photo#4977199629767278610)
+[![](images/0.jpg)](http://picasaweb.google.com/yurenju/Unnamed05/photo#4977199629767278610)
 
 From [腦殘實驗室](http://picasaweb.google.com/yurenju/Unnamed05)
 
