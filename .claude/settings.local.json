@@ -1,0 +1,13 @@
+{
+    "permissions": {
+        "allow": [
+            "mcp__ide__getDiagnostics",
+            "mcp__playwright__browser_navigate",
+            "Bash(cat:*)",
+            "Bash(mkdir:*)",
+            "Bash(git add:*)",
+            "Bash(git log:*)"
+        ],
+        "deny": []
+    }
+}

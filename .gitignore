@@ -45,3 +45,4 @@ public/rss.xml
 public/rss/*
 
 fixtures
+.playwright-mcp

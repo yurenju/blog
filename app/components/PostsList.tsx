@@ -53,14 +53,14 @@ const PostsList = ({
               <li key={post.slug}>
                 <Link
                   href={`/posts/${encodeURIComponent(post.slug)}`}
-                  className="flex items-center gap-1 hover:bg-gray-50 dark:hover:bg-gray-800 p-1 pl-3 mb-2 rounded-lg transition-colors"
+                  className="flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 p-1 pl-3 mb-2 rounded-lg transition-colors"
                   tabIndex={0}
                   aria-label={`閱讀文章: ${post.title}`}
                 >
-                  <span className="text-gray-500 text-sm min-w-[80px] text-center">
+                  <span className="text-gray-500 dark:text-gray-400 text-sm min-w-[80px] text-center">
                     {formatDate(post.date, { withYear: false })}
                   </span>
-                  <span className="text-blue-600 group-hover:text-blue-700">
+                  <span className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                     {post.title}
                   </span>
                 </Link>

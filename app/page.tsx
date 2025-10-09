@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/siteConfig";
 
 export default function Home() {
@@ -25,21 +26,21 @@ export default function Home() {
       <div>
         <ul className="flex items-center justify-center gap-2 text-md">
           <li>
-            <Link href="/shorts" className="function-link">
-              照片
-            </Link>
+            <Button variant="ghost" asChild>
+              <Link href="/shorts">照片</Link>
+            </Button>
           </li>
-          <span className="dark:text-gray-300 text-gray-500">•</span>
+          <span className="text-muted-foreground">•</span>
           <li>
-            <Link href="/life" className="function-link">
-              生活
-            </Link>
+            <Button variant="ghost" asChild>
+              <Link href="/life">生活</Link>
+            </Button>
           </li>
-          <span className="dark:text-gray-300 text-gray-500">•</span>
+          <span className="text-muted-foreground">•</span>
           <li>
-            <Link href="/tech" className="function-link">
-              技術
-            </Link>
+            <Button variant="ghost" asChild>
+              <Link href="/tech">技術</Link>
+            </Button>
           </li>
         </ul>
       </div>

@@ -16,22 +16,27 @@
 ## 相關檔案
 
 ### 新增檔案
-- `components/ui/` - shadcn/ui 元件目錄（由 shadcn 初始化產生）
+- `components/ui/button.tsx` - shadcn Button 元件（用於導航連結）
+- `components/ui/alert.tsx` - shadcn Alert 元件（準備用於語言提示）
+- `components/ui/badge.tsx` - shadcn Badge 元件（準備用於語言版本指示器）
+- `components.json` - shadcn/ui 配置檔
+- `app/globals.backup.css` - 原始 globals.css 備份
 - `lib/i18n/locales.ts` - 語言定義和型別
 - `lib/i18n/translations.ts` - UI 翻譯字典
-- `app/components/LanguageSwitcher.tsx` - 語言切換器元件（使用 shadcn Button 或 DropdownMenu）
-- `app/components/ArticleLanguageIndicator.tsx` - 文章語言版本指示器元件（使用 shadcn Badge 或 Link）
+- `app/components/LanguageSwitcher.tsx` - 語言切換器元件（使用 shadcn Button）
+- `app/components/ArticleLanguageIndicator.tsx` - 文章語言版本指示器元件（使用 shadcn Badge）
 - `app/components/LanguageNotice.tsx` - 文章列表語言提示元件（使用 shadcn Alert）
 
 ### 修改檔案
+- `app/globals.css` - 整合 shadcn CSS variables，移除自訂 .function-link 類別
+- `app/layout.tsx` - 移除硬編碼的 body 顏色類別，使用 shadcn 的 bg-background/text-foreground（將移動到 `app/[locale]/layout.tsx`）
+- `app/components/Navbar.tsx` - 使用 shadcn Button 元件替代自訂連結樣式
+- `app/page.tsx` - 使用 shadcn Button 元件（將實作根路徑重新導向到 `/zh/`）
+- `app/components/PostsList.tsx` - 改善暗色模式對比度（將支援多語言顯示）
+- `lib/utils.ts` - 新增 shadcn 的 cn() 函式（將擴展日期格式化函式支援多語言）
 - `lib/posts.ts` - 擴展以支援多語言文章識別和過濾
-- `lib/utils.ts` - 擴展日期格式化函式支援多語言
 - `lib/rss.ts` - 擴展 RSS 產生支援多語言
 - `scripts/generate-rss.ts` - 擴展以產生多語言 RSS feeds
-- `app/page.tsx` - 實作根路徑重新導向到 `/zh/`
-- `app/layout.tsx` - 移動到 `app/[locale]/layout.tsx`
-- `app/components/Navbar.tsx` - 整合語言切換器
-- `app/components/PostsList.tsx` - 支援多語言顯示
 - 所有頁面檔案 - 移動到 `app/[locale]/` 下並支援多語言
 
 ### 測試相關
@@ -39,7 +44,7 @@
 
 ## 任務
 
-- [ ] 1. 設定 shadcn/ui
+- [x] 1. 設定 shadcn/ui
   - 1.1 執行 `npx shadcn@latest init` 初始化 shadcn/ui，選擇適合的設定（使用 TypeScript、Tailwind CSS）
   - 1.2 根據需求安裝基礎 UI 元件：`npx shadcn@latest add button alert badge` （這些將用於語言切換器、提示訊息等）
   - 1.3 如果需要下拉選單形式的語言切換器，安裝 `npx shadcn@latest add dropdown-menu`
