@@ -1,6 +1,7 @@
 import { getPostData } from "@/lib/posts";
 import { siteConfig } from "@/lib/siteConfig";
 import { formatDate } from "@/lib/utils";
+import { getTranslation } from "@/lib/i18n/translations";
 import { Noto_Serif_TC } from "next/font/google";
 import type { Locale } from "@/lib/i18n/locales";
 
@@ -12,16 +13,17 @@ type MarkdownPageProps = {
   filepath: string;
   showAuthor?: boolean;
   showDate?: boolean;
-  locale?: Locale;
+  locale: Locale;
 };
 
 export default async function MarkdownPage({
   filepath,
   showAuthor = true,
   showDate = true,
-  locale, // eslint-disable-line @typescript-eslint/no-unused-vars
+  locale,
 }: MarkdownPageProps) {
   const pageData = await getPostData(filepath);
+  const t = getTranslation(locale);
 
   return (
     <div className="container mx-auto p-4 mb-48">
@@ -39,10 +41,10 @@ export default async function MarkdownPage({
           {showAuthor && (
             <>
               ⸺ {siteConfig.author.name}
-              {showDate && " 撰於 "}
+              {showDate && ` ${t.post.writtenBy} `}
             </>
           )}
-          {showDate && formatDate(pageData.date, { withYear: true })}
+          {showDate && formatDate(pageData.date, { withYear: true, locale })}
         </p>
       )}
     </div>

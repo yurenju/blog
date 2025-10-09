@@ -3,30 +3,36 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ThemeToggleButton from "./ThemeToggleButton";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { getTranslation } from "@/lib/i18n/translations";
 import type { Locale } from "@/lib/i18n/locales";
 
-const Navbar = ({ locale }: { locale?: Locale }) => { // eslint-disable-line @typescript-eslint/no-unused-vars
+const Navbar = ({ locale = 'zh' }: { locale?: Locale }) => {
+  const t = getTranslation(locale);
+  const prefix = locale === 'zh' ? '' : `/${locale}`;
+
   return (
     <nav className="top-0 left-0 right-0 h-16 border-b-2 border-border">
       <div className="h-full max-w-7xl mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Button variant="ghost" asChild>
-            <Link href="/">首頁</Link>
+            <Link href={`${prefix}/`}>{t.nav.home}</Link>
           </Button>
         </div>
         <div className="flex items-center gap-1">
           <Button variant="ghost" asChild>
-            <Link href="/about">關於</Link>
+            <Link href={`${prefix}/about`}>{t.nav.about}</Link>
           </Button>
           <span className="text-muted-foreground">•</span>
           <Button variant="ghost" asChild>
-            <Link href="/subscription">訂閱</Link>
+            <Link href={`${prefix}/subscription`}>{t.nav.subscription}</Link>
           </Button>
           <span className="text-muted-foreground">•</span>
           <Button variant="ghost" asChild>
-            <Link href="/posts">全部文章</Link>
+            <Link href={`${prefix}/posts`}>{t.nav.allPosts}</Link>
           </Button>
           <ThemeToggleButton />
+          <LanguageSwitcher locale={locale} />
         </div>
       </div>
     </nav>

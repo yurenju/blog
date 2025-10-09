@@ -16,7 +16,7 @@ type PostsListProps = {
   posts: Post[];
   title?: string;
   showTitle?: boolean;
-  locale?: Locale;
+  locale: Locale;
 };
 
 const groupPostsByYear = (posts: Post[]): GroupedPosts => {
@@ -32,10 +32,12 @@ const groupPostsByYear = (posts: Post[]): GroupedPosts => {
 
 const PostsList = ({
   posts,
-  title = "全部文章",
+  title,
   showTitle = true,
-  locale, // eslint-disable-line @typescript-eslint/no-unused-vars
+  locale,
 }: PostsListProps) => {
+  const prefix = locale === 'zh' ? '' : `/${locale}`;
+
   // Sort posts by date in descending order
   const sortedPosts = [...posts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -45,23 +47,32 @@ const PostsList = ({
   const groupedPosts = groupPostsByYear(sortedPosts);
   const years = Object.keys(groupedPosts).sort((a, b) => b.localeCompare(a));
 
+  // Format year display based on locale
+  const formatYearDisplay = (year: string) => {
+    if (locale === 'zh') return `${year} 年`;
+    if (locale === 'ja') return `${year}年`;
+    return year;
+  };
+
   return (
     <div className="w-full">
-      {showTitle && <h1 className="text-2xl font-bold mb-8">{title}</h1>}
+      {showTitle && title && <h1 className="text-2xl font-bold mb-8">{title}</h1>}
       {years.map((year) => (
         <div key={year} className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">{year} 年</h2>
+          <h2 className="text-xl font-semibold mb-4">{formatYearDisplay(year)}</h2>
           <ul className="text-lg">
             {groupedPosts[year].map((post) => (
               <li key={post.slug}>
                 <Link
-                  href={`/posts/${encodeURIComponent(post.slug)}`}
+                  href={`${prefix}/posts/${encodeURIComponent(post.slug)}`}
                   className="flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 p-1 pl-3 mb-2 rounded-lg transition-colors"
                   tabIndex={0}
-                  aria-label={`閱讀文章: ${post.title}`}
+                  aria-label={locale === 'zh' ? `閱讀文章: ${post.title}` :
+                             locale === 'ja' ? `記事を読む: ${post.title}` :
+                             `Read article: ${post.title}`}
                 >
                   <span className="text-gray-500 dark:text-gray-400 text-sm min-w-[80px] text-center">
-                    {formatDate(post.date, { withYear: false })}
+                    {formatDate(post.date, { withYear: false, locale })}
                   </span>
                   <span className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                     {post.title}

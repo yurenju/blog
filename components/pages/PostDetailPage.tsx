@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/siteConfig";
 import { formatDate } from "@/lib/utils";
 import { Noto_Serif_TC } from "next/font/google";
 import { getTranslation } from "@/lib/i18n/translations";
+import { ArticleLanguageIndicator } from "@/components/ArticleLanguageIndicator";
 import type { Locale } from "@/lib/i18n/locales";
 
 const notoSerifTC = Noto_Serif_TC({
@@ -28,6 +29,11 @@ export async function PostDetailPage({
       <h1 className="article-title text-3xl font-semibold mb-6">
         {postData.title}
       </h1>
+      <ArticleLanguageIndicator
+        availableLocales={postData.availableLocales}
+        currentLocale={locale}
+        slug={slug}
+      />
       <div
         className="article font-light text-lg leading-10 md:leading-relaxed text-justify"
         dangerouslySetInnerHTML={{ __html: postData.content }}
@@ -36,7 +42,7 @@ export async function PostDetailPage({
         className={`text-gray-400 dark:text-gray-500 text-right mt-6 ${notoSerifTC.className}`}
       >
         ⸺ {siteConfig.author.name} {t.post.writtenBy}{" "}
-        {formatDate(postData.date, { withYear: true })}
+        {formatDate(postData.date, { withYear: true, locale })}
       </p>
     </div>
   );

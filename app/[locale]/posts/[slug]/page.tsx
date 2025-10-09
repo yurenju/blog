@@ -31,9 +31,26 @@ export async function generateMetadata({
   const postKey = locale === 'zh' ? decodedSlug : `${decodedSlug}-${locale}`;
   const postData = await getPostData(allPostMetadata[postKey].filePath);
 
+  // Build hreflang alternates based on available locales
+  const languages: Record<string, string> = {};
+  const localeToHreflang: Record<Locale, string> = {
+    zh: 'zh-Hant',
+    ja: 'ja',
+    en: 'en',
+  };
+
+  for (const availableLocale of postData.availableLocales) {
+    const prefix = availableLocale === 'zh' ? '' : `/${availableLocale}`;
+    languages[localeToHreflang[availableLocale]] = `${siteConfig.link}${prefix}/posts/${decodedSlug}`;
+  }
+  languages['x-default'] = `${siteConfig.link}/posts/${decodedSlug}`;
+
   return {
     title: `${postData.title}`,
     description: postData.description,
+    alternates: {
+      languages,
+    },
     openGraph: {
       title: `${postData.title}`,
       description: postData.description,
