@@ -111,7 +111,7 @@
   - 3.10 建立測試文章（在某個文章目錄加入 `index.ja.md` 和 `index.en.md`），驗證語言識別和關聯功能正確運作
   - 3.11 修正 `app/[locale]/posts/[slug]/page.tsx` 和 `components/pages/PostDetailPage.tsx` 中的 postKey 查找邏輯，確保正確載入對應語言版本
 
-- [ ] 4. 實作 UI 多語言化
+- [x] 4. 實作 UI 多語言化
   - 4.1 完成 `lib/i18n/translations.ts` 中所有 UI 元素的日文和英文翻譯
   - 4.2 建立 `app/components/LanguageSwitcher.tsx` 元件，使用 shadcn Button 元件顯示所有支援的語言（中文、日本語、English），當前語言使用 variant="default"，其他語言使用 variant="ghost"。對於 `app/` 下的頁面，點擊切換會導向 `/[locale]/相同路徑`；對於 `app/[locale]/` 下的頁面，點擊切換會導向 `/[新語言]/相同路徑`
   - 4.3 修改 `app/components/Navbar.tsx`，接收 `locale` prop（可選，預設為 'zh'），整合 `LanguageSwitcher` 元件（放在主題切換按鈕旁）。如果 locale 為 'zh'，導航連結不加前綴；否則加入 `/[locale]` 前綴
@@ -130,23 +130,36 @@
   - 4.11 在 `app/[locale]/` 下的所有頁面的 `generateMetadata()` 函式中，使用對應語言的翻譯來設定 title 和 description。`app/` 下的頁面保持使用中文 metadata
   - 4.12 在 `public/pages/` 目錄下建立測試用的多語言靜態頁面（例如 `about.ja.md`、`subscription.en.md`），驗證靜態頁面多語言功能正確運作
 
-- [ ] 5. 實作多語言 RSS 與 SEO 優化
-  - 5.1 修改 `lib/rss.ts` 中的 `generateRSSFeed()` 函式，接受 `locale?: Locale` 參數，過濾指定語言的文章
-  - 5.2 修改 `getCategoryTitle()` 函式，接受 `locale` 參數，返回對應語言的分類標題
-  - 5.3 更新 RSS feed 的 title 和 description 使用對應語言的翻譯
-  - 5.4 修改 `scripts/generate-rss.ts`，為每個語言和分類組合產生 RSS feed（如 `/rss/zh/tech.xml`、`/rss/ja.xml`）
-  - 5.5 確保原有的 `/rss.xml` 保持運作，包含所有語言的文章
-  - 5.6 在 `app/[locale]/layout.tsx` 的 `generateMetadata()` 中加入 `alternates.languages` 設定，為所有頁面加入 hreflang 標籤
-  - 5.7 在 `app/[locale]/posts/[slug]/page.tsx` 的 `generateMetadata()` 中，根據 `availableLocales` 動態產生 hreflang 標籤，只為實際存在的語言版本加入標籤
-  - 5.8 執行完整建置，測試所有 RSS feeds 是否正確產生
-  - 5.9 驗證產生的 HTML 中 hreflang 標籤是否正確
-  - 5.10 測量建置時間，確保增加不超過 50%
+- [ ] 5. 修正根路徑重新導向架構
+  - 5.1 將 `app/` 下的所有頁面改為重新導向到 `/zh/` 對應路徑
+  - 5.2 修改 `app/page.tsx`，使用 Next.js `redirect()` 重新導向到 `/zh/`
+  - 5.3 修改 `app/posts/page.tsx`，重新導向到 `/zh/posts`
+  - 5.4 修改 `app/posts/[slug]/page.tsx`，重新導向到 `/zh/posts/[slug]`
+  - 5.5 修改 `app/tech/page.tsx`，重新導向到 `/zh/tech`
+  - 5.6 修改 `app/life/page.tsx`，重新導向到 `/zh/life`
+  - 5.7 修改 `app/shorts/page.tsx`，重新導向到 `/zh/shorts`
+  - 5.8 修改 `app/about/page.tsx`，重新導向到 `/zh/about`
+  - 5.9 修改 `app/subscription/page.tsx`，重新導向到 `/zh/subscription`
+  - 5.10 修改 `app/[locale]/layout.tsx`，使用 RootLayoutContent 並傳入正確的 locale 和 htmlLang
+  - 5.11 測試所有根路徑（`/`, `/posts`, `/tech` 等）是否正確重新導向到對應的 `/zh/` 路徑
 
-- [ ] 6. 執行驗收測試
-  - 6.1 使用 AI 讀取 `acceptance.feature` 檔案
-  - 6.2 透過終端指令和瀏覽器操作執行每個場景
-  - 6.3 驗證所有場景通過並記錄結果
-  - 6.4 如有失敗場景，修正程式碼後重新測試
+- [ ] 6. 實作多語言 RSS 與 SEO 優化
+  - 6.1 修改 `lib/rss.ts` 中的 `generateRSSFeed()` 函式，接受 `locale?: Locale` 參數，過濾指定語言的文章
+  - 6.2 修改 `getCategoryTitle()` 函式，接受 `locale` 參數，返回對應語言的分類標題
+  - 6.3 更新 RSS feed 的 title 和 description 使用對應語言的翻譯
+  - 6.4 修改 `scripts/generate-rss.ts`，為每個語言和分類組合產生 RSS feed（如 `/rss/zh/tech.xml`、`/rss/ja.xml`）
+  - 6.5 確保原有的 `/rss.xml` 保持運作，包含所有語言的文章
+  - 6.6 在 `app/[locale]/layout.tsx` 的 `generateMetadata()` 中加入 `alternates.languages` 設定，為所有頁面加入 hreflang 標籤
+  - 6.7 在 `app/[locale]/posts/[slug]/page.tsx` 的 `generateMetadata()` 中，根據 `availableLocales` 動態產生 hreflang 標籤，只為實際存在的語言版本加入標籤
+  - 6.8 執行完整建置，測試所有 RSS feeds 是否正確產生
+  - 6.9 驗證產生的 HTML 中 hreflang 標籤是否正確
+  - 6.10 測量建置時間，確保增加不超過 50%
+
+- [ ] 7. 執行驗收測試
+  - 7.1 使用 AI 讀取 `acceptance.feature` 檔案
+  - 7.2 透過終端指令和瀏覽器操作執行每個場景
+  - 7.3 驗證所有場景通過並記錄結果
+  - 7.4 如有失敗場景，修正程式碼後重新測試
 
 ## 實作參考資訊
 
