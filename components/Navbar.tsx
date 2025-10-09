@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ThemeToggleButton from "./ThemeToggleButton";
+import type { Locale } from "@/lib/i18n/locales";
 
-const Navbar = () => {
+const Navbar = ({ locale }: { locale?: Locale }) => { // eslint-disable-line @typescript-eslint/no-unused-vars
   return (
     <nav className="top-0 left-0 right-0 h-16 border-b-2 border-border">
       <div className="h-full max-w-7xl mx-auto px-4 flex items-center justify-between">

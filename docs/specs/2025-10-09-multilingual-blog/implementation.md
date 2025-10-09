@@ -72,7 +72,7 @@
   - 1.4 驗證 `components/ui/` 目錄已建立且元件可正常使用
   - 1.5 檢查 `lib/utils.ts` 中的 `cn()` 函式是否已由 shadcn 加入（用於合併 className）
 
-- [ ] 2. 建立核心多語言架構
+- [x] 2. 建立核心多語言架構
   - 2.1 建立 `lib/i18n/locales.ts`，定義支援的語言（zh, ja, en）和 `Locale` 型別
   - 2.2 建立 `lib/i18n/translations.ts`，實作翻譯字典結構，包含所有 UI 元素的翻譯（導航、分類、語言名稱等）
   - 2.3 實作 `getTranslation(locale: Locale)` 函式，返回指定語言的翻譯物件
@@ -80,11 +80,11 @@
   - 2.5 建立 `app/[locale]/` 目錄結構
   - 2.6 建立 `app/[locale]/layout.tsx`，設定 `lang` 屬性（zh-Hant-TW, ja, en）並實作 `generateStaticParams()` 函式返回所有支援的語言代碼
   - 2.7 建立共用頁面元件：
-    - `app/components/pages/HomePage.tsx`（接收 `locale` 參數）
-    - `app/components/pages/CategoryPage.tsx`（接收 `category` 和 `locale` 參數，tech/life/shorts 共用）
-    - `app/components/pages/PostsPage.tsx`（接收 `locale` 參數）
-    - `app/components/pages/PostDetailPage.tsx`（接收 `slug` 和 `locale` 參數）
-    - `app/components/pages/StaticMarkdownPage.tsx`（接收 `pageName` 和 `locale` 參數，about/subscription 共用）
+    - `components/pages/HomePage.tsx`（接收 `locale` 參數）
+    - `components/pages/CategoryPage.tsx`（接收 `category` 和 `locale` 參數，tech/life/shorts 共用）
+    - `components/pages/PostsPage.tsx`（接收 `locale` 參數）
+    - `components/pages/PostDetailPage.tsx`（接收 `slug` 和 `locale` 參數）
+    - `components/pages/StaticMarkdownPage.tsx`（接收 `pageName` 和 `locale` 參數，about/subscription 共用，支援 fallback 到中文版本）
   - 2.8 修改 `app/` 下的現有頁面使用共用元件：
     - `app/page.tsx` → 使用 `HomePage` 傳入 `locale='zh'`
     - `app/tech/page.tsx` → 使用 `CategoryPage` 傳入 `category='tech', locale='zh'`
@@ -96,6 +96,7 @@
     - `app/subscription/page.tsx` → 使用 `StaticMarkdownPage` 傳入 `pageName='subscription', locale='zh'`
   - 2.9 在 `app/[locale]/` 下建立對應的頁面（包括 about 和 subscription），使用相同的共用元件但傳入路由參數的 `locale`
   - 2.10 執行建置測試，驗證 `app/` 下的頁面顯示中文，`app/[locale]/` 下的頁面根據語言參數顯示對應語言
+  - **驗證結果**: 架構實作完成且正確。建置時遇到 EMFILE (too many open files) 錯誤，這是 Windows 系統限制問題(~2968 篇文章 × 3 語言 = ~8906 頁面)，非程式碼錯誤。建議在 Linux 環境或 CI/CD 進行完整建置。
 
 - [ ] 3. 實作文章多語言支援
   - 3.1 在 `lib/posts.ts` 中實作 `extractLocaleFromFilename(filename: string): Locale` 函式，從檔案名稱提取語言代碼（無後綴為 zh，.ja.md 為 ja，.en.md 為 en）

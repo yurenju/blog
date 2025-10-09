@@ -1,8 +1,5 @@
-import path from "path";
-import MarkdownPage from "@/app/components/MarkdownPage";
+import { StaticMarkdownPage } from "@/components/pages/StaticMarkdownPage";
 
-export default async function AboutPage() {
-  const filepath = path.join(process.cwd(), "public/pages/about.md");
-
-  return <MarkdownPage filepath={filepath} />;
+export default function AboutPage() {
+  return <StaticMarkdownPage pageName="about" locale="zh" />;
 }

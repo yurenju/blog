@@ -3,14 +3,15 @@ import { siteConfig } from "@/lib/siteConfig";
 import { Metadata } from "next";
 import path from "path";
 import { PostDetailPage } from "@/components/pages/PostDetailPage";
+import type { Locale } from "@/lib/i18n/locales";
 
-export default async function PostPage({
+export default async function LocalePostPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: Locale; slug: string }>;
 }) {
-  const { slug } = await params;
-  return <PostDetailPage slug={slug} locale="zh" />;
+  const { locale, slug } = await params;
+  return <PostDetailPage slug={slug} locale={locale} />;
 }
 
 export async function generateStaticParams() {
@@ -21,9 +22,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: Locale; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const allPostMetadata = await getSingletonPostMetadata();
   const decodedSlug = decodeSlug(slug);
   const postData = await getPostData(allPostMetadata[decodedSlug].filePath);
@@ -34,7 +35,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${postData.title}`,
       description: postData.description,
-      url: `${siteConfig.link}/posts/${decodedSlug}`,
+      url: `${siteConfig.link}/${locale}/posts/${decodedSlug}`,
       type: "article",
       ...(postData.coverImage && {
         images: {

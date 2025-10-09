@@ -2,6 +2,7 @@ import { getPostData } from "@/lib/posts";
 import { siteConfig } from "@/lib/siteConfig";
 import { formatDate } from "@/lib/utils";
 import { Noto_Serif_TC } from "next/font/google";
+import type { Locale } from "@/lib/i18n/locales";
 
 const notoSerifTC = Noto_Serif_TC({
   subsets: ["latin"],
@@ -11,12 +12,14 @@ type MarkdownPageProps = {
   filepath: string;
   showAuthor?: boolean;
   showDate?: boolean;
+  locale?: Locale;
 };
 
 export default async function MarkdownPage({
   filepath,
   showAuthor = true,
   showDate = true,
+  locale, // eslint-disable-line @typescript-eslint/no-unused-vars
 }: MarkdownPageProps) {
   const pageData = await getPostData(filepath);
 

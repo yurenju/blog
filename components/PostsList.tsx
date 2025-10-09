@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
+import type { Locale } from "@/lib/i18n/locales";
 
 type Post = {
   slug: string;
@@ -15,6 +16,7 @@ type PostsListProps = {
   posts: Post[];
   title?: string;
   showTitle?: boolean;
+  locale?: Locale;
 };
 
 const groupPostsByYear = (posts: Post[]): GroupedPosts => {
@@ -32,6 +34,7 @@ const PostsList = ({
   posts,
   title = "全部文章",
   showTitle = true,
+  locale, // eslint-disable-line @typescript-eslint/no-unused-vars
 }: PostsListProps) => {
   // Sort posts by date in descending order
   const sortedPosts = [...posts].sort(

@@ -1,15 +1,5 @@
-import { getSingletonPostMetadata, getPostData } from "@/lib/posts";
-import PostsList from "@/app/components/PostsList";
+import { PostsPage as PostsPageComponent } from "@/components/pages/PostsPage";
 
-export default async function PostsPage() {
-  const allPostMetadata = await getSingletonPostMetadata();
-  const posts = await Promise.all(
-    Object.values(allPostMetadata).map((post) => getPostData(post.filePath))
-  );
-
-  return (
-    <div className="container mx-auto p-4">
-      <PostsList posts={posts} />
-    </div>
-  );
+export default function PostsPage() {
+  return <PostsPageComponent locale="zh" />;
 }
