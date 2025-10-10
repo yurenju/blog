@@ -67,11 +67,6 @@
   }
 
   /* OpenType font features for CJK languages */
-  /* 'palt' (Proportional Alternate) provides proportional spacing for CJK punctuation */
-  [lang="ja"] {
-    font-feature-settings: 'palt' 1;
-  }
-
   /* Disable font features for code blocks to maintain monospace characteristics */
   pre, code {
     font-feature-settings: normal;
