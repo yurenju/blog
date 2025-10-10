@@ -5,7 +5,7 @@ date: 2023-08-04
 image: cover_florence-cathedral.jpg
 description: 聖母百花聖殿就在這個老城區裡面拔地而起，跟兩旁的低矮建築形成強烈的對比，從街道縫隙裡面仰望這座教堂更是凸顯了它的雄偉。
 categories:
-- shorts
+- life
 tags:
 - photo
 ---

@@ -5,7 +5,7 @@ date: 2023-10-02
 image: cover_sips-and-trips.jpg
 description: 為了這口啜飲而生的旅程，同時都成了緣由、目的以及小小的冒險歷程。
 categories:
-  - shorts
+  - life
 tags:
   - coffee
   - trip

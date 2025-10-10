@@ -5,7 +5,7 @@ date: 2023-10-09
 image: cover_pantheon.jpg
 description: 其實是因為以前都是用為數眾多的蠟燭來照明，所以當時確實熱上升氣流可以讓小雨不致於淋入室內。但科技發達至今改用燈泡照明之後，神蹟就消失了。
 categories:
-  - shorts
+  - life
 tags:
   - photo
 ---

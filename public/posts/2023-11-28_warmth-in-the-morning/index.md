@@ -5,7 +5,7 @@ date: 2023-11-28
 image: warmth-in-the-morning.jpg
 description: 在伊斯坦堡的前半段都在參加研討會，趁著這段時間也對這個城市逐漸熟悉起來。有天逛完伊斯坦堡老城區的主要景點後，晚上就決定隔天要去一個比較遠的地方看日出。
 categories:
-  - shorts
+  - life
 tags:
   - photo
   - istanbul

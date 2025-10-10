@@ -5,7 +5,7 @@ date: 2023-11-25
 image: cover_istanbul-city-night-dawn.jpg
 description: 我最喜歡的是在日出之前以及早晨城市燈光熄滅之前的縫隙，燈光點綴著清真寺與橋樑，天空從深色緞帶質感褪成了金黃與藍色的交界，微風吹皺了金角灣的海，前方幾戶人家炊煙裊裊。
 categories:
-  - shorts
+  - life
 tags:
   - photo
   - istanbul

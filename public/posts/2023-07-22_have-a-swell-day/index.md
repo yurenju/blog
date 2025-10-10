@@ -5,7 +5,7 @@ date: 2023-07-22
 image: cover_have-a-swell-day.jpg
 description: 最近一次經過的時候剛好是夕陽的時候，那時候的氣溫還相當宜人，經過這間咖啡館的時候又想起了當初感受到的夏威夷氛圍，而日式風格的海浪圖樣搭配上 "Have a swell day" 與夕陽的側邊光線造成的垂直折線陰影，真的是讓人覺得度過了美好的一天。
 categories:
-- shorts
+- life
 tags:
 - photo
 - coffee

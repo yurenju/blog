@@ -5,7 +5,7 @@ date: 2023-06-30
 image: cover_sanctuary.jpg
 description: 無雷推薦《相撲聖域》。
 categories:
-- shorts
+- life
 tags:
 - tvseries
 ---

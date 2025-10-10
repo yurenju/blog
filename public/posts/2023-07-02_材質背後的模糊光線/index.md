@@ -5,7 +5,7 @@ date: 2023-07-02
 image: cover_blurry_light.jpg
 description: 早上的陽光斜射在捲曲的紗簾上看起來被層疊折起的波浪，透過窗簾後又變得模糊。
 categories:
-- shorts
+- life
 tags:
 - photo
 ---

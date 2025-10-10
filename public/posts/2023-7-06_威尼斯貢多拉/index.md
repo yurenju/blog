@@ -5,7 +5,7 @@ date: 2023-07-06
 image: cover_venice-gondola.jpg
 description: 威尼斯貢多拉
 categories:
-- shorts
+- life
 tags:
 - photo
 ---
