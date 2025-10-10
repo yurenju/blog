@@ -1,5 +1,5 @@
 ---
-title: Boundaries: The Balance Between Rules and Innovation
+title: "Boundaries: The Balance Between Rules and Innovation"
 ---
 
 ![Cover Image](./cover_balance-of-rules-and-innovation.jpeg)
