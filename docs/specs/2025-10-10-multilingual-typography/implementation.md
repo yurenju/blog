@@ -26,14 +26,14 @@
 
 ## 任務
 
-- [ ] 1. 安裝依賴並配置 Tailwind 基礎設定
+- [x] 1. 安裝依賴並配置 Tailwind 基礎設定
   - 1.1 執行 `npm install -D @tailwindcss/typography tailwindcss-localized` 安裝兩個插件
   - 1.2 在 `tailwind.config.ts` 中的 theme.languages 新增語言映射配置(對應 htmlLangMap)
   - 1.3 在 plugins 陣列中新增 `require('@tailwindcss/typography')` 和 `require('tailwindcss-localized')`
   - 1.4 在 variants 配置中啟用 localized 變體:fontSize, lineHeight, letterSpacing, fontFamily
   - 1.5 測試 `npm run dev` 確認配置無誤
 
-- [ ] 2. 載入 Noto 字型家族到專案
+- [x] 2. 載入 Noto 字型家族到專案
   - 2.1 在 `app/layout.tsx` 從 `next/font/google` 引入 7 個 Noto 字型
   - 2.2 配置正文字型(Sans):Noto_Sans, Noto_Sans_TC, Noto_Sans_JP,字重 400/500/600
   - 2.3 配置標題字型(Serif):Noto_Serif, Noto_Serif_TC, Noto_Serif_JP,字重 400/600/700
