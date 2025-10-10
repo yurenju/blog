@@ -16,6 +16,31 @@ export default {
   		ja: 'ja',           // class: ja:xxx, matches lang="ja"
   	},
   	extend: {
+  		// Font family configuration for mixed typography strategy
+  		// Body text: Sans Serif, Headings: Serif, Code: Monospace
+  		fontFamily: {
+  			sans: [
+  				'var(--font-noto-sans)',
+  				'var(--font-noto-sans-tc)',
+  				'var(--font-noto-sans-jp)',
+  				'system-ui',
+  				'-apple-system',
+  				'sans-serif',
+  			],
+  			serif: [
+  				'var(--font-noto-serif)',
+  				'var(--font-noto-serif-tc)',
+  				'var(--font-noto-serif-jp)',
+  				'Georgia',
+  				'serif',
+  			],
+  			mono: [
+  				'var(--font-noto-sans-mono)',
+  				'Consolas',
+  				'Monaco',
+  				'monospace',
+  			],
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -62,7 +87,9 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+  		// Typography configuration (empty structure for now, will be populated in next tasks)
+  		typography: () => ({}),
   	}
   },
   plugins: [
