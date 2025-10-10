@@ -56,25 +56,31 @@ const PostsList = ({
 
   return (
     <div className="w-full">
-      {showTitle && title && <h1 className="text-2xl font-bold mb-8">{title}</h1>}
+      {showTitle && title && (
+        <h1 className="font-serif text-4xl font-bold mb-12">
+          {title}
+        </h1>
+      )}
       {years.map((year) => (
-        <div key={year} className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">{formatYearDisplay(year)}</h2>
-          <ul className="text-lg">
+        <div key={year} className="mb-12">
+          <h2 className="font-serif text-2xl font-semibold mb-6 text-foreground/80">
+            {formatYearDisplay(year)}
+          </h2>
+          <ul className="space-y-3">
             {groupedPosts[year].map((post) => (
               <li key={post.slug}>
                 <Link
                   href={`${prefix}/posts/${encodeURIComponent(post.slug)}`}
-                  className="flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 p-1 pl-3 mb-2 rounded-lg transition-colors"
+                  className="flex items-baseline gap-4 group hover:text-primary transition-colors"
                   tabIndex={0}
                   aria-label={locale === 'zh' ? `閱讀文章: ${post.title}` :
                              locale === 'ja' ? `記事を読む: ${post.title}` :
                              `Read article: ${post.title}`}
                 >
-                  <span className="text-gray-500 dark:text-gray-400 text-sm min-w-[80px] text-center">
+                  <span className="text-sm text-muted-foreground min-w-[80px]">
                     {formatDate(post.date, { withYear: false, locale })}
                   </span>
-                  <span className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                  <span className="flex-1 group-hover:underline underline-offset-4">
                     {post.title}
                   </span>
                 </Link>
