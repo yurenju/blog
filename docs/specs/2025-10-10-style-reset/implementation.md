@@ -63,7 +63,7 @@
   - 4.4 第 26 行: 移除 `text-gray-700 dark:text-gray-400 mb-4 leading-9 font-medium md:font-normal` 和 `homepage-description` class
   - 4.5 第 32 行: 移除 `gap-2 text-md`,保留 `flex items-center justify-center`
 
-- [ ] 5. 重置 PostDetailPage.tsx、Navbar.tsx 和 Layout 元件樣式
+- [x] 5. 重置 PostDetailPage.tsx、Navbar.tsx 和 Layout 元件樣式
   - 5.1 PostDetailPage.tsx 第 28 行: 移除 `mb-48`,保留 `container mx-auto p-4`
   - 5.2 PostDetailPage.tsx 第 29 行: 移除 `mb-6` 和 `article-title` class,保留基本樣式
   - 5.3 PostDetailPage.tsx 第 38 行: 移除 `font-light text-lg leading-10 md:leading-relaxed text-justify`,保留 `article` class
@@ -81,7 +81,6 @@
   - 6.5 測試導航功能,確認所有連結可用
   - 6.6 檢視文章內容,確認程式碼區塊有語法高亮
   - 6.7 確認 YouTube 嵌入影片保持響應式比例(如有)
-  - 6.8 執行 `npm run build` 確認靜態匯出成功
 
 - [ ] 7. 執行驗收測試
   - 7.1 使用 AI 讀取 `acceptance.feature` 檔案

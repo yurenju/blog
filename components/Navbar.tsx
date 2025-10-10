@@ -12,14 +12,14 @@ const Navbar = ({ locale = 'zh' }: { locale?: Locale }) => {
   const prefix = locale === 'zh' ? '' : `/${locale}`;
 
   return (
-    <nav className="top-0 left-0 right-0 h-16 border-b-2 border-border">
+    <nav className="top-0 left-0 right-0 h-16 border-b border-border">
       <div className="h-full max-w-7xl mx-auto px-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center">
           <Button variant="ghost" asChild>
             <Link href={`${prefix}/`}>{t.nav.home}</Link>
           </Button>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center">
           <Button variant="ghost" asChild>
             <Link href={`${prefix}/about`}>{t.nav.about}</Link>
           </Button>
