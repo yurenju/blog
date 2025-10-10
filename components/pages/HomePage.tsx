@@ -10,8 +10,8 @@ export function HomePage({ locale }: { locale: Locale }) {
   const prefix = locale === 'zh' ? '' : `/${locale}`;
 
   return (
-    <div className="container mx-auto">
-      <section className="flex flex-col items-center max-w-sm mx-auto">
+    <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-8rem)]">
+      <section className="flex flex-col items-center max-w-sm mx-auto text-center space-y-4">
         <Image
           src={siteConfig.image}
           alt={siteConfig.title}
@@ -20,16 +20,16 @@ export function HomePage({ locale }: { locale: Locale }) {
           className="rounded-full"
           priority
         />
-        <h1>
+        <h1 className="font-serif text-3xl font-bold">
           {siteConfig.title}
         </h1>
-        <p>
+        <p className="text-lg leading-relaxed">
           {t.site.description}
         </p>
       </section>
 
-      <div>
-        <ul className="flex items-center justify-center">
+      <nav className="mt-8">
+        <ul className="flex items-center justify-center gap-2">
           <li>
             <Button variant="ghost" asChild>
               <Link href={`${prefix}/shorts`}>{t.categories.shorts}</Link>
@@ -48,7 +48,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             </Button>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   );
 }

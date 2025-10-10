@@ -22,15 +22,15 @@ export default async function MarkdownPage({
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-semibold">
+      <h1 className="font-serif text-4xl font-bold mb-6">
         {pageData.title}
       </h1>
-      <div
-        className="article"
+      <article
+        className="prose prose-lg zh:prose-zh ja:prose-ja dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: pageData.content }}
       />
       {(showAuthor || showDate) && (
-        <p>
+        <div className="font-serif text-sm text-muted-foreground text-right mt-8">
           {showAuthor && (
             <>
               ⸺ {siteConfig.author.name}
@@ -38,7 +38,7 @@ export default async function MarkdownPage({
             </>
           )}
           {showDate && formatDate(pageData.date, { withYear: true, locale })}
-        </p>
+        </div>
       )}
     </div>
   );
