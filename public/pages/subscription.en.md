@@ -7,6 +7,5 @@ Articles on this blog are updated irregularly. If you'd like to be notified when
 
 Available subscription sources:
 - [All Articles](/rss/en.xml)
-- [Photos](/rss/en/shorts.xml)
 - [Tech Articles](/rss/en/tech.xml)
 - [Life Articles](/rss/en/life.xml)

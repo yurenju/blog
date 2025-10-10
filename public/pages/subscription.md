@@ -7,6 +7,5 @@ date: 2023-07-14
 
 可以訂閱的來源有幾個：
 - [所有文章](/rss/zh.xml)
-- [短文與照片](/rss/zh/shorts.xml)
 - [技術文章](/rss/zh/tech.xml)
 - [生活記事](/rss/zh/life.xml)

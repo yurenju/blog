@@ -106,7 +106,7 @@ export type PostData = {
   availableLocales: Locale[];
 };
 
-export type Category = "shorts" | "life" | "tech";
+export type Category = "life" | "tech";
 
 /**
  * Extract locale from filename

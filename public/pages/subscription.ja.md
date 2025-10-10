@@ -7,6 +7,5 @@ date: 2023-07-14
 
 購読できるソースは以下の通りです：
 - [すべての記事](/rss/ja.xml)
-- [写真](/rss/ja/shorts.xml)
 - [技術記事](/rss/ja/tech.xml)
 - [生活記事](/rss/ja/life.xml)

@@ -15,8 +15,6 @@ const getCategoryTitle = (category: Category, locale: Locale = 'zh'): string => 
   const t = getTranslation(locale);
 
   switch (category) {
-    case "shorts":
-      return t.categories.shorts;
     case "life":
       return t.categories.life;
     case "tech":

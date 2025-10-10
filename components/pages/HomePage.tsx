@@ -32,12 +32,6 @@ export function HomePage({ locale }: { locale: Locale }) {
         <ul className="flex items-center justify-center gap-2">
           <li>
             <Button variant="ghost" asChild>
-              <Link href={`${prefix}/shorts`}>{t.categories.shorts}</Link>
-            </Button>
-          </li>
-          <span className="text-muted-foreground">•</span>
-          <li>
-            <Button variant="ghost" asChild>
               <Link href={`${prefix}/life`}>{t.categories.life}</Link>
             </Button>
           </li>

@@ -10,7 +10,6 @@ export type Translations = {
   categories: {
     tech: string
     life: string
-    shorts: string
   }
   post: {
     writtenBy: string
@@ -47,7 +46,6 @@ export const translations: Record<Locale, Translations> = {
     categories: {
       tech: '技術',
       life: '生活',
-      shorts: '照片',
     },
     post: {
       writtenBy: '撰於',
@@ -82,7 +80,6 @@ export const translations: Record<Locale, Translations> = {
     categories: {
       tech: '技術',
       life: '生活',
-      shorts: '写真',
     },
     post: {
       writtenBy: '',
@@ -117,7 +114,6 @@ export const translations: Record<Locale, Translations> = {
     categories: {
       tech: 'Tech',
       life: 'Life',
-      shorts: 'Photos',
     },
     post: {
       writtenBy: 'Written on',

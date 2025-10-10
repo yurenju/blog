@@ -7,7 +7,7 @@
 - 📝 **靜態導出** - 完全靜態化的部落格，無需伺服器
 - 🌓 **深色模式** - 支援淺色/深色主題切換
 - 📱 **響應式設計** - 適應各種裝置尺寸
-- 🔖 **多分類支援** - 技術 (tech)、生活 (life)、照片 (shorts)
+- 🔖 **多分類支援** - 技術 (tech)、生活 (life)
 - 🌍 **多語言支援** - 支援繁體中文、日文、英文的文章翻譯與 UI 多語化
 - 🌐 **多語言 RSS** - 自動產生繁體中文、英文、日文的 RSS feeds
 - ⚡ **效能優化** - 使用 Turbopack 加速開發體驗
@@ -51,8 +51,7 @@ npm run build
 │   ├── [locale]/             # 多語言路由
 │   │   ├── posts/[slug]/    # 動態文章路由
 │   │   ├── tech/            # 技術分類頁面
-│   │   ├── life/            # 生活分類頁面
-│   │   └── shorts/          # 照片分類頁面
+│   │   └── life/            # 生活分類頁面
 │   └── page.tsx             # 根路徑重定向
 ├── components/              # 共用元件
 │   ├── LanguageSwitcher.tsx  # 語言切換器
@@ -109,7 +108,7 @@ description: "SEO 描述"
 
 - `title` - 文章標題（選填，預設從檔名推斷）
 - `date` - 發布日期（選填，預設從檔名推斷）
-- `category` - 分類：`tech`、`life` 或 `shorts`（預設為 `tech`）
+- `category` - 分類：`tech` 或 `life`（預設為 `tech`）
 - `cover` - 封面圖片路徑（選填，預設使用文章中第一張圖片）
 - `description` - SEO 描述（選填）
 
@@ -117,7 +116,6 @@ description: "SEO 描述"
 
 - **tech** - 技術文章
 - **life** - 生活隨筆
-- **shorts** - 照片集
 
 ### 多語言翻譯
 

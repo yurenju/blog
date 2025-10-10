@@ -3,7 +3,7 @@ import path from "path";
 import { generateRSSFeed } from "../lib/rss";
 import { locales, type Locale } from "../lib/i18n/locales";
 
-const CATEGORIES = ["all", "shorts", "life", "tech"] as const;
+const CATEGORIES = ["all", "life", "tech"] as const;
 
 const generateRSSFile = async () => {
   try {

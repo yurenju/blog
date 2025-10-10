@@ -21,7 +21,7 @@ This is a Next.js 15 blog with static export, built for Traditional Chinese cont
 ### Core Structure
 - **app/** - Next.js App Router pages and components
   - Dynamic routes: `/posts/[slug]` for blog posts
-  - Category pages: `/tech`, `/life`, `/shorts` (photos)
+  - Category pages: `/tech`, `/life`
 - **lib/** - Core logic
   - `posts.ts` - Post management with singleton caching
   - `markdown.ts` - Markdown to HTML conversion
@@ -116,7 +116,7 @@ Posts use markdown with YAML frontmatter:
 ---
 title: "Post Title"
 date: "2024-01-01"
-category: "tech" | "life" | "shorts"
+category: "tech" | "life"
 cover: "/path/to/image" (optional)
 description: "SEO description" (optional)
 ---
