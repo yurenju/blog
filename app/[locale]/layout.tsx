@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { locales, type Locale } from "@/lib/i18n/locales";
+import { locales, type Locale, htmlLangMap } from "@/lib/i18n/locales";
 import { siteConfig } from "@/lib/siteConfig";
 import Navbar from "@/components/Navbar";
 
@@ -38,7 +38,7 @@ export default async function LocaleLayout({
   const { locale } = await params;
 
   return (
-    <div className="mx-auto max-w-3xl">
+    <div lang={htmlLangMap[locale]} className="mx-auto max-w-3xl">
       <Navbar locale={locale} />
       {children}
     </div>
