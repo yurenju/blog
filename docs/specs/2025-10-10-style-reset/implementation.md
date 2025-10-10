@@ -22,14 +22,17 @@
 - `components/pages/HomePage.tsx` - 首頁元件,需移除排版和顏色樣式
 - `components/pages/PostDetailPage.tsx` - 文章詳細頁元件,需移除文章樣式和裝飾
 - `components/Navbar.tsx` - 導航列元件,需簡化樣式
-- `components/RootLayoutContent.tsx` - 多語言布局元件,需移除排版樣式
-- `app/layout.tsx` - 根布局元件,需移除排版樣式
+- `components/RootLayoutContent.tsx` - 多語言布局元件,需移除排版樣式和字型引用
+- `app/layout.tsx` - 根布局元件,需移除排版樣式和字型引用
+- `components/MarkdownPage.tsx` - 靜態頁面元件,需移除樣式(與 PostDetailPage 類似)
+- `components/LanguageNotice.tsx` - 語言提示元件,需移除裝飾性間距
 
 ### 參考檔案
 
 - `tailwind.config.ts` - Tailwind 配置,確認 shadcn/ui 顏色變數(無需修改)
-- `components/pages/CategoryPage.tsx` - 分類頁元件(可能也需要檢視)
-- `components/pages/PostsPage.tsx` - 文章列表頁元件(可能也需要檢視)
+- `components/pages/CategoryPage.tsx` - 分類頁元件(已檢視,只有結構性樣式)
+- `components/pages/PostsPage.tsx` - 文章列表頁元件(已檢視,只有結構性樣式)
+- `components/pages/StaticMarkdownPage.tsx` - 靜態頁面包裝元件(已檢視,純邏輯)
 
 ### 驗收測試
 

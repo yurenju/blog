@@ -19,7 +19,7 @@ export function LanguageNotice({
   }
 
   return (
-    <Alert className="mt-8">
+    <Alert>
       <Info className="h-4 w-4" />
       <AlertDescription>
         {t.languageNotice.mainlyInChinese}。
