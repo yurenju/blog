@@ -170,6 +170,16 @@ export default {
   						},
   					},
 
+  					// Strong and bold text
+  					strong: {
+  						color: theme('colors.foreground'),
+  						fontWeight: '600',
+  					},
+  					b: {
+  						color: theme('colors.foreground'),
+  						fontWeight: '600',
+  					},
+
   					// Blockquotes
   					blockquote: {
   						fontStyle: 'normal',
