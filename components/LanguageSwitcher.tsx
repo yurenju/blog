@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -14,19 +13,7 @@ import { locales, type Locale } from "@/lib/i18n/locales";
 import { getTranslation } from "@/lib/i18n/translations";
 
 export function LanguageSwitcher({ locale }: { locale: Locale }) {
-  const pathname = usePathname();
   const t = getTranslation(locale);
-
-  const getLanguageUrl = (targetLocale: Locale) => {
-    // If we're on app/ (no locale prefix), navigate to /[locale]/path
-    if (!pathname.startsWith('/zh') && !pathname.startsWith('/ja') && !pathname.startsWith('/en')) {
-      return `/${targetLocale}${pathname}`;
-    }
-
-    // If we're on app/[locale]/, switch locale prefix
-    const pathWithoutLocale = pathname.replace(/^\/(zh|ja|en)/, '');
-    return targetLocale === 'zh' ? pathWithoutLocale || '/' : `/${targetLocale}${pathWithoutLocale || ''}`;
-  };
 
   return (
     <DropdownMenu>
@@ -39,7 +26,7 @@ export function LanguageSwitcher({ locale }: { locale: Locale }) {
         {locales.map((lang) => (
           <DropdownMenuItem key={lang} asChild>
             <Link
-              href={getLanguageUrl(lang)}
+              href={`/${lang}`}
               className={locale === lang ? "font-bold" : ""}
             >
               {t.languageNames[lang]}
