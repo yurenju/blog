@@ -72,10 +72,6 @@
     font-feature-settings: 'palt' 1;
   }
 
-  [lang="zh-Hant-TW"] {
-    font-feature-settings: 'palt' 1;
-  }
-
   /* Disable font features for code blocks to maintain monospace characteristics */
   pre, code {
     font-feature-settings: normal;
