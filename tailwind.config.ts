@@ -211,6 +211,260 @@ export default {
   					},
   				},
   			},
+
+  			// Traditional Chinese (繁體中文)
+  			zh: {
+  				css: {
+  					// Base typography settings for Traditional Chinese
+  					fontSize: '1.125rem',      // 18px - larger for Chinese characters
+  					lineHeight: '2',           // 200% - more vertical space for dense characters
+  					letterSpacing: '0.05em',   // Wider letter spacing
+  					maxWidth: '65ch',
+  					color: theme('colors.foreground'),
+
+  					// Headings - use serif font family
+  					h1: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '2.5rem',      // 40px
+  						marginTop: '0',
+  						marginBottom: '0.8em',
+  						lineHeight: '1.3',
+  						letterSpacing: '0.02em',
+  						fontWeight: '700',
+  						color: theme('colors.foreground'),
+  					},
+  					h2: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '2rem',        // 32px
+  						marginTop: '2em',
+  						marginBottom: '1em',
+  						lineHeight: '1.4',
+  						letterSpacing: '0.02em',
+  						fontWeight: '700',
+  						color: theme('colors.foreground'),
+  					},
+  					h3: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.625rem',    // 26px
+  						marginTop: '1.6em',
+  						marginBottom: '0.8em',
+  						lineHeight: '1.5',
+  						letterSpacing: '0.02em',
+  						fontWeight: '600',
+  						color: theme('colors.foreground'),
+  					},
+  					h4: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.375rem',    // 22px
+  						marginTop: '1.5em',
+  						marginBottom: '0.6em',
+  						lineHeight: '1.5',
+  						letterSpacing: '0.02em',
+  						fontWeight: '600',
+  						color: theme('colors.foreground'),
+  					},
+
+  					// Paragraphs - more spacing for Chinese
+  					p: {
+  						marginTop: '1.5em',
+  						marginBottom: '1.5em',
+  					},
+
+  					// Lists
+  					ul: {
+  						marginTop: '1.5em',
+  						marginBottom: '1.5em',
+  					},
+  					ol: {
+  						marginTop: '1.5em',
+  						marginBottom: '1.5em',
+  					},
+  					li: {
+  						marginTop: '0.6em',
+  						marginBottom: '0.6em',
+  					},
+
+  					// Links - inherit from DEFAULT
+  					a: {
+  						color: theme('colors.primary.DEFAULT'),
+  						textDecoration: 'underline',
+  						fontWeight: '500',
+  						'&:hover': {
+  							color: theme('colors.primary.DEFAULT'),
+  							opacity: '0.8',
+  						},
+  					},
+
+  					// Blockquotes
+  					blockquote: {
+  						fontStyle: 'normal',
+  						borderLeftColor: theme('colors.border'),
+  						borderLeftWidth: '4px',
+  						paddingLeft: '1.5em',
+  						marginTop: '2em',
+  						marginBottom: '2em',
+  						color: theme('colors.foreground'),
+  					},
+
+  					// Code blocks and inline code
+  					code: {
+  						fontFamily: theme('fontFamily.mono'),
+  						fontSize: '0.9em',
+  						letterSpacing: '0',      // Reset letter spacing for code
+  						color: theme('colors.foreground'),
+  					},
+  					'code::before': {
+  						content: '""',
+  					},
+  					'code::after': {
+  						content: '""',
+  					},
+  					pre: {
+  						fontFamily: theme('fontFamily.mono'),
+  						fontSize: '0.875rem',
+  						lineHeight: '1.8',
+  						marginTop: '2em',
+  						marginBottom: '2em',
+  						borderRadius: '0.375rem',
+  						paddingTop: '1em',
+  						paddingRight: '1.5em',
+  						paddingBottom: '1em',
+  						paddingLeft: '1.5em',
+  						backgroundColor: theme('colors.muted.DEFAULT'),
+  					},
+  					'pre code': {
+  						backgroundColor: 'transparent',
+  						fontSize: 'inherit',
+  					},
+  				},
+  			},
+
+  			// Japanese (日本語)
+  			ja: {
+  				css: {
+  					// Base typography settings for Japanese
+  					fontSize: '1rem',          // 16px - smaller than Chinese (about 11% reduction)
+  					lineHeight: '1.85',        // 185%
+  					letterSpacing: '0.02em',
+  					maxWidth: '65ch',
+  					color: theme('colors.foreground'),
+
+  					// Headings - use serif font family
+  					h1: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '2.25rem',     // 36px
+  						marginTop: '0',
+  						marginBottom: '0.8em',
+  						lineHeight: '1.3',
+  						letterSpacing: '0.01em',
+  						fontWeight: '700',
+  						color: theme('colors.foreground'),
+  					},
+  					h2: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.875rem',    // 30px
+  						marginTop: '2em',
+  						marginBottom: '1em',
+  						lineHeight: '1.4',
+  						letterSpacing: '0.01em',
+  						fontWeight: '700',
+  						color: theme('colors.foreground'),
+  					},
+  					h3: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.5rem',      // 24px
+  						marginTop: '1.6em',
+  						marginBottom: '0.8em',
+  						lineHeight: '1.5',
+  						letterSpacing: '0.01em',
+  						fontWeight: '600',
+  						color: theme('colors.foreground'),
+  					},
+  					h4: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.25rem',     // 20px
+  						marginTop: '1.5em',
+  						marginBottom: '0.6em',
+  						lineHeight: '1.5',
+  						letterSpacing: '0.01em',
+  						fontWeight: '600',
+  						color: theme('colors.foreground'),
+  					},
+
+  					// Paragraphs
+  					p: {
+  						marginTop: '1.4em',
+  						marginBottom: '1.4em',
+  					},
+
+  					// Lists
+  					ul: {
+  						marginTop: '1.4em',
+  						marginBottom: '1.4em',
+  					},
+  					ol: {
+  						marginTop: '1.4em',
+  						marginBottom: '1.4em',
+  					},
+  					li: {
+  						marginTop: '0.55em',
+  						marginBottom: '0.55em',
+  					},
+
+  					// Links - inherit from DEFAULT
+  					a: {
+  						color: theme('colors.primary.DEFAULT'),
+  						textDecoration: 'underline',
+  						fontWeight: '500',
+  						'&:hover': {
+  							color: theme('colors.primary.DEFAULT'),
+  							opacity: '0.8',
+  						},
+  					},
+
+  					// Blockquotes
+  					blockquote: {
+  						fontStyle: 'normal',
+  						borderLeftColor: theme('colors.border'),
+  						borderLeftWidth: '4px',
+  						paddingLeft: '1.2em',
+  						marginTop: '1.8em',
+  						marginBottom: '1.8em',
+  						color: theme('colors.foreground'),
+  					},
+
+  					// Code blocks and inline code
+  					code: {
+  						fontFamily: theme('fontFamily.mono'),
+  						fontSize: '0.9em',
+  						letterSpacing: '0',      // Reset letter spacing for code
+  						color: theme('colors.foreground'),
+  					},
+  					'code::before': {
+  						content: '""',
+  					},
+  					'code::after': {
+  						content: '""',
+  					},
+  					pre: {
+  						fontFamily: theme('fontFamily.mono'),
+  						fontSize: '0.875rem',
+  						lineHeight: '1.7',
+  						marginTop: '1.8em',
+  						marginBottom: '1.8em',
+  						borderRadius: '0.375rem',
+  						paddingTop: '1em',
+  						paddingRight: '1.5em',
+  						paddingBottom: '1em',
+  						paddingLeft: '1.5em',
+  						backgroundColor: theme('colors.muted.DEFAULT'),
+  					},
+  					'pre code': {
+  						backgroundColor: 'transparent',
+  						fontSize: 'inherit',
+  					},
+  				},
+  			},
   		}),
   	}
   },
