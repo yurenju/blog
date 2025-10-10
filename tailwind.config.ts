@@ -88,8 +88,130 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			}
   		},
-  		// Typography configuration (empty structure for now, will be populated in next tasks)
-  		typography: () => ({}),
+  		// Typography configuration for @tailwindcss/typography
+  		// Defines prose styles for English (DEFAULT), Chinese (zh), and Japanese (ja)
+  		typography: ({ theme }: { theme: (path: string) => string }) => ({
+  			DEFAULT: {
+  				css: {
+  					// Base typography settings for English
+  					fontSize: '1rem',
+  					lineHeight: '1.75',
+  					letterSpacing: '0.01em',
+  					maxWidth: '65ch',
+  					color: theme('colors.foreground'),
+
+  					// Headings - use serif font family
+  					h1: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '2.25rem',
+  						marginTop: '0',
+  						marginBottom: '0.8em',
+  						lineHeight: '1.2',
+  						fontWeight: '700',
+  						color: theme('colors.foreground'),
+  					},
+  					h2: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.875rem',
+  						marginTop: '2em',
+  						marginBottom: '1em',
+  						lineHeight: '1.3',
+  						fontWeight: '700',
+  						color: theme('colors.foreground'),
+  					},
+  					h3: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.5rem',
+  						marginTop: '1.6em',
+  						marginBottom: '0.8em',
+  						lineHeight: '1.4',
+  						fontWeight: '600',
+  						color: theme('colors.foreground'),
+  					},
+  					h4: {
+  						fontFamily: theme('fontFamily.serif'),
+  						fontSize: '1.25rem',
+  						marginTop: '1.5em',
+  						marginBottom: '0.6em',
+  						lineHeight: '1.4',
+  						fontWeight: '600',
+  						color: theme('colors.foreground'),
+  					},
+
+  					// Paragraphs
+  					p: {
+  						marginTop: '1.25em',
+  						marginBottom: '1.25em',
+  					},
+
+  					// Lists
+  					ul: {
+  						marginTop: '1.25em',
+  						marginBottom: '1.25em',
+  					},
+  					ol: {
+  						marginTop: '1.25em',
+  						marginBottom: '1.25em',
+  					},
+  					li: {
+  						marginTop: '0.5em',
+  						marginBottom: '0.5em',
+  					},
+
+  					// Links
+  					a: {
+  						color: theme('colors.primary.DEFAULT'),
+  						textDecoration: 'underline',
+  						fontWeight: '500',
+  						'&:hover': {
+  							color: theme('colors.primary.DEFAULT'),
+  							opacity: '0.8',
+  						},
+  					},
+
+  					// Blockquotes
+  					blockquote: {
+  						fontStyle: 'normal',
+  						borderLeftColor: theme('colors.border'),
+  						borderLeftWidth: '4px',
+  						paddingLeft: '1em',
+  						marginTop: '1.6em',
+  						marginBottom: '1.6em',
+  						color: theme('colors.foreground'),
+  					},
+
+  					// Code blocks and inline code
+  					code: {
+  						fontFamily: theme('fontFamily.mono'),
+  						fontSize: '0.875em',
+  						color: theme('colors.foreground'),
+  					},
+  					'code::before': {
+  						content: '""',
+  					},
+  					'code::after': {
+  						content: '""',
+  					},
+  					pre: {
+  						fontFamily: theme('fontFamily.mono'),
+  						fontSize: '0.875rem',
+  						lineHeight: '1.7',
+  						marginTop: '1.7em',
+  						marginBottom: '1.7em',
+  						borderRadius: '0.375rem',
+  						paddingTop: '1em',
+  						paddingRight: '1.5em',
+  						paddingBottom: '1em',
+  						paddingLeft: '1.5em',
+  						backgroundColor: theme('colors.muted.DEFAULT'),
+  					},
+  					'pre code': {
+  						backgroundColor: 'transparent',
+  						fontSize: 'inherit',
+  					},
+  				},
+  			},
+  		}),
   	}
   },
   plugins: [
