@@ -41,7 +41,7 @@
   - 1.1 已在 `feat/theme` 分支上
   - 1.2 工作目錄乾淨,準備開始實作
 
-- [ ] 2. 重置 globals.css 自定義樣式
+- [x] 2. 重置 globals.css 自定義樣式
   - 2.1 移除第 67-68 行的 body 字型設定 `font-family: var(--font-noto-sans-tc), sans-serif;`
   - 2.2 移除第 70-76 行的 homepage 特殊字型設定 (`h1.homepage-title` 和 `p.homepage-description`)
   - 2.3 移除第 78-122 行所有 `.article` 相關樣式 (strong, p, article-title, blockquote, h2-h4, ul, ol, a)
@@ -49,7 +49,7 @@
   - 2.5 確認第 124-193 行語法高亮樣式完整保留
   - 2.6 確認第 1-3 行 @tailwind 指令、第 5-59 行 shadcn/ui 顏色變數、第 62-66 行基礎設定都已保留
 
-- [ ] 3. 重置 PostsList.tsx 元件樣式
+- [x] 3. 重置 PostsList.tsx 元件樣式
   - 3.1 第 68 行: 移除 `hover:bg-gray-100 dark:hover:bg-gray-700 p-1 pl-3 mb-2 rounded-lg transition-colors`,保留 `flex items-center gap-1`
   - 3.2 第 74 行: 移除 `text-gray-500 dark:text-gray-400 text-sm text-center`,保留 `min-w-[80px]`
   - 3.3 第 77 行: 移除 `text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300`

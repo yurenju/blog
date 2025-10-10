@@ -56,25 +56,25 @@ const PostsList = ({
 
   return (
     <div className="w-full">
-      {showTitle && title && <h1 className="text-2xl font-bold mb-8">{title}</h1>}
+      {showTitle && title && <h1>{title}</h1>}
       {years.map((year) => (
-        <div key={year} className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">{formatYearDisplay(year)}</h2>
-          <ul className="text-lg">
+        <div key={year}>
+          <h2>{formatYearDisplay(year)}</h2>
+          <ul>
             {groupedPosts[year].map((post) => (
               <li key={post.slug}>
                 <Link
                   href={`${prefix}/posts/${encodeURIComponent(post.slug)}`}
-                  className="flex items-center gap-1 hover:bg-gray-100 dark:hover:bg-gray-700 p-1 pl-3 mb-2 rounded-lg transition-colors"
+                  className="flex items-center gap-1"
                   tabIndex={0}
                   aria-label={locale === 'zh' ? `閱讀文章: ${post.title}` :
                              locale === 'ja' ? `記事を読む: ${post.title}` :
                              `Read article: ${post.title}`}
                 >
-                  <span className="text-gray-500 dark:text-gray-400 text-sm min-w-[80px] text-center">
+                  <span className="min-w-[80px]">
                     {formatDate(post.date, { withYear: false, locale })}
                   </span>
-                  <span className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
+                  <span>
                     {post.title}
                   </span>
                 </Link>
