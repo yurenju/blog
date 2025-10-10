@@ -66,6 +66,22 @@
     @apply bg-background text-foreground;
   }
 
+  /* OpenType font features for CJK languages */
+  /* 'palt' (Proportional Alternate) provides proportional spacing for CJK punctuation */
+  [lang="ja"] {
+    font-feature-settings: 'palt' 1;
+  }
+
+  [lang="zh-Hant-TW"] {
+    font-feature-settings: 'palt' 1;
+  }
+
+  /* Disable font features for code blocks to maintain monospace characteristics */
+  pre, code {
+    font-feature-settings: normal;
+    font-kerning: none;
+  }
+
   /* Syntax highlighting styles */
   .article pre {
     @apply rounded-lg overflow-x-auto my-6;

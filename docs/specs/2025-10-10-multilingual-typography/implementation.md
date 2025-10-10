@@ -42,7 +42,7 @@
   - 2.6 在 `<body>` className 中注入所有字型 CSS 變數
   - 2.7 測試字型是否正確載入(使用 DevTools 檢查)
 
-- [ ] 3. 配置 Tailwind 字型家族和 typography 基礎
+- [x] 3. 配置 Tailwind 字型家族和 typography 基礎
   - 3.1 在 `tailwind.config.ts` 的 theme.extend.fontFamily 中定義三個字型族
   - 3.2 font-sans:包含所有 Noto Sans 變數,回退到 system-ui
   - 3.3 font-serif:包含所有 Noto Serif 變數,回退到 Georgia
@@ -50,7 +50,7 @@
   - 3.5 在 theme.extend.typography 開始配置 prose 樣式(先建立空架構)
   - 3.6 測試 font-sans, font-serif, font-mono class 是否可用
 
-- [ ] 4. 配置英文(DEFAULT) prose 樣式
+- [x] 4. 配置英文(DEFAULT) prose 樣式
   - 4.1 在 typography.DEFAULT.css 中設定基礎參數:fontSize 1rem, lineHeight 1.75, letterSpacing 0.01em
   - 4.2 配置標題(H1-H4)使用 `theme('fontFamily.serif')`,設定對應的字體大小、行距、字重
   - 4.3 配置段落間距:marginTop/Bottom 1.25em
@@ -60,7 +60,7 @@
   - 4.7 配置程式碼:font-mono, 0.875em,移除前後的引號
   - 4.8 在測試文章頁面套用 `prose` class 測試效果
 
-- [ ] 5. 配置繁體中文(zh)和日文(ja) prose 樣式
+- [x] 5. 配置繁體中文(zh)和日文(ja) prose 樣式
   - 5.1 複製 DEFAULT 結構,建立 typography.zh.css 配置
   - 5.2 zh 基礎參數:fontSize 1.125rem, lineHeight 2, letterSpacing 0.05em
   - 5.3 zh 標題大小:H1 2.5rem, H2 2rem, H3 1.625rem, H4 1.375rem,使用 font-serif
@@ -71,14 +71,14 @@
   - 5.8 ja 段落間距:1.4em
   - 5.9 測試三種語言的 prose 樣式(prose, prose-zh, prose-ja)
 
-- [ ] 6. 修改 locale layout 加入 lang 屬性
+- [x] 6. 修改 locale layout 加入 lang 屬性
   - 6.1 在 `app/[locale]/layout.tsx` 引入 htmlLangMap
   - 6.2 在根 `<div>` 加上 `lang={htmlLangMap[locale]}` 屬性
   - 6.3 確保所有頁面內容都在此 div 內
   - 6.4 使用 DevTools 確認 DOM 中有正確的 lang 屬性(zh-Hant-TW, ja, en)
   - 6.5 測試切換語言時 lang 屬性是否正確變化
 
-- [ ] 7. 應用 OpenType 字型特性和更新 PostDetailPage
+- [x] 7. 應用 OpenType 字型特性和更新 PostDetailPage
   - 7.1 在 `app/globals.css` 的 @layer base 中新增 font-feature-settings
   - 7.2 為 `[lang="ja"]` 設定 `font-feature-settings: 'palt' 1`
   - 7.3 為 `[lang="zh-Hant-TW"]` 設定 `font-feature-settings: 'palt' 1`

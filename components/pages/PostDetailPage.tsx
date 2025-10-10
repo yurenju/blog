@@ -21,7 +21,7 @@ export async function PostDetailPage({
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-semibold">
+      <h1 className="font-serif text-4xl font-bold mb-6">
         {postData.title}
       </h1>
       <ArticleLanguageIndicator
@@ -29,14 +29,14 @@ export async function PostDetailPage({
         currentLocale={locale}
         slug={slug}
       />
-      <div
-        className="article"
+      <article
+        className="prose prose-lg zh:prose-zh ja:prose-ja dark:prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: postData.content }}
       />
-      <p>
+      <div className="font-serif text-sm text-muted-foreground text-right mt-8">
         ⸺ {siteConfig.author.name} {t.post.writtenBy}{" "}
         {formatDate(postData.date, { withYear: true, locale })}
-      </p>
+      </div>
     </div>
   );
 }
