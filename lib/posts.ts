@@ -46,14 +46,30 @@ async function getAllPostMetadata(): Promise<Record<string, PostMetadata>> {
         throw new Error(`No markdown file found in directory: ${dirPath}`);
       }
 
+      // First, find the primary (zh) version to get the canonical slug
+      const zhFile = mdFiles.find(file => extractLocaleFromFilename(file) === 'zh');
+      let primarySlug: string | null = null;
+
+      if (zhFile) {
+        const zhPath = path.join(dirPath, zhFile);
+        const zhContents = await fs.promises.readFile(zhPath, "utf8");
+        const zhMatter = matter(zhContents);
+        primarySlug = zhMatter.data.slug || directory.name;
+      }
+
       // Process all language versions in this directory
       for (const mdFile of mdFiles) {
         const fullPath = path.join(dirPath, mdFile);
         const fileContents = await fs.promises.readFile(fullPath, "utf8");
         const matterResult = matter(fileContents);
-
-        const slug = encodeSlug(matterResult.data.slug || directory.name);
         const locale = extractLocaleFromFilename(mdFile);
+
+        // Get slug: prefer current file's slug, then primary slug, then directory name
+        const slug = encodeSlug(
+          matterResult.data.slug ||
+          primarySlug ||
+          directory.name
+        );
 
         // Create a unique key for each language version
         const postKey = locale === 'zh' ? slug : `${slug}-${locale}`;
