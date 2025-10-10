@@ -14,45 +14,45 @@
 
 ## 相關檔案
 
-- `.claude/commands/translate.md` - Slash command 的主要實作檔案，包含完整的翻譯提示詞和邏輯
+- `.claude/commands/translate.md` - Slash command 的主要實作檔案，包含完整的翻譯提示詞和邏輯 (已建立)
 - `public/posts/2025-04-23_ai-coding-doesnt-understand-me/叫 AI 幫我寫程式，結果他聽不懂人話？.md` - 翻譯範例的中文原文
-- `public/posts/2025-04-23_ai-coding-doesnt-understand-me/index.ja.md` - 翻譯範例的日文版本
-- `public/posts/2025-04-23_ai-coding-doesnt-understand-me/index.en.md` - 翻譯範例的英文版本
+- `public/posts/2025-04-23_ai-coding-doesnt-understand-me/index.ja.md` - 翻譯範例的日文版本 (用作參考)
+- `public/posts/2025-04-23_ai-coding-doesnt-understand-me/index.en.md` - 翻譯範例的英文版本 (用作參考)
 - `acceptance.feature` - Gherkin 格式的驗收測試場景
 
 ## 任務
 
-- [ ] 1. 建立 `.claude/commands/` 目錄結構
+- [x] 1. 建立 `.claude/commands/` 目錄結構
   - 1.1 檢查 `.claude/commands/` 目錄是否存在，若不存在則建立
   - 1.2 確認目錄權限正確，可以寫入檔案
 
-- [ ] 2. 撰寫 `/translate` 指令的 frontmatter 配置
+- [x] 2. 撰寫 `/translate` 指令的 frontmatter 配置
   - 2.1 定義 `argument-hint: <file_path>` 參數提示
   - 2.2 設定 `description` 為簡潔的指令說明
   - 2.3 配置 `allowed-tools: Read, Write, WebSearch` 確保指令可使用必要工具
   - 2.4 確認 frontmatter 格式符合 Claude Code 規範
 
-- [ ] 3. 實作文章讀取與 frontmatter 解析邏輯
+- [x] 3. 實作文章讀取與 frontmatter 解析邏輯
   - 3.1 使用 Read 工具讀取指定路徑的中文 markdown 檔案
   - 3.2 解析 frontmatter，提取 `categories` 和 `title` 欄位
   - 3.3 如果沒有 `title` 欄位，從檔名（不含副檔名）提取標題
   - 3.4 根據 `categories` 判斷文章分類（tech/life），若無則根據內容自動判斷
   - 3.5 處理 frontmatter 格式錯誤的情況，給予警告但繼續處理
 
-- [ ] 4. 實作翻譯策略邏輯
+- [x] 4. 實作翻譯策略邏輯
   - 4.1 根據文章分類（tech/life）選擇對應的翻譯策略
   - 4.2 Tech 分類：使用理性、專業的口吻，精準翻譯技術術語
   - 4.3 Life 分類：使用抒情、表達性的口吻，根據語境調整而非逐字翻譯
   - 4.4 在提示詞中明確說明兩種翻譯策略的差異和要求
 
-- [ ] 5. 實作內容元素處理規則
+- [x] 5. 實作內容元素處理規則
   - 5.1 程式碼區塊：翻譯中文註解，保留英文註解和程式碼本身
   - 5.2 圖片連結：翻譯 alt text，保持圖片路徑不變
   - 5.3 超連結：翻譯連結文字，保持 URL 不變
   - 5.4 作品名稱：使用 WebSearch 查詢官方翻譯名稱（書籍、動畫、漫畫、電影等）
   - 5.5 人名和地名：使用 WebSearch 確認目標語言的正確寫法和慣用表記
 
-- [ ] 6. 實作日文翻譯功能
+- [x] 6. 實作日文翻譯功能
   - 6.1 根據分類選擇翻譯策略進行日文翻譯
   - 6.2 翻譯 title 欄位為日文
   - 6.3 翻譯文章內容，正確處理所有內容元素
@@ -60,7 +60,7 @@
   - 6.5 產生日文翻譯的中文回譯
   - 6.6 組合 frontmatter、翻譯內容和回譯，格式符合規範
 
-- [ ] 7. 實作英文翻譯功能
+- [x] 7. 實作英文翻譯功能
   - 7.1 根據分類選擇翻譯策略進行英文翻譯
   - 7.2 翻譯 title 欄位為英文
   - 7.3 翻譯文章內容，正確處理所有內容元素
@@ -68,14 +68,14 @@
   - 7.5 產生英文翻譯的中文回譯
   - 7.6 組合 frontmatter、翻譯內容和回譯，格式符合規範
 
-- [ ] 8. 實作檔案輸出邏輯
+- [x] 8. 實作檔案輸出邏輯
   - 8.1 解析原始檔案路徑，取得目錄位置
   - 8.2 使用 Write 工具將日文翻譯儲存為 `index.ja.md`（與原始檔案同目錄）
   - 8.3 使用 Write 工具將英文翻譯儲存為 `index.en.md`（與原始檔案同目錄）
   - 8.4 確保路徑處理正確（支援 Windows 和 Unix 路徑格式）
   - 8.5 檔案不存在時提供清楚的錯誤訊息
 
-- [ ] 9. 撰寫完整的提示詞內容
+- [x] 9. 撰寫完整的提示詞內容
   - 9.1 整合所有翻譯規則、策略和內容處理邏輯
   - 9.2 加入範例說明，參考現有翻譯範例
   - 9.3 說明中文回譯的格式和目的
