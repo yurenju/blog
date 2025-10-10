@@ -37,6 +37,28 @@ Based on the article category, apply the appropriate translation strategy:
 
 When translating, handle different content elements as follows:
 
+### Punctuation Marks
+**IMPORTANT**: Convert Chinese punctuation marks to the target language's standard punctuation.
+
+**For Japanese:**
+- Chinese 《》(book title marks) → Japanese 『』(double corner brackets) for major works (books, albums)
+- Chinese 《》→ Japanese 「」(corner brackets) for minor works (articles, songs)
+- Chinese 「」→ Japanese 「」(keep corner brackets)
+- Chinese full-width comma 、→ Japanese 、(keep)
+- Chinese period 。→ Japanese 。(keep)
+
+**For English:**
+- Chinese 《》→ English *italics* or "quotation marks" for work titles
+- Chinese 「」→ English "quotation marks"
+- Chinese full-width comma 、→ English comma ,
+- Chinese period 。→ English period .
+- Chinese ellipsis ⋯⋯ → English ellipsis ...
+
+**Example:**
+- Chinese: 《Jazz Impressions of Japan》的《Fujiyama》
+- Japanese: 『Jazz Impressions of Japan』の「Fujiyama」
+- English: *Jazz Impressions of Japan*'s "Fujiyama"
+
 ### Code Blocks
 - **Chinese comments**: Translate to the target language
 - **English comments**: Keep as-is, do not translate
@@ -122,6 +144,7 @@ Use the Write tool to save both files. Ensure path handling works correctly for 
 
 ### Quality Checklist
 - ✅ Apply correct translation strategy based on category
+- ✅ Convert Chinese punctuation marks to target language standards
 - ✅ Use WebSearch for work titles and person names
 - ✅ Correctly handle all content elements (code, images, links)
 - ✅ Preserve markdown formatting
