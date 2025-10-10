@@ -8,6 +8,13 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+  	// Language configuration for tailwindcss-localized
+  	// Maps short language codes to HTML lang attribute values from htmlLangMap
+  	languages: {
+  		en: 'en',           // class: en:xxx, matches lang="en"
+  		zh: 'zh-Hant-TW',   // class: zh:xxx, matches lang="zh-Hant-TW"
+  		ja: 'ja',           // class: ja:xxx, matches lang="ja"
+  	},
   	extend: {
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -58,5 +65,15 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    require("tailwindcss-localized"),
+  ],
+  variants: {
+    fontSize: ['responsive', 'localized'],
+    lineHeight: ['responsive', 'localized'],
+    letterSpacing: ['responsive', 'localized'],
+    fontFamily: ['responsive', 'localized'],
+  },
 } satisfies Config;
