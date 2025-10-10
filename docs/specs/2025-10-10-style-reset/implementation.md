@@ -56,7 +56,7 @@
   - 3.4 第 62 行: 移除 `text-xl font-semibold mb-4`
   - 3.5 第 63 行: 移除 `text-lg`
 
-- [ ] 4. 重置 HomePage.tsx 元件樣式
+- [x] 4. 重置 HomePage.tsx 元件樣式
   - 4.1 第 13 行: 移除 `text-xl tracking-wide`,保留 `container mx-auto`
   - 4.2 第 14 行: 移除 `gap-4 mt-20 mb-4`,保留 `flex flex-col items-center max-w-sm mx-auto`
   - 4.3 第 23-24 行: 移除 `mt-4 text-4xl font-bold` 和 `homepage-title` class
