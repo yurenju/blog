@@ -3,7 +3,7 @@ title: "吸收知識的手段：撰寫筆記作為你的黃色小鴨"
 author: "Yuren Ju"
 date: 2022-06-05T08:43:52.020Z
 lastmod: 2023-06-06T13:45:04+08:00
-categories: [life, tech]
+categories: [tech]
 
 description: ""
 

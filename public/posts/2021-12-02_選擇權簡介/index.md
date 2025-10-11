@@ -3,7 +3,7 @@ title: "選擇權簡介"
 author: "Yuren Ju"
 date: 2021-12-02T04:21:38.191Z
 lastmod: 2023-06-06T13:44:41+08:00
-categories: [tech, life]
+categories: [tech]
 
 description: ""
 

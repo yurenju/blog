@@ -3,7 +3,7 @@ title: "Getting Things Done + 番茄鐘時間管理 — 2020 年更新"
 author: "Yuren Ju"
 date: 2020-04-21T11:28:05.856Z
 lastmod: 2023-06-06T13:43:25+08:00
-categories: [tech, life]
+categories: [tech]
 
 description: ""
 

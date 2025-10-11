@@ -3,7 +3,7 @@ title: "旅行/每日背包資訊整理"
 author: "Yuren Ju"
 date: 2020-03-09T00:22:09.177Z
 lastmod: 2023-06-06T13:43:06+08:00
-categories: [life, tech]
+categories: [tech]
 
 description: ""
 

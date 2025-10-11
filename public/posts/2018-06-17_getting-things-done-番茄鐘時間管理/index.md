@@ -3,7 +3,7 @@ title: "Getting Things Done + 番茄鐘時間管理"
 author: "Yuren Ju"
 date: 2018-06-17T16:00:21.850Z
 lastmod: 2023-06-06T13:41:46+08:00
-categories: [tech, life]
+categories: [tech]
 
 description: ""
 

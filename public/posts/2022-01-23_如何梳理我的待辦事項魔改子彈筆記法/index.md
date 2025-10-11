@@ -3,7 +3,7 @@ title: "如何梳理我的待辦事項 — 魔改子彈筆記法"
 author: "Yuren Ju"
 date: 2022-01-23T06:45:36.976Z
 lastmod: 2023-06-06T13:44:57+08:00
-categories: [tech, life]
+categories: [tech]
 
 description: ""
 

@@ -3,7 +3,7 @@ title: "遠距工作一年多的經驗"
 author: "Yuren Ju"
 date: 2016-10-18T16:23:38.224Z
 lastmod: 2023-06-06T13:38:52+08:00
-categories: [tech, life]
+categories: [tech]
 
 description: ""
 

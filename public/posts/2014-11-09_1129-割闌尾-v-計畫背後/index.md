@@ -3,7 +3,7 @@ title: "11/29 割闌尾 V 計畫背後"
 author: "Yuren Ju"
 date: 2014-11-09T15:55:27.571Z
 lastmod: 2023-06-06T13:36:31+08:00
-categories: [life, tech]
+categories: [tech]
 
 description: ""
 

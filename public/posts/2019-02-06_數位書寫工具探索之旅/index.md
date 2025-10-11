@@ -3,7 +3,7 @@ title: "數位書寫工具探索之旅"
 author: "Yuren Ju"
 date: 2019-02-06T00:38:26.954Z
 lastmod: 2023-06-06T13:42:19+08:00
-categories: [life, tech]
+categories: [tech]
 
 description: ""
 

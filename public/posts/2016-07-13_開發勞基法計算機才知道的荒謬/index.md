@@ -3,7 +3,7 @@ title: "開發勞基法計算機才知道的荒謬"
 author: "Yuren Ju"
 date: 2016-07-13T14:42:23.369Z
 lastmod: 2023-06-06T13:38:26+08:00
-categories: [life, tech]
+categories: [tech]
 
 description: ""
 

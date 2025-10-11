@@ -3,7 +3,7 @@ title: "Less is more, 精簡每日待辦事項"
 author: "Yuren Ju"
 date: 2022-10-24T02:25:28.878Z
 lastmod: 2023-06-06T13:45:10+08:00
-categories: [tech, life]
+categories: [tech]
 
 description: ""
 

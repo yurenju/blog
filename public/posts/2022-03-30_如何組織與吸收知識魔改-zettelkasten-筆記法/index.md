@@ -3,7 +3,7 @@ title: "如何組織與吸收知識 — 魔改 Zettelkasten 筆記法"
 author: "Yuren Ju"
 date: 2022-03-30T02:39:09.569Z
 lastmod: 2023-06-06T13:44:59+08:00
-categories: [life, tech]
+categories: [tech]
 
 description: ""
 

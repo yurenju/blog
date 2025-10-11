@@ -3,7 +3,7 @@ title: "Vectr 的奇幻旅程"
 author: "Yuren Ju"
 date: 2017-08-12T00:09:27.764Z
 lastmod: 2023-06-06T13:40:08+08:00
-categories: [life, tech]
+categories: [life]
 
 description: ""
 

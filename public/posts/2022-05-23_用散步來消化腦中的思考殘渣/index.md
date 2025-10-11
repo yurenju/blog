@@ -3,7 +3,7 @@ title: "用散步來消化腦中的思考殘渣"
 author: "Yuren Ju"
 date: 2022-05-23T00:55:16.508Z
 lastmod: 2023-06-06T13:45:03+08:00
-categories: [life, tech]
+categories: [tech]
 
 description: ""
 
