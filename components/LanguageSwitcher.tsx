@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -14,6 +15,29 @@ import { getTranslation } from "@/lib/i18n/translations";
 
 export function LanguageSwitcher({ locale }: { locale: Locale }) {
   const t = getTranslation(locale);
+  const pathname = usePathname();
+
+  /**
+   * Generate the target path for a given locale while maintaining context
+   * - For post detail pages: navigate to home page (posts may not have translations)
+   * - For other pages (home, about, subscription, categories): stay on same page type
+   */
+  const getTargetPath = (targetLocale: Locale): string => {
+    // Remove current locale prefix from pathname
+    // Example: /zh/tech → /tech, /ja/about → /about
+    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}/, '') || '/';
+
+    // Check if it's a post detail page (pattern: /posts/[slug])
+    const isPostDetailPage = /^\/posts\/.+/.test(pathWithoutLocale);
+
+    if (isPostDetailPage) {
+      // For post detail pages, navigate to home page of target locale
+      return `/${targetLocale}/`;
+    }
+
+    // For all other pages, maintain the same path with new locale
+    return `/${targetLocale}${pathWithoutLocale}`;
+  };
 
   return (
     <DropdownMenu>
@@ -26,7 +50,7 @@ export function LanguageSwitcher({ locale }: { locale: Locale }) {
         {locales.map((lang) => (
           <DropdownMenuItem key={lang} asChild>
             <Link
-              href={`/${lang}`}
+              href={getTargetPath(lang)}
               className={locale === lang ? "font-bold" : ""}
             >
               {t.languageNames[lang]}

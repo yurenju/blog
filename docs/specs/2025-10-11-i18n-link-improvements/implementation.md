@@ -33,26 +33,26 @@
   - 1.3 函式回傳指定分類和語言的文章數量
   - 1.4 確保函式簽章和型別定義正確
 
-- [ ] 2. 更新所有元件使用明確的 locale 前綴
+- [x] 2. 更新所有元件使用明確的 locale 前綴
   - 2.1 修改 `components/Navbar.tsx`：移除 `prefix` 條件判斷，改用 `/${locale}/` 格式
   - 2.2 修改 `components/pages/HomePage.tsx`：更新連結生成邏輯為 `/${locale}/life` 和 `/${locale}/tech`
   - 2.3 修改 `components/PostsList.tsx`：更新文章連結為 `/${locale}/posts/${slug}` 格式
   - 2.4 確保所有連結都包含明確的 locale 前綴，包括中文頁面
 
-- [ ] 3. 增強 LanguageNotice 元件
+- [x] 3. 增強 LanguageNotice 元件
   - 3.1 更新型別定義，新增可選的 `category?: Category` prop
   - 3.2 實作動態連結生成邏輯：根據 `category` 決定連結路徑（`/zh/tech`、`/zh/life` 或 `/zh/posts`）
   - 3.3 實作標點符號國際化：根據 locale 使用正確的標點符號（英文用 `.`，中文和日文用 `。`）
   - 3.4 確保連結使用 `/zh/` 前綴格式
   - 3.5 更新元件邏輯以處理 `category` 為 undefined 的情況（全部文章頁面）
 
-- [ ] 4. 更新頁面元件以傳遞分類資訊
+- [x] 4. 更新頁面元件以傳遞分類資訊
   - 4.1 修改 `components/pages/CategoryPage.tsx`：
     - 使用 `getPostCountByCategoryAndLocale('zh', category)` 取得該分類的中文文章數
     - 傳遞 `category` prop 給 LanguageNotice 元件
   - 4.2 確認 `components/pages/PostsPage.tsx` 維持原有行為（不傳遞 category prop）
 
-- [ ] 5. 增強 LanguageSwitcher 元件實作路徑保持
+- [x] 5. 增強 LanguageSwitcher 元件實作路徑保持
   - 5.1 引入 Next.js 的 `usePathname()` hook 取得當前路徑
   - 5.2 實作路徑解析邏輯，識別路徑類型（首頁、about、subscription、分類、文章詳情）
   - 5.3 實作智慧型語言切換邏輯：
