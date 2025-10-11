@@ -13,7 +13,7 @@ So I moved again. This time I finally made up my mind to organize all my article
 
 After a series of packing, organizing, and arranging, I finally finished moving. I decorated it to better match my ideal lifestyle, but unfortunately, it's just another rental. You seemingly control everything, but in reality, "ownership" is just an illusion—it's merely placed on a server somewhere in the cloud that you don't even know where it is.
 
-There's a passage in the manga "History's Eye" that says:
+There's a passage in the manga "Historie" that says:
 
 > The freedom everyone longs for is just a courtyard surrounded by fences, only differing in size. Freedom that extends to the horizon does not exist.
 
