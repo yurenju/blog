@@ -15,11 +15,10 @@ interface NavbarProps {
 
 const Navbar = ({ locale, category }: NavbarProps) => {
   const t = getTranslation(locale);
-  const prefix = locale === 'zh' ? '' : `/${locale}`;
 
   // Determine category link based on category prop
   const showCategoryLink = category !== null;
-  const categoryLinkHref = category ? `${prefix}/${category}` : '';
+  const categoryLinkHref = category ? `/${locale}/${category}` : '';
   const categoryLinkText = category === 'tech'
     ? t.nav.allTechPosts
     : t.nav.allLifePosts;
@@ -29,16 +28,16 @@ const Navbar = ({ locale, category }: NavbarProps) => {
       <div className="h-full max-w-7xl mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <Button variant="ghost" asChild>
-            <Link href={`${prefix}/`}>{t.nav.home}</Link>
+            <Link href={`/${locale}/`}>{t.nav.home}</Link>
           </Button>
         </div>
         <div className="flex items-center">
           <Button variant="ghost" asChild>
-            <Link href={`${prefix}/about`}>{t.nav.about}</Link>
+            <Link href={`/${locale}/about`}>{t.nav.about}</Link>
           </Button>
           <span className="text-muted-foreground">•</span>
           <Button variant="ghost" asChild>
-            <Link href={`${prefix}/subscription`}>{t.nav.subscription}</Link>
+            <Link href={`/${locale}/subscription`}>{t.nav.subscription}</Link>
           </Button>
           {showCategoryLink && (
             <>

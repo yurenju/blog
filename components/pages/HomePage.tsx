@@ -8,7 +8,6 @@ import type { Locale } from "@/lib/i18n/locales";
 
 export function HomePage({ locale }: { locale: Locale }) {
   const t = getTranslation(locale);
-  const prefix = locale === 'zh' ? '' : `/${locale}`;
 
   return (
     <>
@@ -35,13 +34,13 @@ export function HomePage({ locale }: { locale: Locale }) {
         <ul className="flex items-center justify-center gap-2">
           <li>
             <Button variant="ghost" asChild>
-              <Link href={`${prefix}/life`}>{t.categories.life}</Link>
+              <Link href={`/${locale}/life`}>{t.categories.life}</Link>
             </Button>
           </li>
           <span className="text-muted-foreground">•</span>
           <li>
             <Button variant="ghost" asChild>
-              <Link href={`${prefix}/tech`}>{t.categories.tech}</Link>
+              <Link href={`/${locale}/tech`}>{t.categories.tech}</Link>
             </Button>
           </li>
         </ul>

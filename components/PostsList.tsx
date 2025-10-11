@@ -36,8 +36,6 @@ const PostsList = ({
   showTitle = true,
   locale,
 }: PostsListProps) => {
-  const prefix = locale === 'zh' ? '' : `/${locale}`;
-
   // Sort posts by date in descending order
   const sortedPosts = [...posts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -70,7 +68,7 @@ const PostsList = ({
             {groupedPosts[year].map((post) => (
               <li key={post.slug}>
                 <Link
-                  href={`${prefix}/posts/${encodeURIComponent(post.slug)}`}
+                  href={`/${locale}/posts/${encodeURIComponent(post.slug)}`}
                   className="flex items-baseline gap-4 group hover:text-primary transition-colors"
                   tabIndex={0}
                   aria-label={locale === 'zh' ? `閱讀文章: ${post.title}` :
