@@ -28,7 +28,7 @@
 
 ## 任務
 
-- [ ] 1. 新增多語系翻譯文字
+- [x] 1. 新增多語系翻譯文字
   - 1.1 在 `lib/i18n/translations.ts` 的每個語系 `nav` 物件中新增 `allTechPosts` 和 `allLifePosts` 鍵
   - 1.2 繁體中文 (`zh`): `allTechPosts: '所有科技文章'`, `allLifePosts: '所有生活記事'`
   - 1.3 日文 (`ja`): `allTechPosts: 'すべての技術記事'`, `allLifePosts: 'すべての生活記事'`
@@ -36,7 +36,7 @@
   - 1.5 保留現有的 `allPosts` 翻譯鍵(供 PostsPage 使用)
   - 1.6 確認 TypeScript 類型定義 `Translations` 介面也更新了 `nav` 部分的型別
 
-- [ ] 2. 重構 Navbar 元件
+- [x] 2. 重構 Navbar 元件
   - 2.1 修改 `NavbarProps` 介面,將 `locale` 改為必填,新增 `category: Category | null` 必填參數
   - 2.2 移除 `usePathname` 的 import(如果有使用)
   - 2.3 移除所有基於 URL 路徑的判斷邏輯

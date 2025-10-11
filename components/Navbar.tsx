@@ -6,10 +6,23 @@ import ThemeToggleButton from "./ThemeToggleButton";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { getTranslation } from "@/lib/i18n/translations";
 import type { Locale } from "@/lib/i18n/locales";
+import type { Category } from "@/lib/posts";
 
-const Navbar = ({ locale = 'zh' }: { locale?: Locale }) => {
+interface NavbarProps {
+  locale: Locale;
+  category: Category | null;
+}
+
+const Navbar = ({ locale, category }: NavbarProps) => {
   const t = getTranslation(locale);
   const prefix = locale === 'zh' ? '' : `/${locale}`;
+
+  // Determine category link based on category prop
+  const showCategoryLink = category !== null;
+  const categoryLinkHref = category ? `${prefix}/${category}` : '';
+  const categoryLinkText = category === 'tech'
+    ? t.nav.allTechPosts
+    : t.nav.allLifePosts;
 
   return (
     <nav className="top-0 left-0 right-0 h-16 border-b border-border">
@@ -27,10 +40,14 @@ const Navbar = ({ locale = 'zh' }: { locale?: Locale }) => {
           <Button variant="ghost" asChild>
             <Link href={`${prefix}/subscription`}>{t.nav.subscription}</Link>
           </Button>
-          <span className="text-muted-foreground">•</span>
-          <Button variant="ghost" asChild>
-            <Link href={`${prefix}/posts`}>{t.nav.allPosts}</Link>
-          </Button>
+          {showCategoryLink && (
+            <>
+              <span className="text-muted-foreground">•</span>
+              <Button variant="ghost" asChild>
+                <Link href={categoryLinkHref}>{categoryLinkText}</Link>
+              </Button>
+            </>
+          )}
           <ThemeToggleButton locale={locale} />
           <LanguageSwitcher locale={locale} />
         </div>
