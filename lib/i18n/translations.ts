@@ -6,6 +6,8 @@ export type Translations = {
     about: string
     subscription: string
     allPosts: string
+    allTechPosts: string
+    allLifePosts: string
   }
   categories: {
     tech: string
@@ -42,6 +44,8 @@ export const translations: Record<Locale, Translations> = {
       about: '關於',
       subscription: '訂閱',
       allPosts: '全部文章',
+      allTechPosts: '所有科技文章',
+      allLifePosts: '所有生活記事',
     },
     categories: {
       tech: '技術',
@@ -76,6 +80,8 @@ export const translations: Record<Locale, Translations> = {
       about: '概要',
       subscription: '購読',
       allPosts: 'すべての記事',
+      allTechPosts: 'すべての技術記事',
+      allLifePosts: 'すべての生活記事',
     },
     categories: {
       tech: '技術',
@@ -110,6 +116,8 @@ export const translations: Record<Locale, Translations> = {
       about: 'About',
       subscription: 'Subscribe',
       allPosts: 'All Posts',
+      allTechPosts: 'All Tech Posts',
+      allLifePosts: 'All Life Posts',
     },
     categories: {
       tech: 'Tech',
