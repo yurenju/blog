@@ -275,3 +275,14 @@ export async function getPostCountByLocale(locale: Locale): Promise<number> {
   const posts = await getPostsByLocale(locale);
   return posts.length;
 }
+
+/**
+ * Get the count of posts for a specific category and locale
+ */
+export async function getPostCountByCategoryAndLocale(
+  category: Category,
+  locale: Locale
+): Promise<number> {
+  const posts = await fetchCategoryPosts(category, locale);
+  return posts.length;
+}
