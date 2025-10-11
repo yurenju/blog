@@ -4,7 +4,7 @@ import type { Locale } from "@/lib/i18n/locales";
 
 export function RootLayoutContent({
   children,
-  locale,
+  locale = "zh",
   htmlLang,
 }: {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export function RootLayoutContent({
       <body className="antialiased">
         <ThemeProvider attribute="class">
           <div className="mx-auto max-w-3xl">
-            <Navbar locale={locale} />
+            <Navbar locale={locale} category={null} />
             {children}
           </div>
         </ThemeProvider>
