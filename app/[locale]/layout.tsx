@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { locales, type Locale, htmlLangMap } from "@/lib/i18n/locales";
 import { siteConfig } from "@/lib/siteConfig";
-import Navbar from "@/components/Navbar";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -39,7 +38,6 @@ export default async function LocaleLayout({
 
   return (
     <div lang={htmlLangMap[locale]} className="mx-auto max-w-3xl">
-      <Navbar locale={locale} />
       {children}
     </div>
   );

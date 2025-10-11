@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/siteConfig";
 import { formatDate } from "@/lib/utils";
 import { getTranslation } from "@/lib/i18n/translations";
 import { ArticleLanguageIndicator } from "@/components/ArticleLanguageIndicator";
+import Navbar from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n/locales";
 
 export async function PostDetailPage({
@@ -19,8 +20,12 @@ export async function PostDetailPage({
   const postKey = locale === 'zh' ? decodedSlug : `${decodedSlug}-${locale}`;
   const postData = await getPostData(allPostMetadata[postKey].filePath);
 
+  const mainCategory = postData.categories[0] || null;
+
   return (
-    <div className="container mx-auto p-4">
+    <>
+      <Navbar locale={locale} category={mainCategory} />
+      <div className="container mx-auto p-4">
       <h1 className="font-serif text-4xl font-bold mb-6">
         {postData.title}
       </h1>
@@ -37,6 +42,7 @@ export async function PostDetailPage({
         ⸺ {siteConfig.author.name} {t.post.writtenBy}{" "}
         {formatDate(postData.date, { withYear: true, locale })}
       </div>
-    </div>
+      </div>
+    </>
   );
 }

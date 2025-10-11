@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/siteConfig";
 import { getTranslation } from "@/lib/i18n/translations";
+import Navbar from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n/locales";
 
 export function HomePage({ locale }: { locale: Locale }) {
@@ -10,7 +11,9 @@ export function HomePage({ locale }: { locale: Locale }) {
   const prefix = locale === 'zh' ? '' : `/${locale}`;
 
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-8rem)]">
+    <>
+      <Navbar locale={locale} category={null} />
+      <div className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-8rem)]">
       <section className="flex flex-col items-center max-w-sm mx-auto text-center space-y-4">
         <Image
           src={siteConfig.image}
@@ -43,6 +46,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </li>
         </ul>
       </nav>
-    </div>
+      </div>
+    </>
   );
 }

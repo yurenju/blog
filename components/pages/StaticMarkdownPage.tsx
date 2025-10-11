@@ -1,6 +1,7 @@
 import path from "path";
 import { access } from "fs/promises";
 import MarkdownPage from "@/components/MarkdownPage";
+import Navbar from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n/locales";
 
 export async function StaticMarkdownPage({
@@ -25,5 +26,10 @@ export async function StaticMarkdownPage({
     }
   }
 
-  return <MarkdownPage filepath={filepath} locale={locale} />;
+  return (
+    <>
+      <Navbar locale={locale} category={null} />
+      <MarkdownPage filepath={filepath} locale={locale} />
+    </>
+  );
 }

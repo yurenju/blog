@@ -2,6 +2,7 @@ import { fetchCategoryPosts, getPostCountByLocale, type Category } from "@/lib/p
 import PostsList from "@/components/PostsList";
 import { LanguageNotice } from "@/components/LanguageNotice";
 import { getTranslation } from "@/lib/i18n/translations";
+import Navbar from "@/components/Navbar";
 import type { Locale } from "@/lib/i18n/locales";
 
 export async function CategoryPage({
@@ -17,9 +18,12 @@ export async function CategoryPage({
   const chinesePostCount = await getPostCountByLocale('zh');
 
   return (
-    <div className="container mx-auto p-4">
-      <PostsList posts={posts} title={title} locale={locale} />
-      <LanguageNotice locale={locale} chinesePostCount={chinesePostCount} />
-    </div>
+    <>
+      <Navbar locale={locale} category={category} />
+      <div className="container mx-auto p-4">
+        <PostsList posts={posts} title={title} locale={locale} />
+        <LanguageNotice locale={locale} chinesePostCount={chinesePostCount} />
+      </div>
+    </>
   );
 }

@@ -48,25 +48,25 @@
   - 2.6 保持其他導覽項目不變:首頁、關於、訂閱、主題切換、語言切換器
   - 2.7 保持現有的樣式和結構(`max-w-7xl mx-auto px-4`, `variant="ghost"` 等)
 
-- [ ] 3. 調整 Layout 架構
+- [x] 3. 調整 Layout 架構
   - 3.1 開啟 `app/[locale]/layout.tsx`
   - 3.2 移除 `<Navbar locale={locale} />` 這一行
   - 3.3 保持 `<div lang={htmlLangMap[locale]} className="mx-auto max-w-3xl">` 的包裝結構
   - 3.4 確認 `{children}` 直接渲染在 div 中,不再包含 Navbar
 
-- [ ] 4. 更新文章詳細頁元件
+- [x] 4. 更新文章詳細頁元件
   - 4.1 在 `components/pages/PostDetailPage.tsx` 頂部 import Navbar: `import Navbar from "@/components/Navbar"`
   - 4.2 從 `postData.categories[0]` 取得主要類別,如果不存在則使用 `null`: `const mainCategory = postData.categories[0] || null`
   - 4.3 在 return 的 JSX 最頂部(在 `<div className="container...">` 之前)加入 `<Navbar locale={locale} category={mainCategory} />`
   - 4.4 將原本的 div 包裝在 React Fragment (`<>...</>`) 中,確保 Navbar 和內容都被返回
 
-- [ ] 5. 更新類別頁面元件
+- [x] 5. 更新類別頁面元件
   - 5.1 在 `components/pages/CategoryPage.tsx` 頂部 import Navbar: `import Navbar from "@/components/Navbar"`
   - 5.2 在 return 的 JSX 最頂部加入 `<Navbar locale={locale} category={category} />`
   - 5.3 使用 React Fragment 包裝 Navbar 和現有的內容 div
   - 5.4 `category` 參數直接使用元件 props 傳入的值
 
-- [ ] 6. 更新首頁、靜態頁面和全部文章頁面元件
+- [x] 6. 更新首頁、靜態頁面和全部文章頁面元件
   - 6.1 在 `components/pages/HomePage.tsx` 加入 `import Navbar from "@/components/Navbar"` 和 `<Navbar locale={locale} category={null} />`
   - 6.2 在 `components/pages/StaticMarkdownPage.tsx` 加入 `import Navbar from "@/components/Navbar"` 和 `<Navbar locale={locale} category={null} />`
   - 6.3 在 `components/pages/PostsPage.tsx` 加入 `import Navbar from "@/components/Navbar"` 和 `<Navbar locale={locale} category={null} />`
