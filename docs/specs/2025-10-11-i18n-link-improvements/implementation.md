@@ -27,7 +27,7 @@
 
 ## 任務
 
-- [ ] 1. 新增分類文章計數函式
+- [x] 1. 新增分類文章計數函式
   - 1.1 在 `lib/posts.ts` 中新增 `getPostCountByCategoryAndLocale(category: Category, locale: Locale)` 函式
   - 1.2 函式應重用現有的 `fetchCategoryPosts` 函式以保持一致性
   - 1.3 函式回傳指定分類和語言的文章數量
