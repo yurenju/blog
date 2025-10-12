@@ -17,6 +17,8 @@ export type Translations = {
   post: {
     writtenBy: string
     alsoAvailableIn: string
+    translatedFrom: string
+    originalArticle: string
   }
   languageNames: {
     zh: string
@@ -56,6 +58,8 @@ export const translations: Record<Locale, Translations> = {
     post: {
       writtenBy: '撰於',
       alsoAvailableIn: 'Also available in:',
+      translatedFrom: '本文翻譯自中文',
+      originalArticle: '閱讀原文',
     },
     languageNames: {
       zh: '繁體中文',
@@ -93,6 +97,8 @@ export const translations: Record<Locale, Translations> = {
     post: {
       writtenBy: '',
       alsoAvailableIn: 'Also available in:',
+      translatedFrom: '中国語から翻訳',
+      originalArticle: '原文を読む',
     },
     languageNames: {
       zh: '繁體中文',
@@ -130,6 +136,8 @@ export const translations: Record<Locale, Translations> = {
     post: {
       writtenBy: 'Written on',
       alsoAvailableIn: 'Also available in:',
+      translatedFrom: 'Translated from Chinese',
+      originalArticle: 'Read original',
     },
     languageNames: {
       zh: '繁體中文',

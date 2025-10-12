@@ -42,6 +42,11 @@ export async function PostDetailPage({
         ⸺ {siteConfig.author.name} {t.post.writtenBy}{" "}
         {formatDate(postData.date, { withYear: true, locale })}
       </div>
+      {locale !== 'zh' && (
+        <div className="font-serif text-xs text-muted-foreground text-right mt-4">
+          {t.post.translatedFrom} · <a href={`/posts/${slug}`} className="underline hover:text-foreground">{t.post.originalArticle}</a>
+        </div>
+      )}
       </div>
     </>
   );
