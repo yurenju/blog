@@ -35,7 +35,7 @@ export async function PostDetailPage({
         slug={slug}
       />
       <article
-        className="prose prose-lg zh:prose-zh ja:prose-ja dark:prose-invert max-w-none"
+        className="prose prose-lg zh:prose-zh ja:prose-ja dark:prose-invert max-w-none prose-blockquote:font-serif"
         dangerouslySetInnerHTML={{ __html: postData.content }}
       />
       <div className="font-serif text-sm text-muted-foreground text-right mt-8">

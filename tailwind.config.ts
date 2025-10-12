@@ -182,13 +182,15 @@ export default {
 
   					// Blockquotes
   					blockquote: {
+  						fontFamily: theme('fontFamily.serif'),
   						fontStyle: 'normal',
-  						borderLeftColor: theme('colors.border'),
-  						borderLeftWidth: '4px',
-  						paddingLeft: '1em',
+  						fontWeight: '700',
+  						borderLeftColor: theme('colors.muted.foreground'),
+  						borderLeftWidth: '5px',
+  						paddingLeft: '1.2em',
   						marginTop: '1.6em',
   						marginBottom: '1.6em',
-  						color: theme('colors.foreground'),
+  						color: theme('colors.muted.foreground'),
   					},
 
   					// Code blocks and inline code
@@ -308,13 +310,15 @@ export default {
 
   					// Blockquotes
   					blockquote: {
+  						fontFamily: theme('fontFamily.serif'),
   						fontStyle: 'normal',
-  						borderLeftColor: theme('colors.border'),
-  						borderLeftWidth: '4px',
+  						fontWeight: '700',
+  						borderLeftColor: theme('colors.muted.foreground'),
+  						borderLeftWidth: '5px',
   						paddingLeft: '1.5em',
   						marginTop: '2em',
   						marginBottom: '2em',
-  						color: theme('colors.foreground'),
+  						color: theme('colors.muted.foreground'),
   					},
 
   					// Code blocks and inline code
@@ -435,13 +439,15 @@ export default {
 
   					// Blockquotes
   					blockquote: {
+  						fontFamily: theme('fontFamily.serif'),
   						fontStyle: 'normal',
-  						borderLeftColor: theme('colors.border'),
-  						borderLeftWidth: '4px',
+  						fontWeight: '700',
+  						borderLeftColor: theme('colors.muted.foreground'),
+  						borderLeftWidth: '5px',
   						paddingLeft: '1.2em',
   						marginTop: '1.8em',
   						marginBottom: '1.8em',
-  						color: theme('colors.foreground'),
+  						color: theme('colors.muted.foreground'),
   					},
 
   					// Code blocks and inline code
