@@ -183,6 +183,7 @@ export default {
   					// Blockquotes
   					blockquote: {
   						fontFamily: theme('fontFamily.serif'),
+						fontSize: '1.3rem',
   						fontStyle: 'normal',
   						fontWeight: '700',
   						borderLeftColor: theme('colors.muted.foreground'),

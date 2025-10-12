@@ -26,7 +26,7 @@ export default async function MarkdownPage({
         {pageData.title}
       </h1>
       <article
-        className="prose prose-lg zh:prose-zh ja:prose-ja dark:prose-invert max-w-none"
+        className="prose prose-lg zh:prose-zh ja:prose-ja dark:prose-invert max-w-none prose-blockquote:font-serif"
         dangerouslySetInnerHTML={{ __html: pageData.content }}
       />
       {(showAuthor || showDate) && (
