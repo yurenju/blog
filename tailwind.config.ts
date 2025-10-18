@@ -21,17 +21,17 @@ export default {
   		// Note: CJK fonts should come first to ensure proper rendering of Chinese/Japanese characters
   		fontFamily: {
   			sans: [
+  				'var(--font-noto-sans)',      // English/Latin last
   				'var(--font-noto-sans-tc)',   // Chinese first for better CJK coverage
   				'var(--font-noto-sans-jp)',   // Japanese second
-  				'var(--font-noto-sans)',      // English/Latin last
   				'system-ui',
   				'-apple-system',
   				'sans-serif',
   			],
   			serif: [
+  				'var(--font-noto-serif)',     // English/Latin last
   				'var(--font-noto-serif-tc)',  // Chinese first for better CJK coverage
   				'var(--font-noto-serif-jp)',  // Japanese second
-  				'var(--font-noto-serif)',     // English/Latin last
   				'Georgia',
   				'serif',
   			],
