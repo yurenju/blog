@@ -14,6 +14,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
 import { remarkYouTubeEmbed } from "./youtube";
+import remarkGfm from "remark-gfm";
 
 const remarkExtractText: Plugin = () => {
   return (tree: Node) => {
@@ -59,6 +60,7 @@ export const stripMarkdownToText = async (
   const markdownDir = path.dirname(filePath);
 
   const result = await remark()
+    .use(remarkGfm)
     .use(remarkCustomImageSyntax(markdownDir))
     .use(remarkExtractText)
     .process(content);
@@ -78,6 +80,7 @@ export const processMarkdownContent = async (
   const markdownDir = path.dirname(filePath);
 
   const processedContent = await remark()
+    .use(remarkGfm)
     .use(remarkCustomImageSyntax(markdownDir))
     .use(remarkImagePath(markdownDir))
     .use(remarkYouTubeEmbed)
@@ -150,6 +153,7 @@ export const extractFirstImage = async (
   };
 
   await remark()
+    .use(remarkGfm)
     .use(remarkCustomImageSyntax(markdownDir))
     .use(extractImagePlugin)
     .process(content);

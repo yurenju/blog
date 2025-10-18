@@ -24,7 +24,7 @@ The next morning at breakfast, the innkeeper brought out a framed picture—six 
 
 So wolves are called "Ōkami."
 
-Isn't that the Japanese title of Capcom's *Ōkami* game? Gradually, I picked up on a few more keywords. Deer and boar eat the crops that farmers grow, but wolves eat these pests that trouble farmers. That's why wolves are worshipped as deities in this region, and the "Ōkuchi-no-Magami" enshrined at Mitake Shrine is the divine incarnation of the wolf.
+Isn't that the Japanese title of Capcom's *Ōkami* game?[^1] Gradually, I picked up on a few more keywords. Deer and boar eat the crops that farmers grow, but wolves eat these pests that trouble farmers. That's why wolves are worshipped as deities in this region, and the "Ōkuchi-no-Magami" enshrined at Mitake Shrine is the divine incarnation of the wolf.
 
 That's why so many people bring their pet dogs (both are canines) to Mount Mitake to pray for their pets' health.
 
@@ -39,3 +39,5 @@ These kinds of coincidences are truly fascinating.
 These memories originally just sat scattered in my mind, but certain things that feel especially novel or significant are like particularly bright stars in the night sky, so I give those stars names. And as interesting memories accumulate more and more, sometimes they unexpectedly connect with each other, and the connected stars become a constellation.
 
 It's just that everyone has their own personal Orion. Even without meteors, that's pretty wonderful.
+
+[^1]: I later researched and found that *Ōkami* appears to draw from a broad range of wolf-related mythology rather than specifically referencing Mount Mitake's legends, but it's still delightful to connect memories that I find interesting. Those six paintings were the work of Akira Himekawa (姫川明輝), who is responsible for the official manga adaptations of Nintendo's *The Legend of Zelda*.

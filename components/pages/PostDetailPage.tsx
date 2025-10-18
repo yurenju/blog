@@ -25,7 +25,7 @@ export async function PostDetailPage({
   return (
     <>
       <Navbar locale={locale} category={mainCategory} />
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 mb-16">
       <h1 className="font-serif text-4xl font-bold mb-6">
         {postData.title}
       </h1>
