@@ -22,3 +22,7 @@ Blogger 加上了絢麗的動畫效果同時不知道什麼時候會結束營業
 但是，歡迎你來到我的藩籬 ⸺ 我撰寫、思考，並且歡迎你來閱讀。
 
 因為太麻煩，我連留言功能都省去了。如果你覺得文章有意思，歡迎到 [twitter](https://twitter.com/yurenju) 上面找我聊聊。
+
+---
+
+這裡的文章採用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 授權，歡迎分享與改作。若有商業用途需求，請與我聯絡洽談 ([blog@yurenju.me](mailto:blog@yurenju.me))。授權詳情請參閱 [GitHub 儲存庫](https://github.com/yurenju/blog)。

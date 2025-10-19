@@ -171,4 +171,11 @@ description: "SEO 描述"
 
 ## 授權
 
-此專案為個人部落格，內容版權歸作者所有。
+本專案採用雙重授權:
+
+- **程式碼**: 採用 [MIT License](LICENSE) 授權
+- **文章內容**: 採用 [Creative Commons BY-NC 4.0](LICENSE) 授權
+
+詳細授權資訊請參閱 [LICENSE](LICENSE) 檔案。
+
+若您需要將文章內容用於商業用途，請聯絡 blog@yurenju.me 洽談授權事宜。

@@ -22,3 +22,7 @@ Blogger は華麗なアニメーション効果を追加する一方で、いつ
 しかし、私の境界へようこそ ⸺ 私が書き、考え、そしてあなたに読んでもらうことを歓迎します。
 
 面倒なので、コメント機能も省略しました。もし記事が面白いと思ったら、[twitter](https://twitter.com/yurenju) で私とお喋りしてください。
+
+---
+
+ここにある記事は [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) でライセンスされており、共有や改変は歓迎します。商業利用をご希望の場合は、お問い合わせください ([blog@yurenju.me](mailto:blog@yurenju.me))。ライセンスの詳細については、[GitHub リポジトリ](https://github.com/yurenju/blog)をご覧ください。

@@ -22,3 +22,7 @@ Indeed, isn't digital identity the same? Wherever there's society, there are bou
 However, welcome to my boundary ⸺ where I write, think, and welcome you to read.
 
 Because it's too much trouble, I've even omitted the comment feature. If you find the articles interesting, feel free to chat with me on [twitter](https://twitter.com/yurenju).
+
+---
+
+Articles here are licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). You're welcome to share and adapt them. For commercial use, please contact me ([blog@yurenju.me](mailto:blog@yurenju.me)). For detailed licensing information, please refer to the [GitHub repository](https://github.com/yurenju/blog).
