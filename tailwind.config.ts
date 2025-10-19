@@ -224,6 +224,11 @@ export default {
 							fontSize: 'inherit',
 						},
 
+						// Horizontal rule
+						hr: {
+							borderColor: theme('colors.border'),
+						},
+
 						// Footnotes
 						'.footnotes': {
 							fontSize: '0.8em',           // Smaller font size
