@@ -25,4 +25,4 @@ Blogger 加上了絢麗的動畫效果同時不知道什麼時候會結束營業
 
 ---
 
-這裡的文章採用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 授權，歡迎分享與改作。若有商業用途需求，請與我聯絡洽談 ([blog@yurenju.me](mailto:blog@yurenju.me))。授權詳情請參閱 [GitHub 儲存庫](https://github.com/yurenju/blog)。
+這裡的文章採用 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 授權，歡迎分享與改作。若有商業用途需求，請與我聯絡洽談 ([blog@yurenju.me](mailto:blog@yurenju.me))。授權詳情請參閱 [GitHub Repository](https://github.com/yurenju/blog)。
