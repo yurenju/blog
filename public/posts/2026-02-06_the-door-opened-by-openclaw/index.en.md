@@ -36,7 +36,9 @@ I even added a rating system so it can use my feedback to improve its news selec
 
 Of course, this brings us back to the elephant in the room. Is OpenClaw really that unsafe?
 
-This is easy enough to imagine. Give a software engineer a computer (even without admin privileges) and consider what they could do and how dangerous that could be. OpenClaw is roughly at that level of risk, plus the additional possibility of being hijacked through Prompt Injection to do other things.
+This is easy enough to imagine. Give a software engineer a computer (even without admin privileges) and consider what they could do and how dangerous that could be. Ask your engineer friends about the silly things that happen in engineering circles — accidentally deleting databases, messing up git, nuking the root directory, and so on. This bot is capable of doing all of those things (even though the model itself has many safety measures in place).
+
+OpenClaw is roughly at that level of risk, plus the additional possibility of being hijacked through Prompt Injection to do other things. In my case, if someone injects malicious content into an RSS feed or comments, I'm not confident it can adequately defend against that kind of attack.
 
 So I'd say the security concerns are quite serious, especially if you don't provide it with an isolated environment and instead run it on your own computer — that makes the security issues even greater.
 
