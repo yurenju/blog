@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { fetchCategoryPosts, getPostCountByCategoryAndLocale, type Category } from "@/lib/posts";
 import PostsList from "@/components/PostsList";
 import { LanguageNotice } from "@/components/LanguageNotice";
@@ -22,6 +23,14 @@ export async function CategoryPage({
       <Navbar locale={locale} category={category} />
       <div className="container mx-auto p-4">
         <PostsList posts={posts} title={title} locale={locale} />
+        <div className="mt-8 mb-12 text-center">
+          <Link
+            href={`/${locale}/archives/${category}`}
+            className="text-muted-foreground hover:text-primary transition-colors underline underline-offset-4"
+          >
+            {t.archives.moreCategoryArchived}
+          </Link>
+        </div>
         <LanguageNotice locale={locale} chinesePostCount={chinesePostCount} category={category} />
       </div>
     </>

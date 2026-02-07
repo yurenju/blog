@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getPostsByLocale, getPostCountByLocale } from "@/lib/posts";
 import PostsList from "@/components/PostsList";
 import { LanguageNotice } from "@/components/LanguageNotice";
@@ -15,6 +16,14 @@ export async function PostsPage({ locale }: { locale: Locale }) {
       <Navbar locale={locale} category={null} />
       <div className="container mx-auto p-4">
         <PostsList posts={posts} title={t.nav.allPosts} locale={locale} />
+        <div className="mt-8 mb-12 text-center">
+          <Link
+            href={`/${locale}/archives`}
+            className="text-muted-foreground hover:text-primary transition-colors underline underline-offset-4"
+          >
+            {t.archives.viewArchived}
+          </Link>
+        </div>
         <LanguageNotice locale={locale} chinesePostCount={chinesePostCount} />
       </div>
     </>
