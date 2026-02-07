@@ -119,10 +119,11 @@
 - `components/pages/ArchivesPage.tsx` - 新建，Archives 頁面元件
 
 **完成檢查**
-- 瀏覽 `/archives` 確認 redirect 到 `/zh/archives`
-- 瀏覽 `/zh/archives` 確認列出所有歸檔文章，按年份分組顯示
-- 瀏覽 `/ja/archives` 和 `/en/archives` 確認多語言正確
-- 瀏覽 `/zh/archives/tech` 和 `/zh/archives/life` 確認分類歸檔頁面正確篩選
+- 執行 `npm run build` 確認建置成功
+- 使用 Playwright CLI 開啟 `http://localhost:3001/archives`，確認 redirect 到 `/zh/archives`
+- 使用 Playwright CLI 開啟 `http://localhost:3001/zh/archives`，確認列出所有歸檔文章，h2 年份標題只包含 2019 及以前的年份
+- 使用 Playwright CLI 開啟 `http://localhost:3001/ja/archives` 和 `/en/archives`，確認頁面標題為多語言翻譯
+- 使用 Playwright CLI 開啟 `http://localhost:3001/zh/archives/tech` 和 `/zh/archives/life`，確認分類歸檔頁面正確篩選
 
 **實作備註**
 <!-- 執行過程中填寫重要的技術決策、障礙和需要傳遞的上下文 -->
@@ -144,9 +145,10 @@
 - `components/pages/CategoryPage.tsx` - 加入分類歸檔入口連結
 
 **完成檢查**
-- 瀏覽 `/zh/posts` 確認底部有「查看歸檔文章」連結，點擊後導向 `/zh/archives`
-- 瀏覽 `/zh/tech` 確認底部有「更多歸檔文章」連結，點擊後導向 `/zh/archives/tech`
-- 切換語言確認連結文案正確顯示
+- 執行 `npm run build` 確認建置成功
+- 使用 Playwright CLI 開啟 `http://localhost:3001/zh/posts`，確認底部有「查看歸檔文章」連結，點擊後導向 `/zh/archives`
+- 使用 Playwright CLI 開啟 `http://localhost:3001/zh/tech`，確認底部有「更多歸檔文章」連結，點擊後導向 `/zh/archives/tech`
+- 使用 Playwright CLI 開啟 `http://localhost:3001/ja/posts`，確認連結文案為日文翻譯
 
 **實作備註**
 <!-- 執行過程中填寫重要的技術決策、障礙和需要傳遞的上下文 -->
