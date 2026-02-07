@@ -38,6 +38,11 @@ export type Translations = {
     toggleToDark: string
     toggleToLight: string
   }
+  archives: {
+    title: string
+    viewArchived: string
+    moreCategoryArchived: string
+  }
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -79,6 +84,11 @@ export const translations: Record<Locale, Translations> = {
       toggleToDark: '切換至暗色模式',
       toggleToLight: '切換至亮色模式',
     },
+    archives: {
+      title: '歸檔文章',
+      viewArchived: '查看歸檔文章',
+      moreCategoryArchived: '更多歸檔文章',
+    },
   },
   ja: {
     nav: {
@@ -118,6 +128,11 @@ export const translations: Record<Locale, Translations> = {
       toggleToDark: 'ダークモードに切り替え',
       toggleToLight: 'ライトモードに切り替え',
     },
+    archives: {
+      title: 'アーカイブ',
+      viewArchived: 'アーカイブ記事を見る',
+      moreCategoryArchived: 'その他のアーカイブ記事',
+    },
   },
   en: {
     nav: {
@@ -156,6 +171,11 @@ export const translations: Record<Locale, Translations> = {
     theme: {
       toggleToDark: 'Switch to dark mode',
       toggleToLight: 'Switch to light mode',
+    },
+    archives: {
+      title: 'Archives',
+      viewArchived: 'View archived posts',
+      moreCategoryArchived: 'More archived posts',
     },
   },
 }
