@@ -281,19 +281,21 @@ export function encodeSlug(slug: string) {
     : updatedSlug;
 }
 
-export const fetchCategoryPosts = async (category: Category, locale: Locale = 'zh') => {
+export const fetchCategoryPosts = async (category: Category, locale: Locale = 'zh', includeArchived: boolean = false) => {
   const allPostMetadata = await getSingletonPostMetadata();
 
-  // First, filter by locale before loading full post data
-  const localeFilteredMetadata = Object.values(allPostMetadata).filter((post) => {
+  // Filter by locale and archived status before loading full post data
+  const filteredMetadata = Object.values(allPostMetadata).filter((post) => {
     const filename = path.basename(post.filePath);
     const postLocale = extractLocaleFromFilename(filename);
-    return postLocale === locale;
+    if (postLocale !== locale) return false;
+    if (!includeArchived && post.group === "archives") return false;
+    return true;
   });
 
   // Load full post data in batches to avoid EMFILE
   const posts = await processInBatches(
-    localeFilteredMetadata,
+    filteredMetadata,
     (post) => getPostData(post.filePath)
   );
 
@@ -302,27 +304,58 @@ export const fetchCategoryPosts = async (category: Category, locale: Locale = 'z
 };
 
 /**
- * Get all posts for a specific locale
+ * Get archived posts for a specific category and locale
  */
-export async function getPostsByLocale(locale: Locale): Promise<PostData[]> {
+export const fetchArchivedCategoryPosts = async (category: Category, locale: Locale = 'zh') => {
+  return fetchCategoryPosts(category, locale, true).then(
+    (posts) => posts.filter((post) => post.archived)
+  );
+};
+
+/**
+ * Get all posts for a specific locale (includes all posts by default)
+ */
+export async function getPostsByLocale(locale: Locale, includeArchived: boolean = false): Promise<PostData[]> {
   const allPostMetadata = await getSingletonPostMetadata();
 
-  // Filter by locale before loading full post data
-  const localeFilteredMetadata = Object.values(allPostMetadata).filter((post) => {
+  // Filter by locale and archived status before loading full post data
+  const filteredMetadata = Object.values(allPostMetadata).filter((post) => {
     const filename = path.basename(post.filePath);
     const postLocale = extractLocaleFromFilename(filename);
-    return postLocale === locale;
+    if (postLocale !== locale) return false;
+    if (!includeArchived && post.group === "archives") return false;
+    return true;
   });
 
   // Load full post data in batches to avoid EMFILE
   return processInBatches(
-    localeFilteredMetadata,
+    filteredMetadata,
     (post) => getPostData(post.filePath)
   );
 }
 
 /**
- * Get the count of posts for a specific locale
+ * Get only archived posts for a specific locale
+ */
+export async function getArchivedPostsByLocale(locale: Locale): Promise<PostData[]> {
+  const allPostMetadata = await getSingletonPostMetadata();
+
+  // Filter by locale and archived status
+  const archivedMetadata = Object.values(allPostMetadata).filter((post) => {
+    const filename = path.basename(post.filePath);
+    const postLocale = extractLocaleFromFilename(filename);
+    return postLocale === locale && post.group === "archives";
+  });
+
+  // Load full post data in batches to avoid EMFILE
+  return processInBatches(
+    archivedMetadata,
+    (post) => getPostData(post.filePath)
+  );
+}
+
+/**
+ * Get the count of non-archived posts for a specific locale
  */
 export async function getPostCountByLocale(locale: Locale): Promise<number> {
   const posts = await getPostsByLocale(locale);
@@ -330,7 +363,7 @@ export async function getPostCountByLocale(locale: Locale): Promise<number> {
 }
 
 /**
- * Get the count of posts for a specific category and locale
+ * Get the count of non-archived posts for a specific category and locale
  */
 export async function getPostCountByCategoryAndLocale(
   category: Category,

@@ -9,7 +9,7 @@
 
 - [x] 修改文章讀取邏輯支援兩層目錄結構
 - [x] 撰寫並執行遷移腳本
-- [ ] 修改文章列表頁面過濾歸檔文章
+- [x] 修改文章列表頁面過濾歸檔文章
 - [ ] 新增 Archives 頁面與分類歸檔頁面
 - [ ] 在列表底部加入歸檔入口連結
 - [ ] 執行驗收測試
@@ -89,7 +89,7 @@
 - 瀏覽 `/zh/tech` 和 `/zh/life` 確認也只顯示非歸檔文章
 
 **實作備註**
-<!-- 執行過程中填寫重要的技術決策、障礙和需要傳遞的上下文 -->
+照預期開發。在 `getPostsByLocale()` 和 `fetchCategoryPosts()` 加入 `includeArchived` 參數（預設 `false`），在 metadata 層級以 `post.group === "archives"` 過濾，避免載入完整 PostData。新增 `getArchivedPostsByLocale()` 和 `fetchArchivedCategoryPosts()` 供 Archives 頁面使用。
 
 ---
 
