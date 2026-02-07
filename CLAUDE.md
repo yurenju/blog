@@ -22,20 +22,25 @@ This is a Next.js 15 blog with static export, built for Traditional Chinese cont
 - **app/** - Next.js App Router pages and components
   - Dynamic routes: `/posts/[slug]` for blog posts
   - Category pages: `/tech`, `/life`
+  - Archives pages: `/archives`, `/archives/tech`, `/archives/life`
 - **lib/** - Core logic
-  - `posts.ts` - Post management with singleton caching
+  - `posts.ts` - Post management with singleton caching and batch processing
   - `markdown.ts` - Markdown to HTML conversion
   - `image.ts` - Image extraction from posts
   - `rss.ts` - RSS feed generation
-- **public/posts/** - Markdown content organized by date-based slugs
+- **public/posts/** - Markdown content in two-level grouped directory structure
+  - Group directories: `archives/`, `2020/`~`2026/` (year-based)
+  - Post directories nested inside groups: `public/posts/{group}/{slug}/`
+  - Posts in `archives/` are 2019 and earlier; year directories hold 2020+ posts
 - **public/pages/** - Static markdown pages (about, subscription)
 
 ### Key Patterns
 1. **Post Slugs**: Date-based format `YYYY-MM-DD_title` with URL encoding/decoding
-2. **Metadata**: Extracted from frontmatter or inferred from slug
+2. **Metadata**: Extracted from frontmatter or inferred from slug. `PostMetadata` includes `group` field (directory group name). `PostData` includes `archived` boolean (true when `group === "archives"`)
 3. **Categories**: Defined in frontmatter, default is "tech"
 4. **Cover Images**: First image in post or explicit cover in frontmatter
 5. **Static Export**: All pages pre-rendered at build time
+6. **Archiving**: Posts in `public/posts/archives/` are excluded from main listings. Archives pages (`/[locale]/archives`) display only archived posts. Batch processing (`processInBatches()`) is used for file I/O to avoid EMFILE errors with 1,400+ posts
 
 ### Styling
 

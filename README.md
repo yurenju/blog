@@ -8,6 +8,7 @@
 - 🌓 **深色模式** - 支援淺色/深色主題切換
 - 📱 **響應式設計** - 適應各種裝置尺寸
 - 🔖 **多分類支援** - 技術 (tech)、生活 (life)
+- 🗄️ **文章歸檔** - 舊文章（2019 年以前）歸檔至 Archives，主列表只顯示近年文章
 - 🌍 **多語言支援** - 支援繁體中文、日文、英文的文章翻譯與 UI 多語化
 - 🌐 **多語言 RSS** - 自動產生繁體中文、英文、日文的 RSS feeds
 - ⚡ **效能優化** - 使用 Turbopack 加速開發體驗
@@ -51,7 +52,8 @@ npm run build
 │   ├── [locale]/             # 多語言路由
 │   │   ├── posts/[slug]/    # 動態文章路由
 │   │   ├── tech/            # 技術分類頁面
-│   │   └── life/            # 生活分類頁面
+│   │   ├── life/            # 生活分類頁面
+│   │   └── archives/        # 歸檔文章頁面（含 tech/life 子分類）
 │   └── page.tsx             # 根路徑重定向
 ├── components/              # 共用元件
 │   ├── LanguageSwitcher.tsx  # 語言切換器
@@ -65,8 +67,10 @@ npm run build
 │   ├── image.ts            # 文章圖片擷取
 │   └── rss.ts              # RSS feed 產生
 ├── public/
-│   ├── posts/              # Markdown 文章內容（依日期命名）
-│   │   └── [slug]/         # 文章目錄
+│   ├── posts/              # Markdown 文章內容（兩層分組目錄結構）
+│   │   ├── archives/       # 歸檔文章（2019 年及以前）
+│   │   ├── 2020/~2026/     # 依年份分組的文章目錄
+│   │   └── [group]/[slug]/ # 文章目錄
 │   │       ├── index.md    # 繁中原文（或 文章名.md）
 │   │       ├── index.ja.md # 日文翻譯（選填）
 │   │       └── index.en.md # 英文翻譯（選填）
@@ -88,7 +92,7 @@ npm run build
 
 ### 文章格式
 
-文章使用 Markdown 格式，存放於 `public/posts/` 目錄，檔名格式為 `YYYY-MM-DD_標題.md`。
+文章使用 Markdown 格式，存放於 `public/posts/{年份}/` 目錄下的文章資料夾中（如 `public/posts/2026/2026-01-15_標題/index.md`）。2019 年及以前的舊文章歸檔於 `public/posts/archives/` 中。
 
 範例：
 
@@ -150,6 +154,9 @@ description: "SEO 描述"
 - `/zh/posts/[slug]` - 繁體中文文章
 - `/ja/posts/[slug]` - 日文翻譯文章
 - `/en/posts/[slug]` - 英文翻譯文章
+- `/zh/archives` - 歸檔文章列表（2019 年及以前）
+- `/zh/archives/tech` - 歸檔技術文章
+- `/zh/archives/life` - 歸檔生活文章
 
 #### RSS 訂閱
 
