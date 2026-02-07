@@ -8,7 +8,7 @@
 ## 任務概要
 
 - [x] 修改文章讀取邏輯支援兩層目錄結構
-- [ ] 撰寫並執行遷移腳本
+- [x] 撰寫並執行遷移腳本
 - [ ] 修改文章列表頁面過濾歸檔文章
 - [ ] 新增 Archives 頁面與分類歸檔頁面
 - [ ] 在列表底部加入歸檔入口連結
@@ -65,7 +65,7 @@
 - 執行 `npm run build` 確認建置成功，所有頁面正常產生
 
 **實作備註**
-<!-- 執行過程中填寫重要的技術決策、障礙和需要傳遞的上下文 -->
+[技術障礙] 遷移後 `npm run build` 出現 `EMFILE: too many open files` 錯誤，因為 `getAllPostMetadata()` 用巢狀 `Promise.all()` 同時開啟 1,486 篇文章的檔案。解決方式是新增 `processInBatches()` 工具函式（批次大小 50），將 `getAllPostMetadata()`、`getPostsByLocale()`、`fetchCategoryPosts()` 中的 `Promise.all()` 改為批次處理，建置順利通過。
 
 ---
 

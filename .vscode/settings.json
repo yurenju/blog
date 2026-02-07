@@ -8,6 +8,5 @@
   },
   "editor.quickSuggestions": {
     "strings": "on"
-  },
-  "explorer.sortOrder": "modified"
+  }
 }

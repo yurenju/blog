@@ -10,6 +10,22 @@ import { Locale } from "./i18n/locales";
 
 const postsDirectory = path.join(process.cwd(), "public/posts");
 
+const CONCURRENCY_LIMIT = 50;
+
+async function processInBatches<T, R>(
+  items: T[],
+  fn: (item: T) => Promise<R>,
+  batchSize: number = CONCURRENCY_LIMIT
+): Promise<R[]> {
+  const results: R[] = [];
+  for (let i = 0; i < items.length; i += batchSize) {
+    const batch = items.slice(i, i + batchSize);
+    const batchResults = await Promise.all(batch.map(fn));
+    results.push(...batchResults);
+  }
+  return results;
+}
+
 interface PostMetadata {
   slug: string;
   filePath: string;
@@ -37,63 +53,70 @@ async function getAllPostMetadata(): Promise<Record<string, PostMetadata>> {
 
   const posts: Record<string, PostMetadata> = {};
 
-  await Promise.all(
-    groupDirs.map(async (groupDir) => {
-      const groupPath = path.join(postsDirectory, groupDir.name);
-      const postEntries = await fs.promises.readdir(groupPath, {
-        withFileTypes: true,
+  // Collect all post directories with their group info
+  const allPostDirs: { groupName: string; dirPath: string; postDirName: string }[] = [];
+
+  for (const groupDir of groupDirs) {
+    const groupPath = path.join(postsDirectory, groupDir.name);
+    const postEntries = await fs.promises.readdir(groupPath, {
+      withFileTypes: true,
+    });
+    const postDirs = postEntries.filter((entry) => entry.isDirectory());
+
+    for (const postDir of postDirs) {
+      allPostDirs.push({
+        groupName: groupDir.name,
+        dirPath: path.join(groupPath, postDir.name),
+        postDirName: postDir.name,
       });
-      const postDirs = postEntries.filter((entry) => entry.isDirectory());
+    }
+  }
 
-      await Promise.all(
-        postDirs.map(async (postDir) => {
-          const dirPath = path.join(groupPath, postDir.name);
-          const files = await fs.promises.readdir(dirPath);
-          const mdFiles = files.filter((file) => file.endsWith(".md"));
+  // Process post directories in batches to avoid EMFILE
+  await processInBatches(allPostDirs, async ({ groupName, dirPath, postDirName }) => {
+    const files = await fs.promises.readdir(dirPath);
+    const mdFiles = files.filter((file) => file.endsWith(".md"));
 
-          // Skip directories without markdown files (e.g., assets/)
-          if (mdFiles.length === 0) {
-            return;
-          }
+    // Skip directories without markdown files (e.g., assets/)
+    if (mdFiles.length === 0) {
+      return;
+    }
 
-          // First, find the primary (zh) version to get the canonical slug
-          const zhFile = mdFiles.find(file => extractLocaleFromFilename(file) === 'zh');
-          let primarySlug: string | null = null;
+    // First, find the primary (zh) version to get the canonical slug
+    const zhFile = mdFiles.find(file => extractLocaleFromFilename(file) === 'zh');
+    let primarySlug: string | null = null;
 
-          if (zhFile) {
-            const zhPath = path.join(dirPath, zhFile);
-            const zhContents = await fs.promises.readFile(zhPath, "utf8");
-            const zhMatter = matter(zhContents);
-            primarySlug = zhMatter.data.slug || postDir.name;
-          }
+    if (zhFile) {
+      const zhPath = path.join(dirPath, zhFile);
+      const zhContents = await fs.promises.readFile(zhPath, "utf8");
+      const zhMatter = matter(zhContents);
+      primarySlug = zhMatter.data.slug || postDirName;
+    }
 
-          // Process all language versions in this directory
-          for (const mdFile of mdFiles) {
-            const fullPath = path.join(dirPath, mdFile);
-            const fileContents = await fs.promises.readFile(fullPath, "utf8");
-            const matterResult = matter(fileContents);
-            const locale = extractLocaleFromFilename(mdFile);
+    // Process all language versions in this directory
+    for (const mdFile of mdFiles) {
+      const fullPath = path.join(dirPath, mdFile);
+      const fileContents = await fs.promises.readFile(fullPath, "utf8");
+      const matterResult = matter(fileContents);
+      const locale = extractLocaleFromFilename(mdFile);
 
-            // Get slug: prefer current file's slug, then primary slug, then directory name
-            const slug = encodeSlug(
-              matterResult.data.slug ||
-              primarySlug ||
-              postDir.name
-            );
-
-            // Create a unique key for each language version
-            const postKey = locale === 'zh' ? slug : `${slug}-${locale}`;
-
-            posts[postKey] = {
-              slug,
-              filePath: fullPath,
-              group: groupDir.name,
-            };
-          }
-        })
+      // Get slug: prefer current file's slug, then primary slug, then directory name
+      const slug = encodeSlug(
+        matterResult.data.slug ||
+        primarySlug ||
+        postDirName
       );
-    })
-  );
+
+      // Create a unique key for each language version
+      const postKey = locale === 'zh' ? slug : `${slug}-${locale}`;
+
+      posts[postKey] = {
+        slug,
+        filePath: fullPath,
+        group: groupName,
+      };
+    }
+  });
 
   return posts;
 }
@@ -268,9 +291,10 @@ export const fetchCategoryPosts = async (category: Category, locale: Locale = 'z
     return postLocale === locale;
   });
 
-  // Load full post data only for locale-filtered posts
-  const posts = await Promise.all(
-    localeFilteredMetadata.map((post) => getPostData(post.filePath))
+  // Load full post data in batches to avoid EMFILE
+  const posts = await processInBatches(
+    localeFilteredMetadata,
+    (post) => getPostData(post.filePath)
   );
 
   // Finally filter by category
@@ -290,9 +314,10 @@ export async function getPostsByLocale(locale: Locale): Promise<PostData[]> {
     return postLocale === locale;
   });
 
-  // Load full post data only for locale-filtered posts
-  return Promise.all(
-    localeFilteredMetadata.map((post) => getPostData(post.filePath))
+  // Load full post data in batches to avoid EMFILE
+  return processInBatches(
+    localeFilteredMetadata,
+    (post) => getPostData(post.filePath)
   );
 }
 
