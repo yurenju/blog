@@ -13,6 +13,7 @@ const postsDirectory = path.join(process.cwd(), "public/posts");
 interface PostMetadata {
   slug: string;
   filePath: string;
+  group: string;
 }
 
 let cachedPostMetadata: Record<string, PostMetadata> | null = null;
@@ -29,56 +30,68 @@ export const getSingletonPostMetadata = async (): Promise<
 };
 
 async function getAllPostMetadata(): Promise<Record<string, PostMetadata>> {
-  const entries = await fs.promises.readdir(postsDirectory, {
+  const groupEntries = await fs.promises.readdir(postsDirectory, {
     withFileTypes: true,
   });
-  const directories = entries.filter((entry) => entry.isDirectory());
+  const groupDirs = groupEntries.filter((entry) => entry.isDirectory());
 
   const posts: Record<string, PostMetadata> = {};
 
   await Promise.all(
-    directories.map(async (directory) => {
-      const dirPath = path.join(postsDirectory, directory.name);
-      const files = await fs.promises.readdir(dirPath);
-      const mdFiles = files.filter((file) => file.endsWith(".md"));
+    groupDirs.map(async (groupDir) => {
+      const groupPath = path.join(postsDirectory, groupDir.name);
+      const postEntries = await fs.promises.readdir(groupPath, {
+        withFileTypes: true,
+      });
+      const postDirs = postEntries.filter((entry) => entry.isDirectory());
 
-      if (mdFiles.length === 0) {
-        throw new Error(`No markdown file found in directory: ${dirPath}`);
-      }
+      await Promise.all(
+        postDirs.map(async (postDir) => {
+          const dirPath = path.join(groupPath, postDir.name);
+          const files = await fs.promises.readdir(dirPath);
+          const mdFiles = files.filter((file) => file.endsWith(".md"));
 
-      // First, find the primary (zh) version to get the canonical slug
-      const zhFile = mdFiles.find(file => extractLocaleFromFilename(file) === 'zh');
-      let primarySlug: string | null = null;
+          // Skip directories without markdown files (e.g., assets/)
+          if (mdFiles.length === 0) {
+            return;
+          }
 
-      if (zhFile) {
-        const zhPath = path.join(dirPath, zhFile);
-        const zhContents = await fs.promises.readFile(zhPath, "utf8");
-        const zhMatter = matter(zhContents);
-        primarySlug = zhMatter.data.slug || directory.name;
-      }
+          // First, find the primary (zh) version to get the canonical slug
+          const zhFile = mdFiles.find(file => extractLocaleFromFilename(file) === 'zh');
+          let primarySlug: string | null = null;
 
-      // Process all language versions in this directory
-      for (const mdFile of mdFiles) {
-        const fullPath = path.join(dirPath, mdFile);
-        const fileContents = await fs.promises.readFile(fullPath, "utf8");
-        const matterResult = matter(fileContents);
-        const locale = extractLocaleFromFilename(mdFile);
+          if (zhFile) {
+            const zhPath = path.join(dirPath, zhFile);
+            const zhContents = await fs.promises.readFile(zhPath, "utf8");
+            const zhMatter = matter(zhContents);
+            primarySlug = zhMatter.data.slug || postDir.name;
+          }
 
-        // Get slug: prefer current file's slug, then primary slug, then directory name
-        const slug = encodeSlug(
-          matterResult.data.slug ||
-          primarySlug ||
-          directory.name
-        );
+          // Process all language versions in this directory
+          for (const mdFile of mdFiles) {
+            const fullPath = path.join(dirPath, mdFile);
+            const fileContents = await fs.promises.readFile(fullPath, "utf8");
+            const matterResult = matter(fileContents);
+            const locale = extractLocaleFromFilename(mdFile);
 
-        // Create a unique key for each language version
-        const postKey = locale === 'zh' ? slug : `${slug}-${locale}`;
+            // Get slug: prefer current file's slug, then primary slug, then directory name
+            const slug = encodeSlug(
+              matterResult.data.slug ||
+              primarySlug ||
+              postDir.name
+            );
 
-        posts[postKey] = {
-          slug,
-          filePath: fullPath,
-        };
-      }
+            // Create a unique key for each language version
+            const postKey = locale === 'zh' ? slug : `${slug}-${locale}`;
+
+            posts[postKey] = {
+              slug,
+              filePath: fullPath,
+              group: groupDir.name,
+            };
+          }
+        })
+      );
     })
   );
 
@@ -104,6 +117,7 @@ export type PostData = {
   coverImage: ImageInfo | null;
   locale: Locale;
   availableLocales: Locale[];
+  archived: boolean;
 };
 
 export type Category = "life" | "tech";
@@ -136,6 +150,16 @@ async function findTranslations(dirPath: string): Promise<Record<Locale, string>
   }
 
   return translations as Record<Locale, string>;
+}
+
+/**
+ * Derive the group directory name from a post file path.
+ * Path structure: .../public/posts/{group}/{postDir}/{file}.md
+ */
+function getGroupFromFilePath(filePath: string): string {
+  const postDir = path.dirname(filePath);
+  const groupDir = path.dirname(postDir);
+  return path.basename(groupDir);
 }
 
 export async function getPostData(filePath: string): Promise<PostData> {
@@ -202,6 +226,9 @@ export async function getPostData(filePath: string): Promise<PostData> {
   );
   const coverImage = await extractFirstImage(matterResult.content, filePath);
 
+  const group = getGroupFromFilePath(filePath);
+  const archived = group === "archives";
+
   return {
     slug,
     title,
@@ -213,6 +240,7 @@ export async function getPostData(filePath: string): Promise<PostData> {
     coverImage,
     locale,
     availableLocales,
+    archived,
   };
 }
 

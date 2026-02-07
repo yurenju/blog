@@ -49,3 +49,4 @@ fixtures
 .mcp.json
 .claude/settings.local.json
 nul
+.playwright-cli
