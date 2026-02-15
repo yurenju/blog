@@ -38,21 +38,21 @@ White building 是一種在三十年前紅色高棉之前所蓋好的建築，�
 
 當幾十年後人們慢慢的再度回來金邊時，White building 已經從新穎的建築變成了現在殘破不堪的面貌。而也有許多人們因為不同的原因目前仍居住在此。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 牆面上並不存在太多平整的表面，樓跟樓之間則用交錯的 X 型階梯互相連接在一起，到處斑駁修補的痕跡有點讓我聯想到香港的九龍。
 
 街上停了好幾台像這樣小攤販的車子，雖然金邊的小攤販賣的炒麵看似好吃，但是只要想到三十六度的高溫下，所有食材全部都放在路邊陳列在這台攤販車裡面高溫烘烤，我就對我的腸胃沒有什麼信心。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 住在 white building 的人生活感覺起來不算困苦，比較像是金邊裡面的市井小民住的地方，甚至條件還要比其他地方再稍微好一點。裡面有著如同赤峰街上修理機械的小店鋪、停放一旁的小吃攤店舖，許多小朋友也在巷弄裡面穿梭，大大的眼珠好奇著打量這三個外國人。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 也有母親帶著孩子在盛滿水的水缸旁踢著水試圖消解下午不停從四處散發出來的熱氣。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 而居住在這邊的人們面臨四處都在大興土木的金邊城內，據 Michael 說 White building 的數量不斷的在減少，在金邊目前土地價值高漲，中國、新加坡，甚至台灣等等國家來這邊大興土木建設時，不知道當地人還是否可以負荷擁有一個自己的家。
 
@@ -62,11 +62,11 @@ White building 是一種在三十年前紅色高棉之前所蓋好的建築，�
 
 有很多人在這個混亂的時代口袋填得飽飽的，但是有些人卻還是生活在水深火熱裡面，貧富差距拉的極大。這個國家就跟這條河的顏色一樣，在同一條河上，但卻涇渭分明。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 度過這條河之後，Michael 帶我們到了另外一頭渡船口旁邊的貧民窟。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 跟 white building 比起來，這邊居民過的生活絕對要比那邊差得多了。Michael 也跟我們提到他來這裡也常常看到有些婦人每次都在這聚賭，他也不太確定他們賴何維生。當我們走進去的時候，正巧就有一群人正圍在一起賭博，不過說實在的就像是我們在家裡面聚在一起打牌的感覺差不多。
 
@@ -74,19 +74,19 @@ White building 是一種在三十年前紅色高棉之前所蓋好的建築，�
 
 話說，無論在那裡，小朋友都是最天真無邪，也是最可以在困苦的環境中找到快樂的人群。當我們在這個村落裡面走動時，小朋友臉上永遠都是好奇的表情，當作個手勢要幫他們拍照時，永遠都流露出最開心的笑容。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg#layoutTextWidth)
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg#layoutTextWidth)
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg#layoutTextWidth)
 
 離開這個小村落之後，tuk tuk 司機又載著我們到了另外一座寺廟，而旁邊則是一座 pagoda (在柬埔寨 pagoda 是僧人住的地方)。這邊 Michael 帶著我們見了一個年輕的僧人，他的英文也非常的好，Michael 跟他交談也問了一些我們的疑問（例如說有沒有女性僧人），也在這邊跟他閒話家常。
 
 當我們在跟年輕僧人聊天時，旁邊有一位老態龍鍾的僧人，八十四歲的他也有一定程度的英文能力。Michael 感覺跟他們很熟，就問他是不是在喝 red bull，老僧人就跟他說他今天只喝一罐。後來 Michael 蹲下來幫他拍照時，老僧人還開玩笑地跟他說 one dollar，這種輕鬆的氣氛經常發生在 Michael 跟當地人互動的過程。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg#layoutTextWidth)
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg#layoutTextWidth)
 
 可想而知他在這邊住了五年的時間，也經常在不同的地方跟當地的居民互動，在 tuk tuk 車上經常看到他跟經過的人們互相打招呼。對我來說攝影非常困難的地方就是要跟被攝者打好關係，而 Michael 在餐廳裡教我們的互動技巧，跟看到他跟當地人的互動真覺得他是個很專業又很好相處的攝影師。
 
@@ -102,4 +102,4 @@ White building 是一種在三十年前紅色高棉之前所蓋好的建築，�
 
 謝謝你 Michael，謝謝你帶著我們透過你的視角認識這個國家與城市。
 
-![image](/posts/2016-03-12_攝影師之眼-金邊觀察/images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg#layoutTextWidth)

@@ -22,7 +22,7 @@ images:
   - "/posts/2020-04-11_自製-chai-plugin/images/10.png"
 ---
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/1.jpg#layoutTextWidth)
+![image](images/1.jpg#layoutTextWidth)
 
 Credit: [Github repo](https://github.com/chaijs)
 
@@ -38,17 +38,17 @@ Credit: [Github repo](https://github.com/chaijs)
 
 但是如果你嘗試著在 Chai 裡面撰寫如下的測試範例時：
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 按照邏輯在第二個測試應該會出錯，並且顯示 30n 不等於 20n，但實際上則會丟出一個莫名其妙的錯誤訊息：
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 原因其實就是 Chai 內部運作沒有考慮到 BigInt 的邏輯。而等待官方支援[目前看起來是遙遙無期](https://github.com/chaijs/chai/issues/1321)，不過我們可以利用 Chai plugin 很簡單的就可以解決這個問題。
 
 Chai 的框架提供了許多更改原先邏輯的方法。首先新增一個 helper 模組，並且利用 `overwriteMethod` 來修改 `eq` 原本的邏輯：
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 其中有幾個參數：
 
@@ -58,11 +58,11 @@ Chai 的框架提供了許多更改原先邏輯的方法。首先新增一個 he
 
 寫完 helper 之後利用 `chai.use()` 就可以將寫好的模組注入 chai 當中：
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 這樣錯誤訊息就會清楚很多了
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 ### 新增函式
 
@@ -70,19 +70,19 @@ Chai 的框架提供了許多更改原先邏輯的方法。首先新增一個 he
 
 在這個例子裏面，我們希望驗證 response.logs 裡面有個 event 是 SwapToken，而且 log.args 裡面有兩個屬性 fromToken, toToken 分別是特定數值。
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
 在 Chai 我們在沒有任何 helper 之前依然可以完成這項工作，但是如果有 helper 之後，我們可以把它寫成更為精簡。比如說我們先設定預期目標是將語法修正成這樣：
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/8.png#layoutTextWidth)
+![image](images/8.png#layoutTextWidth)
 
 這樣的語法更容易閱讀，需要的行數也較少。接著我們就可以依照我們想要達成的效果利用 `addMethod()` 為 Chai 新增 emit 以及 withArgs 函式：
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/9.png#layoutTextWidth)
+![image](images/9.png#layoutTextWidth)
 
 就即可達成用更簡潔的語法達成相同效果的驗證。
 
-![image](/posts/2020-04-11_自製-chai-plugin/images/10.png#layoutTextWidth)
+![image](images/10.png#layoutTextWidth)
 
 除了這兩個函式外，Chai 還提供了不少功能可以擴展功能，有興趣的可以研讀一下官方文件。
 

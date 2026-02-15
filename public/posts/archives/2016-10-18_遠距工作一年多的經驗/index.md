@@ -17,7 +17,7 @@ images:
   - "/posts/2016-10-18_遠距工作一年多的經驗/images/5.jpeg"
 ---
 
-![image](/posts/2016-10-18_遠距工作一年多的經驗/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 我在咖啡館工作拍的照片
 
@@ -25,7 +25,7 @@ images:
 
 介紹一下背景，我目前待的公司是一間 Startup 公司，兩個創辦人分別來自加拿大與美國，成員除了一位在波蘭外，其他人目前都在台北，總共七個人。公司是軟體公司，寫線上的向量繪圖軟體  — [Vectr](http://vectr.com/)。
 
-![image](/posts/2016-10-18_遠距工作一年多的經驗/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 由於公司目前沒有辦公室（目前已知的計畫也沒有打算找辦公室），大家都在家工作，每週二會在咖啡館開會，偶爾同事會約在咖啡館一起工作，我偶爾也會自己去咖啡館工作，不過大部分的時間都在家工作。
 
@@ -47,7 +47,7 @@ images:
 
 公司目前追蹤進度的方式是兩周一個 milestone，每個 milestone 會排入預估的工作量，這個預估的工作量我們採用 story points，有興趣的可以查 [scrum](https://zh.wikipedia.org/zh-tw/Scrum) 的相關資訊（我們不是真的採用 Scurm，不過預估的方式有點類似）。
 
-![image](/posts/2016-10-18_遠距工作一年多的經驗/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 每週的進度會有一個 burndown chart 來表示，橫軸是兩週的時間，縱軸是整個團隊所有的點數。每個人每個 milestone 都會分配的差不多的點數的 issues。上圖有一個虛線與實線分別代表預估的進度跟實際進度。目標是在兩週內把自己手上的 issue 都解完，如果每個人都在兩週內把所有 issue 都解完，虛線跟實線就會非常接近。
 
@@ -55,7 +55,7 @@ images:
 
 ### 實際觀察
 
-![image](/posts/2016-10-18_遠距工作一年多的經驗/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 這張拍的時間有點早，還不是目前所有的成員
 
@@ -65,7 +65,7 @@ images:
 
 大家都是很有經驗也很負責的開發者，遠距工作其實在我們團隊並沒有造成什麼太大的問題。像我們公司這樣的純軟體公司工作方面只需要電腦與網路，到哪裡其實都可以工作，是不是一定需要在同一個辦公室工作也不是個問題。
 
-![image](/posts/2016-10-18_遠距工作一年多的經驗/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 有一天我走經過一間咖啡館時，正巧遇到同事在這間咖啡館工作，超巧！
 

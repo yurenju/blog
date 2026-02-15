@@ -13,7 +13,7 @@ images:
   - "/posts/2017-06-24_travisci-上設定-headless-chrome/images/1.png"
 ---
 
-![image](/posts/2017-06-24_travisci-上設定-headless-chrome/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 今天在弄自己的小專案的時候發現現在 travis-ci 要設定 Headless Chrome 已經簡單很多了，這邊紀錄一下。
 

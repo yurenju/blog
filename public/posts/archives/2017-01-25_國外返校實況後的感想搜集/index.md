@@ -13,7 +13,7 @@ images:
   - "/posts/2017-01-25_國外返校實況後的感想搜集/images/1.jpeg"
 ---
 
-![image](/posts/2017-01-25_國外返校實況後的感想搜集/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 返校遊戲原聲帶封面，可在 steam 上購買
 

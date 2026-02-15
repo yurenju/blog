@@ -18,7 +18,7 @@ images:
   - "/posts/2019-10-15_aztec-保密傳輸協議devcon5-見聞/images/6.png"
 ---
 
-![image](/posts/2019-10-15_aztec-保密傳輸協議devcon5-見聞/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 這次去 Devcon5 有機會跟 AZTEC 的開發者聊天，後續討論中也釐清了我自己使用 AZTEC 的一些疑問，搞清楚後也分享本篇文章來介紹此協議。
 
@@ -42,23 +42,23 @@ AZTEC 提供了一種名為 ZKAsset 的資產，在系統裡面我們稱它為�
 
 首先公司先把 100,000 DAI 轉成一張單據 A，此時這張單據價值 100,000 DAI 是公開的。
 
-![image](/posts/2019-10-15_aztec-保密傳輸協議devcon5-見聞/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 發薪水時，公司把單據 A 切成兩份，分別價值 90,000 DAI 跟 10,000 DAI 的兩張單據 A1, A2。
 
-![image](/posts/2019-10-15_aztec-保密傳輸協議devcon5-見聞/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 接著把 A2 傳送給員工，此時這兩張單據的價值並不會公開的記錄在區塊鏈上，但是擁有者依然可以透過 AZTEC 的工具來驗證其價值。
 
-![image](/posts/2019-10-15_aztec-保密傳輸協議devcon5-見聞/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 員工收到代表 10,000 DAI 的單據後，當需要用錢時可以將此單據中一部分的 DAI 如 1,000 DAI 從隱藏價值的 note 切分出來，一部分變成公開的 DAI，另外一部分仍是隱藏價值的 note，此時區塊鏈上可以知道此員工換出了 1,000 DAI，但是不知道他還剩下多少 DAI，此員工也可以一直重複這個步驟把錢領出。
 
-![image](/posts/2019-10-15_aztec-保密傳輸協議devcon5-見聞/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 如果下份薪水進來後，此員工還可以把他原本的兩張單據合併或切分，讓實際還有多少錢更難被推敲出來。
 
-![image](/posts/2019-10-15_aztec-保密傳輸協議devcon5-見聞/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 ### DEMO 實作
 

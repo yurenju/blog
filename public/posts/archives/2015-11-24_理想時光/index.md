@@ -15,7 +15,7 @@ images:
 
 大家應該都注意到我最近很常跑咖啡館（笑），因為現在這間公司沒有辦公室的關係，我大多都在家裡工作，偶爾每週一兩天會到咖啡館工作，換個環境也吸收一下不一樣的空氣。
 
-![image](/posts/2015-11-24_理想時光/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 同事 Emery 前幾天提到了這間咖啡館很適合 weekly meeting，所以這週二我們就到了這間「理想。時光」。
 

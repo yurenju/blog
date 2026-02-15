@@ -49,7 +49,7 @@ images:
 
 目前在管理待辦事項的方式是採用循環審視的模式，每次循環時都會審視上個循環的執行狀況。
 
-![image](/posts/2022-01-23_如何梳理我的待辦事項魔改子彈筆記法/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 - 每天開始時，審視昨天作的事情
 - 每月開始時，審視上個月作的事情
@@ -67,7 +67,7 @@ images:
 
 我的筆記就是一堆資料夾跟文字檔透過筆記軟體 Obsidian 書寫，他的結構長這樣：
 
-![image](/posts/2022-01-23_如何梳理我的待辦事項魔改子彈筆記法/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 每天、每月、每年都會有一個自己的筆記檔案，裡面就是寫要完成的工作事項，包含工作與生活的事情都包含在裡面。
 
@@ -75,7 +75,7 @@ images:
 
 每年的我會這麼寫：
 
-![image](/posts/2022-01-23_如何梳理我的待辦事項魔改子彈筆記法/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 因為通常年度目標都很遠，所以我紀錄的會比較少，通常也都是個概略性的目標。
 
@@ -83,7 +83,7 @@ images:
 
 每個月的則是這樣：
 
-![image](/posts/2022-01-23_如何梳理我的待辦事項魔改子彈筆記法/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 會分成 Calendar 跟 Tasks，Calendar 會在一天的開始紀錄昨天做了什麼事情，一般來講都會紀錄任何覺得有意思的事情，比如說去哪裡攀岩、跟同事一起完成了什麼工作、看到什麼有趣的知識等等，只要有印象的都會寫上去。所以這並不是排定工作用的，比較像是條列式的日記。
 
@@ -93,7 +93,7 @@ Tasks 就是預計這個月要完成的事情，這些工作會比起年度的�
 
 每日筆記則有 Tasks 跟 Notes 兩類。
 
-![image](/posts/2022-01-23_如何梳理我的待辦事項魔改子彈筆記法/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 這個是我筆記的樣板，每天 Obsidian 都會產生這樣的預設筆記。會把今天要作的事情就寫在上面，而 Notes 通常會拿來紀錄一些臨時需要紀錄的東西。
 
@@ -103,7 +103,7 @@ Tasks 就是預計這個月要完成的事情，這些工作會比起年度的�
 
 每天開始工作的第一件事情就是照著樣板上的工作開始作，這份樣板每天都會自動複製一份到指定的資料夾，內容也都一樣。此時我會打開三份筆記：昨天、今天跟這個月的筆記。
 
-![image](/posts/2022-01-23_如何梳理我的待辦事項魔改子彈筆記法/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 首先要作的事情是審視昨天的工作，考慮事情的重要跟緊急程度：
 
@@ -117,7 +117,7 @@ Tasks 就是預計這個月要完成的事情，這些工作會比起年度的�
 
 這些工作可以是今天作、這個月作或是下個月作，把它放到適合的地方，如果有需要也可以回個訊息告知對方你大概什麼時候會作，他們也會比較安心。當然如果他一點都不重要，就不要寫在筆記裡面。
 
-![image](/posts/2022-01-23_如何梳理我的待辦事項魔改子彈筆記法/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
 這個流程會把今天要作的事情全部都聚集到今天的筆記來，這樣今天的待辦事項就成型了，你只要專注的把這頁待辦事項完成即可。
 

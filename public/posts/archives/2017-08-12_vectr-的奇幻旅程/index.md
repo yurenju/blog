@@ -14,7 +14,7 @@ images:
   - "/posts/2017-08-12_vectr-的奇幻旅程/images/2.png"
 ---
 
-![image](/posts/2017-08-12_vectr-的奇幻旅程/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 > Hey yuren you want to meet my cofounder? Have time? — nick
 
@@ -67,7 +67,7 @@ Vectr 在八月份時正式宣佈資金用盡。如果把在 Vectr 的時光濃�
 如果沒站上浪板也沒關係，在淋浴間沖走那些海水與沙子。整理好衣物搭著下班火車離開。讓我們在火車站道別，期待下次一起衝浪的時刻。
 
 > In case I don’t see you… good afternoon, good evening, and good night.
-> ![image](/posts/2017-08-12_vectr-的奇幻旅程/images/2.png#layoutTextWidth)
+> ![image](images/2.png#layoutTextWidth)
 > Credit: [The Truman Show](http://www.imdb.com/title/tt0120382/quotes/qt3487991)
 
 **後記**：感謝大家捧場，也許多人在我的 [Facebook](https://www.facebook.com/yurenju/posts/10154630755116631) 上說這是個很感人的旅程。不過我也想要平衡一下報導，畢竟我這篇都沒寫太多我們公司遇到的問題，不過同事 EJ 在他的部落格寫了[他在 Vectr 這兩年的感想](https://eragonj.me/2017/08/10/memo-%E6%95%B8%E4%BD%8D%E9%81%8A%E7%89%A7%E7%9A%84%E7%94%9F%E6%B4%BB-part-end/)，裡面也提到不少公司的缺失，歡迎大家前往閱讀。

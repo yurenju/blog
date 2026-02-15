@@ -45,7 +45,7 @@ images:
 
 如果把知識傳授給另外一個人視為產出時，知識的產生流程就會是這樣：
 
-![image](/posts/2022-03-30_如何組織與吸收知識魔改-zettelkasten-筆記法/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 在所有學習的方式裡面，我們做的最多的是閱讀，同時也是收穫最少的。以我自己的經驗而言，不管是遇到問題後的學習或是動手作的學習，轉化成自己的知識的比例都滿高的。但是閱讀一般來說轉化成自己的比例都比較低。
 
@@ -91,7 +91,7 @@ images:
 
 我們把文獻筆記、永久筆記跟文章放在一起比就更容易看出這三種筆記的差異：
 
-![image](/posts/2022-03-30_如何組織與吸收知識魔改-zettelkasten-筆記法/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 - 文獻筆記：附著在閱讀的那份文獻的脈絡所寫下的筆記
 - 永久筆記：從自己的角度出發，筆記本身擁有自身的脈絡寫下的筆記
@@ -103,7 +103,7 @@ images:
 
 所有的工具可以用以下這張圖來表示。
 
-![image](/posts/2022-03-30_如何組織與吸收知識魔改-zettelkasten-筆記法/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 這些工具有些是付費服務，不過我自己滿投入資訊整理這件事情，所以對我來說是可以接受的花費。
 
@@ -183,7 +183,7 @@ Slipbox 是放永久筆記的目錄。原本剛開始是沒有照目錄分門別
 
 當我在列出相關筆記的時候我會用 Obsidian 的 Open Local Graph 的功能，並且把 Depth 開到 2，這樣當連結其他筆記時，同時也會展示出那篇筆記的其他連結，這樣會有助於探索本篇筆記是否應該連結到其他的筆記。
 
-![image](/posts/2022-03-30_如何組織與吸收知識魔改-zettelkasten-筆記法/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 ### 結論
 

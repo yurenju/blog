@@ -31,7 +31,7 @@ images:
   - "/posts/2020-03-09_旅行每日背包資訊整理/images/19.png"
 ---
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 最近假日都在進行一個 side project 想說等做得差不多的時候可以來介紹。不過專案進行的不是很順利，看來寫文章的日子遙遙無期。想說來寫一篇比較輕鬆的主題，也就是最近看了超多跟背包相關的資訊整理。
 
@@ -46,27 +46,27 @@ images:
 
 後來我選擇的是 Peak Design 的 Travel Backpack。
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/2.jpg#layoutTextWidth)
+![image](images/2.jpg#layoutTextWidth)
 
 這個背包的好處是他的大小是介於 30L 至 45L 之間總共三段的容量，如果不需要裝太多東西的時候可以收成 30L 的大小，而展開到 45L 時非常大，我攀岩的時候可以把繩子跟裝備都丟進去也沒問題。另外他在 35L 的大小時是可以符合大多數航空公司的手提行李大小。
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 30L vs 35L vs 45L, 擷取自 [官方介紹影片](https://www.youtube.com/watch?v=HyOHbn18PR4)
 
 如果要拿取背包裡的東西，可以從兩側拉鍊打開存取或是從後側整片拉開存取。前側有個拉鍊可以打開存取前側的東西，不過跟後側是分開來的，不過如果有需要，前側跟後側是可以整個拉開變成同一個空間，這通常會用在展開成 45L 的時候，這樣可以容納更多東西。
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/8.png#layoutTextWidth)
+![image](images/8.png#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/9.png#layoutTextWidth)
+![image](images/9.png#layoutTextWidth)
 
 從各種地方打開，另外前側跟後側也可以完全打開。同樣擷取自官方介紹影片
 
@@ -78,13 +78,13 @@ images:
 
 如果要使用單一背包旅行勢必會需要準備另外一個小背包，通常都是大背包放在旅館之後單天輕裝旅行用的。這個背包我選擇用可以收納壓縮成小體積的背包，經過一番研究後我選擇了 Mystery Ranch 的 In and Out Pack 19L 背包。
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/10.png#layoutTextWidth)
+![image](images/10.png#layoutTextWidth)
 
 圖片擷取自 Pack Hacker “[Mystery Ranch In and Out Packable Daypack Review](https://www.youtube.com/watch?v=HkoLpndJVmQ)”
 
 這個背包通常我就會把它收成一個小袋子然後丟到大包包裡面，如下圖所示。
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/11.png#layoutTextWidth)
+![image](images/11.png#layoutTextWidth)
 
 最下面的那個是 In and Out Pack，圖片與上圖同樣擷取自 Pack Hacker
 
@@ -98,9 +98,9 @@ images:
 
 #### Peak Design Everyday Backpack V2 與 ZIP 背包
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/12.jpg#layoutTextWidth)
+![image](images/12.jpg#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/13.jpg#layoutTextWidth)
+![image](images/13.jpg#layoutTextWidth)
 
 這是兩款不同背包，左邊是 Everyday Backpack V2，右邊是 EVERYDAY BACKPACK ZIP
 
@@ -108,9 +108,9 @@ Peak Design 最近剛更新了每日背包產品線，有非常強大的設計�
 
 #### Evergoods Civic Half Zip (CHZ) 22L
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/14.jpg#layoutTextWidth)
+![image](images/14.jpg#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/15.jpg#layoutTextWidth)
+![image](images/15.jpg#layoutTextWidth)
 
 這是我看過不少評測的背包，不過他的問題比較奇怪是因為他在台灣很難買到，包含同廠牌的 CPL 24L 也很難買到，這兩個背包都有不少人覺得是設計相當好的背包，不過因為很難買到我就放棄了，有興趣的可以看 Bo Ismono 對於這款背包的觀點。
 
@@ -118,9 +118,9 @@ Peak Design 最近剛更新了每日背包產品線，有非常強大的設計�
 
 #### WANDRD PRVKE
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/16.jpg#layoutTextWidth)
+![image](images/16.jpg#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/17.jpg#layoutTextWidth)
+![image](images/17.jpg#layoutTextWidth)
 
 WANDRD PRVKE 正面與側面圖，側面有側開拉鍊
 
@@ -132,9 +132,9 @@ WANDRD PRVKE 正面與側面圖，側面有側開拉鍊
 
 如果需要整理組織物品放更多東西時，背包可以完全打開讓東西比較好整理。
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/18.png#layoutTextWidth)
+![image](images/18.png#layoutTextWidth)
 
-![image](/posts/2020-03-09_旅行每日背包資訊整理/images/19.png#layoutTextWidth)
+![image](images/19.png#layoutTextWidth)
 
 左圖：可以完全打開來整理組織物品 右圖：背側的護照口袋 圖片來自於 [官方介紹影片](https://youtu.be/A6MUgtaFW0Y)
 

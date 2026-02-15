@@ -22,7 +22,7 @@ images:
   - "/posts/2016-07-07_svg-text-簡介與範例/images/10.png"
 ---
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 [http://codepen.io/yurenju/pen/AXoqQk](http://codepen.io/yurenju/pen/AXoqQk)
 
@@ -35,7 +35,7 @@ images:
  &lt;text x=”50&#34; y=”50&#34;&gt;Hello World&lt;/text&gt;
 &lt;/svg&gt;`
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 #### x, y 陣列
 
@@ -44,7 +44,7 @@ images:
  &lt;text x=”50,60,70&#34; y=”50,60,70&#34;&gt;Hello World&lt;/text&gt;
 &lt;/svg&gt;`
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 #### dx, dy
 
@@ -53,7 +53,7 @@ images:
  &lt;text x=”50&#34; y=”50&#34; dx=”0,10,20&#34;&gt;Hello World&lt;/text&gt;
 &lt;/svg&gt;`
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 #### rotate 旋轉字元
 
@@ -64,7 +64,7 @@ images:
  &lt;text x=”50&#34; y=”50&#34; rotate=”0,30,60,90,120&#34;&gt;Hello World&lt;/text&gt;
 &lt;/svg&gt; `
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 #### textLength 與 lengthAdjust
 
@@ -75,7 +75,7 @@ images:
  &lt;text x=”50&#34; y=”50&#34; textLength=”200&#34; lengthAdjust=”spacingAndGlyphs”&gt;Hello World&lt;/text&gt;
 &lt;/svg&gt; `
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 #### &lt;tspan&gt;
 
@@ -88,7 +88,7 @@ images:
   &lt;/text&gt;
 &lt;/svg&gt;`
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
 #### 直書
 
@@ -97,7 +97,7 @@ images:
   &lt;text writing-mode=&#34;tb&#34; x=&#34;50&#34; y=&#34;50&#34;&gt;漢字直行書寫&lt;/text&gt;
 &lt;/svg&gt;`
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/8.png#layoutTextWidth)
+![image](images/8.png#layoutTextWidth)
 
 #### text-anchor
 
@@ -108,7 +108,7 @@ text-anchor 是決定要從哪邊開始繪製。下面三個 &lt;text&gt; 的 x 
   &lt;text text-anchor=&#34;end&#34; x=&#34;100&#34; y=&#34;150&#34;&gt;Hello World&lt;/text&gt;
 &lt;/svg&gt;`
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/9.png#layoutTextWidth)
+![image](images/9.png#layoutTextWidth)
 
 #### Text on Path
 
@@ -127,7 +127,7 @@ text-anchor 是決定要從哪邊開始繪製。下面三個 &lt;text&gt; 的 x 
   &lt;/text&gt;
 &lt;/svg&gt;`
 
-![image](/posts/2016-07-07_svg-text-簡介與範例/images/10.png#layoutTextWidth)
+![image](images/10.png#layoutTextWidth)
 
 另外 dominant-baseline 也是個非常重要的屬性，不過有另外一篇文章 [Dominant Baseline Style](http://bl.ocks.org/eweitnauer/7325338) 寫得很清楚，我這邊就不贅述了。
 

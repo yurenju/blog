@@ -17,13 +17,13 @@ images:
   - "/posts/2014-10-26_日本遇到的人們/images/5.jpeg"
 ---
 
-![image](/posts/2014-10-26_日本遇到的人們/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 在日本旅行一向都是很舒適的，這次待了八天當然也不乏可以跟其他人交流的機會，很幸運的是他們對旅人都很友善，讓我們可以順利的在一個個的城市裡面穿梭。
 
 **西方人與日本警察**
 
-![image](/posts/2014-10-26_日本遇到的人們/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 第二天，我們早早就拉著行李往名古屋車站前進，當其他人去買早餐的時候我也問了一下旁邊的警察（或是保安？）要搭幾號月台的火車，當他用英文回答我哪個月台時，當時覺得他的英文還不錯。
 
@@ -33,7 +33,7 @@ images:
 
 **溫泉旅館的接待人員**
 
-![image](/posts/2014-10-26_日本遇到的人們/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 同一天，我們晚上到大町溫泉鄉的ホテル山田屋住宿，因為這間是超級傳統的日本旅館，想當然爾除了櫃檯以外的接待人員是不太會講英文的。當我們看到超級日本風味的房間興奮地跑來跑去後，接待人員想問我們今天晚餐跟明天早餐要什麼時候吃，不過因為他不懂英文，我不懂日文，所以就算用寫的還是搞不太清楚早餐跟晚餐到底什麼時候要吃，後來簡單明暸的列了
 
@@ -44,7 +44,7 @@ images:
 
 **背著 Kata 相機包的女孩**
 
-![image](/posts/2014-10-26_日本遇到的人們/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 下飛機後，我突然發現走在我前面的那個女孩揹著跟 Chialin 一模一樣的背包，而這次旅行中大概因為行程排得很相似的關係，我們在不同的城市不停地遇到她們，也受到幾次他們的幫助。
 
@@ -56,7 +56,7 @@ images:
 
 **飛驒牛肉串老闆**
 
-![image](/posts/2014-10-26_日本遇到的人們/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 當我們沿著高山市內的河流**宮川**散步時，看到了台灣國旗，以及註記在牌子上面的『台灣獨立支持』，我上去買了兩串牛肉串，拿到我的肉串後，我跟老闆說了聲謝謝，並且深深的跟他握了手。
 

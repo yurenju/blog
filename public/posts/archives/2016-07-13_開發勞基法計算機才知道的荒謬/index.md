@@ -14,7 +14,7 @@ images:
   - "/posts/2016-07-13_開發勞基法計算機才知道的荒謬/images/2.png"
 ---
 
-![image](/posts/2016-07-13_開發勞基法計算機才知道的荒謬/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 [https://g0v.github.io/workweek](https://g0v.github.io/workweek)
 
@@ -45,7 +45,7 @@ images:
 
 另外如果雇主想要勞工在週六上班半天而不想付加班費也是可以做到，只要在平常工作日讓勞工每天工作七小時，週六就可安排工作五個小時而不需要付出任何加班費了，但在此情況下勞工就無法週休二日。
 
-![image](/posts/2016-07-13_開發勞基法計算機才知道的荒謬/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 總歸來說，現行勞基法存在一些漏洞，可以讓不懷好心的雇主利用這些漏洞來降低僱用勞工的成本，而勞工也無法實質的週休二日。
 

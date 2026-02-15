@@ -13,7 +13,7 @@ images:
   - "/posts/2019-08-28_storybook-設定-vue-typescript/images/1.png"
 ---
 
-![image](/posts/2019-08-28_storybook-設定-vue-typescript/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 Storybook 是個好東西，可以讓你在製作 UI 元件的時候有個地方可以展示，這樣如果需要看元件要如何使用時就可以到 storybook 看。不過每個專案採用的框架都不一樣導致設定上也會有點麻煩。
 

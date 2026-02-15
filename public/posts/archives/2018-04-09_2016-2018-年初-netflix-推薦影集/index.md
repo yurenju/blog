@@ -18,7 +18,7 @@ images:
   - "/posts/2018-04-09_2016-2018-年初-netflix-推薦影集/images/6.jpeg"
 ---
 
-![image](/posts/2018-04-09_2016-2018-年初-netflix-推薦影集/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 自從 2016 上半年寫了 [Netflix 影片推薦清單](/posts/2016-06-25_netflix-%E6%8E%A8%E8%96%A6%E7%BE%8E%E5%8A%87%E7%89%87%E5%96%AE2016-%E4%B8%8A%E5%8D%8A%E5%B9%B4/)後，就一口氣偷懶了一年半的時間（笑），不過一直以來還是會很多朋友跟我討論 Netflix 上面的影片，這次就趁機把值得看看的影片推薦給大家吧。
 
@@ -28,7 +28,7 @@ images:
 
 #### 💯 非常推薦的影集
 
-![image](/posts/2018-04-09_2016-2018-年初-netflix-推薦影集/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 [《先見之明》 — The OA](https://www.netflix.com/title/80044950)
 
@@ -38,7 +38,7 @@ images:
 
 影集播畢沒多久後，Netflix 也發布了一段影片宣布續約下一季，當然這[續約影片](https://www.facebook.com/netflixtw/videos/381363378906846/)也是很有病（稱讚意味，有雷，看完第一季前不要看）。
 
-![image](/posts/2018-04-09_2016-2018-年初-netflix-推薦影集/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 [《闇》 — Dark](https://www.netflix.com/title/80100172)
 
@@ -46,7 +46,7 @@ images:
 
 這部劇情龐大複雜的影集看完之後確實很容易迷失在劇情裡面，我也畫了[一份關係圖跟時間軸](https://www.reddit.com/r/DarK/comments/7nvpn6/spoiler_complete_relationship_in_winden_genogram/)（有雷，看完影集後再看）來釐清所有人物的關係，總之這是一部非常燒腦又好看的影集，非常推薦！
 
-![image](/posts/2018-04-09_2016-2018-年初-netflix-推薦影集/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 [《破案神探》 — Mindhunter](https://www.netflix.com/title/80114855)
 
@@ -58,13 +58,13 @@ images:
 
 如果你是 David Fincher 的粉絲千萬不要錯過這部影集！
 
-![image](/posts/2018-04-09_2016-2018-年初-netflix-推薦影集/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 [《怪奇物語》 — Stranger things](https://www.netflix.com/title/80057281)
 
 截至文章發表時怪奇物語已經出了兩季，這算是 Netflix 上經典的自製影集，一群小孩遇到了一個神奇的少女後，慢慢發現背後的故事，在那個時代無法信任蘇聯的背景下展開。劇中的小孩的演技大多都非常好，原來他們很多之前都在百老匯演出，他們在其他節目唱歌的片段也很驚人的厲害。
 
-![image](/posts/2018-04-09_2016-2018-年初-netflix-推薦影集/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 [《緝兇》大學航空炸彈客  — Manhunt: Unabomber](https://www.netflix.com/title/80176878)
 

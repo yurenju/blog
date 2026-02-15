@@ -17,7 +17,7 @@ images:
   - "/posts/2018-01-13_gina-智慧手沖咖啡濾杯/images/5.png"
 ---
 
-![image](/posts/2018-01-13_gina-智慧手沖咖啡濾杯/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 2016 年十二月我在 kickstarter 贊助了一個咖啡濾杯的專案 GINA，經過了一年多它終於出現在我桌上，感覺還有點不真實，畢竟這麼多募資專案都延遲了又延遲，也有許多都出不了貨，這種有電子零件的專案失敗機率更高。
 
@@ -25,7 +25,7 @@ images:
 
 GINA Coffee Maker 是個藍芽電子秤、特殊設計的濾杯跟 mobile app 的組合，可以同時使用在三種沖煮方式：手沖、浸泡式（跟 Clever Dripper 一樣）還有冰滴，另外透過電子秤與 mobile app 可以記錄與分享沖煮的環境，在製作冰滴時也可以拿來預估時間等等多用途的組合。
 
-![image](/posts/2018-01-13_gina-智慧手沖咖啡濾杯/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 開箱打開時真的覺得做得很精緻，不論是電子秤與金屬架、玻璃以及最上面陶瓷的咖啡濾杯都設計得很漂亮。不過也讓人感到很容易打破，真的是要好好注意。
 
@@ -33,11 +33,11 @@ GINA 有三種模式，我目前只使用過手沖模式，剪輯了一段影片
 
 使用上我還蠻滿意的，其實它做的事情本來都可以靠自己紀錄也可以達成，只是要整合不同零散的工具才可以做到，但是用了 GINA 後可以有沖煮流程提示、自動跟手動的環境紀錄（我通常還會記錄溫度，雖然它沒有溫度計但是有欄位可以填），還有每次沖煮的風味紀錄等，整合在一起還不錯。
 
-![image](/posts/2018-01-13_gina-智慧手沖咖啡濾杯/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
-![image](/posts/2018-01-13_gina-智慧手沖咖啡濾杯/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
-![image](/posts/2018-01-13_gina-智慧手沖咖啡濾杯/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 除了上面影片裡面有展示的沖煮流程外，結束後還可以針對這次的咖啡環境紀錄與風味評比等。
 

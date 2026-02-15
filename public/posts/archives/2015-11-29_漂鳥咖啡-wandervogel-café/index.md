@@ -14,7 +14,7 @@ images:
   - "/posts/2015-11-29_漂鳥咖啡-wandervogel-café/images/2.jpeg"
 ---
 
-![image](/posts/2015-11-29_漂鳥咖啡-wandervogel-café/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 雖然這是間咖啡館，但是我們來這的時候大部分都是來喝酒的（笑）。
 
@@ -26,7 +26,7 @@ images:
 
 第一次到這間咖啡館的時候就瞭解了他為什麼這麼喜歡這間咖啡館，半開放式的咖啡館，吧檯上可以做四個客人，旁邊的小桌子可以再塞兩個人，再不夠的話，老闆娘還可以變出幾張椅子。
 
-![image](/posts/2015-11-29_漂鳥咖啡-wandervogel-café/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 老闆幾乎跟每位進來的客人都很熟。第一次來的時候，旁邊桌子坐著一位日文很好的女士與其他幾位客人，而第二次去的時候又遇到了她。在這邊的客人大概都是這樣，老闆親切的跟每個客人攀談，介紹他們互相認識。
 

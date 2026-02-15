@@ -13,7 +13,7 @@ images:
   - "/posts/2018-07-03_開放源碼授權概觀下/images/1.jpeg"
 ---
 
-![image](/posts/2018-07-03_開放源碼授權概觀下/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 在台灣的 OSDC 研討會所拍攝的照片
 

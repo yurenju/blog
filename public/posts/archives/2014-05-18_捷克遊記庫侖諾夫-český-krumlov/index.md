@@ -21,7 +21,7 @@ images:
   - "/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/9.gif"
 ---
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 ## 捷克遊記：庫侖諾夫 (Český Krumlov)時間飛逝，在布拉格待了四天後，我們前往下一個要造訪的城市  —  庫侖諾夫 (Český Krumlov)。我們從布拉格到庫侖諾夫是坐 Student Agency 巴士過去的，車程大約三個小時左右，我們訂好機票後沒多久就上網訂了巴士了，不過事實證明前一天訂大概也會有位置。方法也很簡單，上[官方網站](http://www.studentagency.eu/)選擇從 Praha — Na Knížecí 到 Český Krumlov — AN 即可，票價是 7.3 歐元。如果從 Dahlia Inn 出發，只要走到 Karlovo náměstí 地鐵站坐 Line B 的 Anděl 即可，走上來就會看到很多巴士月台，找找你的票上寫的是哪個月台在那等就行了。
 
@@ -31,7 +31,7 @@ images:
 
 到了之後我們就拖著重重的行李往我們這次住的民宿走去，沒想到走沒幾步就在一個高處看到 Krumlov 整個城鎮。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 俯瞰 Krumlov 小鎮
 
@@ -39,13 +39,13 @@ images:
 
 民宿的櫃檯給了我們一張 Krumlov 的地圖，我們就出發吃東西跟亂逛囉。吃完飯後我們準備先逛 Krumlov 的城堡區。由於 Krumlov 基本上就是一個有城牆、護城河、教堂、小站廣場跟城堡的古代城鎮，走來裡面會有種錯置在遊戲、小說或電影裡面的城鎮的感覺，但另外一面是在這個即將進入觀光季節的旅遊勝地人還不多，走在小鎮裡面非常的悠閒。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 下午河邊用餐的人們
 
 走進城堡區後就看到了 Castle Tower，這麼漂亮的小鎮當然是要上去看看，而在蜿蜒迴旋的樓梯走到腳軟後，果然這風景是值得的。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 從 Castle Tower 鳥瞰，遠處尖塔是教堂
 
@@ -53,13 +53,13 @@ images:
 
 而很幸運的呢  —  我們來到這裡竟然剛好遇到這邊一年一度的節慶，查了一下 [Magical Krumlov](http://www.ckrumlov.info/docs/cz/kouzelnykrumlov.xml) 正好在 4/30 — 5/1 舉辦，正好就是我們來的前兩天。其中有一系列的活動包含音樂節跟燒女巫掃把等等。不過資訊有點少搞不清楚，我們還是過去湊湊熱鬧，看節目的傳單是可以在燃燒的營火下面烤香腸慶祝春天來臨（？）這邊背景資訊不足有點搞不太懂。不過買了啤酒跟香腸，我們還是在這邊待了一會，享受節慶氣氛。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 大家圍著爐火烤香腸（旁邊有個更大的營火）
 
 結束後我們就在城鎮內想找間餐廳吃飯，沒想到走著走著就到一間 Krumlov 算是很有名的地窖餐廳，幸運的是竟然沒很多人然後有位置！就立馬進來吃了頗具盛名的烤豬腳。這豬腳對台灣人來說並不是一人份的，我們叫了一份豬腳兩杯啤酒兩個人一起吃，竟然還不到 300 捷克克朗（大概 450 台幣），捷克的物價在這樣的觀光地區竟然還是不高真的讓我很訝異，而且這豬腳很好吃。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 地窖很暗，沒拍清楚。
 
@@ -67,7 +67,7 @@ images:
 
 早上六點多起來上廁所，想說趁早上來探索一下城鎮，抓了相機跟手機就出門了。果然在這陽光斜射的晨間這個小鎮非常美麗啊。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg#layoutTextWidth)
 
 Městské 公園
 
@@ -77,7 +77,7 @@ Městské 公園
 
 從馬背上下來後，我們就沿著計程車載我們來的路慢慢的走回去，田野風光真的很美。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg#layoutTextWidth)
 
 Krumlov 田野風光
 
@@ -91,7 +91,7 @@ Bohemian Bards 樂團在瓦茨拉夫廣場的表演
 
 希望某年某天，再來悠閑著走在布拉格廣場。
 
-![image](/posts/2014-05-18_捷克遊記庫侖諾夫-český-krumlov/images/9.gif#layoutTextWidth)
+![image](images/9.gif#layoutTextWidth)
 
 下次再來布拉格廣場旋轉吧
 

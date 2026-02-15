@@ -28,11 +28,11 @@ images:
 
 所以就讓我偷懶一下，把修改過後的截圖貼上來吧：
 
-![image](/posts/2016-07-03_捷克遊記序曲-行前準備/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 我把 confirmation 的資訊去掉了，不過原本會是在這邊的，另外他也提供一個功能，如果你有把每段交通跟住宿的花費寫上去，他有個地方可以直接幫你加總起來。
 
-![image](/posts/2016-07-03_捷克遊記序曲-行前準備/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 這是兩個人的花費，所以換算後除以二是 37,842 台幣。我們總共換了 18,500 捷克克朗，剩餘 2,600 克朗，另外 krumlov 的住宿是現金給付，再加上看歌劇的錢約 1,000 台幣，所以每人的花費是～～～
 
@@ -50,7 +50,7 @@ images:
 
 下面這是地圖，你也可以直接上這個[網站](http://map.prg.aero/)查，如果你跟我們一樣是第一航廈出來，走出來之後向右走就是第二航廈了：
 
-![image](/posts/2016-07-03_捷克遊記序曲-行前準備/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 ### 機場來往市區交通
 
@@ -60,7 +60,7 @@ images:
 
 請先在 vodafone 旁邊的 public transport 買 90 分鐘的票（你的大箱行李也要買半票）。搭公車的地方就再買完 vodafone 之後那邊的出口走出去，跨過馬路，那邊有幾個公車站牌找一下就有了。
 
-![image](/posts/2016-07-03_捷克遊記序曲-行前準備/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 下車之後就可以看到地鐵站。如果要到 Dahlia Inn, 則是下去做地鐵 (Line A, 這邊只有這條線) 到 Museum，再換 Line C 到 I.P. Pavlova，最後走一段路就到啦。
 

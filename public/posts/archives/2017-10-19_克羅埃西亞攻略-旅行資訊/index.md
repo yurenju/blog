@@ -25,7 +25,7 @@ images:
   - "/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/13.png"
 ---
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 這次到克羅埃西亞 (Croatia) 旅行了十一天，網路上雖然有些資訊但也稱不上非常多，趁機會整理一下相關資訊。
 
@@ -43,7 +43,7 @@ images:
 
 每個城市的旅程介紹可以點選上面的連結，至於 Zagreb 我就沒寫了，因為只短暫待在那邊一小段時間。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 從這樣的安排大約可以理解到我們把重點放在 Dubrovnik 跟 Rovinj，其他地方的天數都比較少，主要也是我們在搜集資料後覺得這兩個小鎮會是我們比較喜歡的地方，特別是 Dubrovnik 是《冰與火之歌》電視劇中君臨城的拍攝場景，所以才會這樣安排。
 
@@ -53,7 +53,7 @@ images:
 
 ### 飛機
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 如我上面所說，機票在中秋雙十連假還蠻貴的，大致上有兩種選擇：荷蘭航空跟華航，至於從法蘭克福進克羅埃西亞通常還是透過克羅埃西亞航空，考慮到我們進出地點想要不一樣，最後還是決定買了華航加上克羅埃西亞航空這樣的組合。
 
@@ -77,7 +77,7 @@ images:
 
 而且在 getbybus 上面買完後除了會把包含 QR code 的車票寄給你外，還會附上另外一個 PDF 是搭乘資訊上面會有車站的座標連結，點連結就會打開 Google Maps。在國外搭車時常常不知道要到哪裡搭以及哪裡下車，這樣的資訊非常方便。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 另外有一個非常重要的事情，在克羅埃西亞搭巴士時要放到行李艙的行李是要依件收費的，而且只能付庫納現金同時不能在 getbybus 上購買，通常每件會介於 5 ~ 10kn。
 
@@ -116,7 +116,7 @@ Plitvice Lakes 裡面我們只吃過 Bistro Vučnica 餐廳，每人大約 150 �
 
 ### 飲食
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 這邊因為靠近亞得里亞海的關係有很多漁獲，我們到的城市也大部分都靠海，所以在這邊可以吃到很多地中海的食物，如淡菜、烤魚等等，像上圖這盤是雙人份的 Fish Platter。
 
@@ -130,7 +130,7 @@ Plitvice Lakes 裡面我們只吃過 Bistro Vučnica 餐廳，每人大約 150 �
 
 #### Tele2
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 [https://www.tele2.hr/privatni-korisnici/welcome-to-croatia/](https://www.tele2.hr/privatni-korisnici/welcome-to-croatia/)
 
@@ -138,7 +138,7 @@ Plitvice Lakes 裡面我們只吃過 Bistro Vučnica 餐廳，每人大約 150 �
 
 #### VIP
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
 [http://www.vipnet.hr/tourist-offer/en](http://www.vipnet.hr/tourist-offer/en)
 
@@ -146,7 +146,7 @@ Plitvice Lakes 裡面我們只吃過 Bistro Vučnica 餐廳，每人大約 150 �
 
 不論是要買 tele2 或 VIP 的方案，你只要找到書報攤就可以買到了，你可以找外面印有 TISAK 的商店通常都買得到。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/8.png#layoutTextWidth)
+![image](images/8.png#layoutTextWidth)
 
 TISAK 在克羅埃西亞非常普遍，到處都有。圖片出自於 Google 街景
 
@@ -154,9 +154,9 @@ TISAK 在克羅埃西亞非常普遍，到處都有。圖片出自於 Google 街
 
 這邊的 Google Maps 圖資非常的貧瘠（特別是 Rovinj），所以用它不是個好主意。使用 OpenStreetMap 圖資的 maps.me 不僅圖資非常的完整，連階梯都有標示，而且也有非常清楚的介面可以離線下載整個克羅埃西亞的地圖，非常推薦使用 maps.me。你可以看看兩個 app 的比較：
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/9.png#layoutTextWidth)
+![image](images/9.png#layoutTextWidth)
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/10.png#layoutTextWidth)
+![image](images/10.png#layoutTextWidth)
 
 第一張圖是 Google Maps, 第二張圖是 maps.me，詳細程度差太多了。
 
@@ -164,7 +164,7 @@ TISAK 在克羅埃西亞非常普遍，到處都有。圖片出自於 Google 街
 
 我們到克羅埃西亞時是十月初，這個時候的天氣非常的好不會像夏天一樣太熱，歷史平均溫度約 14 ~ 21 度，但缺點就是有可能會下雨。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/11.png#layoutTextWidth)
+![image](images/11.png#layoutTextWidth)
 
 Dubrovnik 的歷史降雨量與降雨天數，圖表源於 [Holiday Weather 網站](http://www.holiday-weather.com/dubrovnik/averages/)。
 
@@ -176,9 +176,9 @@ Dubrovnik 的歷史降雨量與降雨天數，圖表源於 [Holiday Weather 網�
 
 如果計算無誤的話，每人總消費約接近八萬，比起去希臘約六萬五要貴上不少，主要差異還是在機票上，大概貴了一萬。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/12.png#layoutTextWidth)
+![image](images/12.png#layoutTextWidth)
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-旅行資訊/images/13.png#layoutTextWidth)
+![image](images/13.png#layoutTextWidth)
 
 旅遊資訊大概就這些，如果你想知道什麼問題可以留言，我如果知道的話再加入文章裡面。
 

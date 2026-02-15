@@ -13,7 +13,7 @@ images:
   - "/posts/2022-05-23_用散步來消化腦中的思考殘渣/images/1.jpeg"
 ---
 
-![image](/posts/2022-05-23_用散步來消化腦中的思考殘渣/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 我的一天總是很忙，處理工作的事情之餘經常還需要閱讀大量新資訊，而這些資訊有時候會很困擾我，比如說搞不清楚新技術運作方式，或是書籍裡面一些讀起來很彆扭，但自己也說不清楚為什麼。
 

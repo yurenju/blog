@@ -27,7 +27,7 @@ images:
 
 浮動利率協議有很多，幾乎目前的 DeFi 產品有提供利率的情況下都是浮動利率。舉 Compound Finance 借貸協議為例子，當使用者將 1000 USDC 存入一個 10~20% 浮動利率的池子時，Compound 會發回 cUSDC 作為借貸憑證，數量則不一定，我們這邊假設是 20000 cUSDC。
 
-![image](/posts/2021-10-07_element-protocol-固定利率協議/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 這個 20,000 cUSDC 會隨著時間價值慢慢浮動提升，如果在半年的時候換回 USDC，這 20000 cUSDC 可以換到 1050~1100 USDC (這邊就簡化先算單利的狀況比較容易解釋)，而到一年後換回，則可以換出 1100~1200 USDC。
 
@@ -47,7 +47,7 @@ images:
 
 Element Protocol 本身是一個包裝著浮動利率產品的新協議，其實他最終還是會把資金放到其他浮動利率的 DeFi 產品去，我們這邊假設他背後的產品是 Compound (實際上是 Yearn，但是 Compound 比較好舉例)。
 
-![image](/posts/2021-10-07_element-protocol-固定利率協議/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 我們假設一個 Element 建立了一個一年期限的產品，他底下包裝的協議是一個利率為 10~20% 的 Compound USDC 池子。
 
@@ -76,7 +76,7 @@ Element Protocol 本身是一個包裝著浮動利率產品的新協議，其實
 
 但 PT 是如何定價的呢？在一年後則可以透過智能合約換回 1:1 的 USDC，而剛開始換成 PT 時數量上則會有一個折扣耗損比如說 10%，換句話說越靠近期限時 PT 價值會約接近 1:1。當市場流動性高的時候，我們可以說 PT 會以 1/9=11.11% 的固定利率成長，這樣這個 PT 就變成了一個固定利率的產品了。
 
-![image](/posts/2021-10-07_element-protocol-固定利率協議/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 使用者不見得要自己投入 USDC 換取 PT 跟 YT，其實也可以直接到市場上買 PT，這樣對他來說這就是一個固定利率的產品，時間到之後可以直接跟智能合約贖回 USDC。從他的角度看就是一個一年期固定利率為 11.11% 的產品，用 900 USDC 購買後，一年後可以變成 1000 USDC。
 

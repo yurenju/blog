@@ -21,7 +21,7 @@ images:
   - "/posts/2015-10-31_北投的日本松山秋祭/images/9.jpeg"
 ---
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 自從追蹤了《[我是北投人](https://www.facebook.com/Beitoucitizens/)》的粉絲專頁後就多了一個管道可以知道北投附近的訊息，其中一則吸引我注意的就是經由台灣台北市與日本松山市的交流活動而來台灣舉辦的松山秋祭撞轎儀式。
 
@@ -31,39 +31,39 @@ images:
 
 時間到了後逐漸地從遠處聽到鼓聲，接著隊伍就一一地走進了封街的場地內，最前面是三位來自日本的女性展開台北市與松山市交流活動的布幕進場。
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 接著則是一台較小的神轎，跟後面的大型神轎比起來體積跟重量都差距很大！
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 根據主持人的解說，神轎撞擊儀式的起源是因為日本也跟台灣的遶境活動一樣，神轎最後都要進入廟中，而由於要入廟的神轎眾多，難免都會有摩擦跟推擠，後來這樣的衝突就演變成一種儀式來展示哪個地方來的神轎的男丁的體格比較強健，可以在撞擊之中贏過對方。
 
 至於標準大小的神轎這次總共來了四座，另外除了神轎入場，前面還有很多穿著和服的民眾帶領隊伍進場，感覺蠻多是台灣人。
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 也幫他們照了一張合照
 
 不過抬神轎的看起來應該都是日本人，而且數量應該有幾百人，真的是把許多祭典人力都搬來台灣了！
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 經過一連串中日語混合的致詞後，就到了儀式的最高峰撞轎，這次來了四座神轎，每次都有兩組神轎人馬互相衝擊。很有趣的是剛開始感覺兩邊的人會互相叫囂，接著會在一致的口令下抬起並往前傾斜神轎，最後拍打轎子讓所兩邊的人都往前衝互相撞擊。
 
 兩座神轎撞擊的時候旁兩旁的觀眾還會一起發出驚呼，因為場面真的還蠻壯觀的，另外不同組的人馬也都會交互撞擊，看到這麼多人抬起不知道多少公斤的神轎撞擊實在太厲害了。
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 而且他們自己也非常會炒熱氣氛與激起自己人馬的氣勢！
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg#layoutTextWidth)
 
 雖然聽不懂日語不過還是可以感覺得他們熱血沸騰的情緒。
 
 這次總共有五次的神轎對撞（第六次還是當場找四十名台灣男丁把轎子抬起來跟紳士的互撞了一下 XDD），每次撞擊的時候都會感到超刺激！
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg#layoutTextWidth)
 
 如果昨天（週五）跟今天（週六）還沒有機會去參與這個祭典，明天（週日）還有最後幾次機會！明天的以下時間（請依[台北旅遊網的公告](http://www.travel.taipei/frontsite/tw/intro/activityListAction.do?method=doFindActivityById&menuId=2010107&activityId=25212)為主）還會有最後幾次的撞轎儀式：
 
@@ -72,4 +72,4 @@ images:
 
 有空的話就去參加吧！超酷！
 
-![image](/posts/2015-10-31_北投的日本松山秋祭/images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg#layoutTextWidth)

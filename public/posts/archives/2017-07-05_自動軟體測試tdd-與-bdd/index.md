@@ -27,17 +27,17 @@ images:
 
 實際上以「勞工權益」這個網站為例子，該專案以 github 管理源碼，travis-ci 作為持續整合工具，整個開發流程會是這樣：
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 實際上運作時，不論是 pull request 的頁面或是 commit 列表都可以看到綠色的小勾勾，移到上面會寫 `Success: The Travis CI build passed`。
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 [https://github.com/yurenju/laborrights/commits/master](https://github.com/yurenju/laborrights/commits/master)
 
 點進去可以看到每次的測試結果，同時也會顯示測試項目通過的狀況：
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 [https://travis-ci.org/yurenju/laborrights/builds/249925132](https://travis-ci.org/yurenju/laborrights/builds/249925132)
 
@@ -85,7 +85,7 @@ BDD 則是比起 TDD 更進一步，除了在實作前先寫測試外，而在�
 
 以 cucumber 這個 BDD 框架為例，在勞工權益網站裡面有一個跟工會資訊相關的規格：
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 [https://github.com/yurenju/laborrights/blob/master/features/contact.feature](https://github.com/yurenju/laborrights/blob/master/features/contact.feature)
 
@@ -93,27 +93,27 @@ BDD 則是比起 TDD 更進一步，除了在實作前先寫測試外，而在�
 
 當這個規格充分討論並且定案後，這份「規格」就可以準備被轉換成「測試案例」，此時把這份規格放到 cucumber 預定的目錄 `features/` 後，執行 `cucumberjs` 指令則會出現以下兩種訊息，第一種是目前規格每個步驟的狀態：
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 黃色文字搭配問號的意思是此步驟尚未實作，若再稍微往下拉一點，則會看到 cucumberjs 提供給你實作的樣板：
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 這個樣板就可以直接複製貼上到你的測試案例中，成為一個尚未實作 (pending) 的步驟。你可以注意到在測試案例中用雙引號括起來的部分會被解析成 `{stringInDoubleQuotes}`，這個部分會被當作參數傳入測試步驟中，可以做進一步的使用。
 
 而在測試案例中重複出現的步驟，比如說在另外一個測試案例，「使用者進入網站」跟「點選 “更多選項” 連結」重複出現，只是雙引號中的文字不同，這些步驟就會被歸類聚合在一起，成為同一個測試步驟。
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
 最後，只要一一的實作目前還被標示 pending 的測試步驟，當所有步驟都被實作時，整個測試案例也就完成了。下面則是一個已經被實作的測試步驟
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/8.png#layoutTextWidth)
+![image](images/8.png#layoutTextWidth)
 
 [https://github.com/yurenju/laborrights/blob/master/features/step_definitions/common-steps.js](https://github.com/yurenju/laborrights/blob/master/features/step_definitions/common-steps.js)
 
 接下來就跟 TDD 一樣，寫完測試之後再寫主程式，一一地通過測試案例，當所有測試案例都通過時，程式也就完成了。
 
-![image](/posts/2017-07-05_自動軟體測試tdd-與-bdd/images/9.png#layoutTextWidth)
+![image](images/9.png#layoutTextWidth)
 
 當然有些測試案例當程式完成後發現原本的測試案例可能有些問題，但是大致上是不需要做太大的修正的。
 

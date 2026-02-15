@@ -57,7 +57,7 @@ ethers.js 是最近我找到的 web3.js 的替代方案，用起來不會相差�
 
 Buidler (注意 d 跟 l 的位置，並不是 “builder”) 是一個針對智慧合約的 task runner，提供了 plugin 介面來引入各式各樣的功能，比如說針對 etherscan 的整合，可以將佈署後的合約上傳 etherscan，讓使用者可以在 etherscan 上面直接看到合約源碼，更重要的是 buidler 內建了一個 buidler-vm，提供了 solidity 的 error stack，在開發的時候可以更容易的除錯。
 
-![image](/posts/2019-12-26_solidity-的新開發工具集buidler-waffle-ethers/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 不過對我來說覺得針對智能合約製作了一個新的 task runner 有些多餘，根據 Hacker Noon 的文章除了除錯的 Error Stack 外他也負責了 deploy 到 testnet 以及支援 typescript 等功能。
 

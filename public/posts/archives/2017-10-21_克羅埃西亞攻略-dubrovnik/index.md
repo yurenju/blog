@@ -35,7 +35,7 @@ images:
 
 多麽好的一個開場 :-)
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 我們住在 Dubrovnik 的舊城區內，距離巴士站不到十分鐘的路程。我們扛著我們的大背包循著地圖到了這次住宿的公寓附近，在我前後確認到底是哪條路才是正確時，房東的鄰居看到迷惘的我們，幫我們找到了房東也終於卸下了行李。
 
@@ -43,17 +43,17 @@ images:
 
 睡了很久，隔天終於把精神充滿電了。早上我們就隨意在城鎮內逛逛，沒想到很快就看到了《冰與火之歌》瑟曦的認罪之路。如果有看這個影集的應該會對這段劇情印象深刻，瑟曦的長髮被粗魯的剃掉後，她就被剝光站在階梯上，接著一邊遊街，後面的修女一邊搖著鈴鐺說 “Shame! Shame!”
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 這一幕真的蠻難忘的
 
 接著逛了已經開業了 700 年的古老藥局後，我們就從西面的 Pile Gate 離開城鎮，眼尖的我瞄到了北側的海灘似乎也是個拍攝場景，我們就邊玩貓邊從 Pile Gate 附近的樓梯走下去，到了瑟曦在海邊等著她女兒彌賽菈從多恩跟著詹姆·蘭尼斯特回來，沒想到詹姆送回來的是他女兒的屍體啊。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 後來又逛了另外一個小碼頭也是拍攝場景之一，我們就沿著海邊、碼頭逛著，這邊中午時很棒，看到好幾個人都在這邊買了三明治吃午餐，我們在 Dubrovnik 的期間就看到了兩對新人在這邊拍照。
 
@@ -61,7 +61,7 @@ images:
 
 Lovrijenac 是一個非常適合瞭望 Dubrovnik 的地方，在這邊可以看到舊城鎮的全貌。我們到這裡的時候天氣變得非常的好，搭配上藍天白雲的舊城真是令人著迷。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 在碼頭的餐廳吃飯後，我們走到通往高處的纜車，準備搭纜車上去看夕陽。到了售票口後，沒想到竟然因為強風停開了。問了一下售票人員走上去大概要花多久，原來需要一個小時。
 
@@ -71,25 +71,25 @@ Lovrijenac 是一個非常適合瞭望 Dubrovnik 的地方，在這邊可以看�
 
 步道基本上是 Z 字型的往上，而每個轉折處都有一個羅馬數字標示 I, II, III, IV 直到 XIV，我們就在每個標示休息，而 Dubrovnik 舊城鎮的輪廓也愈來愈清晰。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg#layoutTextWidth)
 
 走到最上面的時候，我覺得我的鞋子已經快被摧毀了，還好的是這邊的景色真的很美麗，我們也走回纜車的瞭望台，發現這邊的視野竟然比步道上的還差，而且還有纜繩。所以最後我們還是走回步道看夕陽，以我們的經驗在 XIII 或 XI 的視野會比較好，而且其實這兩個地方都已經有人在這邊等夕陽了。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg#layoutTextWidth)
 
 擔心山路在晚上燈光不好時會變得難走的關係，我們看到夕陽後就馬上啟程下山了。不過過了一陣子街上的燈亮了後，又忍不住停下來拍了幾張照片。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg#layoutTextWidth)
 
 雖然下山時到後面光線暗到要用手機照明，不過上山後可以看到這片美景還是很值得的。回來想想其實比較好的方法是坐纜車上去，但是別在觀景台看夕陽，而是往下走到步道標示 XI 或 XIII 處看夕陽就好了。如果口袋還夠深的話或是天色很暗，可以再坐纜車下去。隔天早上起來幸好昨天爬山路沒造成腳太大的負擔，感覺起來還好，吃了早餐出門後我們就去逛了一下市集，接下來就上城牆沿著整個城逛了一圈。
 
 Dubrovnik 的城牆絕對是來這裡絕對要參觀的景點，雖然這次沒拍到太多好照片，但是上面的景色真的很棒。除了可以用不同的角度看這個城以外，在西北側的 Tower Minčeta 也是《冰與火之歌》龍母在第二季第十集在某處找她的龍的其中一個場景，另外也可以從這邊遠眺 Lovrijenac 堡壘。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg#layoutTextWidth)
 
 從城牆下去後，我們就在城鎮裡面漫步，到處走走各處的小巷。接近黃昏時原本想找個地方看夕陽，不過後來沒找到比較適合的點。最後我們就坐在昨天遇到新人拍照的小碼頭，坐在那邊在淺淺的海潮聲中享受在 Dubrovnik 的最後一個黃昏，明天我們就要前往 Split 囉。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg#layoutTextWidth)
 
 ### 實用資訊
 
@@ -105,11 +105,11 @@ Dubrovnik 的城牆絕對是來這裡絕對要參觀的景點，雖然這次沒�
 
 如果要走步道回來請把握時間並且準備手電筒跟摸黑下山的打算。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg#layoutTextWidth)
 
 看上面的文章會知道到我們第二天有想要去找看夕陽的地點，不過沒找到。不過覺得有幾個點是可以探索一下，或許有機會可以看到夕陽。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg#layoutTextWidth)
 
 上面的 XIII 跟 XI 確定可以看到夕陽，打叉的地方確定看不到。另外在城牆外比較小的圈感覺是可以看到夕陽的地點，但是不確定。另外在 Lovrijenac 堡壘西側的停車場應該也可以看到夕陽，不過有點遠。
 
@@ -117,11 +117,11 @@ Dubrovnik 的城牆絕對是來這裡絕對要參觀的景點，雖然這次沒�
 
 城內有兩間銀行，你可以到那邊換錢，記得通常來說平日營業到下午七點，週六只營業到十二點，週日沒有營業。
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/14.png#layoutTextWidth)
+![image](images/14.png#layoutTextWidth)
 
 #### 超市
 
-![image](/posts/2017-10-21_克羅埃西亞攻略-dubrovnik/images/15.png#layoutTextWidth)
+![image](images/15.png#layoutTextWidth)
 
 [https://goo.gl/maps/K6Uh3wimsbP2](https://goo.gl/maps/K6Uh3wimsbP2)
 

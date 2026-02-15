@@ -13,7 +13,7 @@ images:
   - "/posts/2017-01-12_一日專案-純前端圖文產生器/images/1.jpeg"
 ---
 
-![image](/posts/2017-01-12_一日專案-純前端圖文產生器/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 昨天也不知道在查些什麼資料，發現了之前一直沒找到可以用純前端可以利用 Canvas 加上 Facebook Graph API 的方式，在不需要後端的狀況下完成產生圖片與分享。
 

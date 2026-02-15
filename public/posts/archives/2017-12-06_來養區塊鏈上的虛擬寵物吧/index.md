@@ -25,7 +25,7 @@ images:
   - "/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/13.png"
 ---
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 這陣子以太坊圈子的人或多或少都在討論這個剛上線一周的遊戲 CryptoKitties。這是一個線上虛擬寵物卡蒐集系統，可以收藏、交易虛擬貓咪卡片，同時也可以讓兩隻虛擬貓咪卡片孕育新的貓咪卡片。
 
@@ -44,7 +44,7 @@ CryptoKitties 基本上就是卡牌蒐集遊戲。至於最剛開始這些卡片
 
 除了以上由遊戲提供的卡片外，玩家擁有卡片後也可以出售自己的卡片。出售時可以訂起始價格跟結束價格，價格會在 24 小時內漸漸從起始價格改變至結束價格，比如說你起始價格定價 10 ETH，結束價格定 0 ETH，在 24 小時內價格就會慢慢地滑落，如果有人在你出售期間的正好一半買了你的卡片，費用就會剛好是 5 ETH。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 比如說這張的初始價格是 13.775 ETH，結束價格是 0
 
@@ -56,7 +56,7 @@ CryptoKitties 基本上就是卡牌蒐集遊戲。至於最剛開始這些卡片
 
 CryptoKitties 網站是採用 [MetaMask] (https://metamask.io/)與區塊鏈互動，請先上官方網站安裝 Chrome 或是 Firefox 的擴充套件。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 [https://metamask.io/](https://metamask.io/)
 
@@ -64,19 +64,19 @@ CryptoKitties 網站是採用 [MetaMask] (https://metamask.io/)與區塊鏈互�
 
 匯完了之後，到[官方網站](https://www.cryptokitties.co/)按下 Start meow 就會開始註冊程序，在這邊需要填入你的電子郵件以及你的暱稱。另外因為安裝了 MetaMask 的關係，Wallet Address 這欄會已經填上 MetaMask 的錢包地址。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 按下 Save account info 後會出現 Sign Message，按下 Sign 後就註冊完成了。這邊的步驟是要確認使用者確實擁有這個錢包位址的私鑰，感謝台北以太坊社群的 [Ben] (https://benjaminlu.github.io/blog/)提供了參考資料，有興趣可以看一下這篇 [How does recovering the public key from an ECDSA signature work?](https://crypto.stackexchange.com/a/18106)。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 註冊完畢後，剛開始你不會擁有任何卡片，所以會先給你瀏覽幾張目前可以在市場上購買的貓咪卡，不過這些卡有些非常貴，比如說下圖的第一隻初代卡竟然要 13 ETH，依照現在的匯率換算成台幣可是要十七萬台幣阿。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 你可以按下 `See more Kitties` 瀏覽更多貓咪卡，並且可以用 Cheapest first 先看看比較便宜的卡片。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
 選好貓咪卡後，按下 Buy now 就可以購買。另外提醒一下目前購買時的 Gas Price 已經到了 25 Wei 了，我最近一次購買實際的交易費是 0.0015111 Ether ($0.69)，也不算太低。
 
@@ -89,29 +89,29 @@ Error: insufficient funds for gas * price + value
 
 按下購買之後會出現下面這個對話框，如果 Gas Limit 太高超過錢包餘額的話可以調低一點，最低是 21000。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/8.png#layoutTextWidth)
+![image](images/8.png#layoutTextWidth)
 
 按下之後就等待一下，如果沒有人出價比你高的話你就可以購買到該張貓咪卡，不過就我的經驗如果想買比較便宜的貓咪卡通常都很容易有很多人同時要買，成交機率也比較低。如果一直沒辦法成交，可以跟我一樣試著買買看比較貴一點的貓咪卡吧（苦笑）
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/9.png#layoutTextWidth)
+![image](images/9.png#layoutTextWidth)
 
 ### 孕育新貓咪卡
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/10.png#layoutTextWidth)
+![image](images/10.png#layoutTextWidth)
 
 當你擁有虛擬貓咪卡後，接下來你可以作的事情還有孕育新卡片、出售跟贈送。你可以跟其他人擁有的貓咪卡繁殖，或是如果你有兩張貓咪卡的話也可以自行用它們繁殖，另外貓咪卡沒有性別，所以只要任兩張卡片就可以繁殖了。按下 Breed Kitty 會有兩個選擇，跟其他人的卡片繁殖，或是跟自己的卡片繁殖。
 
 因為我有兩張貓咪卡，所以就先來試試讓他們兩張繁衍出新後代囉。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/11.png#layoutTextWidth)
+![image](images/11.png#layoutTextWidth)
 
 然後讓我意外的是繁衍後代也要 0.015 ETH，這根本就是錢坑阿。不過頭都洗了，只好還是試試。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/12.png#layoutTextWidth)
+![image](images/12.png#layoutTextWidth)
 
 如果上面的交易成功，最後你的其中一隻寵物就會出現 Bun is oven 的訊息，接下來就要等新的貓咪卡誕生囉。
 
-![image](/posts/2017-12-06_來養區塊鏈上的虛擬寵物吧/images/13.png#layoutTextWidth)
+![image](images/13.png#layoutTextWidth)
 
 大致上就是這樣。孕育出來的新的貓咪卡也可以售出、送人或是再孕育新的貓咪卡片。
 

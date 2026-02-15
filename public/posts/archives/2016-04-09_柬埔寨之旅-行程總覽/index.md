@@ -29,7 +29,7 @@ images:
 
 去的時間是 2016/2/27 至 3/6 總共九天。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 概略行程
 
@@ -43,7 +43,7 @@ images:
 
 我們去程坐巴士，回程坐飛機，我當然是比較喜歡坐飛機，但是考慮到花費坐巴士也是很不錯的選擇。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 在城市內的交通就兩種，tuk tuk 跟包車（轎車）。如果在金邊的話全部都是搭 tuk tuk 就可以了，因為也沒有太遠的景點。在暹粒要參觀比較遠的景點還是包車會比較舒適。tuk tuk 可議價，我們的議價很軟弱，所以不會特別便宜。在金邊城市內的 tuk tuk 大約是 3USD 到 4USD。在暹粒城市內 tuk tuk 大約是 2USD，從飯店出發的會比較便宜 (1USD)，應該是有簽約的關係。
 
@@ -67,31 +67,31 @@ images:
 
 金邊的話我第一個推薦的地方是 S21 屠殺博物館。我們參觀的時候剛好是二二八紀念日，而這兩個事件正好都是統治者的暴力行為。雖然程度上差距很大，不過讓人警惕也希望不要再發生同樣的慘案。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 我覺得這個博物館對了解柬埔寨近代的事情非常的重要，這個博物館有中文導覽機，如果有前往請務必租用，講解的非常詳細。
 
 另外一個我覺得值得參觀的是皇宮，不過如果沒進去也沒關係，在皇宮外面的廣場看夕陽吹吹風也很不錯。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 至於暹粒大家都參觀過的地方我就不推薦了，比如說吳哥窟神廟，你不可能沒去吧？我想推薦的是崩密列神廟。這是一個荒廢的神廟，大自然佔據了整個神廟讓這個地方更值得探索。
 
 我用 Adobe Slate 做了一個相片集，有興趣的可以點[這個連結](https://slate.adobe.com/cp/YKckX/)過去看看！
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 另外一個非常值得推薦的是班蒂斯蕾 (Banteay Srei, 或是女皇宮)，這是暹粒地區雕刻最精細的神廟，佔地不大但是裡面的雕刻很值得一看，搭配上如果你有先看印度神話這邊逛起來會很有意思。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 另外巴揚寺 (Bayon) 跟塔普倫寺 (Ta Prohm) 都很棒！不過應該都不是會錯過的景點，跑大圈的時候就一定會經過。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg#layoutTextWidth)
 
 塔普倫寺
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg#layoutTextWidth)
 
 巴揚寺前廣場
 
@@ -103,13 +103,13 @@ images:
 
 基本上這是間素食餐廳（但是裡面也有賣葷食），在獨立紀念碑附近。我們吃了綠咖喱跟柬埔寨的傳統食物 Amok 真的非常好吃。我在柬埔寨的這段時間吃了非常多次 Amok，The Corn 無疑是最好吃的一間。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg#layoutTextWidth)
 
 **Brown Coffee (金邊)**
 
 其實這是間咖啡館，前幾年待在金邊一段時間的 James 跟我介紹這間咖啡館，有一天因為我們在金邊排了太多時間，所以我們就到這間咖啡館看書聊天。有種台灣的星巴克的感覺，大致上是大眾取向，但是店內風格也不錯。這間咖啡館在金邊有許多分店，可以到他們[官網](https://www.browncoffee.com.kh/ContactUs/Locations/)找到咖啡館位置，要注意的是他們有些店家沒有登記在 Google maps 上面。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg#layoutTextWidth)
 
 **Ly Ly Restaurant (暹粒)**
 
@@ -119,13 +119,13 @@ images:
 
 跟往常一樣我們這次旅行也有記帳，所以可以看一下我們在這次行程之中的花費。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/11.png#layoutTextWidth)
+![image](images/11.png#layoutTextWidth)
 
 支出
 
 這次我們九天的旅行花費每人大約為 35,500，我們不是玩的特別省所以金額有點高。如果少掉去柏威夏寺的行程大約可以減掉 175USD，大約是 5,600 台幣（不過這是兩個人計算，所以還要除以二），以二月底三月初這個時間去玩，以我們的規劃我覺得九天花費三萬二千元大概會是比較合理的。夏季似乎是淡季，可能會更便宜一點。
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/12.png#layoutTextWidth)
+![image](images/12.png#layoutTextWidth)
 
 看這個支出比例，雖然我們很愛亂吃東西，但是花費其實也不多。但是交通費真的是很多。機票跟住宿到也是差不多符合預期，特別這是九天的住宿。
 
@@ -155,6 +155,6 @@ images:
 
 這次的總覽大概就是這樣，如果有任何問題可以留言問我，祝大家到柬埔寨玩得愉快！
 
-![image](/posts/2016-04-09_柬埔寨之旅-行程總覽/images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg#layoutTextWidth)
 
 另外這是我柬埔寨的 Flickr 相簿

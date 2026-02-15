@@ -13,7 +13,7 @@ images:
   - "/posts/2016-05-04_鄭性澤案-在台灣發生的making-a-murderer/images/1.jpeg"
 ---
 
-![image](/posts/2016-05-04_鄭性澤案-在台灣發生的making-a-murderer/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 [鄭性澤回家 ── 告別需要多少時間／報導者](https://www.twreporter.org/a/cheng-hsing-tse-release)
 

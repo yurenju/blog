@@ -17,13 +17,13 @@ images:
   - "/posts/2014-11-09_1129-割闌尾-v-計畫背後/images/5.jpeg"
 ---
 
-![image](/posts/2014-11-09_1129-割闌尾-v-計畫背後/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 V 計畫正式公布的那天，大家抬著頭，看投影幕上打著[割闌尾 V 計畫](http://1129vday.tw/)的首頁，不知道心裏想些什麼呢？
 
 我倒是想說說怎麼開始的。
 
-![image](/posts/2014-11-09_1129-割闌尾-v-計畫背後/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 太陽花學運接近尾聲的某一天，我被電視上完全沒邏輯的立委發言搞得七竅生煙，覺得很後悔以前沒有好好關心政治才會讓這些不適任的政客掌握台灣。但是一個宅宅如我，除了到立法院靜坐抗議以外，我還能做些什麼呢？
 
@@ -31,13 +31,13 @@ V 計畫正式公布的那天，大家抬著頭，看投影幕上打著[割闌�
 
 跟著幾個早期的夥伴，有些人做了蒐集應該罷免哪些立委的網站，而當時我幫忙弄了填寫完表單，產生三摺式可列印的 PDF 並且支援直接送到 7–11 iBon 網站的前端部分，後來也幫忙做了一些快速 key in 連署資料並且連結到 google docs 的頁面。
 
-![image](/posts/2014-11-09_1129-割闌尾-v-計畫背後/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 印象沒錯的話早期我只有一起跟夥伴開過一兩次會，接下來就都是遠端參戰了，而因為工作忙碌加上自己又開始做 g0v 的[立委選舉地圖](http://blog.yurenju.info/mlymap/)，後來就也比較少幫忙割闌尾團隊了。
 
 時光飛逝，幾個月很快過去，中間也去了沖繩走走。
 
-![image](/posts/2014-11-09_1129-割闌尾-v-計畫背後/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 當我從沖繩的旅程回來後，幾個 g0v 的朋友不約而同地問了我有關立委選舉地圖的事情，原來是想要基於這個地圖開發其他的應用，而想要開發新網站的團體不是別人  —  正好就是割闌尾團隊！
 
@@ -45,7 +45,7 @@ V 計畫正式公布的那天，大家抬著頭，看投影幕上打著[割闌�
 
 而我們還沒到終點呢。
 
-![image](/posts/2014-11-09_1129-割闌尾-v-計畫背後/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 今年的 11/29，除了是非常重要的投票日外，也是割闌尾 V 計畫蒐集罷免連署書的重大日子。
 

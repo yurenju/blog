@@ -18,7 +18,7 @@ images:
   - "/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/6.png"
 ---
 
-![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 上週八仙塵爆發生時，台灣血液基金會因為沒有提供血液庫存資訊開放格式的資料，晚上就快速寫了一個從他們網站自動解析庫存資訊並且儲存成 JSON 的小爬蟲 [blood](https://github.com/g0v/blood)，再儲存到 github 的小程式。在[村長](http://blog.clkao.org/)的推薦下用了 [IronWorker](http://www.iron.io/) 真是驚為天人的好用，在這邊介紹一下，順便簡介如何設定整個服務。
 
@@ -28,7 +28,7 @@ IronWorker 是一個可以執行程式片段的服務，你可以把各式各樣
 
 回到專案本身，這個專案產生出來的資料主要是用在 [八仙粉塵爆炸開放資料查詢](http://g0v.github.io/color/#blood) 中血液查詢的部分
 
-![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 而小程式則是利用 jsdom 分析網頁搭配 shell.js 簡化指令操作達成，整個 script 只有四十行。
 
@@ -42,7 +42,7 @@ blood.worker 檔案內容如下：
 
 重要的有兩個地方，第五行用來安裝套件，但有些 ssl 不會過所以在這邊要把 SSL 關閉。第八行意思是要在遠端安裝所有相依套件。至於 iron.json 在 iron.io 建立專案後可以直接下載。
 
-![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 接下來就可以把專案上傳到 iron.io 了，先用 gem 安裝 IronWorker 的工具：
 
@@ -54,17 +54,17 @@ blood.worker 檔案內容如下：
 
 最後到 iron 專案內的 scheduled task 設定什麼時候想跑就收工了！
 
-![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 最後就可以在 blood project 的 gh-pages branch 中找到 [JSON 檔案](https://github.com/g0v/blood/blob/gh-pages/blood.json)，也可以看到每一個小時就會多一個 commit：
 
-![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/5.png#layoutTextWidth)
+![image](images/5.png#layoutTextWidth)
 
 ### Github + Travis-CI + IronWorker
 
 身為一個愛好自動化的宅宅，每次有人送了 pull request 之後，我還要自己執行 iron_worker 也說不過去，這個時候就可以用 Travis-CI 幫 github 跟 IronWorker 建起友誼的橋樑，也讓我 merge commit 之後可以透過 travis-ci deploy 到 iron.io 上面。
 
-![image](/posts/2015-07-10_ironworker-scheduled-tasks-好工具/images/6.png#layoutTextWidth)
+![image](images/6.png#layoutTextWidth)
 
 其中 .travis.yml 是這樣設定的
 

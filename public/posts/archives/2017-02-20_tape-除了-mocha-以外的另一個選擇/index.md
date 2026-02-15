@@ -15,7 +15,7 @@ images:
   - "/posts/2017-02-20_tape-除了-mocha-以外的另一個選擇/images/3.png"
 ---
 
-![image](/posts/2017-02-20_tape-除了-mocha-以外的另一個選擇/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 [https://flic.kr/p/a22dKZ](https://flic.kr/p/a22dKZ)
 
@@ -48,7 +48,7 @@ const KEY = process.env.GOOGLE_PRIVATE_KEY;``test(&#39;auth&#39;, t =&gt; {
 
 執行測試後的輸出是這樣：
 
-![image](/posts/2017-02-20_tape-除了-mocha-以外的另一個選擇/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 這是 [TAP (Test Anything Protocol)](https://en.wikipedia.org/wiki/Test_Anything_Protocol) 格式，一種人與機器都可以輕易看得懂的測試輸出格式，我之前只知道 junit report，還真的沒看過這種。不過基本上還蠻易讀的，如果要產生測試摘要也可以用另外一個 npm module `faucet` 接著 pipeline 就可以讀取：
 `npm test | faucet`
@@ -57,7 +57,7 @@ const KEY = process.env.GOOGLE_PRIVATE_KEY;``test(&#39;auth&#39;, t =&gt; {
 
 測試了一下接上 istanbul 做 coverage 也沒任何問題。順帶一提現在 Istanbul 好厲害，我的測試是 `npm test` ，如果要上 coverage 只要前面加上 nyc 就可以了： `nyc npm test` 這是什麼神奇的巫術 ⋯⋯
 
-![image](/posts/2017-02-20_tape-除了-mocha-以外的另一個選擇/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 ### 結論
 

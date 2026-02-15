@@ -28,7 +28,7 @@ images:
 
 Kerigma 是一個熱心的女士經營，約在舊城區內靠近西側的地方。走過許多 Dubrovnik 鎮內的巷弄，還是覺得這間公寓外的巷子最美。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-住宿/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 Chialin 站的位置就是我們的公寓門口
 
@@ -54,9 +54,9 @@ Plitvice Lakes 國家公園有兩個入口，Guesthouse Bor 位於距離入口�
 
 Guesthouse Bor 位於一個非常漂亮的足球場旁邊，接壤足球場的就是一大片森林了，早上起來看天色漸漸亮起真是如夢似幻，而晚上在房間裡面關了燈就可以看到滿天星空了。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-住宿/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-住宿/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 房間比起一般公寓就要更加簡易了，房間裡兩張單人床，一張桌子與一對椅子再加上浴室，沒了。但是住在這個小木屋感覺真的很好，看起來非常的新穎，不知道是不是全新蓋的。Mukinje 裡面有一間 Bistro Vučnica 比薩餐廳跟一個超市，這兩個地方都是補充熱量 / 食物的好地方。
 
@@ -73,7 +73,7 @@ Guesthouse Bor 位於一個非常漂亮的足球場旁邊，接壤足球場的�
 
 Hey Rovinj 同樣位於 Rovinj 舊城內，進城後大約 5 ~ 10 分鐘可以到達，從巴士站走過來大約 20 分鐘。Google Maps 在這邊的圖資非常貧乏，你可以在 OpenStreetMap 上找到 [Apartments and Rooms Hey Rovinj 比較精確的位置](https://osm.org/go/0IKLU34~0?layers=N&m=)。
 
-![image](/posts/2017-10-19_克羅埃西亞攻略-住宿/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 Hey Rovinj 在非常美麗的 Trevisol 街上
 

@@ -25,7 +25,7 @@ images:
   - "/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/13.jpeg"
 ---
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 冨樫了一年多的 Netflix 紀錄片推薦又來啦！Netflix 上面有數量龐大的紀錄片，無論你想看哪個面向的幾乎都可以在上面找到一些自己喜歡的題材。這邊是我從[上次 Netflix 紀錄片推薦](/posts/2016-06-05_netflix-%E6%8E%A8%E8%96%A6%E7%B4%80%E9%8C%84%E7%89%87%E5%96%AE2016-%E4%B8%8A%E5%8D%8A%E5%B9%B4/)後累積下來看過並且推薦的紀錄片。
 
@@ -33,7 +33,7 @@ images:
 
 #### 💯 非常推薦
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 [金與安迪  — Jim &amp; Andy](https://www.netflix.com/title/80209608)
 
@@ -43,7 +43,7 @@ images:
 
 如果你喜歡金凱瑞的作品，千萬不要錯過這部紀錄片。
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 [AlphaGo 世紀對決](https://www.netflix.com/title/80190844)
 
@@ -53,13 +53,13 @@ AlphaGo 世紀對決真是出乎意料的好看，從圍棋界沒有人看看得
 
 我真的沒有料到這部會這麼高潮迭起，是一部非常棒的紀錄片，值得看看。
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 [黑錢  — Dirty Money](https://www.netflix.com/title/80118100)
 
 黑錢是一系列的紀錄片，記錄了幾個黑心的企業家或政客如何在其中獲得不法利益，同時也讓許多人家破人亡。最令我印象深刻的應該就是匯豐銀行協助毒梟洗錢，天啊竟然沒有人被抓去關，這世界就是如此不公平，當一個銀行巨大到政府會保證他不會倒閉時，整個天秤都失衡了。裡面還有另外兩個個有意思的案例是利用小資族的月底貸款，還有楓糖小偷等等集數都有很值得探討的內容。
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 [依卡洛斯  — Icaqus](https://www.netflix.com/title/80168079)
 
@@ -67,7 +67,7 @@ AlphaGo 世紀對決真是出乎意料的好看，從圍棋界沒有人看看得
 
 但是他應該沒想到他做的事情並不是最衝的，他原本拍攝紀錄片的目的，變成了一根火柴，燒起來熊熊大火，揭開了國家級的集體作弊，包含奧運。本部片揭發了很多運動界非常黑暗的角落，同時也讓其中一名主角處於危險的處境。
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 [異狂國度  — Wild Wild Country](https://www.netflix.com/title/80145240)
 
@@ -77,7 +77,7 @@ AlphaGo 世紀對決真是出乎意料的好看，從圍棋界沒有人看看得
 
 「非常推薦」就到這邊了，接下來是「推薦」的片單，其實裡面好幾部也都非常好看，很難抉擇到底是該放到哪邊 😣
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg#layoutTextWidth)
 
 [巴克利超級馬拉松](https://www.netflix.com/title/80076413)
 
@@ -85,13 +85,13 @@ AlphaGo 世紀對決真是出乎意料的好看，從圍棋界沒有人看看得
 
 主辦人說他提供了一個失敗的機會。他說很多參賽者都有很高的學歷、排定了自己的人生計劃、一步步的走向成功的道路。而這個比賽有很大的機率你會失敗，有種在一個瘋狂的活動之中獲取一些人生哲理的感覺，很有意思。
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg#layoutTextWidth)
 
 [**請服藥**](https://www.netflix.com/title/80117831)
 
 在講聰明藥在美國濫用的問題，感覺現代社會的高壓環境也是部分藥物濫用的原因，不過比較大的原因是美國可以廣告藥品跟輕易的開出聰明藥的處方籤吧。
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg#layoutTextWidth)
 
 [Man vs Snake: The Long and Twisted Tale of Nibbler](https://www.netflix.com/title/80083235)
 
@@ -99,7 +99,7 @@ AlphaGo 世紀對決真是出乎意料的好看，從圍棋界沒有人看看得
 
 25 年後，這個小夥子也變成了臃腫的 40 歲中年大叔。當他沒玩貪食蛇的這些年，竟然已經有人超過了他的分數。這部紀錄片就在講這個中年大叔如何燃起電動魂，重新把第一名的殊榮奪回自己手上！
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg#layoutTextWidth)
 
 [Indie Game: The Movie](https://www.netflix.com/title/70229918)
 
@@ -109,7 +109,7 @@ AlphaGo 世紀對決真是出乎意料的好看，從圍棋界沒有人看看得
 
 總之推薦一看，特別如果你是軟體開發者，體驗一下他們的熱情或許也有助益燃起自己的（笑）
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg#layoutTextWidth)
 
 [天梯：蔡國強的藝術](https://www.netflix.com/title/80097472)
 
@@ -121,13 +121,13 @@ AlphaGo 世紀對決真是出乎意料的好看，從圍棋界沒有人看看得
 
 距離「天梯」的第一次實驗已經是超過二十年前的事情，這次是否能終於完成這部努力超過二十年的藝術作品呢？來看看這部紀錄片《天梯》吧！絕對值得一看！
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg#layoutTextWidth)
 
 [光影故事](https://www.netflix.com/title/80133187)
 
 攝影師的故事，如果喜歡拍照的可以看一下，跟著攝影師的眼睛去探索世界各地，但是我自己是覺得不是每個攝影師都拍得很好就是了，但是好看。
 
-![image](/posts/2018-04-13_2016-2018-年初-netflix-推薦紀錄片/images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg#layoutTextWidth)
 
 [守護者](https://www.netflix.com/title/80122179)
 

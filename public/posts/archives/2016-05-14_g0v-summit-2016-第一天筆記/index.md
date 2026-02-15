@@ -13,7 +13,7 @@ images:
   - "/posts/2016-05-14_g0v-summit-2016-第一天筆記/images/1.jpeg"
 ---
 
-![image](/posts/2016-05-14_g0v-summit-2016-第一天筆記/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 快速紀錄一下第一天聽到什麼有意思的。
 

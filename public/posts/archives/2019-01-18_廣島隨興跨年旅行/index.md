@@ -27,7 +27,7 @@ images:
   - "/posts/2019-01-18_廣島隨興跨年旅行/images/15.jpeg"
 ---
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 承襲著我們隨興旅行的習慣，我們跨年假期來來回回從不出國、開始看名古屋的機票、最後因為名古屋機票開始漲價的原因，最後我們來到廣島了。
 
@@ -39,7 +39,7 @@ images:
 
 第一天晚上才到廣島，我們先住在市區的旅館。第二天早上我們把行李寄放在旅館準備輕裝去嚴島住溫泉旅館一泊二食，接著帶著輕裝就跳上 JR 到了嚴島。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 雖然在找資料的時候有看到嚴島上有野鹿，不過沒想到數量還不少，而且他們還滿溫馴的。
 
@@ -49,17 +49,17 @@ images:
 
 巧的是當時一起出遊的前同事正好晚我一天也到了嚴島神社！可惜時間沒湊好沒機會一起吃飯，不然異地相聚總是一件很酷的事情，只好期待下次一起喝酒的機會了。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 天氣很好，不過溫度也只有二度左右。大概是因為神社建於海上的緣故，到稍微沒有建築物或地形掩護的地方，海風可是會吹到鼻涕直流跟頭痛的。我們跟著人潮逐步推進的參拜了嚴島神社，在神社外其實也可以看到鳥居人也沒那麼多，我們反而花比較多時間在神社外散步拍照。
 
 過兩天就是新年參拜，這個時候人都這麼多了，新年參拜那天人感覺應該會滿出來。我們沒有太大的興趣在半夜或凌晨人擠人，就現在在岸邊悠閒的看著這 [日本三景](https://zh.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E4%B8%89%E6%99%AF) 就心滿意足了。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 島上繞夠了，接近傍晚我們回到了隔岸的溫泉旅館住宿。我們房間面相海灣，外面就可以看得到蚵架，遠遠可以看到小小的鳥居的樣子，還有美麗的海景夕陽了。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 #### 廣島市區
 
@@ -67,15 +67,15 @@ images:
 
 當我們走進 Shimaji Coffee 的時候迎面撲來的暖氣讓濕淋淋又凍僵的我們找到了救贖。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg#layoutTextWidth)
 
 跟許多我們造訪的日本精品咖啡館一樣，店內只有老闆一人。吧檯簡潔的菜單陳列著目前有提供的咖啡跟幾罐裝在密封罐的咖啡豆供客人打開聞味，而身後就是烘豆機。
 
 不知道是不是外面正在下雨的關係，整間店除了我們兩人以外就是老闆了。我們各點了一杯咖啡，邊聊天邊等雨停。因為接下來還要參觀原爆公園，所以我們並沒有待很久就離開了咖啡館，跳上就在咖啡館前面的地面電車回到了旅館。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg#layoutTextWidth)
 
 旅館距離原爆公園很近，我們放了行李之後就沿著平和大通走到了和平博物館，不過因為今天是假日的關係博物館沒開。
 
@@ -87,13 +87,13 @@ images:
 
 而公園的中心有個火炬平台，告示牌上面寫著這把和平之火在世界上所有的核武器都被銷毀之前它都會不斷地燃燒，在我看起來這把火大概是永遠都不會熄滅了。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg#layoutTextWidth)
 
 再往前走不遠就是原爆圓頂屋，因為原子彈是在上空六百公尺爆炸，爆炸威力橫向擴散讓周圍完全夷為平地，而這棟圓頂建築因為正好受到原子彈的威力正好是垂直方向，因為建築受力的關係讓它不致於倒塌，直到現在則變成了紀念建築，用來紀念人類的愚蠢。
 
 參觀完畢後，因為我跟 Chialin 都喜歡運動攀岩，出發前我們有找到一間在廣島的室內攀岩抱石館。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg#layoutTextWidth)
 
 我們興沖沖地來了，卻失望地回去。因為今天他們有活動的關係，提早到六點關門，而我們到的時候已經五點多了。望著這間雙層的抱石館，也只能在門口拍照留念的敗興回程了。
 
@@ -111,7 +111,7 @@ images:
 
 後來我們就沿著尾道的主要幹道慢慢地散步到纜車口，搭著纜車上去在高處的千光寺，在慢慢沿著小徑散步下來。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg#layoutTextWidth)
 
 坐纜車的時候尾道的風景就慢慢在眼前展開，尾道最有名的文學作家是林芙美子，她的作品《放浪記》就在一個段落內完整的敘述了尾道的樣貌。
 
@@ -121,13 +121,13 @@ images:
 
 不出所料，尾道這樣的地方果然會是我們喜歡的地方。除夕這天的遊客並沒有很多，我們在瞭望台鳥瞰了四周的景色，散步到千光寺到處拍照，看著纜車幾分鐘就往返連結兩端的車站。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg#layoutTextWidth)
 
 尾道的建築許多都還是保持以前的樣子，散步往下的路上看到了一間 guest house 附設咖啡館【みはらし亭】坐落於一個斜坡上，咖啡館窗外的景色就可以鳥瞰尾道街景，想像這麼好的天氣在裡面喝杯熱咖啡或茶靜靜的眺望尾道有多好啊。不過不知道哪根筋不對竟然沒有進去坐坐。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg#layoutTextWidth)
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/14.jpeg#layoutTextWidth)
+![image](images/14.jpeg#layoutTextWidth)
 
 一：【みはらし亭】傳統的建築配上窗外絕佳風景。二：尾道就是一個倚著山建造的小城鎮
 
@@ -137,7 +137,7 @@ images:
 
 回到廣島市後，在這個除夕的晚上真的很難找到餐廳，所幸我們找到了一間廣島燒餐廳，也在最後一個晚上吃到了當地特產。坐了地面電車回到的旅館，最後在平和大通看了聖誕燈飾。
 
-![image](/posts/2019-01-18_廣島隨興跨年旅行/images/15.jpeg#layoutTextWidth)
+![image](images/15.jpeg#layoutTextWidth)
 
 最後回到旅館當然不能錯過日本跨年必備節目【紅白】並且第一次在日本境內終於可以用遙控器內附的互動功能投票給白隊。
 

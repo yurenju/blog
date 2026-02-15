@@ -13,7 +13,7 @@ images:
   - "/posts/2016-07-05_nightwatch.js-應用-歸檔-pocket-所有文章/images/1.png"
 ---
 
-![image](/posts/2016-07-05_nightwatch.js-應用-歸檔-pocket-所有文章/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 Nightwatch.js 是個 JavaScript 編寫自動化程序好用的小工具，通常拿來做 end-to-end testing，不過當然他也可以拿來解決一些我曾經做的一些愚蠢事情。很久以前我用了 IFTTT 隨便設定了一堆文章透過 RSS 餵給 pocket，所以我的未讀文章有數千篇。
 

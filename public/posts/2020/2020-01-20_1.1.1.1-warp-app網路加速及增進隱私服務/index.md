@@ -16,7 +16,7 @@ images:
   - "/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/4.png"
 ---
 
-![image](/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/1.jpg#layoutTextWidth)
+![image](images/1.jpg#layoutTextWidth)
 
 最近跟在 Cloudflare 工作的朋友吃飯時聊起了他們提供的一個 mobile app 利用了 Cloudflare CDN 在全球各地的機房所建置的網路加速以及增進隱私的服務滿有意思的，跟大家分享一下。
 
@@ -24,7 +24,7 @@ images:
 
 假如說我上網搜尋了一個網站並且點擊進去，這個網站是架設在大阪，因為網際網路上面的節點是互相連接的，你的網路提供商也會跟世界上其他的網路提供商互相連結，設法用他們手邊的資訊幫你找出一條可以到大阪的路。於是他們你跟大阪之間可能經過了好幾個網路提供商，最終找出下圖的一條路。
 
-![image](/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 看起來有點繞，但終究是找到網站在哪了，接下來他就可以顯示出網站的內容。在這邊有幾個問題：
 
@@ -38,13 +38,13 @@ images:
 
 為了提供這樣的服務，Cloudflare 在世界各地都有機房，並且機房之間已經最佳化了節點的路徑。比起浩瀚複雜的網際網路，Cloudflare 機房之間的網路連線提供更佳的連線路徑與品質。
 
-![image](/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 這樣的機房架構原本是設計給 CDN 服務使用，但是新推出的 1.1.1.1 app 也利用這樣的架構提供了一個網路加速的方案。
 
 這個 1.1.1.1 app 提供了一個 WARP+ 的功能，當開啟之後原本複雜的線路就變成這樣：
 
-![image](/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 Cloudflare 利用了自身機房的連線建立了一條連線更精簡的快速通道，比起透過網際網路上複雜的連線系統，這樣的連線經過的節點更少，速度也更快。同時 WARP+ 加密了兩種連線：
 

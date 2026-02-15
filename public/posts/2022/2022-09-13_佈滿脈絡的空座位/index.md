@@ -22,7 +22,7 @@ images:
 
 在重看《[西方極樂園](https://www.imdb.com/title/tt0475784/)》時其中一幕夏洛蒂·海爾 (Charlotte Hale) 提到了 “Show, don’t tell” 才讓我意會到我以前經常用的寫作方法原來是作家會使用的一種寫作技巧，透過更多感官描述來把讀者拉入一個場景中，就像是用蟲洞把讀者傳送到另外一個世界。
 
-![image](/posts/2022-09-13_佈滿脈絡的空座位/images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg#layoutTextWidth)
 
 _Show, don’t tell. Isn’t that what you writers prefer? (_[_source_](https://www.imdb.com/title/tt0475784/mediaviewer/rm370673152?ft0=name&fv0=nm1935086&ft1=image_type&fv1=still_frame&ref_=tt_ch)_)_
 
@@ -30,11 +30,11 @@ _Show, don’t tell. Isn’t that what you writers prefer? (_[_source_](https://
 
 當藝術家在創作時，他們的作品都是將受眾拉入他們所構築的脈絡裡面，講述他們所要傳達的故事與價值觀。就像《全面啟動》裡構築那些宏偉又奇幻的夢境，但身為一起分享夢境的我們，總是會讚嘆夢境裡的精雕細琢，只有在離開夢境時才摸著自己的臉龐困惑的回想那些似乎不合邏輯的細節。
 
-![image](/posts/2022-09-13_佈滿脈絡的空座位/images/2.gif#layoutTextWidth)
+![image](images/2.gif#layoutTextWidth)
 
 就跟我當初走進一縷光咖啡館一樣，還在思索與欣賞咖啡館主人雕琢出來的氛圍與挑選的咖啡品項時，斜斜照入的陽光造成的光線角度與淺淺的陰影完美的詮釋了店名，而這光線的入射角度只限制在特定的時間出現。看著光影的變化，不知不覺的時間就這樣過了，那些與時光交織的脈絡就這樣讓我心滿意足的度過了一個下午。
 
-![image](/posts/2022-09-13_佈滿脈絡的空座位/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 但最讓我感到奇妙的聯想，反而是如何演講與寫作技術文章。
 
@@ -46,6 +46,6 @@ _Show, don’t tell. Isn’t that what you writers prefer? (_[_source_](https://
 
 你要做的不是告訴愛麗絲好奇的重要性，而是描繪出那拿出懷錶的兔子與未知的洞穴，邀請你的觀眾掉入那個充滿脈絡的夢境。 🐇
 
-![image](/posts/2022-09-13_佈滿脈絡的空座位/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 ([source](https://www.imdb.com/title/tt0133093/mediaviewer/rm147658497?ref_=ttmi_mi_all_sf_56))

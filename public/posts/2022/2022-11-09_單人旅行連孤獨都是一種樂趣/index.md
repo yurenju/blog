@@ -19,14 +19,14 @@ images:
 
 「那天在二見浦遇到的人讓我想起攻殼機動隊的合田一人」，我邊跟 Chialin 講邊 Google 了合田一人的照片。
 
-![合田一人的 Google 搜尋結果](/posts/2022-11-09_單人旅行連孤獨都是一種樂趣/images/1.jpeg#layoutTextWidth)
+![合田一人的 Google 搜尋結果](images/1.jpeg#layoutTextWidth)
 合田一人的 Google 搜尋結果
 
 最近在看《搖曳露營 △》第二季，凜講述了自己為什麼喜歡單人露營的原因，讓我想起 2019 年自己去紀伊半島的熊野古道參拜與環半島的旅程。
 
 我還記得剛到出發站田邊的時候，發現田邊是一個極為偏僻的小鄉鎮，大概是我在日本造訪過最鄉下的地方。路上幾乎找不到什麼餐廳，而我入住在一間非常具有日本傳統家庭風味的民宿，一樓是個有些昏暗的客廳與半戶外的浴室，而二樓小小的房間裡面住著我跟另外一位室友。
 
-![image](/posts/2022-11-09_單人旅行連孤獨都是一種樂趣/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 田邊的住宿
 
@@ -36,7 +36,7 @@ images:
 
 而在參拜熊野古道的時候，第一天還沒走到一半就下起了傾盆大雨，等我終於走到古道中間的一個村落時，即使穿著雨衣的我也全身都濕透，在這個絕望的時刻我竟然找到一間招牌已經完全褪色的家庭式經營的餐廳（或咖啡館）。
 
-![image](/posts/2022-11-09_單人旅行連孤獨都是一種樂趣/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 熊野古道參拜時下了大雨，這間餐廳是我的避風港
 
@@ -44,7 +44,7 @@ images:
 
 而等我從熊野古道的旅程結束後，到另外一個小鄉鎮二見浦的時候，民宿的老闆讓我想起了攻殼機動隊的合田一人，不一樣的是他是個很熱心的人。跟我介紹了附近的景點跟餐廳，民宿裡面也提供腳踏車讓我可以更方便的探索附近。
 
-![image](/posts/2022-11-09_單人旅行連孤獨都是一種樂趣/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 騎腳踏車在稻田上的倒影
 
@@ -68,7 +68,7 @@ images:
 
 就跟凜說的一樣：「一樣是露營，一個人去的世界卻完全不一樣。像是看到的事物，吃的東西，也可以一個人默默想事情。」
 
-![image](/posts/2022-11-09_單人旅行連孤獨都是一種樂趣/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 夫妻岩日出
 

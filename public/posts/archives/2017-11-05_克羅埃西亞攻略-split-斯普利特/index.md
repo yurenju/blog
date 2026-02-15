@@ -26,7 +26,7 @@ images:
 
 從 Dubrovnik 到 Split 最有趣的是中間還會經過一個國家波士尼亞，兩個城鎮之間沒有其他國土連接，所以還要經過兩個海關，身為海島型國家的人真覺得有意思。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 這次的公寓在一個常常石鋪上坡道盡頭的小巷裡面，放下行李後時間還早，我們也沒特地要參觀什麼景點，就在城內散步。
 
@@ -36,25 +36,25 @@ Split, 台灣譯作斯普利特的城市根據[維基百科](https://zh.wikipedi
 
 而現在如果到 Split 會發現居民的生活是跟皇宮緊緊的結合在一起，靠著城門賣東西、開咖啡館或曬衣服都有，除了四個明顯的城門外，很難把居民的生活跟皇宮隔得很開，反而也變成了這個城的特色。至於在 Split 散步的感覺跟 Dubrovnik 有些不同，在上個城鎮可以感覺出這就是一個觀光城鎮，有許多的觀光客在這邊。Split 的氛圍則更加悠閒一點，靠近港口的部分是城鎮的南端，有很大的一片的廣場跟咖啡館，非常多人坐在那邊喝咖啡或啤酒，而景色則是一片超藍的藍天、停了許多小船的港口（遠處更有郵輪）配上海鷗就在港口邊盤旋鳴叫，感覺真是很悠哉。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg#layoutTextWidth)
 
 我們吃完午飯後就先在城鎮裡散步，上了鐘樓眺望風景，在小鎮裡漫步。我們在克羅埃西亞的旅遊步調大概都是這樣，大部分的時間都在散步，有些時間會去參觀景點，在每個城市都待上不要太短的時間在轉換城市之間好好感受一下每個城市的氛圍。可惜的是假期都不算太長，否則在一個不同的城市生活上一個月，感覺應該會跟只有兩個禮拜的旅行有很大的差別。
 
 秉持著每天都要悠閒等待太陽下山，我們隨意地在碼頭旁邊的堤岸坐下來看著這魔幻的時刻。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg#layoutTextWidth)
 
 在 Split 除了隨處都很適合閒逛的小城鎮外，其中皇宮的地下室也是蠻值得一看的。裡面展示了很多設施讓人還蠻意外的，像是他們有榨橄欖油用的裝置，跟石頭做的廢水管線，這可是超過一千年前就有的技術阿，真的很厲害。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg#layoutTextWidth)
 
 不過如果你也是《冰與火之歌》的影迷，一定要來參觀這間裡面最大的房間，他就是卡麗熙關龍用的地下室唷。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg#layoutTextWidth)
 
 參觀的時間以外，照例的我們就在城裡散步、吃吃冰淇淋，享受著出外旅遊的悠閒時光囉。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg#layoutTextWidth)
 
 在 Split 住了兩天，第二天我們又坐在碼頭看了黃昏，真的是太享受了。第三天早上我們把鑰匙丟到信箱後，就搭車繼續北上，到克羅埃西亞最著名的十六湖公園 Plitvice Lakes 囉。
 
@@ -64,7 +64,7 @@ Split, 台灣譯作斯普利特的城市根據[維基百科](https://zh.wikipedi
 
 因為公車站在西北邊的關係，當走入 Split 的時候有很高的機率會從南側靠碼頭的人行步道進入 Split，那一側的銀行比較早關（我記得平日兩點多就關了），但是在城鎮的西北角有另外一間銀行開到晚上七點。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/7.png#layoutTextWidth)
+![image](images/7.png#layoutTextWidth)
 
 [https://goo.gl/maps/tJ2im7NBBnG2](https://goo.gl/maps/tJ2im7NBBnG2)
 
@@ -88,7 +88,7 @@ Sexy Cow 是我們在 Split 的救星。因為我們換的克羅埃西亞庫納�
 
 不過要注意的是 Google Maps 上面的資訊是錯誤的，他已經移到了斜對角，如果沒有走過去是不會看到的。
 
-![image](/posts/2017-11-05_克羅埃西亞攻略-split-斯普利特/images/8.png#layoutTextWidth)
+![image](images/8.png#layoutTextWidth)
 
 [https://goo.gl/maps/SUwchkGXG7N2](https://goo.gl/maps/SUwchkGXG7N2) 記得要到斜對面找這間冰淇淋店
 

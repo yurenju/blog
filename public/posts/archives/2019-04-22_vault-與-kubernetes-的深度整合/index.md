@@ -27,7 +27,7 @@ images:
 
 其中一個解決方案是依照 deployment 的權限範圍將相似權限的放在同一個 namespace 中。並且在每個 namespace 底下放入一個內容為 vault token 的 secret，並且在 vault 當中設定此 token 的存取權限。我們在 deployment 中則透過 Kubernetes 的環境變數指向此 secret，如此一來在程式中利用 Vault SDK 就可以取得 Dynamic Credential。
 
-![image](/posts/2019-04-22_vault-與-kubernetes-的深度整合/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 因為 namespace 的切分可以讓不同 namespace 之間沒有辦法讀取其他 namespace 的 secret，以達到權限分群的效果。但是這樣的設定只要稍稍複雜的情境就變得不怎麼好用。
 
@@ -44,7 +44,7 @@ images:
 
 依照權限劃分出元件與資料庫的關係如下：
 
-![image](/posts/2019-04-22_vault-與-kubernetes-的深度整合/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 此時用上述的 namespace 切分法就顯得窒礙難行，每個元件的權限範圍都不同，幾乎每個 deployment 就要放在一個 namespace ，本例僅有三個元件，但是稍微複雜一點的系統都會超過這個數量，原本的管理方法就變得不合適。
 
@@ -56,7 +56,7 @@ Kubernetes 當中有兩個 account 類型：User Account 跟 Service Account，�
 
 在我們的使用情境當中，我們並不用它來規範 Kubernetes API 存取範圍，而是用來登入 Vault 並且取得由 Vault 管理的 Dynamic Credentials，並且透過每個 account 設定一組特定的 policy 來區分存取 credential 的權限。
 
-![image](/posts/2019-04-22_vault-與-kubernetes-的深度整合/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 vault 整合 kubernetes service account 的方式是設定一組 token reviewer 的 service account，此帳號需要有 kubernetes 的 `system:auth-delegator` 權限，另外也會為每個 component 都建立一組 role，每組 role 都會對應一組 policy 明定可以存取的 credentials。
 

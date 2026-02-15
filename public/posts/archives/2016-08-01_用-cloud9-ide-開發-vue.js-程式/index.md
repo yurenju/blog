@@ -16,7 +16,7 @@ images:
   - "/posts/2016-08-01_用-cloud9-ide-開發-vue.js-程式/images/4.png"
 ---
 
-![image](/posts/2016-08-01_用-cloud9-ide-開發-vue.js-程式/images/1.png#layoutTextWidth)
+![image](images/1.png#layoutTextWidth)
 
 昨天因為要帶著 Chromebook 出門，不過又想說想要來弄一些小東西，就又想到了 [Cloud9] (https://c9.io/)這個線上編輯器。
 
@@ -27,14 +27,14 @@ images:
 
 安裝 vue 命令列工具，再刪除所有原本內附的檔案：
 
-![image](/posts/2016-08-01_用-cloud9-ide-開發-vue.js-程式/images/2.png#layoutTextWidth)
+![image](images/2.png#layoutTextWidth)
 
 再使用
 `vue init webpack .`
 
 就可以產生 vue.js webpack 的樣板，執行 npm install &amp;&amp; npm run dev 之後來啟動 vue.js 開發用的伺服器。
 
-![image](/posts/2016-08-01_用-cloud9-ide-開發-vue.js-程式/images/3.png#layoutTextWidth)
+![image](images/3.png#layoutTextWidth)
 
 而且最貼心的是如果點了那個 localhost 的網址選 open，cloud9 內建的終端機則會偵測到 localhost，並且把網址改成正確的遠端網址，在我的例子中
 
@@ -46,7 +46,7 @@ images:
 
 超貼心。
 
-![image](/posts/2016-08-01_用-cloud9-ide-開發-vue.js-程式/images/4.png#layoutTextWidth)
+![image](images/4.png#layoutTextWidth)
 
 說到 cloud9 的缺點，大概就是使用沒有付費的版本時，如果一段時間沒有執行時會把你的 container 休眠，所以啟動會需要花一點時間。付費的版本會給你更快的機器，也可以指定讓你的機器一直開著。
 

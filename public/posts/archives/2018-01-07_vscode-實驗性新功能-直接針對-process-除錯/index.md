@@ -21,7 +21,7 @@ images:
 
 比如說你有個 hello.js 檔案，在編輯起裡面開啟以及設定好了中斷點，執行後就可以透過 process view 看到該程序，而且按下右鍵選擇除錯後，就可以直接停在中斷點，並且開始除錯。
 
-![image](/posts/2018-01-07_vscode-實驗性新功能-直接針對-process-除錯/images/1.gif#layoutTextWidth)
+![image](images/1.gif#layoutTextWidth)
 
 這省去了設定 node.js 的除錯組態，以前在除錯比較複雜的 node.js app 前通常都要從一些 shell script 裡面找出真正執行的 node.js process，並且在組態裡面正確設定參數後才可以開始除錯。
 
