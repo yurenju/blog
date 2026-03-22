@@ -53,6 +53,7 @@ When translating, handle different content elements as follows:
 - Chinese full-width comma 、→ English comma ,
 - Chinese period 。→ English period .
 - Chinese ellipsis ⋯⋯ → English ellipsis ...
+- **Em dash (—)**: Do NOT use em dashes in translations unless the Chinese original contains them. Restructure sentences using commas and periods instead.
 
 **Example:**
 - Chinese: 《Jazz Impressions of Japan》的《Fujiyama》
