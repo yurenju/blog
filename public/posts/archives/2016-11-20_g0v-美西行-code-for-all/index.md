@@ -14,7 +14,6 @@ images:
   - "/posts/2016-11-20_g0v-美西行-code-for-all/images/2.jpeg"
   - "/posts/2016-11-20_g0v-美西行-code-for-all/images/3.jpeg"
   - "/posts/2016-11-20_g0v-美西行-code-for-all/images/4.png"
-  - "/posts/2016-11-20_g0v-美西行-code-for-all/images/5.jpeg"
 ---
 
 ![image](images/1.jpeg#layoutTextWidth)
@@ -41,6 +40,6 @@ Matsumoto san 住在北陸地方的南砺市，剛好之前去日本的時候有
 
 另外在專案方面 [Laboratorio para la Ciudad](http://labcd.mx/) 介紹的 [proyecto de constitución cdmx](https://proyecto.constitucion.cdmx.gob.mx/) 也讓我覺得有趣，這個專案是建立在 [PubPub](https://www.pubpub.org/) 之上用來討論墨西哥城章程的網站，不過真正吸引我注意的其實是後面的 [PubPub](https://www.pubpub.org/)，看起來是一個蠻適合逐段討論的工具，如果跟 diff 工具結合，以後如果法案有爭議的時候，可以透過每段的 diff 來討論到底有什麼爭議，大家的意見是什麼。也可以讓所有人知道大家專注討論的段落是哪邊。
 
-![image](images/5.jpeg#layoutTextWidth)
+!image
 
 Code For All 就在整天的會議中結束了，之中討論了資金問題，一些對於這樣跨組織的組織運作方式跟溝通方式等等許多討論，後來大家還有一起去吃個晚餐，不過因為我實在太累，所以我就先早早回去旅館，又去吃了 Carl’s Jr 當晚餐就睡了。

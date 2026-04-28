@@ -7,7 +7,7 @@ tags:
 categories:
   - tech
 ---
-[![](images/0.JPG)](http://1.bp.blogspot.com/_iOO0fC4NKLE/S3UT7alQXeI/AAAAAAAAIGU/x2GdoJnZUdc/s1600-h/P1000884.JPG)
+![](http://1.bp.blogspot.com/_iOO0fC4NKLE/S3UT7alQXeI/AAAAAAAAIGU/x2GdoJnZUdc/s1600-h/P1000884.JPG)
 
   
   

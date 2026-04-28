@@ -25,7 +25,6 @@ images:
   - "/posts/2020-03-09_旅行每日背包資訊整理/images/13.jpg"
   - "/posts/2020-03-09_旅行每日背包資訊整理/images/14.jpg"
   - "/posts/2020-03-09_旅行每日背包資訊整理/images/15.jpg"
-  - "/posts/2020-03-09_旅行每日背包資訊整理/images/16.jpg"
   - "/posts/2020-03-09_旅行每日背包資訊整理/images/17.jpg"
   - "/posts/2020-03-09_旅行每日背包資訊整理/images/18.png"
   - "/posts/2020-03-09_旅行每日背包資訊整理/images/19.png"
@@ -118,7 +117,7 @@ Peak Design 最近剛更新了每日背包產品線，有非常強大的設計�
 
 #### WANDRD PRVKE
 
-![image](images/16.jpg#layoutTextWidth)
+!image
 
 ![image](images/17.jpg#layoutTextWidth)
 

@@ -16,7 +16,6 @@ images:
   - "/posts/2019-02-06_數位書寫工具探索之旅/images/4.png"
   - "/posts/2019-02-06_數位書寫工具探索之旅/images/5.jpeg"
   - "/posts/2019-02-06_數位書寫工具探索之旅/images/6.jpeg"
-  - "/posts/2019-02-06_數位書寫工具探索之旅/images/7.png"
   - "/posts/2019-02-06_數位書寫工具探索之旅/images/8.png"
   - "/posts/2019-02-06_數位書寫工具探索之旅/images/9.jpeg"
   - "/posts/2019-02-06_數位書寫工具探索之旅/images/10.jpeg"
@@ -94,7 +93,7 @@ iOS 內建的注音輸入法就我使用的經驗輸入法比起最新的 macOS 
 
 #### **Chromebook (ASUS C201 Chromebook)**
 
-![image](images/7.png#layoutTextWidth)
+!image
 
 ASUS C201 Chromebook
 

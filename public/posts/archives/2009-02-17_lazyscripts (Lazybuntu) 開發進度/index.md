@@ -9,7 +9,7 @@ categories:
 感謝 hychen 的加入，lazyscripts 又開始繼續開發。現在整個架構都已經大改了，目前底層採用 git 管理。注：不是 lazyscripts 用 git 管理源碼，而是 lazyscripts 底層就用 git 管理 scripts。hychen 畫了張圖來表示新 lazyscripts 架構。  
   
 
-[![](http://kalug.linux.org.tw/%7Ehychen/lazyscript_model.jpg)](images/0.jpg)
+![](http://kalug.linux.org.tw/%7Ehychen/lazyscript_model.jpg)
 
   
 在若干的努力後，現在已經將底層的 Git lazyscripts framework 接上 UI 。雖然還不能使用，不過總算是往前踏一步了 :)  

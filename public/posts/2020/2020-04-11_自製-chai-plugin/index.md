@@ -10,7 +10,6 @@ description: ""
 subtitle: "作為經常使用 Mocha/Chai 的開發者，有時還是覺得 Chai 的功能沒辦法滿足需求。雖然知道 chai 可以自行撰寫 plugin 來更改預設行為，不過一直都沒研究要怎麼做，不過這次正好有機會認真讀了 Chai 的文件後寫了專案要用的 plugin 後來分享一下做法。"
 
 images:
-  - "/posts/2020-04-11_自製-chai-plugin/images/1.jpg"
   - "/posts/2020-04-11_自製-chai-plugin/images/2.png"
   - "/posts/2020-04-11_自製-chai-plugin/images/3.png"
   - "/posts/2020-04-11_自製-chai-plugin/images/4.png"
@@ -22,7 +21,7 @@ images:
   - "/posts/2020-04-11_自製-chai-plugin/images/10.png"
 ---
 
-![image](images/1.jpg#layoutTextWidth)
+!image
 
 Credit: [Github repo](https://github.com/chaijs)
 

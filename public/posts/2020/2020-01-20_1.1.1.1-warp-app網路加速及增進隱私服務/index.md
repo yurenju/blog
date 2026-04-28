@@ -10,13 +10,12 @@ description: ""
 subtitle: "最近跟在 Cloudflare 工作的朋友吃飯時聊起了他們提供的一個 mobile app 利用了 Cloudflare CDN 在全球各地的機房所建置的網路加速以及增進隱私的服務滿有意思的，跟大家分享一下。"
 
 images:
-  - "/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/1.jpg"
   - "/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/2.png"
   - "/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/3.png"
   - "/posts/2020-01-20_1.1.1.1-warp-app網路加速及增進隱私服務/images/4.png"
 ---
 
-![image](images/1.jpg#layoutTextWidth)
+!image
 
 最近跟在 Cloudflare 工作的朋友吃飯時聊起了他們提供的一個 mobile app 利用了 Cloudflare CDN 在全球各地的機房所建置的網路加速以及增進隱私的服務滿有意思的，跟大家分享一下。
 

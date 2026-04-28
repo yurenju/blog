@@ -8,7 +8,7 @@ tags:
 categories:
   - tech
 ---
-![gmail logo](images/0.gif)  
+!gmail logo  
 
   
 [![](images/1.jpg)](http://www.flickr.com/photos/yurenju/146883179/ "photo sharing")  
