@@ -13,7 +13,7 @@ images:
   - "/posts/2016-11-24_21-世紀社會安全網/images/1.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 這是在 cfasummit 聽到的座談會 “A 21st century safety net: visions, models, and tactics”。這個的演講方式是每個人都有段時間可以講自己參與的專案，不過跟之前形式比較不一樣的是講者之間的討論比較少，另外因為演講的時間較長所以 QA 的時間也比較少一點。
 

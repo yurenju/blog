@@ -18,7 +18,7 @@ images:
   - "/posts/2017-01-08_家系圖軟體的雛形與初步研究/images/6.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 前幾週跟台北市社會局的朋友吃飯，又提到了上次吃飯提到社工常會用的家系圖 (Genogram) 想找個方法可以更方便的繪製。當時聽起來覺得應該蠻簡單的，因為自己這幾年都在做向量繪圖軟體，想說這題目蠻適合我，回來之後就開始研究了一下。
 
@@ -30,11 +30,11 @@ images:
 
 [GenoPro](http://www.genopro.com/): 看起來是套很強大的家系圖繪製軟體，看起來用這套應該可以解決所有問題，有 Windows 與 Mac 版本，一套 49USD。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 [smartdraw](https://www.smartdraw.com/): 是一套可以繪製非常多種圖形的製圖軟體，不過他也支援了家系圖，登入可以免費試用稍微用了一下雖然只能畫不是太複雜的家系圖，不過看起來也是可用，每個月 14.95USD，就畫家系圖而言或許買斷 GenoPro 會是比較好的選擇。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 雖然看起來已經有現成的專案，不過我還是看了一下如果要實作該如何做，也研究了一些相關資料。
 
@@ -56,17 +56,17 @@ images:
 
 然後我就用一個最簡單的家系圖例子，試著用我自己定義的檔案格式看看有沒有辦法輸出。
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 後來用 viz.js 輸出則是這樣：
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 [https://yurenju.github.io/genogram/](https://yurenju.github.io/genogram/)
 
 後來採用 viz.js 發現其實使用 graphviz 是無法做到的，主因是所有 genogram 的圖形都是折線，但是表達雙胞胎時卻不是折線：
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 而 graphviz 設定線段的型態只能針對整個圖形設定，所以不能指定部分的邊緣要使用非折線。後來覺得這個實驗已經超過了 weekend project 了，就先停下來，把自己已經研究過的東西寫一寫。
 

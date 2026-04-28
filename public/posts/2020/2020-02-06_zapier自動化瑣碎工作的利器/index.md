@@ -15,7 +15,7 @@ images:
   - "/posts/2020-02-06_zapier自動化瑣碎工作的利器/images/3.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 [Image credit](https://zapier.com/page/partner-kit/)
 
@@ -23,7 +23,7 @@ images:
 
 Zapier 是一個用來自動化各種瑣事的付費服務，它可以把很多不同服務的步驟串起來，比如說像是你收到了一封特定的 email 後他可以自動地幫你加到代辦事項當中，順便再用 Slack 通知你。我現在設定了幾項工作如下：
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 前面兩項跟 github 相關，在指定的 github repo 當中如果我被指派了新工作或是有人指定我來 review 一個 Pull request 時，Zapier 會自動的把工作放到 Todoist 內指定完成日期是今天（通常這些我都會在一天內做完），並且透過工作用的 Slack account 傳送私訊給我。
 
@@ -47,7 +47,7 @@ Zapier 是一個用來自動化各種瑣事的付費服務，它可以把很多�
 
 而提供了這麼多樣的功能，理所當然的是一個[付費服務](https://zapier.com/app/billing/plans)。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 收費上也不算便宜。雖然也有免費方案，但是沒有多重步驟感覺起來跟 IFTTT 就沒什麼太大的區別，如果要買付費方案的話感覺就是要用好用滿才不會浪費。
 

@@ -27,13 +27,13 @@ images:
   - "/posts/2016-10-10_line-developer-day-見聞-研討會觀察/images/15.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 之前我在 [COSCUP](http://coscup.org/2016/) 擔任過記錄組長跟議程組長，這次參加 LINE Developer Day 感覺有很多可以作為其他也正在舉辦研討會的夥伴的參考資訊，記錄如下。
 
 ### 訊息傳遞管道
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 首先是流通訊息的管道。想當然爾 LINE 作為一個傳訊平台這次的大會當然也用了 LINE 來傳遞訊息。COSCUP 來說大多數的會前、會後訊息都是由 email 寄送，當天搜集訊息則用 twitter 的 hashtag 與 slack / irc 作為場內聊天機制。
 
@@ -41,25 +41,25 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 
 ### 報到
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 會議前傳遞給我的訊息
 
 在會議開始前我收到了這樣的訊息，點選該連結後會出現一個 QR Code，現場則一字排開有許多機台可以掃描這個 QR Code。
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 掃描完畢後，你會在收到一個要到哪個閘口報到的訊息，像是我是到 E 閘口，到那邊之後就可以拿到議程資訊以及入場證。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 ### 會議直播、簡報
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 除了給參加者的 LINE account 外，還有另外一個是對外的帳號，沒來參加的人也可以加這個帳號。這個帳號的內容裡面就有直接可以在 LINE 裡面開啟直播的功能（我還真不知道 LINE 可以直播）。另外在該議程結束後還會直接在同頻道釋出放在 slideshare 的投影片。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 這個真的可以多加學習，雖然很多研討會都沒辦法在演講之後立即拿到演講簡報，不過如果有類似的場合，演講者跟主辦方可以配合在演講前就取得簡報時就可以利用這種方法釋出簡報。
 
@@ -67,7 +67,7 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 
 ### 議程表、問卷與其他相關資訊
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 除了演講結束後會立即用訊息遞送簡報外，整個研討會想知道的相關資訊全部都在同一個頻道裡面可以獲得，像是議程表、問卷或是其他資訊其實都是開啟一個網頁顯示，但是整合在同一個頻道真是很實用。在這次的研討會我需要議程資訊時一定都是從這邊看議程表。
 
@@ -75,13 +75,13 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 
 ### 獲得獨家限定 LINE 貼圖的小遊戲
 
-![image](images/9.png#layoutTextWidth)
+![image](images/9.png)
 
 之前辦理 COSCUP 時有好幾屆攤位廠商或社群都會在當天舉辦一些活動，贈送贈品來吸引參與者的目光。這次 LINE Developer Day 也有類似的作法。不過更進一步的是這個遊戲是由 Beacon 所構成的。關於 Beacon 可以參考[前篇文章](/posts/2016-10-04_line-developer-day-%E8%A6%8B%E8%81%9E-%E7%81%AB%E7%B4%85%E7%9A%84-bot-api/)的最後一節。
 
 在 Beacon 的演講結束後，講者告知今天有一個獨家限量的 LINE 貼圖，只要開啟 LINE Beacon 功能，並且在三個場地：LINE 包場的咖啡館與兩個演講廳特定地點「經過」後，蒐集到這三個場地感應的 beacon 就可以兌換獨家的 LINE 貼圖。
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
 大家都在看手機可不是在玩 Pokemon Go，而是圍繞在 Beacon 裝置旁邊感應！
 
@@ -89,21 +89,21 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 
 當我放棄後去聽演講，不知不覺中就感應到了三個場地的 Beacon 拿到了貼圖。
 
-![image](images/11.png#layoutTextWidth)
+![image](images/11.png)
 
 這次 Beacon 雖然很有創意，不過建置軟體硬體時出了點差錯，否則應該是個很有趣的體驗。
 
 ### LINE 包場的咖啡館
 
-![image](images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg)
 
 除了兩個會議廳外，LINE 這次也包下了在會議廳外的咖啡廳作為給聽眾休息的地方，也預留一個區域供記者寫稿。這邊提供免費的點心與咖啡，在下午其中一場終於忍不住前一天沒休息足夠的疲勞，就到這個咖啡館稍作休息。
 
-![image](images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg)
 
 而且有室外座位，我當然就在室外挑了一個好位置喝喝咖啡，發呆。原本想說整理一下剛聽的演講訊息，不過我真的是太累了，就在這邊望在外面的景色發呆。
 
-![image](images/14.jpeg#layoutTextWidth)
+![image](images/14.jpeg)
 
 然後其中一種點心是熊大銅鑼燒。
 
@@ -111,7 +111,7 @@ LINE 大致上也是這樣（除了場內交流機制，似乎沒看到），但
 
 ### 結語
 
-![image](images/15.jpeg#layoutTextWidth)
+![image](images/15.jpeg)
 
 這次 LINE Developer Day 在會議組織方面真的有許多可以好好學習的地方，雖然這次會議的組織是由公司主導，相對於 COSCUP 這樣全由志工組織的研討會，LINE Devloper Day 包括講者的安排上當然有許多方便的地方，不過值得學習的地方也不少。
 

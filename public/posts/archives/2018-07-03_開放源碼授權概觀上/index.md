@@ -54,7 +54,7 @@ images:
 
 #### 1. 開放源碼 (Open Source)
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 圖片出自於 [A new Firefox and a new Firefox icon](https://blog.mozilla.org/firefox/new-firefox-new-firefox-icon/)
 
@@ -62,7 +62,7 @@ images:
 
 #### 2. 自由散佈 (Free Redistribution)
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 除了可以閱讀源碼外，開源授權通常都授予使用者自由散佈源碼的權利，當你透過廠商或是開發者取得源碼後，你可以自由的將這份原始碼散佈給其他人而不需要經過額外許可。
 
@@ -70,7 +70,7 @@ images:
 
 #### 3. 衍生著作（Derived Works）
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 衍生著作亦即授權可以修改源碼後衍生成另外一個產品。好比 Google Chrome 瀏覽器背後的開源專案 Chromium 被 Github 公司修改後衍生成另外一個專案 Electron 用於製作 Desktop app，而 Visual Studio Code、Brave 瀏覽器、Slack 通訊軟體以及 Twitch 桌面版串流軟體全部都是衍生於 Electron。
 
@@ -86,7 +86,7 @@ images:
 
 在從不同層面開始講解各種授權前，我們可以用一張圖來表達不同授權的嚴謹程度。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 越左邊的授權代表在授權的規定越鬆散，反之則是越嚴格。舉例來說 MIT 授權在義務方面僅規範修改源碼後需要將授權聲明納入，完全沒有規範衍生作品是否要開放源碼，也就是衍生作品可以選擇開源或閉源，甚至改變授權也沒問題。
 
@@ -102,7 +102,7 @@ images:
 
 這三種不同接觸到開源軟體的層面，會有不同的注意事項。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 #### 使用
 

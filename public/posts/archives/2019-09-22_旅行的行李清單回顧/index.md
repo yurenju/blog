@@ -24,7 +24,7 @@ images:
   - "/posts/2019-09-22_旅行的行李清單回顧/images/12.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 最近到摩洛哥玩加上荷蘭轉機順便去玩，因為時間比較長有十八天的關係所以比起之前花了更多時間準備這次的行李，這幾天回來了想說可以整理一下這次帶去的行李清單，來審視一下那些東西多帶了。
 
@@ -42,15 +42,15 @@ images:
 
 盥洗這次一樣有用小罐容器帶了洗髮乳跟沐浴乳，偶爾有用到不過大部分的飯店都有提供。另外也有準備 [sea to summit 的快乾浴巾](https://seatosummit.com/product/drylite-towel/) 也是滿方便的，質感跟一般毛巾不同需要適應一下，但是非常快乾。
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 另外這次也帶了 [sea to summit 的快乾涼感睡袋內套](https://seatosummit.com/product/coolmax-adaptor-liner/)，雖然這次沒有用睡袋但內套是在旅館床上可以單獨使用的。睡袋內套是上次在日本時在某間旅館住了之後全身起了疹子後就覺得可以試試，這次使用覺得效果很好，不用太擔心旅館寢具的衛生問題，而且體積很小。
 
 #### 藥物
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 這次帶了感冒藥、頭痛藥、腸胃藥、暈車藥還有扭傷開的肌肉鬆弛劑跟消炎藥。結果前面四種我跟 Chialin 都用到了，扭傷的藥是備用的沒用到。整體看起來準備的也滿齊全的，不過下次要多準備一個止瀉藥會更好。
 
@@ -64,13 +64,13 @@ images:
 
 另外我也帶了 10 吋的 Surface Go 出門，雖然說路上都可以寫日記跟把相機的照片讀出來放到 Lightroom，不過網路速度不夠沒辦法雲端同步就是了。
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 這次最常用到的是這兩個轉接頭，一個是各種電源插座的變壓器，另外一個是 USB type-c, lightning, micro USB 等等的轉接頭，還附有推 SIM 卡的針與收納槽，非常的實用。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 因為這次有兩個國家這次也嘗試用了不需要實體 SIM 卡的 [Google Fi 服務](https://fi.google.com/)，好處是不用 SIM 卡，到另外一個國家也不需要換跟設定，全球費率統一。壞處就是跟當地電信方案比起來滿貴的。
 
@@ -80,19 +80,19 @@ images:
 
 這次行李用了一個登機箱大小的硬殼行李箱跟 [Peak Design Travel Backpack](https://www.peakdesign.com/products/travel-backpack) 也是登機箱的體積，平常是 35L 不過可以展開成 45L。
 
-![image](images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg)
 
 上面這兩個是用在城市與城市之間的移動，另外還放了一個 Mystery Ranch 19L 的可收納背包一般出門的時候背，沒用到的時候就收起來丟在行李箱裡面。
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
 整理袋是用 [Patagonia 的中型整理袋](https://www.patagonia.com/product/black-hole-packing-cube-6-liters/49366.html)跟 [Peak Design Tech Pouch](https://www.peakdesign.com/products/tech-pouch)，這兩個都很好用，Patagonia 雙開設計很適合大略分類然後把細碎的東西都放在一起，Tech Pouch 裡面我大多都是把所有電子相關用品都放裡面，它打開就可以站起來，非常方便。
 
-![image](images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg)
 
-![image](images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg)
 
 #### 還想添購的東西
 

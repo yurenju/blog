@@ -22,11 +22,11 @@ images:
 
 所以我寫了兩個小工具可以減輕一點痛苦。第一個工具比較簡單是一個 chrome 擴充程式  — [pinkoi-csv](https://chrome.google.com/webstore/detail/pinkoi-csv/iaffjhimpdggaelffiadojfihhcoomlk)，安裝了之後先重新整理頁面，接著到 pinkoi 後進入訂單管理，在訂單管理的任何一個頁面，按右上角粉紅色的 Px 圖示，選擇你要下載的訂單種類，按下擷取訂單稍後數秒，就會將訂單下載成 csv 的檔案格式。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 CSV 檔案格式可以用 iWork 的 Number 或是 [LibreOffice](https://zh-tw.libreoffice.org/) 打開，如果很不幸的你只有 Microsoft Excel，你可以去下載 LibreOffice，那是開源且免費的。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 Number 打開像這樣
 
@@ -36,7 +36,7 @@ Number 打開像這樣
 
 Pinkoi Utility 是一個安裝在 Google Spreadsheet 的外掛，功能主要有二：第一個是可以幫你在試算表裡面開分頁，每個分頁都是一種類型的訂單如下圖
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 第二個功能是假如說你的公司是用[中華票務](http://www.cxn.com.tw/)來開電子發票，恭喜你這個外掛程式可以幫你將訂單資訊直接送到中華票務直接開立電子發票。
 
@@ -48,7 +48,7 @@ Pinkoi Utility 是一個安裝在 Google Spreadsheet 的外掛，功能主要有
 
 安裝完後，還記得 pinkoi-csv 有兩個選項嗎？其中一個選項是下載 JSON 檔案，這個檔案就是用來讀取到 Google 試算表用的。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 按下**擷取訂單（下載 json）**後，將會下載一個 pinkoi.txt 檔案，這時請把這個檔案上傳到 Google Drive 上任何一個地方。但別忘記檔名一定要是 pinkoi.txt，如果你下載多次變成 pinkoi (1).txt 請記得要把檔名改回來之後再上傳。同樣的如果 Google Drive 上已經有相同名字的檔案，請先移除後再上傳一次。
 
@@ -63,10 +63,10 @@ Pinkoi Utility 是一個安裝在 Google Spreadsheet 的外掛，功能主要有
 
 接著到訂單裡面去找哪些訂單你要開發票，要開發票的訂單就整列複製，貼到 cxn 從 A2 那列開始貼上，支援多筆訂單。填完之後，按下「開立發票」就會開始把 A2 開始的訂單全部都開成發票，如果有多個品項也會自動彙整成一張發票。最後看到這個畫面就成功啦！
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 如果使用上有任何問題，你可以寫信給我 yurenju@gmail.com，因為這算是我興趣開發的，可能也沒辦法保證多久可以解決你的問題，不過還是歡迎回報問題！
 
 上傳到中華票服後，當然就可以得到精美的熱轉印紙電子發票紙本囉！
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)

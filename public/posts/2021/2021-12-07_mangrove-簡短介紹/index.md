@@ -18,7 +18,7 @@ Mangrove 是一個不需鎖定資產的 Orderbook 形式的 DeFi 交易協定，
 
 達成這個目的的方式，就是讓每筆訂單（或是說 Offer）都是一段可執行的程式碼 (稱為腳本 Script，不過要注意這段 Script 也是智能合約) 加一個觸發條件，當觸發條件滿足後就這段 Script 就會被執行，並且在執行完之後會再次檢查是否有滿足觸發條件，也就是有沒有確實地交換兩種代幣，如果沒有交換成功，這筆交易就會 revert。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 舉例來說如果上圖為 Mangrove 訂單簿，每個訂單都會是一個 Offer。每個 Offer 裡面都包含了：
 
@@ -37,7 +37,7 @@ Mangrove 是一個不需鎖定資產的 Orderbook 形式的 DeFi 交易協定，
 
 1.  不需要剛開始就鎖定資金，入金到某個智能合約
 2.  資金利用效率比較高，沒在用的時候還是可以放在其他 DeFi 產品生利息
-    ![image](images/2.png#layoutTextWidth)
+    ![image](images/2.png)
     另外在 Mangrove 裡面還可以用一段 Code 管理許多 Offers，當一個 Offer 被吃掉後，他也可以同時更新其他由同一份 Code 管理的 Offer 的價格資訊，不需要像是一般 Maket Maker 那樣重複的取消、建立新的訂單，只需要更新 Offer 的參數即可。
 
 ### 參考資料

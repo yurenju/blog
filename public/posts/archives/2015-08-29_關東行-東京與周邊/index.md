@@ -33,21 +33,21 @@ images:
 
 去了京都與一些被稱為「小京都」的地方（像是高山），這次我們則到了譽為「小江戶」的川越。買了一日卷之後，我們就從喜多院參觀起。
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 仙波東照宮前
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 其實在逛喜多院的時候，我們真的著實感受到日本夏天的熱浪，在接近中午的時候參觀汗真的是用噴的。
 
 後來我們看地圖覺得大正浪漫夢通り應該不遠，想說邊走邊找吃的，結果走到一半的時候差不多已經快變人乾了，後來看到一間餐廳不管三七二十一我們就進去吃了，後來發現這間店「[川越 いちのや](http://tabelog.com/saitama/A1103/A110303/11000139/)」也小有名氣，一不小心就達成這次原本要吃一間鰻魚飯的目標。
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 午餐後我們就順路逛到了大正浪漫夢通り再沿著逛到接著的鐘樓。
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 後來又繼續往菓子店橫丁逛去，不過我們不知道怎麼搞的在喜多院花了很多時間看德川家族的一些展示花了非常久的時間，我們到菓子店橫丁的時候其實店幾乎全關了，只好到一間也快要關的糖果雜貨店逛逛，有點像是二十世紀少年裡面的雜貨店的感覺。
 
@@ -59,15 +59,15 @@ images:
 
 其實原本沒有要逛明治神宮，只是我們到 Fuglen Tokyo 喝完咖啡後原本要去原宿逛逛，後來看到明治神宮就在旁邊，想說就先進去逛了一下。沒想到這個地方超大的啊，又差點被熱死一次。
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
 運氣不錯的是剛好遇到有新人在這邊舉行結婚儀式。
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 至於原宿果然年齡層比較低是一個充滿人的地方 ⋯⋯
 
-![image](images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg)
 
 吃完午餐我們就跑到別的地方逛街了。
 
@@ -75,13 +75,13 @@ images:
 
 這次來東京之前跟往常一樣跟 [Fifteen Steps workshop](https://www.facebook.com/15Steps) 的老闆小趙問了一下東京可以來造訪的咖啡館，這次我們去了兩間咖啡館，第一間是 Fuglen Tokyo
 
-![image](images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg)
 
 這間店的風格其實看起來是酒吧（其實也是酒吧）但是咖啡也很棒，我們在這邊喝了 Latte 跟單品的 Chelelectu (耶加雪夫），喝了一整個都醒了，超棒的！店員的英文也還在可以溝通的程度。後來帶回來的 Githiga AA (肯亞) 也是焦糖味濃到不行，真讓人懷疑是不是偷加了焦糖，哈。
 
 另外一間造訪的是 Switch Coffee，這間距離最近的目黑地鐵站走路大概還要十五到二十分鐘的路程，夏天走真的有點遠。而且走到店裡最傻眼的是沒有座位，我們兩個就站在吧台旁邊有個立桌喝咖啡。
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
 我們點了 Lyego Kenya 跟 El Socorro Guatemala，肯亞很棒沒錯，但是瓜地馬拉真是讓我驚豔到不行，我沒喝過堅果 + 奶油味這麼濃的單品！喝完之後我真的很想要買這包咖啡豆回家，但是因為是倒數第二天我們身上的現金也用得差不多了，而 Switch Coffee 並不能用信用卡，問了半天之後扼腕的沒買咖啡豆回來。回程後我們仔細算了一下其實還是可以買咖啡豆，但是把錢用到這麼見底實在是太可怕了。
 
@@ -91,9 +91,9 @@ images:
 
 捨棄了櫻花跟楓葉，我們在夏天的時候來到日本，最期待的就是花火大會啊啊啊啊啊！經過一番搜尋後，我們決定參加今年期待度第二高的江戸川区花火大会。我們大概提前兩個小時去，在超級多人潮緩緩地移動下，我們竟然還佔到了一個位置實在是很幸運，而且很多人都穿著浴衣來看煙火，真是超級有節慶的感覺。
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
-![image](images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg)
 
 前面前面有兩根細細的就是放煙火的地方
 
@@ -107,13 +107,13 @@ images:
 
 台灣閣
 
-![image](images/12.png#layoutTextWidth)
+![image](images/12.png)
 
-![image](images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg)
 
-![image](images/14.jpeg#layoutTextWidth)
+![image](images/14.jpeg)
 
-![image](images/15.jpeg#layoutTextWidth)
+![image](images/15.jpeg)
 
 而且其實還有好幾對人也來聖地巡禮，看來很多新海誠的影迷呢。
 

@@ -19,7 +19,7 @@ images:
   - "/posts/2019-12-03_witnet-去中心化預言機-devcon-5-見聞/images/7.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 前言：這篇會講得比較長一點，會從預言機 (Oracle) 一路講到去中心化的預言機 Witnet，抓緊囉！
 
@@ -39,7 +39,7 @@ Oracle 的實作方法有很多種，機制啟動後將會到外部擷取資料�
 
 如果要自行實作一個簡易的 Oracle，可以在 Ethereum 內部署一個 Oracle 智慧合約，另外在外部建立一個 daemon 來監控這個 Oracle Event，當收到特定 Event 的時候呼叫相對應的 Web APIs 取得結果後，再把結果透過呼叫智慧合約的 callback 來將資料帶入區塊鏈當中，如下圖所示。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 至於要如何實作這個外部的 Oracle Daemon 作法就很有彈性，簡單實作方法可以是架設一台 AWS EC2，上面放把可以存取 Oracle 智慧合約的私鑰，監測到新的 Event 時去 Web API 擷取所需資料後寫回區塊鏈。
 
@@ -51,7 +51,7 @@ Provable 提供的機制跟上述自行架設 daemon 的機制類似，不一樣
 
 以官方的例子來說，如果要從 coinbase 查詢 ETH/USD 的交易資訊，可以在智慧合約中用以下的語法查詢：
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 此查詢會發出事件後，Provable daemon 監聽到此事件後將會依據查詢語法執行查詢後，再將得到的結果透過智慧合約的 callback 把資料寫回區塊鏈。完整的範例可以看 [Provable 針對 Ethereum 的範例程式](https://docs.provable.xyz/#ethereum-quick-start)。
 
@@ -77,19 +77,19 @@ Witnet 是一個去中心化的 Oracle 網路，也是另外一個區塊鏈，�
 
 我們先從一個使用者的角度來看要如何使用 witnet 來擷取資料。還記得上面用 Provable 擷取 coinbase 價格的例子嗎？如果我們在開發一個需要擷取 ETH 價格的智慧合約，同樣的例子在 Witnet 首先先寫一個 JavaScript 如下：
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 寫完之後，透過 Witnet 提供的工具 rad2sol 編譯這個 JavaScript 成為一個十六進位的字串，而這個字串所代表的是擷取資料的方法，但是用更精簡的格式儲存，當我們需要使用時，則將一個智慧合約宣告為 Witnet Request 並且將該字串放入建構函式當中：
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 接著我們就可以在合約之中使用 `UsingWitnet` 所提供的 `witnetPostRequest()` 與 `witnetReadResult()` 分別發出請求以及接收結果。
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 使用起來比起 Provable 多出了一個編譯的步驟，但其他部分則不會差太多。而之中要如何利用 Witnet 去中心化的機制取得 Web APIs 的回傳結果呢？請見下圖：
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 在 Witnet 上面的節點總共有三種工作類型：
 

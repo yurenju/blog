@@ -25,7 +25,7 @@ images:
 
 而區塊鏈上的程式邏輯智能合約就像是一套下筆之後就一定要依循履行的規則，Set Protocol 就是一套可以讓所有人都可以打造自己的基金，並且給其他人使用的協定。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 每個人都可以當基金管理者，自行創造一個指數基金，比如說 PERP 跟 DYDX 都是永續合約的交易平台的代幣，我們可以自行創建一個基金 Perpetual Swap Index (PSI) 並且在這個基金裡面配置 60% PERP 與 40% DYDX。當使用者花 100 元買 PSI 時，他實際上會持有的就是 60 元價值的 PERP 與 40 元價值的 DYDX，而且持有 PSI 的人也可以直接跟智能合約贖回標的資產，如果以 PERP, DYDX 價格都為 20 USD 的情況下，這個使用者就可以贖回 3 PERP 與 2 DYDX。
 
@@ -57,7 +57,7 @@ NAV (Net Asset Value) 發行模組可以讓投資者在入金的時候使用單�
 
 比如說這個用兩倍槓桿追蹤 ETH 的 ETH 2x FLI (Flexible Leverage Index)，除了有 Compound ETH 外，也有 USDC 的債務。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 債務發行模組其實是一個更能自由操作的模組，發行時可以透過 Manager Hook 的方式實作各種邏輯如白名單、發行時間窗口或是發行上限等等功能。
 
@@ -79,7 +79,7 @@ Set Protocol V2 之後加入了很多功能，在公告文件中也提到了可�
 
 上去逛 Set Protocol 的 TokenSet 網站，確實也看到了滿多有趣的基金，甚至有透過 Mirror Protocol 橋接 FAANG 的指數。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 我自己也有買了些 DPI (DeFi Pulse Index)，指數果然是動得比較慢，對我來講就是在這個資訊爆炸的圈子偷懶少研究一點，買個安心的指數。
 

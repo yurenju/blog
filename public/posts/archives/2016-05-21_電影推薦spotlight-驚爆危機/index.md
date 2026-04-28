@@ -16,7 +16,7 @@ images:
   - "/posts/2016-05-21_電影推薦spotlight-驚爆危機/images/4.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 截自官方網站 [http://spotlightthefilm.com/](http://spotlightthefilm.com/)
 
@@ -30,20 +30,20 @@ Spotlight 這部電影改編自真實事件，劇情大綱是波士頓環球報 
 - 鳥人的 Michael Keaton，飾演焦點小組編輯
 - 金剛狼他哥的 Liev Schreiber，飾演波士頓環球報的主編
 - 航站奇緣主管的 Stanley Tucci，飾演其中一名律師
-  ![image](images/2.png#layoutTextWidth)
+  ![image](images/2.png)
   以上圖片全取自 Wikipedia
 
 整部片其實是可以拍得很驚悚（雖然我還是覺得很驚悚），但是他卻平實的敘述了挖掘真相的過程，並且真相一層一層的像洋蔥一樣地剝開，到最底層的時候，我想不管是劇中人物的表情，或者是正在看這部電影的觀眾都會非常驚訝最後挖掘到的真相。最可怕的是當你知道這些並不只是電影，而是真實事件改編，這種扯到爆的狀況發生在現實生活中，比我看 Making the murderer 這部紀錄片關於知道美國警察如何栽贓時更為訝異，畢竟 Making the murderer 第二個案件還在審理中，還無法確認真相是如何，但是 Spotlight 有相當大一部分的資訊都可以在 Wikipedia 上找到，這種荒謬的事情真實發生實在是無法置信。
 
 另外我想誇獎一下 Mark Ruffalo 的演技。大概是從綠巨人浩克變成記者對我來說轉變太大，我很喜歡他在這部電影裡面詮釋一個難纏記者的方式，有點吊兒啷噹的個性，遇到要追查的事情時變得難纏又執著，到最後報導遭受阻撓時卻又變得異常火爆。不太確定這個記者原本的個性是怎樣，但是從 Mark Ruffalo 各式各樣的小動作感覺花了很多心思在揣摩這位記者。
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 取自電影官網 [http://spotlightthefilm.com/gallery/7](http://spotlightthefilm.com/gallery/7)
 
 另外後來我看了一下有個網站彙整出劇中出現人物，與實際人物的對照，部分選角跟扮演都還蠻像的。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 更多請參考 [http://www.historyvshollywood.com/reelfaces/spotlight/](http://www.historyvshollywood.com/reelfaces/spotlight/)
 

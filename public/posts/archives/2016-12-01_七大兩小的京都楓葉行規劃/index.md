@@ -21,7 +21,7 @@ images:
   - "/posts/2016-12-01_七大兩小的京都楓葉行規劃/images/9.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 這次很瘋狂了組了一團七個大人兩個小孩一起去京都，得到了滿多經驗的，寫下來給大家參考。
 
@@ -37,7 +37,7 @@ images:
 
 這次工具還是跟以前差不多，記事還是用 Evernote 離線存取，事前的記帳還是用 Google spreadsheet，在上面的紀錄就開放給一起旅行的人觀看，evernote 大概長這樣：
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 打 ❤️ 的是重要的事情。
 
@@ -45,11 +45,11 @@ images:
 
 另外我們也開了一個 facebook 活動頁面與聊天群組，活動頁面是在出發前把各式各樣的資訊放在裡面，像是 evernote 的連結或是 google spreadsheet 的連結就是貼在這裡。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 Facebook 聊天群組則是在出發後聯絡用的管道。在日本的時候我們每群人都可以上網，所以聊天群組是很適合的工具。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 ### 📶 上網
 
@@ -79,17 +79,17 @@ Facebook 聊天群組則是在出發後聯絡用的管道。在日本的時候�
 
 而正巧的是十一月分開始我們住的這間【四季香る宿 いちだや】也開始提供了冬季套餐，也就是十一月開始可以捕獲的松葉蟹套餐，既然都這個時候來了，何不吃個螃蟹？
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 來源： [http://www.ichidaya.co.jp/12oheya/04kurumi.html](http://www.ichidaya.co.jp/12oheya/04kurumi.html)
 
 上面是旅館房間的樣子，我們就是住在這間房間。重點是在這邊是整條的溫泉街，旅館會提供泡湯卷，在住宿期間可以到溫泉街上約七間溫泉無限次使用。
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 晚上吃螃蟹大餐，超爽～
 
-![image](images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg)
 
 城崎溫泉住宿就非常貴了，一趟旅程大概也只能住一晚。我們訂的方案是[冬季一泊二食螃蟹吃到爽的套餐](http://www.ichidaya.co.jp/11plan/01fuyu03.html)，每人未稅是 22,680 日幣，約 6,300 台幣，包含晚餐、早餐跟住宿，雖然貴但絕對值得。
 
@@ -97,7 +97,7 @@ Facebook 聊天群組則是在出發後聯絡用的管道。在日本的時候�
 
 機票因為這次很多人都在南部，所以買酷航從高雄飛關西空港的機票。
 
-![image](images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg)
 
 這次因為是楓葉季的時間，所以機票價格還蠻貴的，我們很早就開始看跟買了，不過楓葉季也不容得我們多考慮。後來還是買了不太便宜的機票，我們的機票分成兩張單，一張是兩個大人兩個小孩，另外一張是五個大人。
 
@@ -110,7 +110,7 @@ Facebook 聊天群組則是在出發後聯絡用的管道。在日本的時候�
 
 ### 🚃 行程
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
 行程安排上考慮到大家的腳程，我們每天都只有安排一到兩個景點，每天大約三點行程結束，接下來就是自由活動，我們到的地方交通都很方便，大多做不需換乘的地鐵或公車就可以回到民宿。通常這個時候會有人再額外安排景點，像是我們還會再排入夜楓的行程。
 

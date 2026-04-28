@@ -23,7 +23,7 @@ images:
   - "/posts/2017-08-10_ethereum-smart-contract-入門雜談/images/11.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 最近想開始試試 Ethereum 的 Smart Contract，入門時卻遇到很多問題，感謝 [Taipei Ethereum Meetup](https://www.meetup.com/Taipei-Ethereum-Meetup/) 與 [Chih-Cheng Liang](https://medium.com/u/5c031577a87d) 的協助，最近終於比較搞清楚一些基礎知識，寫下來分享給其他也想學習 Smart Contract 的新手。
 
@@ -56,7 +56,7 @@ Ethereum 的 Smart Contract 不一樣的地方是：
 
 ### Wallet, Backend &amp; Network
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 這是我剛開始覺得最混亂的部分，剛開始入門 Ethereum 與其他區塊鏈一樣都會需要有錢包 (Wallet)。而錢包大致上可以分成有圖形化使用介面 (GUI) 或是只有指令介面。剛開始會先使用有 GUI 介面的，但是真的要開發時還是會需要指令介面的程式會更實用。
 
@@ -66,22 +66,22 @@ Wallet Backend 是負責真正對區塊鏈的操作，目前我有用過的 back
 
 #### Wallet UI
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 [Mist](https://github.com/ethereum/mist/): 就是那套可以在 ethereum.org 官網下載的錢包軟體，其中裡面內建了 geth 核心，所以 Wallet backend 是使用 geth，Mist 主要就是 GUI 介面。若沒有更改過 geth 的設定，使用 Mist 第一次同步要花非常久的時間。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 使用測試網路的 Mist
 
 [Parity](https://parity.io/): 這是另外一套 Wallet，特點是同步區塊的速度比起 Mist/geth 要更快。其介面是 web。使用 `parity ui` 指令就會直接在你的預設瀏覽器上開啟 Parity Web UI。它的 backend 跟 frontend 放在一起，並沒有特意分成兩個專案，所以在架構圖 backend 那欄也是 parity。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 geth console: 這是包含在 [geth (ethereum-go)](https://github.com/ethereum/go-ethereum) 的一個指令介面，跟 JavaScript 的 console 非常類似，可以用指令的方式執行各種功能如查看餘額、匯款、讀取 script 等等功能。比如說要匯款就可以用以下指令：
 `eth.sendTransaction({from: eth.accounts[0], to: eth.accounts[1], value: 1000})`
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 #### Wallet Backend
 
@@ -91,7 +91,7 @@ geth console: 這是包含在 [geth (ethereum-go)](https://github.com/ethereum/g
 
 #### Network
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 我剛開始在這邊被困了很久，因為官網上面的 token tutorial 寫得並不是很清楚。
 
@@ -138,13 +138,13 @@ Ethereum 有很多不同的網路可以選擇，真正的以太幣 (ether) 是�
 
 我在看網路上的文章時有提到 Mist 會偵測背景如果有跑 geth 的話，就會直接連接到那個已經開著的 geth，不過我目前試過如果在 geth 切換到 rinkeby 網路是會出錯，還不太確定是什麼原因，目前猜測有可能是因為我是用 0.8.10 版本的 mist，升級有可能可以解決這個問題。
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 #### geth
 
 下達 `geth --help` 後會看到可以用 `--networkid`, `--testnet`或 `—-rinkby`指定不同網路：
 
-![image](images/9.png#layoutTextWidth)
+![image](images/9.png)
 
 除了 Frontier 是主網路外，測試網路可以選擇 (3) Rposten 或 (4) Rinkeby，至於每個網路代號的意義可以參考[這篇文章](https://ethereum.stackexchange.com/a/10313)，這邊就不細講了。
 
@@ -154,7 +154,7 @@ Ethereum 有很多不同的網路可以選擇，真正的以太幣 (ether) 是�
 
 parity 同樣的用 `--help` 就可以看到使用 `--chain` 可以指定各種測試網路，它可以指定的測試網路非常多，也包含 Kovan 測試網路。
 
-![image](images/10.png#layoutTextWidth)
+![image](images/10.png)
 
 ### 建立私有網路
 
@@ -199,7 +199,7 @@ INFO [08-09|19:01:03] Successfully sealed new block            number=10 hash=37
 
 這時 testrpc 會建立一些帳號，並且新增一些測試用的以太幣，最後面有個網址可以使用 geth console 連入，這整個網路都是模擬的，並不是 private chain，只是一個模擬網路提供開發者測試的模組。
 
-![image](images/11.png#layoutTextWidth)
+![image](images/11.png)
 
 開啟另外一個 terminal，輸入以下指令就可以連進去 testrpc 所創建的模擬環境了。
 `$ geth attach [http://localhost:8545](http://localhost:8545)`

@@ -22,7 +22,7 @@ images:
 
 注意這篇文章假設你已經瞭解 Smart Contract 了，如果不了解 Smart Contract 的話讀起來會有點吃力。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 [https://raiden.network/](https://raiden.network/)
 
@@ -57,7 +57,7 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 
 因為我還沒看過 Raiden 的服務或錢包長怎樣，為了比較好的解釋跟想像 Raiden Network，請先想像使用 Raiden 時會像是悠遊卡一樣的儲值卡 app，不一樣的是它是一個 app，平常你會到捷運的儲值機儲值悠遊卡，在 Raiden Network 底下你需要要一個 app 把你的 Ether 以太幣儲值入 Raiden 裡面。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 抱歉我畫得很醜 🤣
 
@@ -75,7 +75,7 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 
 首先，其實通道 (Channel) 其實就是一個 Smart Contract。當你打開了一個通道後就是佈署了一個新的 Smart Contract。舉例來說 Bob 跟 Alice 之間經常一起吃飯，三天兩頭就要互相 Cover 飯錢，他們之間的互動會是這樣：
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 上面的這張圖虛線以上是區塊鏈上的互動，虛線以下是 Raiden 網路上的互動。
 
@@ -95,7 +95,7 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 
 當雙方都更新完數據後，此通道可以被任何一個人（不限於雙方，可以是 Ethereum 上的任一節點）觸發 `settle()` 將雙方的錢都發回。Bob 跟 Alice 當初都存了 5 ETH 進去這個通道，最後餘額的狀況則是發回給 Bob 6 ETH, 給 Alice 4 ETH。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 這邊的重點就是因為每個人擁有的 Balance Proof 都會經過對方的私鑰簽名，所以不論是哪一方呼叫了 `close()` 或是 `updateTransfer()`，此通道的 Smart Contract 都可以利用 Solidity 中的 `ecrecover()` 驗證簽名，當 Balance Proof 驗證正確後，Smart Contract 就可以確認這筆餘額雙方都確認無誤。
 `註：[Brian Po-han Chen](https://medium.com/u/b808cc1f2067) 寫過一篇文章[解釋如何使用 ecrecover](https://medium.com/taipei-ethereum-meetup/%E7%94%A8ecrecover%E4%BE%86%E9%A9%97%E7%B0%BD%E5%90%8D-694fa8ae3638)。`
@@ -104,7 +104,7 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 
 剛剛先說明了兩個節點在 Raiden 網路的運作狀況，但是如果每次都要在需要支付的雙方開一個通道來轉帳顯得很不合理，所以 Raiden 網路上的多個節點就派上用場，假如說 Alice (A) 現在要轉帳給 David (D)，他們之間其實並不需要雙方存在直接通道，僅需要 Alice 跟 David 都在 Raiden 網路上即可，也就是說他們都跟 Raiden 網路上的其中一些節點之間已經開啟了通道。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 原圖出自 [Raiden Network 101](https://raiden.network/101.html) ，但是把格式改成橫的方便閱讀
 
@@ -116,7 +116,7 @@ Raiden 是一個基於 Ethereum (以太坊)的**鏈下交易方案**，主要想
 
 而這些通道不必然要馬上關閉，因為這些通道還可以用在其他人的轉帳，這樣就可以在不需要 Ethereum 交易費的狀況下繼續轉帳。這個時候讓我們再回到原本的那張草圖，你的 Raiden app 就像是儲值卡一樣，可以快速地拿它來做小額交易，直到你認為需要把錢提領回你的 Ethereum 帳號時，才按 Withdraw 提領把錢領出來。在你的通道還沒關閉時，都可以透過 Raiden 網路轉帳給另外一個人。
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 由於不需要全網共識的關係，所以 Raiden 可以在相對快的速度當中完成交易。另外在這邊要說 Raiden 網路中傳輸還是會有費用的，總共有兩種，其中一種 Protocol level fees 會在你轉帳時收取，不過理論上費用會非常少。另外一個費用是 Peripheral fees，如果你只有使用 Raiden 的輕節點 (light node) 時因為自身沒有跑完整的 Raiden 服務的關係，所以會需要全節點替你提供服務，所以會收取費用。
 

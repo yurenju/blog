@@ -14,7 +14,7 @@ images:
   - "/posts/2020-03-19_ethereum-開發工具比較-truffle-waffle-buidler/images/2.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 擷取自 [Buidler](https://buidler.dev/) 首頁
 
@@ -164,7 +164,7 @@ Error: Transaction reverted: function selector was not recognized and there's no
 
 同時每個 Pull Request 也都會有 codecov 的涵蓋率報告說明這次的修改對於測試涵蓋率的變動增減如何。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 這個範例因為是測試用所以涵蓋率是 100%
 

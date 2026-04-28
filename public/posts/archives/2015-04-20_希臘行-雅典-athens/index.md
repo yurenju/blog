@@ -27,17 +27,17 @@ images:
 
 因為希臘的市容跟其他歐洲城市比起來算是蠻普通的，看到雅典科學院才讓我有點踏入希臘的感覺。
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 雅典科學院
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 在雅典科學院這隻毛茸茸的狗就懶懶的躺在草地上。也不知道為什麼希臘的狗還真多，而且都超大隻的，還好很溫馴。在憲法廣場看完憲兵交接之後，我們就慢慢的逛到 Plaka。第一天來人生地不熟，找個吃得找了好久也沒找到，最後就索性找了間看起來旁邊有暖爐的室外座位吃飯，點了羊肉出乎意料的好吃，在希臘吃了幾餐之後發現是這邊的傳統餐點。
 
 吃完晚餐之後也晚了，我們就沿著街道隨意亂逛，沒想到一個轉身就看到夜裡高高佇立的衛城，旁邊又是另外一座古蹟（再次回來雅典後才知道是圖書館）。
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 Hadrian’s Library 哈德良圖書館
 
@@ -45,25 +45,25 @@ Hadrian’s Library 哈德良圖書館
 
 我們從 Acropolis 地鐵站出來之後，沿著衛城的南坡往上走，很快的就看到壯觀的劇場 Odeon of Herodes Atticus。
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 Odeon of Herodes Atticus
 
 通過山門後就是雅典衛城的地標帕德嫩神殿，而且看來雅典娜也眷顧著我們，這時候竟然出現了短暫的晴天，讓我們好好地拍拍照！
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
 帕德嫩神殿
 
 緊鄰旁邊的則是厄瑞克忒翁廟與著名的少女石柱
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 厄瑞克忒翁廟
 
 當我們滿足地拍完照片後，又在上面繞了幾圈，看看整個雅典城的風景，隨處走走、聊天後才下來。而當我們回到山門的時候才知道為什麼 Lonely planet 上面提醒要儘早上來衛城 ⋯。
 
-![image](images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg)
 
 晚點上來就要面對這些人山人海的遊客了
 
@@ -73,7 +73,7 @@ Odeon of Herodes Atticus
 
 隔天我們就從憲法廣場走路到 Acropolis 地鐵站附近的宙斯神殿走走看看，可惜相同的宙斯神殿也並不是那麼完整。
 
-![image](images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg)
 
 宙斯神殿
 
@@ -81,6 +81,6 @@ Odeon of Herodes Atticus
 
 最後一天我們則繞了 Plaka 悠閒的散步了一整個早上才去機場坐飛機，準備出發到我們這次最後一個城市  — Santorini!
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
 在雅典的最後一天寄出的明信片

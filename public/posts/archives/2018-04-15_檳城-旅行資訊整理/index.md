@@ -25,7 +25,7 @@ images:
   - "/posts/2018-04-15_檳城-旅行資訊整理/images/13.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 這次趁著清明連續假期找了個比較近的城市旅行，我們看了許多城市：峴港、釜山、胡志明市、河內等等等。不過後來因為太晚決定要出國，所以以上這些地方的機票都已經太貴，在原本已經要放棄出遊計畫後，沒想到在最後兩個禮拜 [Chialin Shih](https://medium.com/u/914b80767426) 在 Expedia 上面找到了價格還可以的 last minute 的票，我們就臨時決定到檳城玩囉。
 
@@ -33,7 +33,7 @@ images:
 
 #### 語言
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 檳城街道上常常可以看到中文標示的攤販
 
@@ -41,7 +41,7 @@ images:
 
 #### 天數安排
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 我們在檳城住了四晚，從台北八點多的飛機，到這邊大概已經下午五六點。回程是約下午一點的飛機。所以在這邊整天的時間大概是三天半。如果你跟我們一樣活動範圍只有在喬治市，我認為只要安排兩到三天即可，我們這樣五天四夜的行程感覺是長了些。
 
@@ -69,21 +69,21 @@ images:
 這邊推薦幾間餐廳。
 
 - [鴨粿汁](https://goo.gl/maps/ybkj4o6LDPF2)：是一種以老醬油為基底作為湯汁的粿條湯，裡面的料有鴨肉、豬腸、豬血等等，非常的好吃。這是我心目中檳城食物第一名。
-  ![image](images/4.jpeg#layoutTextWidth)
+  ![image](images/4.jpeg)
   個人排名第一名的檳城美食  —  鴨粿汁
 
 - [天皇粿條湯](https://goo.gl/maps/LdqsD9AJpLu)：鴨粿汁對面的攤販，他的粿條湯是比較清淡的口味，但是蠻好吃的。另外他的雞腳滷的非常入味，很好吃。我們也點了他的其他滷味，但比較沒有像雞腳這麼有特色。
-  ![image](images/5.jpeg#layoutTextWidth)
+  ![image](images/5.jpeg)
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 - [Restoran Tajuddin Hussain](https://goo.gl/maps/cyk8K2ieFx52)：是 Nasi Kandar 的餐廳，這邊的咖喱雞跟羊肉都很好吃，最驚豔的就是照片中最右邊我們隨便亂點的醃漬蕃茄，非常好吃，而且有荔枝的風味，但不太確定有沒有加荔枝。
-  ![image](images/7.jpeg#layoutTextWidth)
+  ![image](images/7.jpeg)
 
 - [老虎炒粿條](https://goo.gl/maps/TDUZq8sx6372)：在往壁畫的路上，炒粿條還不錯，但是雲吞麵比較普通。
-  ![image](images/8.jpeg#layoutTextWidth)
+  ![image](images/8.jpeg)
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
 左邊是雲吞麵，右邊是炒粿條
 
@@ -91,7 +91,7 @@ images:
 
 #### 交通
 
-![image](images/10.png#layoutTextWidth)
+![image](images/10.png)
 
 [https://www.grab.com](https://www.grab.com)
 
@@ -109,15 +109,15 @@ Grab 在 George Town 是很不錯的中長程交通工具。除了價格便宜�
 
 比較著名的景點中我們沒有去升旗山跟極樂寺，所以不太確定是否推薦。剩下的景點中有幾個比較推薦：
 
-![image](images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg)
 
 張弼士故居（藍屋）：張弼士故居除了藍色外牆很適合拍照外，整個大宅邸的建築也很值得一看。特別是週末有中文導覽，如果可以的話推薦週末過來。門票 17 MYR
 
-![image](images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg)
 
 檳城殖民博物館：這邊蒐藏了很多殖民時期的藏品並且用中文導覽，以漢人移民在殖民時期要如何跟英國人打交道作為切入點介紹這邊的藏品，以及當時他們的生活型態。導覽員非常的健談，也回答了我們很多關於檳城的問題。如果你對英國殖民時期的檳城有興趣，可以來檳城殖民博物館走走，門票稍高 30 MYR (約 230 TWD)
 
-![image](images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg)
 
 龍山堂邱公司：從大清帝國過來的移民在檳城成立公司，並且建廟作為信仰中心的古蹟。這邊不僅廟宇保持完善，一樓介紹整間公司的歷史與相關資料都做得非常完整，感覺值得其他類似古蹟參考。另外這邊距離其中一個宣禮塔很近，運氣好的時候可以在道教的廟裡聽到伊斯蘭宣禮塔廣播的聲音，很有意思。
 

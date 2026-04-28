@@ -27,13 +27,13 @@ Trust Token API 是一個正在標準化的瀏覽器 API，主要的目的是在
 
 通常這都是透過 Cookie 來做跨網站追蹤來記錄你在網路上的瀏覽行為。以 Facebook 為例。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 當使用者登入 Facebook 之後，Facebook 會透過 Cookie 放一段識別碼在瀏覽器裡面，當使用者造訪了有安裝 Facebook SDK 來提供「讚」功能的網頁時，瀏覽器在載入 SDK 時會再度夾帶這個識別碼，此時 Facebook 就會知道你造訪了特定的網頁並且記錄下來了。如此一來再搭配其他不同管道的追蹤方式，Facebook 就可以建構出特定使用者在網路上瀏覽的軌跡，從你的瀏覽紀錄推敲喜好，餵給你 Facebook 最想給你看的廣告了。
 
 不過跨站追蹤也不是只能用在廣告這樣的應用上，像是 CDN (Content Delivery Network) 也是一個應用場景。CDN 服務 Cloudflare 提供服務的同時會利用 Captcha 先來確定進入網站的是不是真人或是機器人。而他希望使用者如果是真人時下次造訪同時也是採用 Cloudflare 服務的網站不要再跳出 Captcha 驗證訊息。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 雖然 Cloudflare 也需要跨站驗證的功能來完成他們的服務，但是相較於 Google 或 Facebook 來說他們是比較沒那麼想知道使用者的隱私。有沒有什麼辦法可以保護使用者隱私的狀況下還能完成跨站驗證呢？
 
@@ -51,13 +51,13 @@ Trust Token 其實是由 Privacy Pass 延伸而來。Privacy Pass 就是由 Clou
 
 以 hCaptcha 跟 Cloudflare 的應用為例，使用者第一次進到由 Cloudflare 提供服務的網站時，網站會跳出一些人類才可以解答的問題比如說「挑出以下是汽車的圖片」。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 當使用者答對問題後，Cloudflare 會回傳若干組 blind token，這些 blind token 還會需要經過 unblind 後才會變成真正可以使用的 token，這個過程為 issue token。如上圖所示假設使用者這次驗證拿到了 30 個 token，在每次造訪由 Cloudflare 服務的網站時就會用掉一個 token，這個步驟稱為 redeem token。
 
 但這個機制最重要的地方在於 Cloudflare 並無法把 issue token 跟 redeem token 這兩個階段的使用者連結在一起，也就是說如果 Alice, Bob 跟 Chris 都曾經通過 Captcha 測試並且獲得了 Token，但是在後續瀏覽不同網站時把 token 兌換掉時，Clouldflare 並無法區分哪個 token 是來自 Bob，哪個 token 是來自 Alice，但是只要持有這種 token 就代表持有者已經通過了 Captcha 的挑戰證明為真人。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 但這樣的機制要怎麼完成呢？以下我們會透過多個步驟的例子來解釋如何達成這個目的。不過在那之前我們要先講一下 Privacy Pass 所用到的零知識證明。
 
@@ -79,7 +79,7 @@ Trust Token 其實是由 Privacy Pass 延伸而來。Privacy Pass 就是由 Clou
 
 DLEQ 有一個前提，在系統中的所有人都知道公開的 P 跟 Q 兩個點並且橢圓曲線群的個數是質數個或是 P 和 Q 生成的群是 isomorphism，此時以下等式會成立：
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 另外系統中會有兩個參考值 G 與 sG 會先公布給所有驗證者知道，G 是一個隨機點，sG 則是 Prover 用只有自己知道的祕密純量 s 對 G 運算後產生 sG。所有驗證者都可以再公開的地方得到這兩個點。
 

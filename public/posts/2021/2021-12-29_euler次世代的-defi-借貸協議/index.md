@@ -17,7 +17,7 @@ images:
   - "/posts/2021-12-29_euler次世代的-defi-借貸協議/images/5.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 不管是 Compound 或是 Aave 這樣的初代借貸協議幾乎已經是 DeFi 世界的標準配備了，這些協議上面有著相對主流的代幣可以提供或是借出，如 ETH, USDC, MKR, BAT 等，讓借貸協議成為一個去中心化的服務。
 
@@ -27,7 +27,7 @@ images:
 
 Euler 是新一代的協議，為一個無需許可的 DeFi 借貸協議。任何使用者都可以上架幾乎任意代幣到 Euler 當中作為代幣的供給以及借出。舉例來說我自己發行的 XYZ 代幣只要有在 Uniswap v3 上面有跟 WETH 結成交易對，就可以上架到 Euler。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 而可以上架任意代幣伴隨而來的是更高的風險，Euler 則提出了一系列的方式來管理風險，以下介紹 Euler 幾個特別的設計來達成無需許可的借貸協議。
 
@@ -47,7 +47,7 @@ Euler 是新一代的協議，為一個無需許可的 DeFi 借貸協議。任�
 
 試想如果一個借出資產 XYZ 突然漲了 1000 倍，如果沒有隔離分級，跟他一起共用抵押品的資產 ABC 的抵押品就會被跟著清算。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 #### 跨越級 (Cross-tier)
 
@@ -89,7 +89,7 @@ Compound 上面因為都是上架主流代幣，每個借出資產的風險可�
 
 TWAP 在 Uniswap 上面的計算是某種資產在指定的時間間隔下的時間加權平均價格。一般來說 TWAP 會更加的平滑，但是也會帶有部分延遲效果，如下圖的範例，TWAP 是平滑的曲線，而且會根據取樣的時間會有所延遲。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 [TradingView 上面的 TWAP 模組範例](https://tw.tradingview.com/script/ejpHwk8Y-TWAP-Trend/)
 
@@ -111,7 +111,7 @@ TWAP 在 Uniswap 上面的計算是某種資產在指定的時間間隔下的時
 
 為了解決這些問題，Euler 採用了不同的方法。Euler 不採用固定比例的折扣百分比，而是讓折扣隨著該倉位的價值下降而逐漸上升，也就是折扣隨著時間會愈來愈高，成為了一種荷蘭式拍賣。這樣的好處是潛在清算人都會需要自己決定是不是要以目前的折扣百分比來清算。每個清算人對於要獲利多少有不同的想法，所以會在不同的時機執行清算。而因為 Euler 採用了 TWAP 這種價格會平滑的上升或下降的特性，讓倉位的價值會平滑的下降，讓清算折扣也變成一個平滑漸進的折扣，可部分抑制 MEV 的發生。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 如上圖所示，在一般的清算方式中，當價格突破清算價格的那一刻（紅點處），所有的清算人都會希望在此進行清算以獲得 5–10% 的固定折扣而無可避免地要用最高的 gas 想辦法搶到；而 Euler 透過 TWAP 平滑連續的價格變化曲線給定不同的折扣，清算人需要考慮自己想要的利潤跟成本，決定要在哪個折扣點入場，這樣分散的入場時機可以減緩 MEV 的影響。
 

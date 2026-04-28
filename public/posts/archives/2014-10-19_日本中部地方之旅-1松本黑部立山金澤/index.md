@@ -25,25 +25,25 @@ images:
   - "/posts/2014-10-19_日本中部地方之旅-1松本黑部立山金澤/images/13.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 規劃了許久，這次跨越日本中部以及北陸地方的旅行終於結束了。有別於以往的旅行，由於要穿越黑部立山的關係，我們在中部地方從東邊開始繞了整圈，再從西邊向南回到名古屋，也是最近幾年旅行中造訪最多城市的一次，同時也是搭乘最多交通工具的一次。
 
 反過來說，這趟旅行在每個城市待的時間其實也不夠多，像是金澤或高山市對我來說都值得再造訪一次，也是留些有再次造訪的理由吧。名古屋住了一晚，在晚上非常有日本特色的櫻通附近繞了一下，隔天我們就坐上 JR 往松本前進。到達松本時因為颱風還沒遠離，有些陰雨綿綿，不過當我們步行到松本城的路上，看到了[縄手通り商店街](http://ja.wikipedia.org/wiki/%E7%B8%84%E6%89%8B%E9%80%9A%E3%82%8A%E5%95%86%E5%BA%97%E8%A1%97)，也是個很棒的小商店街，那邊有一些樹漸漸轉紅了，漫步在商店街，看看神社也是很棒。
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 到了松本城之後開始下了大雨，參觀完後雨也還沒停，我們就再散步回車站，搭了火車跟公車到了大町温泉郷。雖然經過了陰雨綿綿的一天，不過到旅館的時候還是非常興奮，這次我們訂的旅館是[ホテル山田屋](http://www.h-yamadaya.com/)，這是個算是非常傳統的日本旅館，當我們走進玄關的時候就要脫掉鞋子，而進房間的時候就覺得超興奮的，因為從來沒住過這種日本傳統旅館！
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 而這邊的晚餐更是好吃到不行，剛開始上了一盤菜之後以為這就是全部了，沒想到後面還有非常多菜他看你吃的差不多之後才會端上來，真是撐到不行，也很滿足，不過搞得我太飽沒辦法泡溫泉 XD
 
 休息了好一陣子之後，終於覺得沒那麼飽後，我們全家就一起往溫泉澡堂前進了。這邊的浴衣也蠻好看的。
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
 我跟我哥
 
@@ -53,19 +53,19 @@ images:
 
 我們到水壩的時候雖然還在飄著毛毛細雨，但是山嵐飄渺的景色真是美呆了。
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
-![image](images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg)
 
 水庫旁的森林也漸漸轉紅了。
 
 我們在這邊流連許久，後來搭著登山纜車黑部平前進，到這邊之後森林的顏色更加轉成紅黃顏色，剛開始起了大霧，霧散去後出現了一整片的秋色森林。
 
-![image](images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg)
 
 雲霧散去後的秋色森林
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
 接下來要搭的纜車從雲霧後面探出來，也是非常詩意。
 
@@ -73,19 +73,19 @@ images:
 
 到富山後我們下榻在車站附近的東橫 inn，隔天就搭 JR 往金澤出發。金澤也是另外一個我覺得可以待久一點的地方，這次我們從富山來回金澤時間也不是很充裕，然後在[ひがし茶屋街](http://ja.wikipedia.org/wiki/%E6%9D%B1%E5%B1%B1%E3%81%B2%E3%81%8C%E3%81%97)（東茶屋街）逛了很久，也是條很舒服又保存得很好的古街道。
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
-![image](images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg)
 
 這條街道其實不是古街道保存最完整的那條街，不過街道兩旁低矮的木造房子的氣氛我很喜歡
 
 走完之後我們又跑去日本三大名園的[兼六園](http://zh.wikipedia.org/wiki/%E5%85%BC%E5%85%AD%E5%9C%92)走走
 
-![image](images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg)
 
 兼六園的石燈籠
 
-![image](images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg)
 
 Chialin
 

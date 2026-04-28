@@ -13,7 +13,7 @@ images:
   - "/posts/2014-11-04_android-指令安裝-sdk/images/1.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 最近正在設定 Android 自動在 Travis-ci 上建置，發現幾個小技巧。Android 開發工具提供的 “android” 這個 command，可以利用 —no-ui 來用指令安裝，如：
 

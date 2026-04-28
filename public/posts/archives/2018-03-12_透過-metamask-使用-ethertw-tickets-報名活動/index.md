@@ -22,7 +22,7 @@ images:
   - "/posts/2018-03-12_透過-metamask-使用-ethertw-tickets-報名活動/images/10.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 這次 Taipei Ethereum Meetup 使用去中心化技術在 Ethereum 區塊鏈上建立了一個報名機制，並且於 2018/3/21 的活動採用這個報名系統。這篇文章將會講解如何利用 MetaMask 報名。
 
@@ -40,25 +40,25 @@ EtherTW Tickets 系統是透過 MetaMask 瀏覽器外掛與以太坊區塊鏈整
 
 請先到 [MetaMask 官方網站](https://metamask.io/)安裝延伸套件，目前 MetaMask 支援 Chrome 以及 Firefox 瀏覽器，經過測試目前 Chrome 瀏覽器的支援程度較佳。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 按下後會導到 Chrome Web Store
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 按下「加到 CHROME」來安裝延伸套件
 
 安裝完畢，按下瀏覽器右上角的狐狸圖示後會出現使用者條款，同意後後會進入輸入密碼的畫面，請輸入一組密碼並且妥善保存。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 接著會顯示一組恢復帳號用的復原碼，也請記下這組復原碼妥善保管後，按下「I’ve copied it somewhere safe」
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 最後會到以下的這個畫面，到這邊的話代表你的帳號已經開設完成。
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 ### 儲值 / 匯入 ETH
 
@@ -81,21 +81,21 @@ EtherTW Tickets 系統是透過 MetaMask 瀏覽器外掛與以太坊區塊鏈整
 
 按下「使用 MetaMask」完成報名後，將會跳出 MetaMask 的視窗讓你確認是否要送出此筆交易。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 跳出的視窗會包含你預計付出的報名費、以及用於給礦工費用計算的 Gas Limit 以及 Gas Price，以及最後的總額，請注意總額會稍微高於報名費用因為其中包含了報名費以及支付給礦工的交易費。
 
 確認執行此筆交易後，按下「Submit」即可送出交易，送出交易後下面會出現一個提示你可以到 Etherscan 查詢你的交易是否成功，通常交易會在一分鐘內完成。
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 你可以按下 Etherscan 來查詢你的交易，這筆交易剛開始會是顯示 Pending，過了一段時間後會顯示 **Success** 或是 **Failed**，請注意只有出現 Success 才代表你的報名已經成功。
 
-![image](images/9.png#layoutTextWidth)
+![image](images/9.png)
 
 如果報名成功，重新整理報名頁面後會看「本錢包位址已經報名，當天請出示寄給您的電子郵件即可。」，同時你也會收到電子郵件，確認交易成功後，請在活動當天活動報到時出示此電子郵件即可。
 
-![image](images/10.png#layoutTextWidth)
+![image](images/10.png)
 
 如果你報名時遇到任何問題，請直接透過 [Facebook 傳訊](https://www.facebook.com/messages/t/eth.taipei)跟我們聯絡。
 ```

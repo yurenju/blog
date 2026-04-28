@@ -21,7 +21,7 @@ images:
   - "/posts/2021-12-02_選擇權簡介/images/9.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 Bob 如果三個月後需要 100 KG 的咖啡豆，但是又擔心咖啡豆價格波動導致到時候買不起，該怎麼辦呢？
 
@@ -41,11 +41,11 @@ Bob 如果三個月後需要 100 KG 的咖啡豆，但是又擔心咖啡豆價�
 
 從上面的例子我們可以分析一下 Bob 跟農會分別在什麼狀況會獲利，首先看一下 Bob：
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 橫軸是咖啡豆的價格，縱軸是 Bob 的獲利。每公斤咖啡豆 Bob 的費用是 50 元，所以當價格低於每公斤 550 元前，Bob 的虧損都是固定每公斤 50 元，但超過 500 的時候虧損就會開始縮小，直到超過 550 元之後就開始獲利了。而且如果每公斤到 1000 元時 Bob 就賺翻了。那農會呢？
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 農會在價格到 500 元前，獲利都一直保持 50 元，價格超過 500 元之後獲利就開始減少，超過 550 元後就開始虧損，如果每公斤 1000 元，他就虧爆了。顯然這不是個賺錢的好方法，後面會講要怎麼解決這個問題。
 
@@ -63,11 +63,11 @@ Bob 如果三個月後需要 100 KG 的咖啡豆，但是又擔心咖啡豆價�
 
 一樣我們來看一下 Chris 的獲利分析：
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 Chris 在價格 500 元以上的時候都會固定虧損 50 元，因為如果價格太高，他就會選不履行選擇權合約，直接到市場賣咖啡豆，但會虧掉固定金額的權利金。當價格低於 500 元時會開始減少虧損，低於 450 時就會開始獲利，價格越低就賺愈多。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 農會則是價格低於 450 元就會開始賠錢。這邊一樣農會看起來有可能虧損的風險很高，隨著價格的下跌他的虧損可能會很大，之後會提到其他方法來避免這樣的風險。
 
@@ -85,7 +85,7 @@ Chris 在價格 500 元以上的時候都會固定虧損 50 元，因為如果�
 
 ### 賣方的風險
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 我們把四種不一樣型態的獲利分析放在一起看，這時候會發現擔任買方的 Bob 與 Chris 頂多就承擔權利金的損失，但是獲利隨著價格往自己有利的方向前進時獲利會愈來愈多；相反來說擔任賣方的農會雖然有機會賺取權利金，但承受的風險很高。
 
@@ -113,7 +113,7 @@ Chris 在價格 500 元以上的時候都會固定虧損 50 元，因為如果�
 
 在選擇權的權利金 (Premium) 的計算，最常使用的就是 [Black-Scholes Model](https://zh.wikipedia.org/wiki/%E5%B8%83%E8%8E%B1%E5%85%8B-%E8%88%92%E5%B0%94%E6%96%AF%E6%A8%A1%E5%9E%8B)，這是個用來為選擇權定價的數學模型，系統裡面有很多屬性會以希臘字母 (Greeks) 表示。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 透過 BS Model 為選擇權定價需要五樣參數來決定選擇權的價格：
 
@@ -127,7 +127,7 @@ Chris 在價格 500 元以上的時候都會固定虧損 50 元，因為如果�
 
 #### 波動率 (Volatility)
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 在這邊我們討論兩種波動率：歷史波動率 (Historical Volatility) 與隱含波動率 (Implied Volatility)。
 
@@ -139,7 +139,7 @@ Chris 在價格 500 元以上的時候都會固定虧損 50 元，因為如果�
 
 在觀察選擇權市場會發現反推出的 IV 在履約價最接近現價的 IV 會最低，而履約價距離現價越遠的選擇權反推出的 IV 越高。這樣觀察出來的現象稱為 Volatility Smile。
 
-![image](images/9.png#layoutTextWidth)
+![image](images/9.png)
 
 這樣的觀測現象通常會在選擇權市場開設時，會拿來針對不同履約價的選擇權微調價格，履約價愈靠近現價的選擇權的價格會愈便宜。
 

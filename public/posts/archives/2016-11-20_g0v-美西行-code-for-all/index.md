@@ -16,7 +16,7 @@ images:
   - "/posts/2016-11-20_g0v-美西行-code-for-all/images/4.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 說來也真巧，我們來美國的時候正好遇到萬聖節，去超市的時候看到外面擺滿了南瓜，看來這個節日南瓜是必備的啊。由於這次住在 Oakland 的關係，比較了解美國治安問題的朋友每次聽到我們著 Oakland 都會再三叮嚀晚上不要一個人出去，不過其實我們住了幾天其實也覺得治安沒那麼差，也或許剛好我們住的街區治安還不錯。
 
@@ -24,17 +24,17 @@ images:
 
 在 Stanford 講完演講之後，心情上也放鬆不少，隔天我們還抽了空去舊金山 City tour 了一天，晚上還跟非常久沒見的朋友葉平吃飯，混雜著時差跟疲憊，在這天還是稍微的舒緩了些。
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 休息了一天後我們去參加了 Code For All 的會議。這個會議是比較後來才安排的，原本是只有 clkao, kirby 跟 ttcat 代表 g0v 與 OCF 組織的代表人要參加，後來討論了一下我跟其他的朋友也可以去參加，就一起去了，只是就比較像旁聽，也沒太多發言就是了。
 
 Code For All 是一個國際公民科技組織網絡，聯繫不同國家之間的公民科技組織。g0v 之前雖然沒有在這個網絡裡面，不過跟裡面的一些成員也都有聯繫，這次去主要的目的就是跟網絡裡面的其他成員見個面，認識一下每個團隊目前的狀況與計畫，也向其他團隊介紹 g0v 零時政府，最後也討論了 Code For All 跨組織的運作方式等。
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 這次是我第一次參加 Code For All 會議，整天的會議讓我有點吃不消。早上的第一個 break 時跟旁邊的 Hatsuji Matsumoto 一起到外面買了咖啡，聊了一下他在介紹的時候提到地圖的專案 [papa-mama-map](http://papamama.codeforsapporo.org/)，這看起來是一個提供特定地區幼兒園的資訊，可以透過地點查詢附近是否有跟自己需求相符的幼兒園，這其實跟 ipa 他們參與的調查公園設施沙坑的專案似乎有點相關，都是以育兒的角度出發。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 Matsumoto san 住在北陸地方的南砺市，剛好之前去日本的時候有去附近的金澤跟白川鄉旅遊，他還帶了一本南砺附近的照片集介紹他的故鄉，裡面一些熟悉的場景真讓人懷念。而且在後來的 Code For America Summit 的時候還遇到他幾次，我們就瞎聊一下看到了什麼有意思的專案，也順便介紹剛認識的朋友們，是個很積極又好相處的人，或許之後有機會可以邀請他到台灣，或是有機會去他們那邊看看。
 

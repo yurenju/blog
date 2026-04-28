@@ -19,21 +19,21 @@ images:
   - "/posts/2019-07-26_srp-secure-remote-password更健全的登入及資料傳輸保護協議/images/7.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 [Lock me blue — Paolo Dallorso](https://www.flickr.com/photos/27868169@N00/15466412315/), CC 2.0 by-nc-nd
 
 在開發 web service 時，你是怎麼實作註冊 (register) 以及登入 (login) 功能呢？一般來說我們會讓 client 透過安全的管道把帳號密碼傳輸到伺服器，並且透過 salt 與單向 hash 將 hashed password 儲存到資料庫中。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 下次登入的時候使用者輸入帳號密碼時會將帳號密碼傳到伺服器上，再透過相同的方式來計算出 hashed password 並且比對與資料庫中儲存的是否一致來驗證，如此一來伺服器就不需要儲存你的明文密碼，並且在後續通訊時依靠既有的安全通道如 https 來確保資料傳輸的安全。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 不過當處理更敏感的資訊時，通道的安全就會愈來愈重要。[2015 年時曾發生](https://www.bnext.com.tw/article/35854/BN-2015-04-03-041513-81)由中國互聯網路信息中心（CNNIC）發出的有問題的憑證導致其可以在使用者完全無法發現的狀況進行中間人攻擊，這代表以上常見的登入機制形同虛設，所有機密資訊都將會暴露在外。此事件導致 Google 與 Mozilla 往後都不信任由 CNNIC 所發出的憑證。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 在這樣 HTTPS 通道安全都不可信賴時，我們要怎麼保護通道安全呢？SRP 提供了一種加強保護登入及資料傳輸安全的機制。
 
@@ -49,7 +49,7 @@ SRP 是一種強化登入以及資料傳輸保護的機制，此機制可以不�
 
 #### Register
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 註冊相對簡單，跟平常的註冊流程不一樣的地方是密碼不會直接傳送到 server 去，而是在本地直接計算出 hashed password 才傳到伺服器端。
 
@@ -63,7 +63,7 @@ SRP 協定規範了一個登入程序，當登入開始時 client 跟 server 都
 
 下圖中的 A, B 就是這樣產生的。
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 第一步使用者會使用自己的 username 跟伺服器索取自己的 salt 作為後續使用。
 
@@ -85,7 +85,7 @@ SRP 協定規範了一個登入程序，當登入開始時 client 跟 server 都
 - k: Multiplier parameter (k = H(N, g)，可以想像他是一個常數
 - A: 使用者用公式 A = g^a 產生出來的數值
 - B: 伺服器用公式 B = kv + g^b 產生出來的數值`
-  ![image](images/7.png#layoutTextWidth)
+  ![image](images/7.png)
   這邊 user 沒有 server 的秘密 b，而 server 沒有 user 的秘密 a，但是卻可以透過不同的公式（上圖中的最後一行）來組出相同的 session key S，而這把 session key 還可以為後續的通訊加解密來保證通訊安全，如此一來即使 https 通道被監聽了中間人還是無法解密這些資訊。
 
 註：本文沒有解釋為什麼這樣可以組出相同的資訊，不過我會把實作細節跟附在文末。

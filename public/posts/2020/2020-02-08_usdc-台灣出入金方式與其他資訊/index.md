@@ -13,7 +13,7 @@ images:
   - "/posts/2020-02-08_usdc-台灣出入金方式與其他資訊/images/1.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 最近這幾個月都一直有用穩定幣的需求，目前最常使用的是 USDC 跟 DAI。USDC 目前可以透過在台灣的銀行的美金帳戶進行 1:1 的轉換。為了使用 USDC 研究了在台灣的出入金方式，順便也把最近找到在 Circle USDC 官方網站上 USDC 與 DAI 的兌幣管道分享一下。
 

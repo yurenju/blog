@@ -22,7 +22,7 @@ images:
   - "/posts/2019-02-06_數位書寫工具探索之旅/images/11.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 我一直在尋找適合自己的書寫工具。寫作對我來說是紀錄特定時刻的資訊，與將手邊的資訊消化吸收的一個手段。這些紀錄大部分都被堆在我私人儲存紀錄的地方，其中一部份會公開發表出來，這些紀錄也不見得是很有營養的東西，廢文、咖啡、旅行、科技等等，都是需要書寫與整理的資訊。雖然 MacBook Pro 就是一個很棒的書寫工具，但是帶著旅行還是略顯沉重。
 
@@ -39,7 +39,7 @@ images:
 
 #### 協同文件編輯
 
-![image](images/2.jpg#layoutTextWidth)
+![image](images/2.jpg)
 
 [https://gsuite.google.com/products/docs/](https://gsuite.google.com/products/docs/)
 
@@ -47,7 +47,7 @@ Google Docs, Quip, HackMD 是同一個分類的，他們更側重協同工作，
 
 #### 組織筆記
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 Photo credit: [https://brandfolder.com/evernote](https://brandfolder.com/evernote)
 
@@ -57,7 +57,7 @@ Evernote, OneNote, Bear 是另外一個分類。主要的工作是個人用筆�
 
 #### 專注書寫工具
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 [iA Writer](https://ia.net/zh-hant/writer)
 
@@ -73,7 +73,7 @@ iA Writer 跟 Ulysses 是另外一個分類，主要的功能是寫作。他們�
 
 #### **MacBook Pro**
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
 大多數的軟體都可以在這個組合上面執行。最新一代的 MacBook Pro 的重量 1.37 公斤，螢幕 13 英吋，新一代的鍵盤不是很舒適，但整體來說還是一個優秀的書寫工具載體。
 
@@ -83,7 +83,7 @@ MacBook Pro 的好處是上面的書寫軟體相較於 Windows 大多都設計�
 
 #### **iPad Pro**
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 大多數的軟體都有支援 iOS 的版本，我所使用的初代 iPad Pro 9.7&#34; 本體加上鍵盤為 890g，尺寸比起 MacBook Pro 要輕薄很多，9.7&#34; 的螢幕也還算適合輸入，重量上也很適合攜帶。但是官方實體鍵盤並不好按，輸入的舒適感跟 MacBook Pro 或是常規 Notebook 鍵盤的體驗差。
 
@@ -103,7 +103,7 @@ web base 的使用情境讓許多軟體無法在上面執行，在我使用的�
 
 #### Surface Go
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 Surface Go
 
@@ -123,17 +123,17 @@ Surface Go 的缺點如上述所說，因為硬體採用比較低階的配備，
 
 ### 自己的使用情境評估
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
 我的需求是去咖啡館以及旅行的時候都會帶著這個書寫工具，同時除了書寫外，它還需要擔任找地圖、聽音樂、整理筆記、簡易修圖、撰寫程式等等的工作，在這樣的需求其實一台常規的筆記型電腦會比較適合這樣的工作。
 
 雖然沒有嘗試過，但是 12&#34; 的 MacBook 應該會適合這樣的工具，920g 的重量搭配上小巧的體積更可以執行各種工作，除了 macOS 蹩腳的注音輸入法外看起來是個不錯的選擇，但是每次看到高昂價格（目前價格為 41,900 台幣起）的時候就會放棄這個選擇。
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
 iPad Pro 是我在過去很長的時間都使用的解決方案。實體鍵盤在習慣之後其實是可以勝任這樣的工作，輕巧的重量與體積也很適合攜帶旅行。但 iPad Pro 在找資料的時候還是不像 Notebook 這麼方便，找地圖、搜尋店家、比較資訊等等雖然 iPad Pro 上面都做得到，但是在 Notebook 上面做還是比較有效率。另外一件事情是我偶爾還是會想寫寫程式，這除了用 ssh 連接到遠端伺服器外，目前其他的 app 像是 Coda 因為 OS 限制也沒辦法編譯與執行。
 
-![image](images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg)
 
 經過很長時間的搜尋與試用，我目前的旅行書寫工具是 Surface Go。Windows 固然有很多缺點，其中一部份是書寫工具還是相對缺乏。但是跟 iPad Pro 比較起來有標準的瀏覽器可以使用，找資料、簡易修圖等等工作都可以更有效率地完成，甚至連打開 vscode 編輯、編譯與執行都沒問題。體積與重量上都比 MacBook Pro 更適合攜帶旅行。實體鍵盤與輸入法上面也是可以接受的效率，書寫工具現在使用 Evernote 跟 iA Writer 一起使用。
 

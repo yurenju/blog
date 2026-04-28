@@ -22,7 +22,7 @@ images:
   - "/posts/2021-12-03_lyra自動報價的-defi-選擇權協議/images/10.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 Lyra 是一個有自動報價功能 (也就是 Automated Market Maker, AMM) 的 DeFi 選擇權協議，透過流動性提供者注入避險所需資金，並且自動提供報價給交易者來進行選擇權交易的去中心化選擇權交易協議。
 
@@ -34,7 +34,7 @@ Lyra 協議有兩種參與角色：
 
 - 流動性提供者 (Liquidity Provider)：提供用於避險的資金，並且於交易中獲得交易費分潤
 - 交易者 (Trader)：在平台上的交易者，可以買賣看漲選擇權 (Call Option) 以及看空選擇權 (Put Option)
-  ![image](images/2.png#layoutTextWidth)
+  ![image](images/2.png)
   當交易者選擇了特定的標的資產 (Underlying Asset)、到期日與履約價 (Strike Price)，並且輸入所要購買或賣出的選擇權時，系統會根據 Black-Scholes Model 以及系統設定的參數計算出價格，並且在交易時鎖定避險所需的抵押品（或是押金），這些抵押品與押金由流動性提供者的資金提供，並且後續執行避險策略。
 
 接下來我們就從流動性提供者與交易者參與系統時所發生的事情來講解系統。如果你對選擇權沒有概念，建議先閱讀前導文《選擇權簡介》來了解選擇權。
@@ -81,7 +81,7 @@ Lyra Protocol 在介紹時經常會介紹自己是個 AMM (Automated market make
 
 定價之中又分成了三個階段：
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 中間的選擇權定價 (Pricing) 方法我們在前一篇《[選擇權簡介](/posts/2021-12-02_%E9%81%B8%E6%93%87%E6%AC%8A%E7%B0%A1%E4%BB%8B/)》裡面有提到選擇權有一個常用的定價模型 Black-Scholes Model，其中定價會需要以下幾個輸入參數：Underlying Price, Strike Price, Expiry, Volatility, Risk-free interest rate，欲知詳情請閱讀前導文。
 
@@ -96,11 +96,11 @@ IV 會在兩個時間點調整：初始化 Board 與每次交易時都會調整 
 
 為什麼需要兩個參數來計算出 IV Input，原因是因為實際上觀察市場時，每個不同的履約價的 listing 其實會是會形成一個 Volatility Smile 的觀察結果，也就是履約價越靠近標的資產價格 (Underlying Price) 的 listing 它的 IV 會愈小，履約價遠離標的資產價格的 listing IV 會愈大。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 所以在 board 建立時給的 baseIv 基本上會套用到同一個 board 裏面的所有 listing，可以想像如果 skew 是 1.0 的狀況 baseIv 就會是 IV Input。舉例來說建立 board 時根據歷史波動率設定 baseIv 為 30%，針對 Strike Price 為 4500, 4400, 4300 分別設定 skew 為 1.0, 1.1, 1.2 來將初始的 IV 設定為符合波動率微笑曲線的百分比。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 以上就是初始化 board 的時候會設定的基礎 IV，而每次交易時還會再次調整 IV。在交易的時候會先判斷此交易是不是買單，比如說 buy call/put options 會標記為買單，另外 close sell call/put positions 也會歸類到買單，在系統裡用 isBuy 來表示。
 
@@ -114,7 +114,7 @@ IV 會在兩個時間點調整：初始化 Board 與每次交易時都會調整 
 
 系統內用 `OptionMarketPricer.ivImpactForTrade()` 來調整 baseIv 跟 skew，這些調整從這次交易就開始套用，往後的交易也都會套用此次的 baseIv 跟 skew。
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 #### Option Pricing
 
@@ -144,7 +144,7 @@ IV 會在兩個時間點調整：初始化 Board 與每次交易時都會調整 
 
 當交易者在 Lyra 買選擇權時，Lyra 就會作為對家賣選擇權給交易者。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 作為賣選擇權的角色，不管是賣 Call option 或是 Put option 都會承擔風險，所以 Lyra 在賣選擇權時會透過 Synthetix 進行避險，在賣 Call Option 的時候買現貨，並且在賣 Put Option 時做空標的資產。
 
@@ -160,13 +160,13 @@ Delta 是一個會影響選擇權價格的指標，指的是當標的資產上�
 
 如果我們採用原本的全抵押制的避險方法，我們來看考慮 Delta 後他的盈虧如何。
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 這邊可以看到當 ETH 價格增加 1 元時，如果交易者選擇關閉倉位把選擇權賣回給 AMM，此時 AMM 會有 1.2 元的盈餘。但是反過來說，如果 ETH 價格減少 1 元時，AMM 反而就會有 1.2 元的虧損了，會這樣是因為過多倉位的避險會讓系統的盈虧隨著市價價格波動，這樣的話系統就有可能造成虧損。
 
 但如果我們考慮了 Delta 來調整避險的倉位時，此時就可以形成一個不被市場價格影響的避險。Delta 避險的計算方式也很簡單，就是把交易者買的選擇權倉位數量乘以 delta 就可以了，以上面的例子來說就是 `2 * 0.4 = 0.8`。接下來我們看看如果用這樣的數量避險，對於市場價格變化的應對能力如何。
 
-![image](images/9.png#layoutTextWidth)
+![image](images/9.png)
 
 在考慮過 delta 在進行的避險倉位，就可以正好抵消標的資產的漲幅，讓系統可以在漲跌的狀況都保持損益兩平，這樣就可以說達成了 delta neutral。
 
@@ -174,7 +174,7 @@ Delta 是一個會影響選擇權價格的指標，指的是當標的資產上�
 
 ### 智能合約簡介
 
-![image](images/10.png#layoutTextWidth)
+![image](images/10.png)
 
 [Contract Details — Lyra Documentation](https://docs.lyra.finance/implementation/contract-details)
 

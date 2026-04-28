@@ -14,7 +14,7 @@ images:
   - "/posts/2016-11-18_g0v-美西行-序/images/2.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 我真是累壞了。
 
@@ -28,7 +28,7 @@ images:
 
 看著 Google Drive 裡面簡報的半成品，想著高村長說 United Airline 上可以無線上網，看來我在飛越太平洋的上空還得忙著呢。
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 本系列文章總共有七篇，11/18 到 11/24 每日連載 XDDD
 

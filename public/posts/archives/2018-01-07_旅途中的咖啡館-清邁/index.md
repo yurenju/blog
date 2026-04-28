@@ -25,7 +25,7 @@ images:
 
 #### [Artisan Cafe at Oxotel](https://www.instagram.com/explore/locations/1019762631/artisan-cafe-at-oxotel/)
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 我們在新年的第一天跑了幾間咖啡館，沒想到都沒有開，所以隔天確定開了後又再度造訪。Artisan 看起來是一間比較多座位、又靠近我們旅館的地點，很適合當作第一站。
 
@@ -41,7 +41,7 @@ Artisan Cafe 在古城的南邊，算是相對比較不熱鬧的區域，在騎�
 
 #### [GRAPH CAFÉ](https://www.instagram.com/explore/locations/265468705/graph-cafe/)
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 其實在造訪 Artisasn Cafe 前我就已經注意到這間咖啡館，不過看起來位置非常少，所以我們還是選擇先去 Artisan Cafe。同一天吃完午餐回飯店休息一下後，我們就往古城內東北角的寺廟 Wat Chiang Mun 前進，因為 Graph Cafe 也在附近，想說如果座位沒滿也可以造訪一下。
 
@@ -53,7 +53,7 @@ Artisan Cafe 在古城的南邊，算是相對比較不熱鬧的區域，在騎�
 
 #### [A Day In Chiang Mai Coffee Brew](https://www.instagram.com/explore/locations/135901523802606/a-day-in-chiang-mai-coffee-brew/)
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 最後一天我們 check out 房間、歸還了機車後，徒步走到了這間還算在我們旅館附近的咖啡館 A Day In Chiang Mai Coffee Brew。這間咖啡館跟 Graph Cafe 一樣也是一間很小間的咖啡館，非常容易就客滿了。不過卻跟跟 Artisan Cafe 一樣出現在一個不像會出現咖啡館的大馬路旁。
 

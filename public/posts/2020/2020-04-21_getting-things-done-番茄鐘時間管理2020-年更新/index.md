@@ -16,7 +16,7 @@ images:
   - "/posts/2020-04-21_getting-things-done-番茄鐘時間管理2020-年更新/images/4.gif"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 之前寫的文章《Getting Things Done + 番茄鐘時間管理》不知不覺也是兩年前的事情了，目前每天的工作流程也變了一些，來更新一下。如果你想知道番茄鐘跟 GTD 是怎樣的工具，請參考前一篇文章。
 
@@ -30,7 +30,7 @@ images:
 
 跟以往一樣，我如果知道有什麼工作事項就會先把他輸入到 Todoist 的收件箱裡面，不過因為我在 Todoist 是同時放了工作跟生活的工作事項都放在裡面，生活的部分就是直接鍵入，而工作的話我透過了 Zapier 設定了在 Github 上特定 repository 分配給我的 issue 或是 review request 則會自動地匯入到 Todoist, 並且標示是 issue 或是 review request。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 雖然工作上主要都是看 Github Project，不過這樣可以讓我把工作跟生活上的代辦事項都放在一起，這樣在看一天的工作時比較不會漏掉生活上要做的事情。
 
@@ -40,11 +40,11 @@ images:
 
 以前番茄鐘紀錄我是直接記錄在 Todoist 裡面，不過現在不這麼做了。我現在直接開了一份文件在 Notion (最近在試用 Gitbook，但是哪種都可以)，格式長這樣。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 右邊是樣板，每一天開始的時候，我會把右邊的東西複製到左邊來，填上日期，然後看一下前一天的紀錄，把昨天作的事情跟今天預計要做的事情作個整理寫成大概一兩句話，會在 Standup meeting 上面講。
 
-![image](images/4.gif#layoutTextWidth)
+![image](images/4.gif)
 
 下面的每個番茄則是記錄每個番茄鐘 (25 分鐘) 作的事情。我並不是很嚴格的在執行番茄鐘，有時候忘了計時或跟其他人一起工作沒辦法計時等也沒關係，這份其實就是給自己看的一份紀錄讓自己知道這一天做了什麼事情。
 

@@ -43,9 +43,9 @@ images:
 
 早上送別 Chialin 後就剩下我自己一人了，因為是單趟路線，所以先去了一趟黑貓把自己的大背包先寄送到幾天後會入住的溫泉飯店。後來就坐火車到田邊站。
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 田邊，真的是一個非常荒涼的地方。除了一間超商跟便利商店外就沒有別的東西了。不過路上真的是還滿清幽的。去吃了民宿老闆推薦的餐廳，買了能量棒後就回到民宿休息了。
 
@@ -53,13 +53,13 @@ images:
 
 這位老兄還推薦幾個他覺得和歌山特別奇怪的景點等，像是哪邊的海邊正妹比較多，哪邊有奇怪的 B 級景點等等，真是很有趣的一個人，不過另外一個原因應該也是因為他酒喝多了。
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 總之呢我就在這個非常偏僻的地方，遇到了一位匈牙利的日本民俗學者，然後在一間既破舊又沒冷氣的老舊日式民宿中，聽他酒後的一連串神奇話題。
 
@@ -69,21 +69,21 @@ images:
 
 搭上一如往常準時的公車，開了四十分鐘就到了古道入口。在這邊剛好聽到日本老伯在跟外國人聊天，原來他們是西班牙人，後來也跟他們問了一下知不知道起點確切的位置，接下來蓋了第一個章之後就開始前進了。
 
-![image](images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg)
 
 在熊野古道一路上都有小小的像鳥屋一樣的地方，裡面會放著熊野古道的印章，蒐集滿一整路的印章後可以在終點兌換熊野古道完成的證明，如果你也有拿到西班牙朝聖之路的證明，兩個證明可以再去申請一個世界遺產雙朝聖之路的證明，這也是我這次來熊野古道的目的。
 
 這邊的導覽也做得非常的好，很容易可以知道自己的進度如何。
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 第一段山路意外的艱苦，除了陡上外，也是比較接近一般登山路，沒有做石頭或是階梯等。到第二個蓋章點已經是半個小時後了，這讓我對於接下來的路程有點猶豫，原本預期是健行等級的路線，但比想像中的難一點。
 
 而第三個章在【熊野高原神社】，距離上一個章已經是兩個小時的路程了。還好這邊景色開闊天氣晴朗，又有村落跟休息點，一個不小心就在這邊休息了半個小時。
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
 後來上路的時候嗨不小心走錯了一段。接下來的路程剛開始是在村落裡，過了大概十分鐘後再度步入森林。下一個往【大門王子】的路又是一連串的上坡，真是讓人崩潰。不過中間有一個高原池塘還蠻大的，突然出現時還滿驚喜的。
 
@@ -91,15 +91,15 @@ images:
 
 接下來從【大門王子】到【大坂本王子】是整個旅程最痛苦的一段，因為剛穿上雨衣的悶熱加上雨下得非常的大，走這段路的時候有點驚恐害怕，到【牛馬童子像】附近的時候因為剛好跟馬路交替了，那邊有個停車場跟休息區，我就在那邊投了販賣機順便休息一下，沒想到雨愈下愈大，後來只好硬著頭皮上了，不過感覺已經習慣了下雨走在山中的感覺，漸漸的比較不會那麼害怕了。路上又遇到一些螃蟹覺得在雨中走也是有一番樂趣。
 
-![image](images/11.jpeg#layoutTextWidth)
+![image](images/11.jpeg)
 
-![image](images/12.jpeg#layoutTextWidth)
+![image](images/12.jpeg)
 
 這個雨大到我穿了雨衣還是全身溼透了
 
 到【近露王子】時又到了另外一個聚落，路也開始變平坦了。蓋完章之後，雨又下得跟從天上倒水一樣。此時在路上看到一間咖啡館就想說進去避雨一下再繼續，我進去的時候全身濕得像落水狗一樣。把雨衣卸下後，點了杯冰拿鐵喝了之後感覺體力有慢慢一點點的恢復了。
 
-![image](images/13.jpeg#layoutTextWidth)
+![image](images/13.jpeg)
 
 這間看起來很陳舊的咖啡館真是救了我一命，在這邊喝了杯拿鐵補充了點熱量
 
@@ -115,15 +115,15 @@ images:
 
 後來洗完澡後就吃飯了，不知道是因為如此驚慌的爬山太累的關係，還是真的料理得很好，吃到後真的都好吃到要流淚了。今天真的太辛苦了，沒想到竟然遇到這麼差的天氣狀況。
 
-![image](images/14.jpeg#layoutTextWidth)
+![image](images/14.jpeg)
 
-![image](images/15.jpeg#layoutTextWidth)
+![image](images/15.jpeg)
 
-![image](images/16.jpeg#layoutTextWidth)
+![image](images/16.jpeg)
 
 吃飯的時候我跟西班牙情侶互相分享了這次無敵累的經驗，但也很珍貴，用完餐後我們一起拍了這張照片。
 
-![image](images/17.jpeg#layoutTextWidth)
+![image](images/17.jpeg)
 
 For the stamps!!
 
@@ -131,23 +131,23 @@ For the stamps!!
 
 今天早上從一頓美好的早餐開始，更正確來說應該是從門口看到的山羊開始。老闆養了兩隻羊，今天早上把他們放在門口。他們非常的溫馴親人，我們摸牠的時候都不會很兇。
 
-![image](images/18.jpeg#layoutTextWidth)
+![image](images/18.jpeg)
 
 早上看起來是簡易的早餐，但是麵包真不得了，麵包是那種軟但是綿密紮實的口感，抹上牛油真是好吃，其他配料也都不錯，生火腿很好吃。配上咖啡真是個完美的早晨。
 
-![image](images/19.jpeg#layoutTextWidth)
+![image](images/19.jpeg)
 
-![image](images/20.jpeg#layoutTextWidth)
+![image](images/20.jpeg)
 
 早上我們就邊閒聊，邊跟羊玩後，稍作整理就準備出發了。根據昨天的討論，老闆要開車載我們越過前面的四公里，直接到迂迴路的開頭。一路上老闆狂飆，很快的我們就到了迂迴路的起始點。
 
-![image](images/21.jpeg#layoutTextWidth)
+![image](images/21.jpeg)
 
 不過這個時候還在下著雨，我們開始走沒多久後，西班牙女突然大叫，後來看了一下才發現是水蛭。這隻還滿大隻的，難怪他那麼驚慌，不過這下子我也檢查了一下我的腳，雖然說穿長褲但是還是難免有點擔心。
 
 後來我們走迂迴路時，走在最前面的西班牙男說這條路封閉了。不過那個時候我沒有像前查看，他說我們可能走錯路了，要回頭走往我們下車後的另外一個方向。不過當我們走過去的時候發現那邊才是原本被封閉的那條路。同時西班牙男的腿上也有另外一隻水蛭了，這個時候我檢查我的腳發現也有一隻小的，對我來說有點打擊到我，覺得自己沒穿長襪又沒有綁腿，在這個這麼潮濕的環境真的很容易中招。
 
-![image](images/22.jpeg#layoutTextWidth)
+![image](images/22.jpeg)
 
 後來我們討論了結果試再回去原本那個地方看看。如果真的封鎖了，我們就出去搭巴士。後來我們走到迂迴路那個被封起來的地方時，原來那不是封閉，而是跟你說請走過以後把網子再度蓋上。
 
@@ -163,6 +163,6 @@ For the stamps!!
 
 又隔了一天，當我準備離開溫泉飯店搭上公車時，看看我又遇到了誰？
 
-![image](images/23.jpeg#layoutTextWidth)
+![image](images/23.jpeg)
 
 覺得跟他們很有緣，雖然沒有留下聯絡方式，不過希望他們在巴塞隆納過得都好！

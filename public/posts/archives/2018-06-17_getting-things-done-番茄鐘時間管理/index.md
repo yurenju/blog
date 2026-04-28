@@ -20,7 +20,7 @@ images:
   - "/posts/2018-06-17_getting-things-done-番茄鐘時間管理/images/8.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 開始工作以後，為了提高工作效率探索了幾個不同的工作方法，最近一兩年開始慢慢的收斂到用番茄鐘與 Getting Things Done (後面都稱 GTD) 混用這兩種時間管理方法，運作了一陣子看起來沒什麼問題，可以寫篇文章來介紹了。
 
@@ -70,7 +70,7 @@ GTD 分成幾個步驟。
 
 另外如果突然知道有什麼工作事項時，比如說跟同事討論後有新的工作事項之後要作，可以利用 Todoist 的鍵盤熱鍵 ctrl + cmd + A 來新增工作事項。這個功能非常方便，只要有打開 todoist 就可以在任何地方使用。
 
-![image](images/2.gif#layoutTextWidth)
+![image](images/2.gif)
 
 在任何地方按下 ctrl + cmd + A 都可以呼叫出這個快速輸入視窗，同時他可以辨認日期「今天」
 
@@ -84,7 +84,7 @@ GTD 分成幾個步驟。
 
 我的分類如下可以讓大家參考一下，不過怎麼安排還是看個人習慣。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 #### 每日工作
 
@@ -92,25 +92,25 @@ GTD 分成幾個步驟。
 
 每天到辦公室後我會打開 todoist 的工作分類，先把今天要做的工作先標示上「今天」，有時候會有昨天沒有做完的工作，如果要今天處理也都標示成今天。接下來回到「今天」的分類就會只顯示今天該做的事情，其他的都會隱藏起來。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 正好寫文章的時候是假日，所以都是私人的事情
 
 這個時候就輪到 be focused (或任何一套番茄鐘工具) 上場了，接下來我會按下番茄鐘開始工作。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 順道一提 Be focused 的結束鈴聲頗嚇人，可以在設定裡面改成 “Meow” 音效比較療癒
 
 當 25 分鐘結束後，打開 Todoist 在這段時間進行的工作項目寫個更新訊息，通常開頭會是 🍅，後面接這 25 分鐘我做了什麼事情，基本上都是一句話，如果你是用 Mac 內建的輸入法，可以鍵入「番茄」然後選字，裡面就會出現 🍅 這個圖示。
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 紀錄完畢後就會再利用番茄鐘軟體進行 5 分鐘的休息，這時我會去廁所或是上一下 Facebook，接著再進行 25 分鐘的工作。這跟一般番茄鐘都一樣，但有個不同之處是我不會進行長時間 15–30 分鐘的休息，因為有午餐時間所以就不需要這個休息了。
 
 通常隔天 stand-up meeting 的時候我就會打開 todoist 的活動日誌，看一下番茄鐘紀錄來回想一下昨天做了什麼事情。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 #### 回顧
 
@@ -122,7 +122,7 @@ Todoist 還有一些滿有用的熱鍵跟技巧，比如說你可以按下 “s�
 
 還有一個很有用的就是輸入井字號後可以直接加入特定分類，日期可以辨識今天、明天、周一、星期一、下周一等，[完整清單可以看這邊](https://support.todoist.com/hc/zh-tw/articles/205325931-Dates-and-Times)。
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 ### 結論
 

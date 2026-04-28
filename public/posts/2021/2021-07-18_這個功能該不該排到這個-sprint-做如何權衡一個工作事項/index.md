@@ -16,7 +16,7 @@ images:
   - "/posts/2021-07-18_這個功能該不該排到這個-sprint-做如何權衡一個工作事項/images/4.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 同事推薦了我一篇文章 [New Feature Validation Framework](https://medium.com/agileinsider/new-feature-validation-framework-89350258d27)，平常對管理知識沒了解太多的我從裡面學到了些驗證分析的方法想跟大家分享。
 
@@ -35,7 +35,7 @@ images:
 
 LVT 從宏觀到微觀把價值觀分成四個顆粒細度，我自己也透過我們公司的狀況來做個練習（不過這通常要跟團隊一起討論，這邊我是練習就自己寫了）。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 #### Vision 願景
 
@@ -82,7 +82,7 @@ LVT 從宏觀到微觀把價值觀分成四個顆粒細度，我自己也透過�
 
 LVT 裡面提到各種顆粒細度的項目之間的關係可以用下面這張圖來看會比較清楚
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 舉措 (Initative) 都是沿著策略方向 (Bet) ，期望要做到的是要推進目前的狀況變成目標狀況 (Goal)，而目標則是支撐著公司的願景 (Vision)。
 
@@ -136,7 +136,7 @@ Kano 模型是狩野紀昭（Noriaki Kano）提出對於雙因素理論 (Two-fac
 
 而 Kano Model 則是把原本用在員工對工作滿意程度的雙因素理論 (Two-factor theory)，變成了評估客戶對特定功能的滿意程度。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 你要做的行動（比如說想實作的功能）對用戶的影響可能會是以下幾種。
 

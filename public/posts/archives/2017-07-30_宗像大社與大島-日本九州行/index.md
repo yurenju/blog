@@ -25,7 +25,7 @@ images:
   - "/posts/2017-07-30_宗像大社與大島-日本九州行/images/13.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 中津宮
 
@@ -39,47 +39,47 @@ images:
 
 而這三個宮分別祭祀三個不同的女神：田心姫神、湍津姫神、市杵島姫神，這三個女神一般來說都是保佑從日本到朝鮮半島之間海路行程的平安順利，如果打開 Google Maps 看一下就會知道其實韓國到福岡之間的距離真的非常短。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 不過我要再次提醒，宗像大社相關的遺產群是非常新的景點，針對給外國人的資訊非常少，配合的交通與介紹也都不太足夠，如果要前往的朋友，建議自行開車前往。
 
 第一站是宗像大社邊津宮，宗像大社雖然說一般來說是三個神社的總稱，不過在公車站牌上的宗像大社，其實是指邊津宮，另外我們到邊津宮時其實原本還有第二宮跟第三宮是沖津宮跟中津宮遷移到本島上的神社方便參拜，不過我們去的時候正在整修。
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 本殿旁
 
 另外我們因為等公車的關係也在附近晃晃，這邊感覺真像是台東那樣的地方，有許多稻田，也非常開闊。
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 我們坐公車到神湊渡船口已經中午了，因為下班船的時間還早我們就準備先吃午餐，不過其實附近的店家非常少，還好還有一間高嘉旅館也兼營餐廳，我們就在那邊吃了午餐，意外的還蠻不錯。我點的生魚片定食 1500 日圓（未稅）。
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
 吃飽飯在旁邊的沙灘走走後，我們就搭渡輪到了大島。剛到大島的時候我們沒有租電動腳踏車，不過稍微走一段之後我們才意識到大島其實真的還蠻大的，所以又走回去租了電動腳踏車，一次 500 日圓，我後來去高千穗峽又租了電動腳踏車是一個小時 300 日圓，才知道其實大島上的還蠻便宜的。
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 相信我，在大島上電動單車可以救你一命
 
 我們在還沒有租單車前，第一個參觀的景點是中津宮，話說這幾個神社其實都不太大，參觀的時間也不會太久，另外這篇文章開頭的那張照片也是拍攝於中津宮。
 
-![image](images/7.jpeg#layoutTextWidth)
+![image](images/7.jpeg)
 
 接下來我們去了在海邊的一個鳥居，原本在照片裡面它是在海裡面的，不過我們到的時候看起來是退潮的時間，所以就沒有照片上那麼厲害。
 
-![image](images/8.jpeg#layoutTextWidth)
+![image](images/8.jpeg)
 
 至於在大島北方一個港灣上的沖津宮遙拜所風景還蠻好的，蓋在海邊丘陵岸上的鳥居也蠻有特色的。
 
-![image](images/9.jpeg#layoutTextWidth)
+![image](images/9.jpeg)
 
 最後我們用吃奶的力氣騎電動單車（上坡還是很累）騎到砲跡台剩下的時間已經不夠我們參觀了，所以草草的看了一下風景，也發現上面的除了日文只有還有俄文，想說不知道是不是跟俄國有關的遺跡？
 
 由於時間不夠的關係，我們三個人飛奔的騎單車衝回了渡船口，剛好剩下十分鐘就發船了，差點就沒趕上船讓我們滿身大汗的回去，真的是蠻趕的。後來就坐著船看著飄揚的日本國旗回到了九州本島。
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
 ### 交通
 
@@ -99,18 +99,18 @@ images:
 - 大島 → 神湊（渡船）
 - 神湊波止場 → 東郷駅前（公車）
 - 搭 JR 回博多
-  ![image](images/11.jpeg#layoutTextWidth)
+  ![image](images/11.jpeg)
   從天神出發的巴士時刻表，圖片來自於[西鐵官方網站](http://www.nishitetsu.jp/bus/rosen/munakata.html)
 
 至於當地的時刻表可以依照你的時間用 [西鐵的網站](http://jik.nishitetsu.jp/menu) 查詢，舉例來說可以查 8/1 早上十點開始從宗像大社到神湊波止場的時刻表
 
-![image](images/12.png#layoutTextWidth)
+![image](images/12.png)
 
 建議在宗像大社前公車站牌下車後，先看一下往神湊波止場的時刻表，因為班次不多，最好先確認時間後，預估自己要在宗像大社邊津宮待的時間，時間差不多時就可以準備搭公車了，不然每班的間距都差不多一個小時。
 
 到了神湊波止場後可以從這邊搭船到大島去，網站上面有時刻表如下：
 
-![image](images/13.png#layoutTextWidth)
+![image](images/13.png)
 
 圖片擷取於 [大島渡船運航時刻表](http://www.city.munakata.lg.jp/tosen/oosima.php)
 

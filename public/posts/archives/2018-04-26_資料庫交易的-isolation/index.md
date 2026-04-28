@@ -23,7 +23,7 @@ images:
 
 舉個例子，Alice 跟 Bob 在各自的帳戶裡有 1000 元，這個資料表叫做 `balances`。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 接著 Alice 轉帳 300 元給 Bob，通常你會下這樣的 SQL：
 `UPDATE balances SET balance = 700 WHERE account = &#34;Alice&#34;;
@@ -45,7 +45,7 @@ COMMIT;`
 
 如下圖 Transaction A 在交易中連續讀取了兩次 Alice’s balance，但是第一次讀的時候是 1000，但是在交易還沒完成前，另外一個 Transaction B 正好也在執行中，並且更改了 Alice’s balance 變成 700，但是這個交易還沒有 commit 時，Transaction A 再次讀取 Alice’s balance，數值卻讀取出尚未 commit 的數據 700，這個現象我們就稱為 Dirty Read。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 #### Non-repeatable reads
 
@@ -53,7 +53,7 @@ COMMIT;`
 
 如下圖，Transaction A 第一次取得 Alice’s balance 時是 1000，當它還在執行時，Transaction B 修改了 Alice’s balance 成 700 並且 commit transaction。此時 Transaction A 再次讀取相同的數值時，卻變成 700，這就是 Non-repeatable reads。另外 Dirty Read 也是一種 Non-repeatable reads。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 #### Phantom reads
 
@@ -61,7 +61,7 @@ COMMIT;`
 
 下面這張圖 Transaction A 第一次讀取了帳戶裡面餘額介於 900–1000 這個範圍的帳戶，結果總共有兩筆：Alice 跟 Bob。在 Transaction A 還沒結束的同時，Transaction B 更新了 Alice’s balance 為 700，這時如果 Transaction A 再次查詢相同條件時，筆數從原本的 2 筆變成 1 筆，這個情況就是 Phantom reads。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 以上就是討論 Isolation 時會遇到的情況。
 
@@ -76,7 +76,7 @@ COMMIT;`
 
 在這邊引用 [Wikipedia](https://en.wikipedia.org/wiki/Isolation_%28database_systems%29#Isolation_levels_vs_read_phenomena) 的表格：
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 順道一提 MySQL 預設的等級是 Repeatable Read，但是也可以透過下面的指令調整：
 ```

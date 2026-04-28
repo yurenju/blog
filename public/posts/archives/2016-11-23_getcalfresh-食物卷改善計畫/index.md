@@ -14,7 +14,7 @@ images:
   - "/posts/2016-11-23_getcalfresh-食物卷改善計畫/images/2.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 [http://getcalfresh.org](http://getcalfresh.org)
 
@@ -34,7 +34,7 @@ GetCalFresh 是 Code For America 一個食物卷系統的改善計畫。
 
 完成的系統雖然技術難度不高，但是卻是經過一次次迭代後改善出來的成果。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 回到這個專案的使用者，由於食物卷的使用對象大多都是需要幫助的人，其實看到這個計畫第一個問題就是到底有多少人是透過線上申請，多少人是紙本申請。因為很多需要這樣服務的人可能家裡甚至沒有智慧型手機或行動電腦，所以根本有可能沒辦法透過這樣網站來申請。
 

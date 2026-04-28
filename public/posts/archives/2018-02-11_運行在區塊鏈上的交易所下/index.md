@@ -38,13 +38,13 @@ images:
 
 EtherDelta 是一個同時使用去中心化與中心化的技術的交易所。在 EtherDelta 當中，不管是存款、提款或是交易加密貨幣等行為都直接在區塊鏈的智能合約上面完成，使用中心化技術的地方是建立了一個交易清單資料庫並且在網站上面呈現，讓有需要交易的雙方可以在網站上面看到所有的交易訂單並且進行交易。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 理論上交易清單不見得要記錄在中心化的資料庫，其實也可以記錄在區塊鏈上，但是目前因為交易費太高的這個技術限制關係，記錄交易清單在區塊鏈上是不可行的。而 Ethereum 改善交易速度的工作正在積極展開中，但在此之前這樣的方法還是會需要如 EtherDelta 這樣代替的解決方案。
 
 一樣以 1 ETH 交換 10 BAT 為例，參照下圖流程為：
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 1.  User A 先在 EtherDelta 提供的智能合約存入交易用的加密貨幣
 2.  建立一個 1 ETH 交換 10 BAT 的賣單在智能合約當中
@@ -73,7 +73,7 @@ Kyber Network 是一個完全去中心化的交易所解決方案，跟 EtherDel
 
 對使用者來說，如果需要將 1 ETH 轉換成 BAT，僅需要呼叫 Kyber Network 的智能合約中的 `Transfer()` 函式，當交易成功時 BAT 就會直接發送到指定的錢包地址，因為只有一個 transaction 而且是直接從錢包發出，不需要掛單與等候，所以在交易費或交易時間上都很不錯。比起 EtherDelta 從存款、提款、掛單至少要三個 blockchain transactions 比較起來 Kyber Network 僅需一個 transaction 真的佔盡優勢。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 僅需要一個 Transaction 就可以達成交換加密貨幣就是 Kyber Network 的設計關鍵。
 
@@ -93,7 +93,7 @@ JOYSO 是一個由台灣團隊所開發的交易所，預計今年上線。根�
 
 瞭解 JOYSO 以前，先來看一下 EtherDelta 目前的問題是什麼。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 EtherDelta 目前比較大的問題主要還是出在交易速度，以上紅字的部分會需要數十秒到數分鐘的時間完成。在一般中心化交易所很難想像開單以及成交需要這麼久的時間，更何況在交易時很有可能有許多使用者同時都想搓合同一張單，此時只有被區塊鏈納入下個區塊的交易會成功，而其他會失敗。
 
@@ -101,7 +101,7 @@ EtherDelta 目前比較大的問題主要還是出在交易速度，以上紅字
 
 接下來看一下 JOYSO 的架構。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 JOYSO 跟 EtherDelta 一樣的地方在於使用者的加密貨幣都保存在區塊鏈上面的智能合約，而不是由交易所持有私鑰保存。
 

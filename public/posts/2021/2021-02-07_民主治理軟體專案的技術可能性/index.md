@@ -16,7 +16,7 @@ images:
   - "/posts/2021-02-07_民主治理軟體專案的技術可能性/images/4.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 數位服務如 Drobox、GitHub 通常由公司帶領產品走向，並且傾聽用戶回饋來完善服務。這個循環運作完善時，用戶可以付費得到它需要的軟體，而公司可以因此獲利。這樣的流程可以稱為是產品治理（或是公司治理，看治理的對象是什麼）。
 
@@ -52,7 +52,7 @@ images:
 
 我們一樣假設還是相同的待辦事項軟體，使用者介面可能還是需要放在 Web 上面，但核心邏輯可以搬到區塊鏈上，透過 Web 介面跟區塊鏈互動。首先為了可以修改程式邏輯，我們可以使用 [openzeppelin-upgrades 套件](https://docs.openzeppelin.com/upgrades-plugins/1.x/) 來將系統分成兩個部分，Proxy 與 Implementation。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 Proxy 本身存放了服務的資料與一些些邏輯。本身的邏輯不多，主要是一個 `upgrade(imp)` 的功能來設定新的 implementation。而 implementation 則是真正的邏輯所在，以待辦事項服務來說，可能會有 `addTodo()`, `removeTodo()` 等邏輯，但取用資料時還是會跟 Proxy 取用資料。
 
@@ -60,7 +60,7 @@ Proxy 本身存放了服務的資料與一些些邏輯。本身的邏輯不多�
 
 當邏輯需要升級時會先部署一個新的 implementation，接下來再透過 proxy 的 `upgrade()` 指定新的 implementation 真正的所在處，如此一來就可以完成升級。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 那誰可以升級邏輯呢？ openzeppelin-upgrades 定義了一個 admin 的角色，只有 admin 才可以執行升級，而這樣的設計可以讓我們透過民主機制來升級。這個 admin 除了是真的持有密鑰的使用者外，同時也是可以是另外一個程式。如此一來，我們可以把 admin 設定給一個投票程序，整個升級程序就可以變成民主決定。
 
@@ -68,7 +68,7 @@ Proxy 本身存放了服務的資料與一些些邏輯。本身的邏輯不多�
 
 此時待辦事項的 proxy 還沒指向新邏輯，所以還會是舊邏輯。此時使用者可以發起投票來決定待辦事項軟體要不要執行 `upgrade(impV2)` 升級到他的新邏輯。接下來使用者開始進行投票，如果過了門檻之後投票程序就會開放任何一個人透過 `callUpgarde()` 執行 `upgrade(impV2)`，此時就連系統管理者都無法阻止核心邏輯的升級了。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 在這樣的情況下，整個軟體服務的治理將可以轉變成民主治理模式，完成前面提到無法在中心化系統達成的框架。在原本的中心化系統中，不論如何追到最後總是有一個中心化的仲裁者，而區塊鏈上的程式由不特定的礦工執行，這樣的結構大幅度地降低權力的集中。
 

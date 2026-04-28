@@ -13,7 +13,7 @@ images:
   - "/posts/2017-07-12_aws-lambda-serverless-跑-git-cron-job-的疑難雜症/images/1.png"
 ---
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 最近終於把之前放在 iron.io 上面的兩個小程式移到 AWS Lambda 了。有一些小技巧值得提一下。
 

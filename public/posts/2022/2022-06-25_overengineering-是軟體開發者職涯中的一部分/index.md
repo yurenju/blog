@@ -33,7 +33,7 @@ Over-engineering 是指實作或設計一些東西來解決一個你**根本就�
 
 不過隨著自己被自己寫的複雜程式碼雷到之後，慢慢的會回歸到比較簡單的寫法。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 圖片修改自 [Overengineering can kill your product](https://www.mindtheproduct.com/overengineering-can-kill-your-product/) 插圖
 

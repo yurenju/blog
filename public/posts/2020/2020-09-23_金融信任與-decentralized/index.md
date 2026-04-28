@@ -32,7 +32,7 @@ images:
 
 ### 存款
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 [ATM by Roadsidepictures](https://www.flickr.com/photos/roadsidepictures/3347040993/), cc-by-nc
 
@@ -58,7 +58,7 @@ images:
 
 ### 貨幣兌換
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 [Exchange by Vladimir Tro](https://www.flickr.com/photos/149732725@N08/34590849396/), cc-by-nc-nd
 

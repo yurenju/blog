@@ -22,13 +22,13 @@ images:
   - "/posts/2016-10-04_line-developer-day-見聞-火紅的-bot-api/images/10.jpeg"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 感謝 LINE 與 Tech In Asia 的邀請到了東京參加了 [LINE Developer Day 2016](http://linedevday.linecorp.com/jp/2016/en/)，最近正好在研究 Facebook Messenger Platform，這次的 Dev day 正好讓我針對 LINE BOT 好好研究一下與其他解決方案比較的優劣。另外雖然這次有很多其他主題，不過本篇會專注在討論 LINE BOT API。
 
 在來 LINE Developer Day 之前，其實我自己有申請 bot trial account 來試試看開發者預覽的 BOT API，當時已經用 LINE BOT 加上 AWS 的 Lambda 串起來玩玩後也寫了一篇[文章分享相關資訊](/posts/2016-09-21_%E7%94%A8-serverless-%E4%BB%8B%E6%8E%A5-line-bot-api/)。在出發的前幾天我又寫了一個做旅行記帳的 LINE BOT，可以透過 bot 記帳、轉換貨幣並且記錄在 Google Spreadsheet 上面。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 雖然稱不上好用，不過在東京這幾天用這個記帳下來也沒什麼特別的問題，這個小專案待我整理一下會把程式碼放出來。不過藉由寫這樣的小機器人也讓我了解到 LINE BOT API 有幾個不足的地方：
 
@@ -39,21 +39,21 @@ images:
 
 而這次在 LINE Developer Day 上所發表的新的 Messaging API 則解決了以上大部分的問題，讓我們來看看這次開發者大會發表了什麼吧！
 
-![image](images/3.jpeg#layoutTextWidth)
+![image](images/3.jpeg)
 
 ### LINE Notify
 
 在講 Messaging API 前，講者宣布了啟用 LINE Notify 這個新型態的 API。這樣的 API 其實 Slack 的使用者應該都不陌生。在 Slack 上可以連接各式各樣的服務到 Slack 的 Channel，從 github 事件、app crash、伺服器紀錄等等都可以丟上特定的頻道，而 LINE Notify 正是做相同的事情。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 除了在 github 的頁面上已經可以看到 [LINE 的整合訊息](https://github.com/integrations/line)外，在 IFTTT 上面已經有了對應的資訊。跟 IFTTT 綁定之後，會收到由 LINE Notify 這個帳號送出的相關訊息，把他邀請到要接收訊息的群組即可（也可以直接發送訊息）。
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 ### Messaging API
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 來源：投影片 31 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
@@ -65,7 +65,7 @@ LINE 這次將 BOT API 更名為 Messaging API，名稱上比較合理。
 
 另外有一個我也覺得很有用的就是 Profile API。這個 API 可以讓你透過 API call 取得使用者的相關資訊。在演講的投影片裡面提到可以在 LINE 登入後取得使用者相關資料後直接填入，不需要重複填寫。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 來源：投影片 44 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
@@ -73,7 +73,7 @@ LINE 這次將 BOT API 更名為 Messaging API，名稱上比較合理。
 
 ### Rich Menu
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 來源：投影片 43 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
@@ -83,7 +83,7 @@ Rich Menu 目前看起來是只有 LINE@ 可以開啟的功能，而且是直接
 
 這是這次大會中非常有意思的一個新功能，也是我完全沒預測到這次會釋出的功能。Beacon 是一種藍芽的裝置，會不斷的發出信號，當手機上有相對應的偵測軟體時可以觸發相對應的行為。而 Beacon 的發送訊號範圍可以調整，就可以進一步的瞭解顧客是否走到特定區域，進而進行更詳細的觸發行為，比如說在超市走到冷飲區可以推送跟冷飲相關的特價訊息。
 
-![image](images/9.png#layoutTextWidth)
+![image](images/9.png)
 
 來源：投影片 47 頁 [http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot](http://www.slideshare.net/linecorp/a-2-new-world-by-the-line-bot)
 
@@ -95,7 +95,7 @@ LINE 在亞洲算是相當普及的通訊軟體，實體商店如果採用 LINE 
 
 至於這樣的應用要怎麼測試呢？LINE 在這次開發者大會在會後填完問卷後，就會收到一盒贈品，其中就包含了 Beacon 裝置，可以讓開發者利用這個裝置測試！
 
-![image](images/10.jpeg#layoutTextWidth)
+![image](images/10.jpeg)
 
 ### 結論
 

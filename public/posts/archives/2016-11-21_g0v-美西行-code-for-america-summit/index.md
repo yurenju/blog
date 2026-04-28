@@ -20,7 +20,7 @@ images:
   - "/posts/2016-11-21_g0v-美西行-code-for-america-summit/images/8.png"
 ---
 
-![image](images/1.jpeg#layoutTextWidth)
+![image](images/1.jpeg)
 
 噹啷～終於來到這場旅程的重頭戲  — Code For America Summit 了！
 
@@ -30,25 +30,25 @@ images:
 
 而在主會場外面的廠商則大多數都是尋求跟政府有合作機會的廠商，每個公司提供的產品看起來都是很成熟的產品。有可能是採購法不太一樣的關係，看起來 Code For America 成功的經營起了一個生態系與社群，除了專案外，這些公司也可以利用這樣的場合來宣傳自己公司的產品，希望政府機構來採用，這些除了做 open data 外，也有幫忙重新設計政府網站的公司。看來在美國 civic tech 的公司看起來也真的是很蓬勃發展，不過其實台灣也有不少公司專門接政府的案子，只是在 cfasummit 看到的產品品質比起台灣接案公司做出來的網站好上不少。這也不見得是公司的問題，現在很多政府的網站看起來很鳥有一部分的原因也可能因為當時政府開出來的需求就是這樣。
 
-![image](images/2.jpeg#layoutTextWidth)
+![image](images/2.jpeg)
 
 除了主舞台的大會演講外，其他則是在同一時間排了非常多比較小型的議程。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 如第一天下午的第一場議程就有這麼多場，而這些議程不全然都是演講，我聽的場次大部分都是小型座談會，由主持人針對一個主題輪流讓不同的講者發言與討論。而也有其中一個場次（也就是上面勾起來那場）是只有簡短的介紹主題，接著就讓聽眾分組討論並且發表。
 
-![image](images/4.jpeg#layoutTextWidth)
+![image](images/4.jpeg)
 
 其實我還蠻喜歡這樣的方式，我也注意到之前參加的 Mozilla Summit 2013 也是許多議程都採用這樣的方式。在台灣的會議很多都是單向單方面的傳遞，而採用小型座談或是讓聽眾一起參與，其實都可以有更多面向的觀點與討論，我覺得在台灣的研討會是值得一試的。
 
-![image](images/5.jpeg#layoutTextWidth)
+![image](images/5.jpeg)
 
 開幕的時候在
 
 另外一個 cfasummit 的特點就是不論是開幕（在夜店開幕，不是在會場的旅館大廳）、第一天尾聲跟第二天結束其實現場都會突然冒出好幾個小酒吧，旁邊有許多展示攤位是展示 Code For America Fellowship 的成果。大家就拿著飲料一邊逛著這邊的攤位，另外一邊也在這個場地到處認識人。
 
-![image](images/6.jpeg#layoutTextWidth)
+![image](images/6.jpeg)
 
 右下角的酒吧是所有議程結束後冒出來的
 
@@ -68,13 +68,13 @@ g0v 零時政府的專案則是比較草根性質，很多專案都是由單人�
 
 就兩者組織的比較上 Code For America 的組織架構也比較像是「有人」的架構（相對於 g0v 的「沒有人」），從他們的官網上也可以窺知一二。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 [https://www.codeforamerica.org/who](https://www.codeforamerica.org/who)
 
 Staff 是專職在 Code for America 的人員，編制看起來超過三、四十人，Fellow 則是派駐到政府或是其他機構的人，從內部協助改善政府或機構網站，2016 人數有十七人，而要支撐這麼多專職人員，當然就需要健全的財務。
 
-![image](images/8.png#layoutTextWidth)
+![image](images/8.png)
 
 上圖是 Code For America 2014 年的收入圖表，總收入超過一千一百萬美金（約 3.7 億台幣），這樣的收入要維持如此大一個團隊跟這麼多計畫看起來是足夠的。
 

@@ -27,11 +27,11 @@ images:
 
 [coinbase](https://www.coinbase.com) 是這三間裡面介面我最喜歡的，介面簡潔，交代的資訊也很清楚。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 因為 bitcoin 轉帳要花費大約一小時，這中間會讓 p2p 網路裡面的其他 client 確認交易的正確性，而 coinbase 會顯示目前的交易有多少 client 已經驗證交易。雖然是個小細節但是另外兩間都沒做得很好。
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 雖然介面是最好用的，但是在台灣不能買賣 BTC，所以也只能單純拿來當錢包用。
 
@@ -39,11 +39,11 @@ images:
 
 [MaiCoin](https://www.maicoin.com) 是個有中文介面的 BTC 銀行與交易中心，可以利用 ATM 轉帳的方式買賣 BTC，通過認證後可以把 BTC 換成台幣轉帳到台灣的銀行帳號（我還沒試過，沒那麼多錢）。
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 另外網路賣場 [奧丁丁市集](https://www.owlting.com/market/) 也是跟 MaiCoin 整合，結帳時可直接透過 MaiCoin 的錢包付款。
 
-![image](images/4.png#layoutTextWidth)
+![image](images/4.png)
 
 MaiCoin 最大的問題就是基礎建設似乎不太穩固，許多朋友使用上常常遇到些小問題，一下子信件寄不到，一下子簡訊寄不到等等，註冊的流程也讓人很困惑，特別是購買 BTC 需要填寫更詳細的資訊，但卻沒有標明清楚，只有把「購買」按鈕 disable 實在太困惑了。
 
@@ -55,11 +55,11 @@ MaiCoin 最大的問題就是基礎建設似乎不太穩固，許多朋友使用
 
 [BitoEX](https://www.bitoex.com/) 是在台灣最有趣的 BTC 服務，因為 BitoEX 直接跟全家便利商店整合，你可以直接在全家透過 [BitoEX 購買 BTC](https://www.bitoex.com/fami?locale=zh-tw)！
 
-![image](images/5.png#layoutTextWidth)
+![image](images/5.png)
 
 另外最近 BitoEX 也啟用的新服務，可以[使用 BTC 購買全家的禮卷](https://www.bitoex.com/fami_coupon?locale=zh-tw)，再利用禮卷在全家消費。
 
-![image](images/6.png#layoutTextWidth)
+![image](images/6.png)
 
 但是真正吸引我持續使用 BitoEX 的理由，絕對是他可以申請 [Bitcoin 簽帳卡](https://www.bitoex.com/services/debitcard?locale=zh-tw)！由於每次 BTC 的交易時間需要大約一個小時的時間，所以使用上要更便利就需要透過一個中間緩衝的電子錢包，而悠遊卡或簽帳卡這類的卡片就非常適合。另外他也支援 VISA ATM 提領現金。
 
@@ -67,7 +67,7 @@ MaiCoin 最大的問題就是基礎建設似乎不太穩固，許多朋友使用
 
 另外 BitoEX Debit Card 裡面的貨幣應該是歐元為主，所以各項費用都是在歐元區使用比較划算。
 
-![image](images/7.png#layoutTextWidth)
+![image](images/7.png)
 
 回到 BitoEX 的介面對我來說是中規中矩，最大的誘因就是 Debit Card 了。
 

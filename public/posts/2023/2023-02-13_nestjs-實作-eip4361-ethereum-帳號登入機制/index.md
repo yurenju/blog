@@ -44,7 +44,7 @@ Issued At: ${issued-at}
 
 而整個流程當中比較重要的是 `nonce` 欄位，由於簽署後的訊息如果被中間人攔截之後就可以再次登入該服務，為了避免這樣的重送攻擊，請求登入的服務會需要實作一個額外的端點取得 `nonce` 亂數字串並且紀錄在系統當中，當使用者簽署登入訊息時就像上面的範例訊息一樣要把 `nonce` 附在其中，在使用者登入後把這個 `nonce` 標記成已使用或是刪除，如此一來這個簽署後的訊息就不能再次拿來登入使用。
 
-![image](images/1.png#layoutTextWidth)
+![image](images/1.png)
 
 上面的流程圖當中 Attacker 即使拿到了使用者原本拿來登入的訊息，因為原本的那個 `nonce` 已經被系統刪除，所以即使取得原始訊息也無法再次拿來登入網站。
 
@@ -66,7 +66,7 @@ NestJS 提供了 `@nestjs/passport` 套件將 passport 策略整合入 NestJS �
 
 比如說要整合 `passport-google-oidc` 來實現 Google 帳號登入會需要建立一個 `GoogleStrategy` 類別繼承自 `PassportStrategy` 並且指定採用 `passport-google-oidc` 策略，整體運作的流程圖如下：
 
-![image](images/2.png#layoutTextWidth)
+![image](images/2.png)
 
 當使用者發出請求到 `/login` 端點後 NestJS 就會觸發 `passport-google-oidc` 的 `authenticate()` 函式並且開始進行 Google 帳號認證，當完成後會重導到原本網站的 `/redirect`。
 
@@ -108,7 +108,7 @@ export class AuthController {
 
 要整合 SIWE 也是非常類似的方式，不同之處在於我們會需要在一個 Nonce Store 裡面產生與儲存亂數字串，並且於登入時檢查該亂數是否由系統發出並且使用完畢後刪除，避免攻擊者的重用攻擊：
 
-![image](images/3.png#layoutTextWidth)
+![image](images/3.png)
 
 跟 `GoogleStrategy` 一樣我們會先需要實作一個 `EthereumStrategy`，並且在建構子內宣告 `SessionNonceStore` 作為 nonce store 用途，另外新增一個 `challenge()` 準備來承接 `/challenge` POST 端點傳遞過來的 request 物件，並且透過 `store.challenge()` 新增一筆 nonce 亂數字串回傳給 `/challenge` 端點。
 
