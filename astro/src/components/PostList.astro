@@ -1,0 +1,55 @@
+---
+import type { PostMeta } from '../lib/posts';
+import { groupByYear } from '../lib/posts';
+
+interface Props {
+  locale: string;
+  posts: PostMeta[];
+}
+const { locale, posts } = Astro.props;
+const grouped = groupByYear(posts);
+const years = [...grouped.keys()].sort((a, b) => b - a);
+---
+<div class="post-list">
+  {years.map((year) => (
+    <section class="year">
+      <h2>{year}</h2>
+      <ul>
+        {grouped.get(year)!.map((post) => (
+          <li>
+            <a href={`/${locale}/posts/${post.slug}`}>
+              <span class="date">{post.date.toISOString().slice(5, 10)}</span>
+              <span class="title">{post.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</div>
+
+<style>
+  .year { margin-bottom: 3rem; }
+  .year h2 {
+    font-family: var(--font-serif), serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  ul { list-style: none; padding: 0; }
+  li { margin: 0.75rem 0; }
+  li a {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .date {
+    font-family: var(--font-serif), serif;
+    font-size: 0.875rem;
+    color: #888;
+    min-width: 4rem;
+    letter-spacing: 0;
+  }
+  .title { flex: 1; }
+  li a:hover .title { text-decoration: underline; text-underline-offset: 4px; }
+</style>
