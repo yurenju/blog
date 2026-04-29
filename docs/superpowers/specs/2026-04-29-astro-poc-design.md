@@ -28,7 +28,7 @@ POC 目的：用最小改動驗證 Astro 能否處理現有內容、開發體驗
   - `/zh/posts/<slug>`（單篇文章）
 - 根目錄到 `/zh` 的 redirect（首頁 `/` → `/zh`，POC 階段先做這一個）
 - 1400+ 篇繁中 markdown 文章渲染
-- Markdown → HTML（Astro 內建 remark/rehype，含 GFM）
+- Markdown → HTML（Astro 內建 remark/rehype，含 GFM 與 Shiki code highlighting，皆使用 Astro 預設配置）
 - Astro Content Collections + `glob()` loader，schema 用 zod 驗證 frontmatter
 - Astro 原生 styling：scoped `<style>` blocks + 一份 `src/styles/global.css`
 - Astro Fonts API（Google provider）：Noto Sans TC + Noto Serif TC，self-hosted + auto preload
@@ -40,7 +40,6 @@ POC 目的：用最小改動驗證 Astro 能否處理現有內容、開發體驗
 - RSS feeds
 - 圖片處理（markdown 內 `<img>` 輸出原樣，POC 不負責讓圖片顯示）
 - 深色模式
-- Code highlighting（Astro 預設 Shiki 關閉）
 - Sitemap、OG meta、SEO metadata
 - 其他根目錄路徑（`/tech`、`/posts/...` 等）的 redirect — 之後再加
 - 圖片優化、`<Image>` component
