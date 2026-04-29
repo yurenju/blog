@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Documentation Conventions
+
+`docs/superpowers/specs/` and `docs/superpowers/plans/` 一律使用**繁體中文**撰寫，包含章節標題、任務標題、步驟敘述、預期結果說明等。即使 skill 提供的模板使用英文 heading（如 `Goal`、`Architecture`、`Task N`、`Files`、`Step N`、`Notes`），也要翻譯成中文。程式碼 block 內、commit message、檔案路徑、函式/變數/型別名稱、shell 指令仍保留英文。
+
 ## Commands
 
 ### Development
