@@ -1,0 +1,24 @@
+---
+interface Props {
+  date: Date;
+  category?: 'tech' | 'life';
+}
+const { date, category } = Astro.props;
+const formatted = date.toISOString().slice(0, 10);
+---
+<p class="meta">
+  <time datetime={date.toISOString()}>{formatted}</time>
+  {category && <span class="dot">·</span>}
+  {category && <span class="cat">{category}</span>}
+</p>
+
+<style>
+  .meta {
+    font-family: var(--font-serif), serif;
+    font-size: 0.875rem;
+    color: #666;
+    letter-spacing: 0;
+  }
+  .dot { margin: 0 0.5rem; }
+  .cat { text-transform: uppercase; font-size: 0.8rem; }
+</style>

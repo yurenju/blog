@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'zh' } }];
+}
+
+const { locale } = Astro.params;
+---
+<BaseLayout title="Subscription · Yuren's Blog">
+  <Header locale={locale!} />
+  <main class="container">
+    <h1>訂閱</h1>
+    <p>訂閱頁面內容稍後遷移。</p>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  h1 { font-size: 2.25rem; margin-bottom: 1.5rem; }
+</style>

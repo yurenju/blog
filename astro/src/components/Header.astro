@@ -1,0 +1,44 @@
+---
+interface Props {
+  locale: string;
+}
+const { locale } = Astro.props;
+const base = `/${locale}`;
+---
+<header class="site-header">
+  <div class="inner">
+    <a href={base} class="brand">Yuren's Blog</a>
+    <nav>
+      <a href={`${base}/tech`}>Tech</a>
+      <a href={`${base}/life`}>Life</a>
+      <a href={`${base}/archives`}>Archives</a>
+      <a href={`${base}/about`}>About</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .inner {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .brand {
+    font-family: var(--font-serif), serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  nav {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.95rem;
+  }
+</style>
