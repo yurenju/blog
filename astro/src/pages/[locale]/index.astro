@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import PostList from '../../components/PostList.astro';
+import { getActivePosts } from '../../lib/posts';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'zh' } }];
+}
+
+const { locale } = Astro.params;
+const posts = await getActivePosts();
+---
+<BaseLayout title="Yuren's Blog">
+  <Header locale={locale!} />
+  <main class="container">
+    <h1 class="page-title">最新文章</h1>
+    <PostList locale={locale!} posts={posts} />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-title {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+</style>
