@@ -3,14 +3,18 @@ import { glob } from 'astro/loaders';
 
 const posts = defineCollection({
   loader: glob({
-    // Match only the primary Chinese index.md files (exclude *.en.md, *.ja.md, etc.)
-    pattern: '*/*/index.md',
+    // Match all primary post markdown files: either `index.md` or a Chinese-titled `<title>.md`.
+    // Exclude `index.en.md` / `index.ja.md` translation siblings (POC is zh-only).
+    pattern: ['**/*.md', '!**/index.en.md', '!**/index.ja.md'],
     base: '../public/posts',
   }),
   schema: z
     .object({
-      title: z.string(),
-      date: z.coerce.date(),
+      // Some posts omit title/date/slug in frontmatter and rely on directory/file naming.
+      // Defaults are derived in lib/posts.ts toMeta() following Next.js conventions.
+      slug: z.string().optional(),
+      title: z.string().optional(),
+      date: z.coerce.date().optional(),
       // Posts use "categories" (array) rather than "category" (string).
       // We accept both formats and normalize in lib/posts.ts.
       categories: z
