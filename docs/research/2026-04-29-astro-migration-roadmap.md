@@ -42,25 +42,41 @@
 
 每個 phase 都產出獨立可 merge 的 branch，皆有自己的 spec/plan 文件。
 
-### Phase 1a — 內容大遷移
+### Phase 1a — 內容複製到 Astro 端
 
-**目標：** 把 markdown 與圖片從 `public/posts/` 搬進 `src/content/posts/`，為 Phase 1b 的 image pipeline 鋪路。
+**目標：** 把 markdown 與圖片**複製**（非搬移）到 `astro/src/content/posts/`，為 Phase 1b 的 image pipeline 鋪路；同時保持 Next.js 端完全不動。
+
+**為什麼是 `cp` 而不是 `mv`：**
+- `mv` 會讓 Next.js 立刻壞掉（它直接讀 `public/posts/` 與 `/posts/...` URL serve 圖片）
+- 改 Next.js 去讀新路徑需要動到 image URL rewrite、static asset 慣例等多處，遷移期間風險過大
+- 用 symlink 在 Windows + git 行為不一致
+- 直接 `cp`：兩邊都跑、Next.js prod 維持 100% 穩定，遷移風險全集中在 Astro 端
 
 **範圍：**
-- `git mv public/posts/ astro/src/content/posts/`（一次性大 mv）
-- 更新 `astro/src/content.config.ts` 的 glob `base` 指到新位置
-- 更新 `lib/posts.ts` 的 `parsePathSegments` 偵測新路徑前綴
+- `cp -r public/posts/ astro/src/content/posts/`（一次性整批複製）
+- 更新 `astro/src/content.config.ts` 的 glob `base` 指到 `./src/content/posts`（原本是 `../public/posts`）
+- 更新 `astro/src/lib/posts.ts` 的 `parsePathSegments` 偵測新路徑前綴
 - Build 仍要保持綠燈、URL 結構不變、所有頁面內容一致
 
+**Source 歸屬與同步策略：**
+- Phase 1a 完成的瞬間 → **`astro/src/content/posts/` 成為新 source of truth**
+- 遷移期間（Phase 1–5）若有新文章或修改，**只寫到新位置**
+- 不寫一個 sync script — 寫了反而誘惑去改 `public/posts/`，破壞 source 唯一性
+- Phase 6 切換上線前做一次 `diff -r public/posts/ astro/src/content/posts/` 確認沒漏掉
+- 如果遷移期間 Next.js 端的某篇 prod 文章需要緊急修改：先寫到新 source，再手動 `cp` 過去 `public/posts/`，commit 寫清楚是 hotfix 同步
+
 **驗收：**
-- 1494+ 頁 build 通過
-- 抽樣首頁、tech、life、archives、5 篇文章 — 跟 Phase 0 結果一致
-- `git log` 顯示 mv 是純 rename（`-M` 偵測到）
-- 不動圖片邏輯（仍然是破圖）
+- 1494+ 頁 Astro build 通過
+- Next.js `npm run build` 也仍通過、output 不變
+- 抽樣首頁、tech、life、archives、5 篇文章 — Astro 結果跟 Phase 0 一致
+- 不動圖片邏輯（Astro 端仍然是破圖，Phase 1b 處理）
+- `git diff` 應顯示為「新增 ~1400 個檔案」而非 rename，這是預期行為
 
 **相依：** 無（POC 已完成）
 
-**風險：** 低。是體力活、邏輯改動極小。Git rename detection 處理得當的話 history 不會斷。
+**風險：** 低。複製操作邏輯單純；唯一要注意的是「source 寫在哪」這條紀律。
+
+**最終清理：** Phase 6 切換時，`rm -rf public/posts/`（連同其他 Next.js 程式一併刪除）。
 
 ### Phase 1b — 圖片 pipeline
 
