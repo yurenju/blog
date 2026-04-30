@@ -54,12 +54,12 @@ function resolveCategory(data: PostEntry['data']): 'tech' | 'life' {
  *
  * Astro's glob loader on Windows occasionally falls back to using `entry.id` as the
  * frontmatter slug (single segment) for paths containing special chars like `[` or `?`.
- * `entry.filePath` is the absolute source path and remains accurate, so we prefer it.
+ * `entry.filePath` is the project-relative source path and remains accurate, so we prefer it.
  */
 function parsePathSegments(entry: PostEntry):
   | { group: string; dirname: string; filename: string }
   | null {
-  // Posix-normalize the absolute file path then strip the loader base prefix.
+  // Posix-normalize the project-relative filePath then locate the loader base prefix.
   const fp = entry.filePath?.replaceAll('\\', '/');
   if (fp) {
     const marker = 'src/content/posts/';
