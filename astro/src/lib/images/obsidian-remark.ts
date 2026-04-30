@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { visit } from 'unist-util-visit';
 import type { Plugin } from 'unified';
-import type { Root, Text, Image, PhrasingContent, Html } from 'mdast';
+import type { Root, Text, Image, PhrasingContent } from 'mdast';
 import type { VFile } from 'vfile';
 import { buildIndex } from './find-in-entry-dir';
 
@@ -49,9 +49,8 @@ export const obsidianRemark: Plugin<[], Root> = () => {
         }
 
         if (!filePath || !entryDir) {
-          // No vfile.path: emit verbatim via html node to avoid bracket escaping
-          const htmlNode: Html = { type: 'html', value: match };
-          replacements.push(htmlNode);
+          // No vfile.path: preserve the original text verbatim
+          replacements.push({ type: 'text', value: match });
         } else {
           const abs = getIndex().get(name);
           if (abs) {
@@ -62,10 +61,8 @@ export const obsidianRemark: Plugin<[], Root> = () => {
             console.warn(
               `[obsidian-remark] not found: ${name} in ${filePath}`,
             );
-            // Use an html node so remark-stringify emits the text verbatim
-            // without escaping the brackets in `![[...]]`.
-            const htmlNode: Html = { type: 'html', value: match };
-            replacements.push(htmlNode);
+            // Preserve the original text verbatim (safe: text nodes are escaped by rehype)
+            replacements.push({ type: 'text', value: match });
           }
         }
         lastEnd = matchEnd;
