@@ -1,4 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+import { resolveCover } from './images/cover';
 
 export type PostEntry = CollectionEntry<'posts'>;
 
@@ -11,6 +13,7 @@ export interface PostMeta {
   title: string;
   date: Date;
   description?: string;
+  cover: ImageMetadata | null;
 }
 
 /**
@@ -88,7 +91,7 @@ function parsePathSegments(entry: PostEntry):
   return null;
 }
 
-function toMeta(entry: PostEntry): PostMeta | null {
+async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
   const parsed = parsePathSegments(entry);
   if (!parsed) {
     console.warn(`[posts] Skipping entry with unparseable path: ${entry.id}`);
@@ -113,6 +116,8 @@ function toMeta(entry: PostEntry): PostMeta | null {
     date = new Date(dateMatch[1]!);
   }
 
+  const cover = await resolveCover(entry);
+
   return {
     entry,
     slug,
@@ -122,13 +127,14 @@ function toMeta(entry: PostEntry): PostMeta | null {
     title,
     date,
     description: entry.data.description,
+    cover,
   };
 }
 
 export async function getAllPosts(): Promise<PostMeta[]> {
   const entries = await getCollection('posts');
-  const sorted = entries
-    .map(toMeta)
+  const resolved = await Promise.all(entries.map(toMeta));
+  const sorted = resolved
     .filter((p): p is PostMeta => p !== null)
     .sort((a, b) => b.date.getTime() - a.date.getTime());
 
