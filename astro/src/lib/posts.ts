@@ -54,15 +54,15 @@ function resolveCategory(data: PostEntry['data']): 'tech' | 'life' {
  *
  * Astro's glob loader on Windows occasionally falls back to using `entry.id` as the
  * frontmatter slug (single segment) for paths containing special chars like `[` or `?`.
- * `entry.filePath` is the absolute source path and remains accurate, so we prefer it.
+ * `entry.filePath` is the project-relative source path and remains accurate, so we prefer it.
  */
 function parsePathSegments(entry: PostEntry):
   | { group: string; dirname: string; filename: string }
   | null {
-  // Posix-normalize the absolute file path then strip the loader base prefix.
+  // Posix-normalize the project-relative filePath then locate the loader base prefix.
   const fp = entry.filePath?.replaceAll('\\', '/');
   if (fp) {
-    const marker = '/public/posts/';
+    const marker = 'src/content/posts/';
     const i = fp.lastIndexOf(marker);
     if (i >= 0) {
       const rel = fp.slice(i + marker.length).replace(/\.md$/, '');
@@ -127,10 +127,24 @@ function toMeta(entry: PostEntry): PostMeta | null {
 
 export async function getAllPosts(): Promise<PostMeta[]> {
   const entries = await getCollection('posts');
-  return entries
+  const sorted = entries
     .map(toMeta)
     .filter((p): p is PostMeta => p !== null)
     .sort((a, b) => b.date.getTime() - a.date.getTime());
+
+  // Slug uniqueness assertion: duplicates would silently collide on /zh/posts/<slug>.
+  const seen = new Map<string, string>();
+  for (const post of sorted) {
+    const prev = seen.get(post.slug);
+    if (prev) {
+      throw new Error(
+        `[posts] Duplicate slug "${post.slug}" in entries: ${prev} and ${post.entry.id}`,
+      );
+    }
+    seen.set(post.slug, post.entry.id);
+  }
+
+  return sorted;
 }
 
 export async function getActivePosts(): Promise<PostMeta[]> {

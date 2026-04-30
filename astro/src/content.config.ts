@@ -6,7 +6,7 @@ const posts = defineCollection({
     // Match all primary post markdown files: either `index.md` or a Chinese-titled `<title>.md`.
     // Exclude `index.en.md` / `index.ja.md` translation siblings (POC is zh-only).
     pattern: ['**/*.md', '!**/index.en.md', '!**/index.ja.md'],
-    base: '../public/posts',
+    base: './src/content/posts',
   }),
   schema: z
     .object({
