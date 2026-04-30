@@ -1,6 +1,8 @@
 # Astro 遷移路線圖
 
-**狀態：** Phase 0（POC）已完成並 merge 進 main。後續 phase 待執行。
+**狀態：** Phase 0（POC）、Phase 1a 已完成並 merge 進 main。後續 phase 待執行。
+
+> **維護提示：** 每次完成一個 phase 並 merge 後，記得回來更新本檔的「狀態」與下方各 phase 的進度標記，避免 roadmap 與實際進度脫節。
 
 **最終目標：** 用 Astro 取代現行 Next.js blog，保留全部 URL、內容與功能，並利用 Astro 內建的 image / fonts pipeline 取得既有 Next.js 沒做到的最佳化。
 
@@ -42,7 +44,11 @@
 
 每個 phase 都產出獨立可 merge 的 branch，皆有自己的 spec/plan 文件。
 
-### Phase 1a — 內容複製到 Astro 端
+### Phase 1a — 內容複製到 Astro 端 ✅ 已完成（2026-04-30）
+
+**完成 commits：** `1801c84`（feat 主體）、`6063dea`（comment fix）。spec：`docs/superpowers/specs/2026-04-30-phase-1a-content-copy-design.md`，plan：`docs/superpowers/plans/2026-04-30-phase-1a-content-copy.md`。
+
+**完成備忘：** marker 改用 `'src/content/posts/'`（無前導斜線），因新 loader base 下 `entry.filePath` 是 project-relative 而非絕對路徑。slug 唯一性 assertion 已加入 `getAllPosts()`。1494 頁、3861 個 content 檔案、無 duplicate slugs。**Astro 端 `src/content/posts/` 從此為新 source of truth**，`public/posts/` 留待 Phase 6 清掉。
 
 **目標：** 把 markdown 與圖片**複製**（非搬移）到 `astro/src/content/posts/`，為 Phase 1b 的 image pipeline 鋪路；同時保持 Next.js 端完全不動。
 
