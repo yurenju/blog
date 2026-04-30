@@ -1,6 +1,6 @@
 # Astro 遷移路線圖
 
-**狀態：** Phase 0（POC）、Phase 1a 已完成並 merge 進 main。後續 phase 待執行。
+**狀態：** Phase 0（POC）、Phase 1a、Phase 1b 已完成並 merge 進 main。後續 phase 待執行。
 
 > **維護提示：** 每次完成一個 phase 並 merge 後，記得回來更新本檔的「狀態」與下方各 phase 的進度標記，避免 roadmap 與實際進度脫節。
 
@@ -84,7 +84,18 @@
 
 **最終清理：** Phase 6 切換時，`rm -rf public/posts/`（連同其他 Next.js 程式一併刪除）。
 
-### Phase 1b — 圖片 pipeline
+### Phase 1b — 圖片 pipeline ✅ 已完成（2026-05-01）
+
+**完成 commits：** `f01c151`、`f55b1c5`、`4f574ec`、`e9db0a2`、`ccdaf83`、`e6c7b65`、`ef22f1d`、`1c9c7fe`、`9be90b0`、`e017c65`。spec：`docs/superpowers/specs/2026-04-30-phase-1b-image-pipeline-design.md`，plan：`docs/superpowers/plans/2026-04-30-phase-1b-image-pipeline.md`。
+
+**完成備忘：**
+- Build 時間：34.5s（warm cache）/ 約 60s（cold），1494 頁、3220 張圖 transform。Phase 0 基準 8.7s。
+- GIF 處理路線：spike 確認 Astro 6.2 預設會把 GIF 轉 WebP 失去動畫；rehype `data-passthrough` attr 沒被 Astro 採納。最終實作 **客製 image service**（`src/lib/images/image-service.ts`）繼承 sharp service，僅在 input format=`gif` 時 passthrough 原始 buffer。比 plan 預想的 rehype 路線更乾淨。
+- 三個 plan 預期外的 production fix：(1) 客製 image service 處理 GIF；(2) `remarkNormalizeImagePaths` plugin 把 bare path 加 `./` prefix（Vite 否則當 module specifier 找）；(3) `fixContentAssetsImporterPaths` Vite plugin workaround Astro 6.2 在 Windows 的 `%2F` URL 編碼 bug（`importer=` query 被 URLSearchParams 編碼導致 `fileURLToPath` throw）。後者 TODO 等 Astro upstream 修了再拔。
+- POC workaround 已全清，`passthroughImageService` 與 `ignorePublicContentImages` Vite plugin 從 `astro.config.ts` 移除。
+- `PostMeta.cover: ImageMetadata | null` 為 Phase 4 OG meta 與後續 styling 預備好基礎設施；列表頁已渲染 cover thumbnail（120px、lazy load、無 cover 時 layout 自動收起）。
+- 26 個 unit test（vitest）：`find-in-entry-dir` 4 + `obsidian-remark` 6 + `cover` 7 + `remark-normalize-image-paths` 7 + `image-service` 2。
+- 1 處 corpus 修正：`archives/2007-09-19_facebook/index.md` 引用的圖檔本來就遺失，刪掉壞引用。
 
 **目標：** 把現有三種圖片語法接到 Astro image pipeline，產出 AVIF/WebP/響應式 srcset 與 hashed URL。
 
