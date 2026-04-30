@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { PostMeta } from '../lib/posts';
 import { groupByYear } from '../lib/posts';
 
@@ -20,6 +21,17 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
             <a href={`/${locale}/posts/${post.slug}`}>
               <span class="date">{post.date.toISOString().slice(5, 10)}</span>
               <span class="title">{post.title}</span>
+              {post.cover && (
+                <span class="cover">
+                  <Image
+                    src={post.cover}
+                    alt=""
+                    widths={[120, 240]}
+                    sizes="120px"
+                    loading="lazy"
+                  />
+                </span>
+              )}
             </a>
           </li>
         ))}
@@ -41,7 +53,7 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
   li a {
     display: flex;
     gap: 1rem;
-    align-items: baseline;
+    align-items: center;
   }
   .date {
     font-family: var(--font-serif), serif;
@@ -51,5 +63,12 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
     letter-spacing: 0;
   }
   .title { flex: 1; }
+  .cover { flex-shrink: 0; }
+  .cover :global(img) {
+    width: 120px;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+  }
   li a:hover .title { text-decoration: underline; text-underline-offset: 4px; }
 </style>
