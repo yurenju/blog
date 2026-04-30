@@ -30,18 +30,18 @@ async function runPlugin(src: string, filePath?: string): Promise<Root> {
 describe('obsidianRemark', () => {
   it('rewrites ![[name.ext]] to standard image syntax with relative path', async () => {
     const out = await process('See ![[0.png]] inline.');
-    expect(out).toContain('![0.png](images/0.png)');
+    expect(out).toContain('![0.png](./images/0.png)');
   });
 
   it('rewrites root-level files', async () => {
     const out = await process('![[cover.jpg]]');
-    expect(out).toContain('![cover.jpg](cover.jpg)');
+    expect(out).toContain('![cover.jpg](./cover.jpg)');
   });
 
   it('handles multiple wiki links in one paragraph', async () => {
     const out = await process('![[0.png]] and ![[cover.jpg]]');
-    expect(out).toContain('![0.png](images/0.png)');
-    expect(out).toContain('![cover.jpg](cover.jpg)');
+    expect(out).toContain('![0.png](./images/0.png)');
+    expect(out).toContain('![cover.jpg](./cover.jpg)');
   });
 
   it('warns and preserves text when file not found', async () => {

@@ -54,7 +54,9 @@ export const obsidianRemark: Plugin<[], Root> = () => {
         } else {
           const abs = getIndex().get(name);
           if (abs) {
-            const rel = path.relative(entryDir, abs).replaceAll('\\', '/');
+            // Ensure relative path starts with "./" so Vite treats it as a
+            // relative import rather than a bare module specifier.
+            const rel = './' + path.relative(entryDir, abs).replaceAll('\\', '/');
             const img: Image = { type: 'image', url: rel, alt: name };
             replacements.push(img);
           } else {
