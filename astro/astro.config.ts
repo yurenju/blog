@@ -80,6 +80,11 @@ export default defineConfig({
   },
   vite: {
     plugins: [fixContentAssetsImporterPaths(new URL('.', import.meta.url))],
+    // Disable PostCSS auto-discovery: this project's CSS is plain vanilla
+    // (no Tailwind, no autoprefixer). Without this, Vite walks up the tree
+    // and finds the Next.js side's postcss.config.mjs, which loads Tailwind
+    // and warns because its content paths don't resolve from astro/.
+    css: { postcss: { plugins: [] } },
   },
   output: 'static',
   site: 'https://yurenju.blog',
