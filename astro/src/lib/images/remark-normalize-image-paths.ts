@@ -18,12 +18,12 @@ export const remarkNormalizeImagePaths: Plugin<[], Root> = () => {
   return (tree) => {
     visit(tree, 'image', (node: Image) => {
       const url = node.url;
-      if (
-        !url.startsWith('./') &&
-        !url.startsWith('../') &&
-        !url.startsWith('/') &&
-        !url.includes(':')
-      ) {
+      const isAbsolute = url.startsWith('/');
+      const isExplicitRelative = url.startsWith('./') || url.startsWith('../');
+      const isUrl = /^[a-z][a-z0-9+\-.]*:/i.test(url); // RFC 3986 scheme (http:, https:, data:, mailto:, tel:, ftp:, etc.)
+      const isProtocolRelative = url.startsWith('//');
+
+      if (!isAbsolute && !isExplicitRelative && !isUrl && !isProtocolRelative) {
         node.url = './' + url;
       }
     });

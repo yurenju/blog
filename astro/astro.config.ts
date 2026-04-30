@@ -19,6 +19,11 @@ import { remarkNormalizeImagePaths } from './src/lib/images/remark-normalize-ima
  * plugin ordering rules. The resolveId interceptor decodes %2F-encoded
  * importer paths, resolves the asset manually, and returns the result so
  * Astro's plugin never sees the broken URL.
+ *
+ * TODO: No upstream Astro issue filed yet. When this workaround is removed,
+ * confirm against the latest Astro release that the %2F encoding bug on
+ * Windows is actually fixed (test by removing this plugin and running build
+ * on Windows).
  */
 function fixContentAssetsImporterPaths(root: URL) {
   const CONTENT_IMAGE_FLAG = 'astroContentImageFlag';
