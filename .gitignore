@@ -48,5 +48,6 @@ fixtures
 .playwright-mcp
 .mcp.json
 .claude/settings.local.json
+.claude/worktrees/
 nul
 .playwright-cli
