@@ -1,4 +1,5 @@
 import { defineConfig, fontProviders, passthroughImageService } from 'astro/config';
+import { obsidianRemark } from './src/lib/images/obsidian-remark';
 
 /**
  * Vite plugin that prevents build failures when markdown content in
@@ -30,6 +31,9 @@ export default defineConfig({
   },
   vite: {
     plugins: [ignorePublicContentImages()],
+  },
+  markdown: {
+    remarkPlugins: [obsidianRemark],
   },
   output: 'static',
   site: 'https://yurenju.blog',
