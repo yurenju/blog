@@ -105,7 +105,9 @@ export async function resolveCover(
   }
 
   // wiki: resolve via filesystem index, then map back to glob key
-  // entryFilePath is project-relative; we need an OS-absolute path for buildIndex
+  // entryFilePath is project-relative; we need an OS-absolute path for buildIndex.
+  // Assumes process.cwd() === astro/ subdirectory (where package.json lives).
+  // If invoked from the repo root, buildIndex would silently return empty.
   const projectRoot = process.cwd();
   const osEntryDir = path.join(projectRoot, path.dirname(entryFilePath));
   const fsIndex = buildIndex(osEntryDir);
