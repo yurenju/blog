@@ -1,6 +1,6 @@
 # Astro 遷移路線圖
 
-**狀態：** Phase 0（POC）、Phase 1a、Phase 1b 已完成並 merge 進 main。後續 phase 待執行。
+**狀態：** Phase 0（POC）、Phase 1a、Phase 1b、Phase 2 已完成並 merge 進 main。後續 phase 待執行。
 
 > **維護提示：** 每次完成一個 phase 並 merge 後，記得回來更新本檔的「狀態」與下方各 phase 的進度標記，避免 roadmap 與實際進度脫節。
 
@@ -117,7 +117,18 @@
 
 **風險：** 中。1400+ 篇文章 × 數張圖 = 數千張圖，build 時間會跳。`![[]]` plugin port + 絕對路徑 codemod 都要小心測試。
 
-### Phase 2 — ja / en 雙語
+### Phase 2 — ja / en 雙語 ✅ 已完成（2026-05-01）
+
+**完成 commits：** `5d99b63` ~ `eb90ff8`（14 個 commits 含 2 個 fix-up）。spec：`docs/superpowers/specs/2026-05-01-phase-2-i18n-design.md`，plan：`docs/superpowers/plans/2026-05-01-phase-2-i18n.md`。
+
+**完成備忘：**
+- 採方案 A：單一 collection、glob 收回 ja/en、locale 由檔名 suffix 推斷（`index.ja` / `index.en` / 其他 = zh）；不啟用 Astro 內建 `i18n` config。
+- 缺翻譯不 fallback：未翻譯文章在 `/ja/posts/<slug>` 與 `/en/posts/<slug>` 不產生（404），跟 Next.js prod 行為一致。Archives 限定 zh，`/ja/archives`、`/en/archives` 不存在。
+- LanguageSwitcher 聰明切換：在文章頁切到「有翻譯的 locale」跳對應翻譯篇；無翻譯則跳目標 locale 首頁。其他頁保留路徑換 prefix。實作用 `<details>`/`<summary>` 原生 dropdown，零 JS。
+- 純 helpers（`inferLocaleFromFilename`、`computeAvailableLocales`、`buildLanguageLinks`）抽出到 `src/lib/locale-helpers.ts` 與 `src/lib/i18n.ts`，避免 vitest 對 `astro:content` 虛擬模組的解析問題（plan 原本要寫在 `posts.ts`，實作時發現 mock alias 對虛擬模組無效，pivot 到純模組更乾淨）。
+- 19 個新單元測試（vitest）：`i18n` 6 + `locale-helpers` 8 + `language-switcher-links` 5；總計 45 個全綠。
+- Build：1564 頁、32.18s（cold），Phase 1b 基準 34.5s。新增 60 篇翻譯與 ja/en 列表頁對 build 時間影響可忽略。
+- hreflang 已完成（spec 原本歸屬 Phase 4 SEO，但因資料剛好齊備順手做了）：每篇 post 產出 `availableLocales` 對應的 `<link rel="alternate">` 加上 `x-default` 指向 zh。OG / Twitter card / sitemap / canonical 仍留給 Phase 4。
 
 **目標：** 把現有 `index.en.md` 與 `index.ja.md` 翻譯文章接進 Astro，建立 `/ja/`、`/en/` 路由，與 Phase 0 預留的 `[locale]` 路由結構對接，含語言 fallback 與切換 UI。
 
