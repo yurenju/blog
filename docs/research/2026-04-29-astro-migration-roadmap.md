@@ -1,6 +1,6 @@
 # Astro 遷移路線圖
 
-**狀態：** Phase 0（POC）、Phase 1a、Phase 1b、Phase 2 已完成並 merge 進 main。後續 phase 待執行。
+**狀態：** Phase 0（POC）、Phase 1a、Phase 1b、Phase 2、Phase 3 已完成並 merge 進 main。後續 phase 待執行。
 
 > **維護提示：** 每次完成一個 phase 並 merge 後，記得回來更新本檔的「狀態」與下方各 phase 的進度標記，避免 roadmap 與實際進度脫節。
 
@@ -149,7 +149,19 @@
 
 **風險：** 中。設計決策多（fallback、URL 形狀、UI 細節），spec 階段要明確。
 
-### Phase 3 — RSS
+### Phase 3 — RSS ✅ 已完成（2026-05-02）
+
+**完成 commits：** `bfa0140` ~ `87e89d6`（9 個 commits）。spec：`docs/superpowers/specs/2026-05-02-phase-3-rss-design.md`，plan：`docs/superpowers/plans/2026-05-02-phase-3-rss.md`。
+
+**完成備忘：**
+- 改用 `@astrojs/rss` 取代 Next.js 的 `feed` 套件。Item 內容用 Astro Container API（`experimental_AstroContainer.renderToString(Content)`）渲染，與頁面 HTML 一致，圖片自動套用 image pipeline 的 `/_astro/...webp` hashed URL。
+- 修掉 Next.js prod 三個 RSS bug：(1) `<language>` 全部硬寫 `zh-tw`；(2) 無 prefix 的 4 隻 feed 三 locale 文章混雜每篇出現 3 次；(3) channel meta 與 item 語言不一致。現在每隻 feed `<language>` 對應 locale（zh-Hant / ja / en），item 全是該 locale 文章。
+- 12 隻 feed 結構：3 個 `/rss/{zh,ja,en}.xml`（per-locale all）+ 6 個 `/rss/{zh,ja,en}/{tech,life}.xml`（per-locale per-category）+ 3 個 legacy alias `/rss.xml`、`/rss/{tech,life}.xml`（內容與 zh 對應 feed byte-identical）。
+- shorts category 已不存在於 schema 與 corpus，正式不產生 shorts feed。原 Next.js prod 的 `/rss/{zh,ja,en}/shorts.xml` 在 Phase 6 切換時隨 Next.js 程式一併刪除（部署平台 redirect 規則屆時補）。
+- 11 個新 unit test：`channelMeta` 4 + `buildFeedItems` 7。加 i18n 6 個新欄位的測試共 60 個 vitest 測試全綠（前一階段 45 + 新增 15）。
+- Build 時間 32.63s（Phase 2 baseline 32.18s，+0.45s 在 5s 預算內）。Container API 渲染 12 feeds × ≤20 篇 ≈ 60 篇 unique full-content render。
+- spec 原本把 markdown-it 列為「item 全文渲染」首選、Container API 為備案；plan 階段直接押 Container API（spec 自身列舉的 markdown-it 限制：hashed image URL 拿不到、`![[]]` 語法漏出，對 corpus 都實際存在）。Task 2 spike 驗證一篇 4 張圖文章渲染後，img 全是 `/_astro/...webp` hashed URL，路線確認可行。
+- `<atom:link rel="self">` 在 `@astrojs/rss` 不會自動寫出，所以 legacy alias 與對應 zh feed 是 byte-identical 而非「除 self-link 外相同」。對 reader 的訂閱實務影響極小。
 
 **目標：** 重現現行 6 隻 RSS feed（`/rss/zh.xml`、`/rss/ja.xml`、`/rss/en.xml`、`/rss/tech.xml`、`/rss/life.xml`、`/rss/shorts.xml`）。
 
