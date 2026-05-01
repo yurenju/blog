@@ -6,6 +6,7 @@ import PostMeta from '../components/PostMeta.astro';
 import ArticleLanguageIndicator from '../components/ArticleLanguageIndicator.astro';
 import type { PostMeta as PostMetaType } from '../lib/posts';
 import { HTML_LANG, HREFLANG, type Locale } from '../lib/i18n';
+import { SITE_LOGO, absoluteUrl, buildArticleSchema } from '../lib/seo';
 
 interface Props {
   locale: Locale;
@@ -15,8 +16,28 @@ interface Props {
 const { locale, post } = Astro.props;
 const pageTitle = `${post.title} · Yuren's Blog`;
 const siteUrl = 'https://yurenju.blog';
+
+// Compute ogImage: prefer post cover (hashed _astro URL), else site logo.
+const ogImage = post.cover
+  ? {
+      url: absoluteUrl(post.cover.src, Astro.site!),
+      width: post.cover.width,
+      height: post.cover.height,
+    }
+  : SITE_LOGO;
+
+const articleSchema = buildArticleSchema(post, locale, ogImage.url);
+const articleSchemaJson = JSON.stringify(articleSchema).replaceAll('</', '<\\/');
 ---
-<BaseLayout title={pageTitle} description={post.description} lang={HTML_LANG[locale]}>
+<BaseLayout
+  title={pageTitle}
+  description={post.description}
+  lang={HTML_LANG[locale]}
+  canonical={Astro.url}
+  ogType="article"
+  ogImage={ogImage}
+  ogLocale={HTML_LANG[locale] as 'zh-Hant-TW' | 'ja' | 'en'}
+>
   <Fragment slot="head">
     {post.availableLocales.map((l) => (
       <link
@@ -26,6 +47,7 @@ const siteUrl = 'https://yurenju.blog';
       />
     ))}
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/zh/posts/${post.slug}`} />
+    <script type="application/ld+json" set:html={articleSchemaJson} />
   </Fragment>
   <Header
     locale={locale}

@@ -1,6 +1,6 @@
 # Astro 遷移路線圖
 
-**狀態：** Phase 0（POC）、Phase 1a、Phase 1b、Phase 2、Phase 3 已完成並 merge 進 main。後續 phase 待執行。
+**狀態：** Phase 0（POC）、Phase 1a、Phase 1b、Phase 2、Phase 3、Phase 4 已完成並 merge 進 main。後續 phase 待執行。
 
 > **維護提示：** 每次完成一個 phase 並 merge 後，記得回來更新本檔的「狀態」與下方各 phase 的進度標記，避免 roadmap 與實際進度脫節。
 
@@ -178,7 +178,19 @@
 
 **風險：** 低。內容形狀已準備好，只是輸出格式。
 
-### Phase 4 — SEO 與 metadata
+### Phase 4 — SEO 與 metadata ✅ 已完成（2026-05-02）
+
+**完成 commits：** `024bb4e` ~ `37eaac7`（6 個 commits）。spec：`docs/superpowers/specs/2026-05-02-phase-4-seo-design.md`，plan：`docs/superpowers/plans/2026-05-02-phase-4-seo.md`。
+
+**完成備忘：**
+- 加 `@astrojs/sitemap`：產 `/sitemap-index.xml` + `/sitemap-0.xml`（210KB、1564 個 `<loc>`）。i18n 設定讓套件自動為翻譯篇互配 `<xhtml:link rel="alternate" hreflang="...">`（232 條 alternates）。Filter 排除 `/rss/*`，sitemap 也不含 `/_astro/`。
+- `BaseLayout.astro` 新增 `canonical`（必傳）、`ogType`、`ogImage`、`ogLocale` 4 個 props，head 渲染 canonical / OG（含 og:locale）/ Twitter `summary_large_image` meta，全頁適用。
+- `PostLayout.astro` 計算 ogImage：有 `post.cover` 則用 `absoluteUrl(post.cover.src, Astro.site)` 轉絕對 URL（產 `/_astro/<hash>.png|webp`）；否則 fallback `SITE_LOGO`（站 logo）。嵌入 `<script type="application/ld+json">` 含 `Article` schema（headline / description / inLanguage / datePublished / image / author Person）。`</` 預先 escape 防 script 注入。
+- `src/lib/seo.ts` 集中 `SITE_LOGO` 常數、`absoluteUrl()`、`buildArticleSchema()`。10 個新 unit test，總計 70 vitest 測試全綠。
+- 既有 Phase 2 hreflang alternates（zh / ja / en / x-default）在文章頁完整保留，與新 canonical / OG / JSON-LD 共存。
+- 6 個 list/about/subscription 頁全部加 SEO props（canonical = self、ogLocale）。順手把之前各 page 的 `lang={locale}` 改成 `lang={HTML_LANG[locale]}` 對齊 BaseLayout 慣例。
+- Build 時間：35.22s warm cache（Phase 3 baseline 32.63s，+2.6s 在 5s 預算內）。Cold build（清空 image cache）約 1m35s — image 處理本身的開銷，不是本 phase 引入。
+- 驗收抽樣：JSON-LD 三個 locale 各取一篇，`@type=Article`、`inLanguage` 對應正確；list 頁無 JSON-LD；canonical 8 個樣本正確；OG image post 用 hashed cover、首頁用 logo.jpg。
 
 **目標：** 補齊 sitemap、OG meta、canonical、結構化資料。
 

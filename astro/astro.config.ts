@@ -1,4 +1,5 @@
 import { defineConfig, fontProviders } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import { fileURLToPath } from 'node:url';
 import type { InputOptions } from 'rollup';
 import { obsidianRemark } from './src/lib/images/obsidian-remark';
@@ -69,6 +70,16 @@ function fixContentAssetsImporterPaths(root: URL) {
 }
 
 export default defineConfig({
+  site: 'https://yurenju.blog',
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: 'zh',
+        locales: { zh: 'zh-Hant', ja: 'ja', en: 'en' },
+      },
+      filter: (page) => !page.includes('/rss'),
+    }),
+  ],
   image: {
     service: {
       entrypoint: './src/lib/images/image-service',
@@ -87,7 +98,6 @@ export default defineConfig({
     css: { postcss: { plugins: [] } },
   },
   output: 'static',
-  site: 'https://yurenju.blog',
   trailingSlash: 'ignore',
   fonts: [
     {
