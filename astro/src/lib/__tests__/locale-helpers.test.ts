@@ -1,6 +1,6 @@
-// src/lib/__tests__/posts.test.ts
+// src/lib/__tests__/locale-helpers.test.ts
 import { describe, it, expect } from 'vitest';
-import { inferLocaleFromFilename, computeAvailableLocales } from '../posts';
+import { inferLocaleFromFilename, computeAvailableLocales } from '../locale-helpers';
 import type { Locale } from '../i18n';
 
 describe('inferLocaleFromFilename', () => {
