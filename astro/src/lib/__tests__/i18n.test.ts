@@ -41,3 +41,29 @@ describe('t(locale)', () => {
     expect(t('en').nav.tech).toBe('Tech');
   });
 });
+
+describe('UI_TEXT site.description', () => {
+  it('zh has zh description', () => {
+    expect(t('zh').site.description).toContain('撰寫');
+  });
+  it('ja has ja description', () => {
+    expect(t('ja').site.description).toContain('書く');
+  });
+  it('en has en description', () => {
+    expect(t('en').site.description).toContain('Writing');
+  });
+});
+
+describe('UI_TEXT rss labels', () => {
+  it('per-locale rss labels for tech/life/allPosts', () => {
+    expect(t('zh').rss.tech).toBe('技術');
+    expect(t('zh').rss.life).toBe('生活');
+    expect(t('zh').rss.allPosts).toBe('全部文章');
+    expect(t('ja').rss.tech).toBe('技術');
+    expect(t('ja').rss.life).toBe('生活');
+    expect(t('ja').rss.allPosts).toBe('すべての記事');
+    expect(t('en').rss.tech).toBe('Tech');
+    expect(t('en').rss.life).toBe('Life');
+    expect(t('en').rss.allPosts).toBe('All Posts');
+  });
+});

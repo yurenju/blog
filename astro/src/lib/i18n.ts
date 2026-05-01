@@ -43,6 +43,14 @@ export interface UiText {
     switchToChinese: string;
   };
   switchLanguage: string;
+  site: {
+    description: string;
+  };
+  rss: {
+    allPosts: string;
+    tech: string;
+    life: string;
+  };
 }
 
 export const UI_TEXT: Record<Locale, UiText> = {
@@ -56,6 +64,14 @@ export const UI_TEXT: Record<Locale, UiText> = {
       switchToChinese: '切換到中文版以瀏覽所有內容',
     },
     switchLanguage: '切換語言',
+    site: {
+      description: '撰寫就是一種思考方式，發佈與分享只是副產品，而真正的意義是在自我的知識脈絡裡面有了歸屬與連結。',
+    },
+    rss: {
+      allPosts: '全部文章',
+      tech: '技術',
+      life: '生活',
+    },
   },
   ja: {
     nav: { home: 'ホーム', tech: '技術', life: '生活', archives: 'アーカイブ', about: '概要', subscription: '購読' },
@@ -67,6 +83,14 @@ export const UI_TEXT: Record<Locale, UiText> = {
       switchToChinese: '中国語版に切り替えるとすべてのコンテンツをご覧いただけます',
     },
     switchLanguage: '言語切替',
+    site: {
+      description: '書くことは思考の一形態であり、公開と共有は副産物に過ぎません。真の意味は、自己の知識体系における帰属とつながりにあります。',
+    },
+    rss: {
+      allPosts: 'すべての記事',
+      tech: '技術',
+      life: '生活',
+    },
   },
   en: {
     nav: { home: 'Home', tech: 'Tech', life: 'Life', archives: 'Archives', about: 'About', subscription: 'Subscribe' },
@@ -78,6 +102,14 @@ export const UI_TEXT: Record<Locale, UiText> = {
       switchToChinese: 'Switch to the Chinese version to browse all content',
     },
     switchLanguage: 'Switch language',
+    site: {
+      description: 'Writing is a form of thinking. Publishing and sharing are just byproducts. The real meaning lies in finding belonging and connections within one\'s own knowledge framework.',
+    },
+    rss: {
+      allPosts: 'All Posts',
+      tech: 'Tech',
+      life: 'Life',
+    },
   },
 };
 
