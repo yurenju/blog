@@ -1,0 +1,36 @@
+---
+import { localePath, t, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  postCount: number;
+}
+
+const { locale, postCount } = Astro.props;
+const text = t(locale).languageNotice;
+---
+<aside class="language-notice">
+  <p>{text.mainlyInChinese}。{text.currentlyHas} {postCount} {text.articles}。</p>
+  <p>
+    <a href={localePath('zh')}>{text.switchToChinese}</a>
+  </p>
+</aside>
+
+<style>
+  .language-notice {
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 0 0 2rem 0;
+    background: #fafafa;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  .language-notice p { margin: 0; }
+  .language-notice p + p { margin-top: 0.4rem; }
+  .language-notice a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>

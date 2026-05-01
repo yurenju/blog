@@ -1,19 +1,42 @@
 ---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { localePath, t, type Locale } from '../lib/i18n';
+
 interface Props {
-  locale: string;
+  locale: Locale;
+  pathname: string;
+  isPostPage?: boolean;
+  slug?: string;
+  availableLocales?: Locale[];
 }
-const { locale } = Astro.props;
-const base = `/${locale}`;
+
+const {
+  locale,
+  pathname,
+  isPostPage = false,
+  slug,
+  availableLocales,
+} = Astro.props;
+
+const text = t(locale);
+const showArchives = locale === 'zh';
 ---
 <header class="site-header">
   <div class="inner">
-    <a href={base} class="brand">Yuren's Blog</a>
+    <a href={localePath(locale)} class="brand">Yuren's Blog</a>
     <nav>
-      <a href={`${base}/tech`}>Tech</a>
-      <a href={`${base}/life`}>Life</a>
-      <a href={`${base}/archives`}>Archives</a>
-      <a href={`${base}/about`}>About</a>
+      <a href={localePath(locale, 'tech')}>{text.nav.tech}</a>
+      <a href={localePath(locale, 'life')}>{text.nav.life}</a>
+      {showArchives && <a href={localePath(locale, 'archives')}>{text.nav.archives}</a>}
+      <a href={localePath(locale, 'about')}>{text.nav.about}</a>
     </nav>
+    <LanguageSwitcher
+      currentLocale={locale}
+      pathname={pathname}
+      isPostPage={isPostPage}
+      slug={slug}
+      availableLocales={availableLocales}
+    />
   </div>
 </header>
 

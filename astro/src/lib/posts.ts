@@ -1,6 +1,8 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import { resolveCover } from './images/cover';
+import type { Locale } from './i18n';
+import { inferLocaleFromFilename, computeAvailableLocales } from './locale-helpers';
 
 export type PostEntry = CollectionEntry<'posts'>;
 
@@ -14,6 +16,8 @@ export interface PostMeta {
   date: Date;
   description?: string;
   cover: ImageMetadata | null;
+  locale: Locale;
+  availableLocales: Locale[];
 }
 
 /**
@@ -91,6 +95,13 @@ function parsePathSegments(entry: PostEntry):
   return null;
 }
 
+/**
+ * Re-derive dirname from an entry, used for grouping translations of the same post.
+ */
+function dirnameFromEntry(entry: PostEntry): string {
+  return parsePathSegments(entry)?.dirname ?? '';
+}
+
 async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
   const parsed = parsePathSegments(entry);
   if (!parsed) {
@@ -98,6 +109,7 @@ async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
     return null;
   }
   const { group, dirname, filename } = parsed;
+  const locale = inferLocaleFromFilename(filename);
 
   const rawSlug = entry.data.slug ?? dirname;
   const slug = rawSlug.replaceAll(' ', '').toLowerCase();
@@ -128,6 +140,8 @@ async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
     date,
     description: entry.data.description,
     cover,
+    locale,
+    availableLocales: [locale],
   };
 }
 
@@ -138,33 +152,50 @@ export async function getAllPosts(): Promise<PostMeta[]> {
     .filter((p): p is PostMeta => p !== null)
     .sort((a, b) => b.date.getTime() - a.date.getTime());
 
-  // Slug uniqueness assertion: duplicates would silently collide on /zh/posts/<slug>.
+  // Compute availableLocales by (group, dirname).
+  const rows = sorted.map((p) => ({
+    group: p.group,
+    dirname: dirnameFromEntry(p.entry),
+    locale: p.locale,
+  }));
+  const localeMap = computeAvailableLocales(rows);
+  for (const p of sorted) {
+    const key = `${p.group}::${dirnameFromEntry(p.entry)}`;
+    p.availableLocales = localeMap.get(key) ?? [p.locale];
+  }
+
+  // Slug uniqueness assertion: (locale, slug) pairs must be unique.
   const seen = new Map<string, string>();
   for (const post of sorted) {
-    const prev = seen.get(post.slug);
+    const key = `${post.locale}::${post.slug}`;
+    const prev = seen.get(key);
     if (prev) {
       throw new Error(
-        `[posts] Duplicate slug "${post.slug}" in entries: ${prev} and ${post.entry.id}`,
+        `[posts] Duplicate (locale=${post.locale}, slug="${post.slug}") in entries: ${prev} and ${post.entry.id}`,
       );
     }
-    seen.set(post.slug, post.entry.id);
+    seen.set(key, post.entry.id);
   }
 
   return sorted;
 }
 
-export async function getActivePosts(): Promise<PostMeta[]> {
-  return (await getAllPosts()).filter((p) => !p.archived);
+export async function getActivePosts(locale: Locale): Promise<PostMeta[]> {
+  return (await getAllPosts()).filter((p) => !p.archived && p.locale === locale);
 }
 
 export async function getPostsByCategory(
   category: 'tech' | 'life',
+  locale: Locale,
 ): Promise<PostMeta[]> {
-  return (await getActivePosts()).filter((p) => p.category === category);
+  return (await getActivePosts(locale)).filter((p) => p.category === category);
 }
 
+/**
+ * Archives are zh-only by design (no translations exist for pre-2020 posts).
+ */
 export async function getArchivedPosts(): Promise<PostMeta[]> {
-  return (await getAllPosts()).filter((p) => p.archived);
+  return (await getAllPosts()).filter((p) => p.archived && p.locale === 'zh');
 }
 
 export function groupByYear(posts: PostMeta[]): Map<number, PostMeta[]> {
@@ -178,7 +209,10 @@ export function groupByYear(posts: PostMeta[]): Map<number, PostMeta[]> {
   return map;
 }
 
-export async function getPostBySlug(slug: string): Promise<PostMeta | null> {
+export async function getPostBySlug(
+  locale: Locale,
+  slug: string,
+): Promise<PostMeta | null> {
   const all = await getAllPosts();
-  return all.find((p) => p.slug === slug) ?? null;
+  return all.find((p) => p.locale === locale && p.slug === slug) ?? null;
 }

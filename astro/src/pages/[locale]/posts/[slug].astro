@@ -2,22 +2,20 @@
 import PostLayout from '../../../layouts/PostLayout.astro';
 import { getAllPosts } from '../../../lib/posts';
 import { render } from 'astro:content';
+import type { Locale } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
   const posts = await getAllPosts();
-  const locales = ['zh'];
-  return locales.flatMap((locale) =>
-    posts.map((post) => ({
-      params: { locale, slug: post.slug },
-      props: { post },
-    })),
-  );
+  return posts.map((post) => ({
+    params: { locale: post.locale, slug: post.slug },
+    props: { post },
+  }));
 }
 
-const { locale } = Astro.params;
+const locale = Astro.params.locale as Locale;
 const { post } = Astro.props;
 const { Content } = await render(post.entry);
 ---
-<PostLayout locale={locale!} post={post}>
+<PostLayout locale={locale} post={post}>
   <Content />
 </PostLayout>

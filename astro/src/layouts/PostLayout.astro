@@ -3,23 +3,47 @@ import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PostMeta from '../components/PostMeta.astro';
+import ArticleLanguageIndicator from '../components/ArticleLanguageIndicator.astro';
 import type { PostMeta as PostMetaType } from '../lib/posts';
+import { HTML_LANG, HREFLANG, type Locale } from '../lib/i18n';
 
 interface Props {
-  locale: string;
+  locale: Locale;
   post: PostMetaType;
 }
 
 const { locale, post } = Astro.props;
 const pageTitle = `${post.title} · Yuren's Blog`;
+const siteUrl = 'https://yurenju.blog';
 ---
-<BaseLayout title={pageTitle} description={post.description}>
-  <Header locale={locale} />
+<BaseLayout title={pageTitle} description={post.description} lang={HTML_LANG[locale]}>
+  <Fragment slot="head">
+    {post.availableLocales.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={HREFLANG[l]}
+        href={`${siteUrl}/${l}/posts/${post.slug}`}
+      />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/zh/posts/${post.slug}`} />
+  </Fragment>
+  <Header
+    locale={locale}
+    pathname={Astro.url.pathname}
+    isPostPage={true}
+    slug={post.slug}
+    availableLocales={post.availableLocales}
+  />
   <main class="container">
     <article>
       <header class="post-head">
         <h1>{post.title}</h1>
         <PostMeta date={post.date} category={post.category} />
+        <ArticleLanguageIndicator
+          currentLocale={locale}
+          availableLocales={post.availableLocales}
+          slug={post.slug}
+        />
       </header>
       <div class="prose">
         <slot />
