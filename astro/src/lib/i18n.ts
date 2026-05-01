@@ -84,3 +84,39 @@ export const UI_TEXT: Record<Locale, UiText> = {
 export function t(locale: Locale): UiText {
   return UI_TEXT[locale];
 }
+
+export interface LanguageLink {
+  locale: Locale;
+  href: string;
+}
+
+export interface BuildLanguageLinksInput {
+  currentLocale: Locale;
+  pathname: string;
+  isPostPage: boolean;
+  slug?: string;
+  availableLocales?: Locale[];
+}
+
+/**
+ * Build target hrefs for switching language from the current page.
+ *
+ * - Non-post pages: replace the locale prefix while preserving the rest of the path.
+ * - Post pages: if the target locale has a translation, link to /{target}/posts/{slug};
+ *   otherwise link to the target locale's home /{target}.
+ */
+export function buildLanguageLinks(input: BuildLanguageLinksInput): LanguageLink[] {
+  const { currentLocale, pathname, isPostPage, slug, availableLocales } = input;
+  const others = LOCALES.filter((l) => l !== currentLocale);
+  return others.map((target) => {
+    if (isPostPage && slug && availableLocales?.includes(target)) {
+      return { locale: target, href: `/${target}/posts/${slug}` };
+    }
+    if (isPostPage) {
+      return { locale: target, href: `/${target}` };
+    }
+    // Non-post page: swap prefix.
+    const stripped = pathname.replace(/^\/(zh|ja|en)/, '');
+    return { locale: target, href: `/${target}${stripped}` };
+  });
+}
