@@ -180,18 +180,22 @@ export async function getAllPosts(): Promise<PostMeta[]> {
   return sorted;
 }
 
-export async function getActivePosts(): Promise<PostMeta[]> {
-  return (await getAllPosts()).filter((p) => !p.archived);
+export async function getActivePosts(locale: Locale): Promise<PostMeta[]> {
+  return (await getAllPosts()).filter((p) => !p.archived && p.locale === locale);
 }
 
 export async function getPostsByCategory(
   category: 'tech' | 'life',
+  locale: Locale,
 ): Promise<PostMeta[]> {
-  return (await getActivePosts()).filter((p) => p.category === category);
+  return (await getActivePosts(locale)).filter((p) => p.category === category);
 }
 
+/**
+ * Archives are zh-only by design (no translations exist for pre-2020 posts).
+ */
 export async function getArchivedPosts(): Promise<PostMeta[]> {
-  return (await getAllPosts()).filter((p) => p.archived);
+  return (await getAllPosts()).filter((p) => p.archived && p.locale === 'zh');
 }
 
 export function groupByYear(posts: PostMeta[]): Map<number, PostMeta[]> {
@@ -205,7 +209,10 @@ export function groupByYear(posts: PostMeta[]): Map<number, PostMeta[]> {
   return map;
 }
 
-export async function getPostBySlug(slug: string): Promise<PostMeta | null> {
+export async function getPostBySlug(
+  locale: Locale,
+  slug: string,
+): Promise<PostMeta | null> {
   const all = await getAllPosts();
-  return all.find((p) => p.slug === slug) ?? null;
+  return all.find((p) => p.locale === locale && p.slug === slug) ?? null;
 }
