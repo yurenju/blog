@@ -2,9 +2,10 @@
 import { Image } from 'astro:assets';
 import type { PostMeta } from '../lib/posts';
 import { groupByYear } from '../lib/posts';
+import { localePath, type Locale } from '../lib/i18n';
 
 interface Props {
-  locale: string;
+  locale: Locale;
   posts: PostMeta[];
 }
 const { locale, posts } = Astro.props;
@@ -18,7 +19,7 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
       <ul>
         {grouped.get(year)!.map((post) => (
           <li>
-            <a href={`/${locale}/posts/${post.slug}`}>
+            <a href={localePath(locale, 'posts', post.slug)}>
               <span class="date">{post.date.toISOString().slice(5, 10)}</span>
               <span class="title">{post.title}</span>
               {post.cover && (
