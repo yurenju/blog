@@ -1,6 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import { resolveCover } from './images/cover';
+import { LOCALES, type Locale } from './i18n';
 
 export type PostEntry = CollectionEntry<'posts'>;
 
@@ -14,6 +15,8 @@ export interface PostMeta {
   date: Date;
   description?: string;
   cover: ImageMetadata | null;
+  locale: Locale;
+  availableLocales: Locale[];
 }
 
 /**
@@ -39,6 +42,40 @@ function resolveCategory(data: PostEntry['data']): 'tech' | 'life' {
   }
 
   return 'tech';
+}
+
+/**
+ * Infer post locale from the source filename (without extension).
+ * `index.ja` -> ja, `index.en` -> en, anything else -> zh.
+ */
+export function inferLocaleFromFilename(filename: string): Locale {
+  if (filename === 'index.ja') return 'ja';
+  if (filename === 'index.en') return 'en';
+  return 'zh';
+}
+
+/**
+ * Group rows by `${group}::${dirname}` and produce the sorted locale list per group.
+ * Locales are sorted to follow LOCALES order (zh, ja, en) so the output is stable.
+ */
+export function computeAvailableLocales(
+  rows: { group: string; dirname: string; locale: Locale }[],
+): Map<string, Locale[]> {
+  const sets = new Map<string, Set<Locale>>();
+  for (const row of rows) {
+    const key = `${row.group}::${row.dirname}`;
+    let set = sets.get(key);
+    if (!set) {
+      set = new Set();
+      sets.set(key, set);
+    }
+    set.add(row.locale);
+  }
+  const result = new Map<string, Locale[]>();
+  for (const [key, set] of sets) {
+    result.set(key, LOCALES.filter((l) => set.has(l)));
+  }
+  return result;
 }
 
 /**
@@ -91,6 +128,13 @@ function parsePathSegments(entry: PostEntry):
   return null;
 }
 
+/**
+ * Re-derive dirname from an entry, used for grouping translations of the same post.
+ */
+function dirnameFromEntry(entry: PostEntry): string {
+  return parsePathSegments(entry)?.dirname ?? '';
+}
+
 async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
   const parsed = parsePathSegments(entry);
   if (!parsed) {
@@ -98,6 +142,7 @@ async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
     return null;
   }
   const { group, dirname, filename } = parsed;
+  const locale = inferLocaleFromFilename(filename);
 
   const rawSlug = entry.data.slug ?? dirname;
   const slug = rawSlug.replaceAll(' ', '').toLowerCase();
@@ -128,6 +173,8 @@ async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
     date,
     description: entry.data.description,
     cover,
+    locale,
+    availableLocales: [locale],
   };
 }
 
@@ -138,16 +185,29 @@ export async function getAllPosts(): Promise<PostMeta[]> {
     .filter((p): p is PostMeta => p !== null)
     .sort((a, b) => b.date.getTime() - a.date.getTime());
 
-  // Slug uniqueness assertion: duplicates would silently collide on /zh/posts/<slug>.
+  // Compute availableLocales by (group, dirname).
+  const rows = sorted.map((p) => ({
+    group: p.group,
+    dirname: dirnameFromEntry(p.entry),
+    locale: p.locale,
+  }));
+  const localeMap = computeAvailableLocales(rows);
+  for (const p of sorted) {
+    const key = `${p.group}::${dirnameFromEntry(p.entry)}`;
+    p.availableLocales = localeMap.get(key) ?? [p.locale];
+  }
+
+  // Slug uniqueness assertion: (locale, slug) pairs must be unique.
   const seen = new Map<string, string>();
   for (const post of sorted) {
-    const prev = seen.get(post.slug);
+    const key = `${post.locale}::${post.slug}`;
+    const prev = seen.get(key);
     if (prev) {
       throw new Error(
-        `[posts] Duplicate slug "${post.slug}" in entries: ${prev} and ${post.entry.id}`,
+        `[posts] Duplicate (locale=${post.locale}, slug="${post.slug}") in entries: ${prev} and ${post.entry.id}`,
       );
     }
-    seen.set(post.slug, post.entry.id);
+    seen.set(key, post.entry.id);
   }
 
   return sorted;
