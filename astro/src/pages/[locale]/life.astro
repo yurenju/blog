@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import PostList from '../../components/PostList.astro';
 import { getPostsByCategory } from '../../lib/posts';
-import { LOCALES, type Locale, t } from '../../lib/i18n';
+import { LOCALES, HTML_LANG, type Locale, t } from '../../lib/i18n';
 
 export function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -14,7 +14,12 @@ const locale = Astro.params.locale as Locale;
 const posts = await getPostsByCategory('life', locale);
 const heading = t(locale).nav.life;
 ---
-<BaseLayout title={`${heading} · Yuren's Blog`} lang={locale}>
+<BaseLayout
+  title={`${heading} · Yuren's Blog`}
+  lang={HTML_LANG[locale]}
+  canonical={Astro.url}
+  ogLocale={HTML_LANG[locale]}
+>
   <Header locale={locale} pathname={Astro.url.pathname} />
   <main class="container">
     <h1 class="page-title">{heading}</h1>
