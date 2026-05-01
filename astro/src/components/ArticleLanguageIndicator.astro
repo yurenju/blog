@@ -1,0 +1,38 @@
+---
+import { LANGUAGE_NAMES, t, type Locale } from '../lib/i18n';
+
+interface Props {
+  currentLocale: Locale;
+  availableLocales: Locale[];
+  slug: string;
+}
+
+const { currentLocale, availableLocales, slug } = Astro.props;
+const others = availableLocales.filter((l) => l !== currentLocale);
+const label = t(currentLocale).post.alsoAvailableIn;
+---
+{others.length > 0 && (
+  <p class="article-language-indicator">
+    <span>{label}</span>
+    {others.map((l, i) => (
+      <>
+        {i > 0 && <span class="sep">、</span>}
+        <a href={`/${l}/posts/${slug}`}>{LANGUAGE_NAMES[l]}</a>
+      </>
+    ))}
+  </p>
+)}
+
+<style>
+  .article-language-indicator {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 1rem 0;
+  }
+  .article-language-indicator a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .sep { margin: 0 0.25rem; }
+</style>
