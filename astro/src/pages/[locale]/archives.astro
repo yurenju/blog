@@ -4,19 +4,22 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import PostList from '../../components/PostList.astro';
 import { getArchivedPosts } from '../../lib/posts';
+import { type Locale, t } from '../../lib/i18n';
 
+// Archives are zh-only by design (Phase 2 spec).
 export function getStaticPaths() {
   return [{ params: { locale: 'zh' } }];
 }
 
-const { locale } = Astro.params;
+const locale = Astro.params.locale as Locale;
 const posts = await getArchivedPosts();
+const heading = t(locale).nav.archives;
 ---
-<BaseLayout title="Archives · Yuren's Blog">
-  <Header locale={locale!} />
+<BaseLayout title={`${heading} · Yuren's Blog`} lang={locale}>
+  <Header locale={locale} pathname={Astro.url.pathname} />
   <main class="container">
-    <h1 class="page-title">Archives</h1>
-    <PostList locale={locale!} posts={posts} />
+    <h1 class="page-title">{heading}</h1>
+    <PostList locale={locale} posts={posts} />
   </main>
   <Footer />
 </BaseLayout>
