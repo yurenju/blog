@@ -4,17 +4,25 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PostMeta from '../components/PostMeta.astro';
 import type { PostMeta as PostMetaType } from '../lib/posts';
+import type { Locale } from '../lib/i18n';
 
 interface Props {
-  locale: string;
+  locale: Locale;
   post: PostMetaType;
+  availableLocales?: Locale[];
 }
 
-const { locale, post } = Astro.props;
+const { locale, post, availableLocales } = Astro.props;
 const pageTitle = `${post.title} · Yuren's Blog`;
 ---
 <BaseLayout title={pageTitle} description={post.description}>
-  <Header locale={locale} />
+  <Header
+    locale={locale}
+    pathname={Astro.url.pathname}
+    isPostPage={true}
+    slug={post.slug}
+    availableLocales={availableLocales}
+  />
   <main class="container">
     <article>
       <header class="post-head">
