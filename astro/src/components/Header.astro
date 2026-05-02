@@ -20,7 +20,6 @@ const {
 } = Astro.props;
 
 const text = t(locale);
-const showArchives = locale === 'zh';
 ---
 <header class="site-header">
   <div class="inner">
@@ -28,7 +27,6 @@ const showArchives = locale === 'zh';
     <nav>
       <a href={localePath(locale, 'tech')}>{text.nav.tech}</a>
       <a href={localePath(locale, 'life')}>{text.nav.life}</a>
-      {showArchives && <a href={localePath(locale, 'archives')}>{text.nav.archives}</a>}
       <a href={localePath(locale, 'about')}>{text.nav.about}</a>
     </nav>
     <LanguageSwitcher

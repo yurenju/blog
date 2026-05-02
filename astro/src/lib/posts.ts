@@ -217,6 +217,12 @@ export async function getArchivedPosts(): Promise<PostMeta[]> {
   return (await getAllPosts()).filter((p) => p.archived && p.locale === 'zh');
 }
 
+export async function getArchivedPostsByCategory(
+  category: 'tech' | 'life',
+): Promise<PostMeta[]> {
+  return (await getArchivedPosts()).filter((p) => p.category === category);
+}
+
 export function groupByYear(posts: PostMeta[]): Map<number, PostMeta[]> {
   const map = new Map<number, PostMeta[]>();
   for (const post of posts) {

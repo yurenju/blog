@@ -13,6 +13,9 @@ export function getStaticPaths() {
 const locale = Astro.params.locale as Locale;
 const posts = await getPostsByCategory('life', locale);
 const heading = t(locale).nav.life;
+const archivesText = t(locale).archives.moreArchived;
+// Archives are zh-only — only show the link on /zh/life.
+const showArchivesLink = locale === 'zh';
 ---
 <BaseLayout
   title={`${heading} · Yuren's Blog`}
@@ -24,10 +27,26 @@ const heading = t(locale).nav.life;
   <main class="container">
     <h1 class="page-title">{heading}</h1>
     <PostList locale={locale} posts={posts} />
+    {showArchivesLink && (
+      <p class="archives-link">
+        <a href="/zh/archives/life">{archivesText}</a>
+      </p>
+    )}
   </main>
   <Footer />
 </BaseLayout>
 
 <style>
   .page-title { font-size: 2.25rem; margin-bottom: 2rem; }
+  .archives-link {
+    margin-top: 2.5rem;
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+  .archives-link a {
+    color: var(--color-text-muted);
+    text-underline-offset: 4px;
+    text-decoration: underline;
+  }
+  .archives-link a:hover { color: var(--color-link); }
 </style>

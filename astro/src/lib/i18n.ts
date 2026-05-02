@@ -51,6 +51,9 @@ export interface UiText {
     tech: string;
     life: string;
   };
+  archives: {
+    moreArchived: string;
+  };
   theme: {
     toggle: string;
   };
@@ -75,6 +78,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
       tech: '技術',
       life: '生活',
     },
+    archives: { moreArchived: '更多歸檔文章' },
     theme: { toggle: '切換主題' },
   },
   ja: {
@@ -95,6 +99,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
       tech: '技術',
       life: '生活',
     },
+    archives: { moreArchived: 'その他のアーカイブ記事' },
     theme: { toggle: 'テーマ切替' },
   },
   en: {
@@ -115,6 +120,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
       tech: 'Tech',
       life: 'Life',
     },
+    archives: { moreArchived: 'More archived posts' },
     theme: { toggle: 'Toggle theme' },
   },
 };

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import PostList from '../../../components/PostList.astro';
+import { getArchivedPostsByCategory } from '../../../lib/posts';
+import { HTML_LANG, type Locale, t } from '../../../lib/i18n';
+
+// Archives are zh-only by design (Phase 2 spec).
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'zh', category: 'tech' } },
+    { params: { locale: 'zh', category: 'life' } },
+  ];
+}
+
+const locale = Astro.params.locale as Locale;
+const category = Astro.params.category as 'tech' | 'life';
+const posts = await getArchivedPostsByCategory(category);
+const text = t(locale);
+const heading = `${text.nav.archives} · ${text.nav[category]}`;
+---
+<BaseLayout
+  title={`${heading} · Yuren's Blog`}
+  lang={HTML_LANG[locale]}
+  canonical={Astro.url}
+  ogLocale={HTML_LANG[locale]}
+>
+  <Header locale={locale} pathname={Astro.url.pathname} />
+  <main class="container">
+    <h1 class="page-title">{heading}</h1>
+    <PostList locale={locale} posts={posts} />
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-title { font-size: 2.25rem; margin-bottom: 2rem; }
+</style>
