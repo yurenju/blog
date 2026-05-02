@@ -9,34 +9,40 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ### Development
-- `npm run dev` - Start development server with Turbopack on http://localhost:3000
-- `npm run build` - Build for production (generates static export and RSS feeds)
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+- `npm run dev` - Start Astro dev server on http://localhost:4321
+- `npm run build` - Build for production (static export to dist/, ~40s for 1564 pages)
+- `npm run preview` - Serve the production build locally for verification
+- `npm run check` - Run `astro check` (type checking + content collection validation)
+- `npm run test` - Run vitest unit tests
 
 ### RSS Generation
-- RSS feeds are automatically generated during build via prebuild script
-- Manual generation: `npx tsx scripts/generate-rss.ts`
+- RSS feeds are produced at build time by `@astrojs/rss` endpoints in `src/pages/rss/`
+- 12 feeds: 3 per-locale (`/rss/{zh,ja,en}.xml`), 6 per-locale-per-category, 3 legacy aliases (`/rss.xml`, `/rss/{tech,life}.xml`)
 
 ## Architecture Overview
 
-This is a Next.js 15 blog with static export, built for Traditional Chinese content. The blog uses markdown files for content and generates a fully static site.
+This is an Astro 6 static-export blog built for Traditional Chinese (zh-Hant) content with Japanese and English translations. Content lives in `src/content/posts/` as markdown files; output is fully static HTML for Cloudflare Pages.
 
 ### Core Structure
-- **app/** - Next.js App Router pages and components
-  - Dynamic routes: `/posts/[slug]` for blog posts
-  - Category pages: `/tech`, `/life`
-  - Archives pages: `/archives`, `/archives/tech`, `/archives/life`
-- **lib/** - Core logic
-  - `posts.ts` - Post management with singleton caching and batch processing
-  - `markdown.ts` - Markdown to HTML conversion
-  - `image.ts` - Image extraction from posts
-  - `rss.ts` - RSS feed generation
-- **public/posts/** - Markdown content in two-level grouped directory structure
-  - Group directories: `archives/`, `2020/`~`2026/` (year-based)
-  - Post directories nested inside groups: `public/posts/{group}/{slug}/`
-  - Posts in `archives/` are 2019 and earlier; year directories hold 2020+ posts
-- **public/pages/** - Static markdown pages (about, subscription)
+- **src/pages/** - Astro routes
+  - `[locale]/` (zh / ja / en): home, tech, life, archives, about, subscription, posts/[slug]
+  - `[locale]/archives/[category]/`: per-category zh-only archives lists
+  - `rss/[name].xml.ts`: 12 RSS feed endpoints
+  - `index.astro`: root meta refresh to `/zh/`
+- **src/content/posts/** - 1500+ markdown source files in two-level grouped layout
+  - Group dirs: `archives/` (pre-2020 zh-only), `2020/`-`2026/` (year-based)
+  - Posts: `<group>/<dirname>/index.md` (and optional `index.ja.md` / `index.en.md`)
+- **src/lib/** - Core helpers
+  - `posts.ts`: post collection + meta + locale inheritance
+  - `i18n.ts`: locale config, translation strings, language switcher links
+  - `seo.ts`: canonical URL, JSON-LD article schema, OG image fallback
+  - `images/`: cover resolution, custom Astro image service (preserves GIF), Obsidian wiki link remark plugin
+  - `rss-feed.ts`: shared RSS item building logic
+- **src/components/** - Astro components (Header, Footer, PostList, PostMeta, LanguageSwitcher, ThemeToggle, ...)
+- **src/layouts/** - BaseLayout (HTML head, theme inline script, OG meta) + PostLayout (article wrapper, JSON-LD)
+- **src/static-pages/** - About / Subscription markdown per locale
+- **public/** - Static assets (logo.jpg, _redirects)
+- **astro.config.ts** - Site config, sitemap integration, font API, image service, custom Vite plugin (Windows %2F bug workaround)
 
 ### Key Patterns
 1. **Post Slugs**: Date-based format `YYYY-MM-DD_title` with URL encoding/decoding
