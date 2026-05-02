@@ -137,9 +137,24 @@ export interface BuildLanguageLinksInput {
 }
 
 /**
+ * Routes that only exist for the zh locale (no ja/ja translations of these
+ * pages). Switching to ja/en from one of these should fall back to the target
+ * locale's home page rather than producing a 404.
+ */
+const ZH_ONLY_PATH_PREFIXES = ['/archives'];
+
+function isZhOnlyPath(pathWithoutLocale: string): boolean {
+  return ZH_ONLY_PATH_PREFIXES.some(
+    (p) => pathWithoutLocale === p || pathWithoutLocale.startsWith(`${p}/`),
+  );
+}
+
+/**
  * Build target hrefs for switching language from the current page.
  *
  * - Non-post pages: replace the locale prefix while preserving the rest of the path.
+ *   When the current path is zh-only (e.g. /archives) and the target locale is
+ *   not zh, link to the target locale's home instead of a non-existent URL.
  * - Post pages: if the target locale has a translation, link to /{target}/posts/{slug};
  *   otherwise link to the target locale's home /{target}.
  */
@@ -155,6 +170,9 @@ export function buildLanguageLinks(input: BuildLanguageLinksInput): LanguageLink
     }
     // Non-post page: swap prefix.
     const stripped = pathname.replace(/^\/(zh|ja|en)/, '');
+    if (target !== 'zh' && isZhOnlyPath(stripped)) {
+      return { locale: target, href: `/${target}` };
+    }
     return { locale: target, href: `/${target}${stripped}` };
   });
 }

@@ -54,6 +54,30 @@ describe('buildLanguageLinks', () => {
     ]);
   });
 
+  it('on zh-only /archives: switching to ja/en falls back to home', () => {
+    const links = buildLanguageLinks({
+      currentLocale: 'zh',
+      pathname: '/zh/archives',
+      isPostPage: false,
+    });
+    expect(links).toEqual([
+      { locale: 'ja', href: '/ja' },
+      { locale: 'en', href: '/en' },
+    ]);
+  });
+
+  it('on zh-only /archives/tech: switching to ja/en falls back to home', () => {
+    const links = buildLanguageLinks({
+      currentLocale: 'zh',
+      pathname: '/zh/archives/tech',
+      isPostPage: false,
+    });
+    expect(links).toEqual([
+      { locale: 'ja', href: '/ja' },
+      { locale: 'en', href: '/en' },
+    ]);
+  });
+
   it('excludes the current locale from results', () => {
     const links = buildLanguageLinks({
       currentLocale: 'ja',
