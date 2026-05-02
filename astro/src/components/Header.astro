@@ -25,9 +25,8 @@ const text = t(locale);
   <div class="inner">
     <a href={localePath(locale)} class="brand">Yuren's Blog</a>
     <nav>
-      <a href={localePath(locale, 'tech')}>{text.nav.tech}</a>
-      <a href={localePath(locale, 'life')}>{text.nav.life}</a>
       <a href={localePath(locale, 'about')}>{text.nav.about}</a>
+      <a href={localePath(locale, 'subscription')}>{text.nav.subscription}</a>
     </nav>
     <LanguageSwitcher
       currentLocale={locale}
