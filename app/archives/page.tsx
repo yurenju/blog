@@ -1,5 +1,0 @@
-import { redirect } from "next/navigation";
-
-export default function ArchivesPage() {
-  redirect("/zh/archives");
-}
