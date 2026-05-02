@@ -3,6 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { LOCALES, HTML_LANG, type Locale, t } from '../../lib/i18n';
+import { Content as SubZh } from '../../static-pages/subscription.zh.md';
+import { Content as SubJa } from '../../static-pages/subscription.ja.md';
+import { Content as SubEn } from '../../static-pages/subscription.en.md';
 
 export function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -10,6 +13,9 @@ export function getStaticPaths() {
 
 const locale = Astro.params.locale as Locale;
 const heading = t(locale).nav.subscription;
+
+const ContentByLocale = { zh: SubZh, ja: SubJa, en: SubEn } as const;
+const Content = ContentByLocale[locale];
 ---
 <BaseLayout
   title={`${heading} · Yuren's Blog`}
@@ -20,7 +26,9 @@ const heading = t(locale).nav.subscription;
   <Header locale={locale} pathname={Astro.url.pathname} />
   <main class="container">
     <h1>{heading}</h1>
-    <p>訂閱頁面內容稍後遷移。</p>
+    <article class="prose">
+      <Content />
+    </article>
   </main>
   <Footer />
 </BaseLayout>

@@ -2,37 +2,61 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import PostList from '../../components/PostList.astro';
-import LanguageNotice from '../../components/LanguageNotice.astro';
-import { getActivePosts } from '../../lib/posts';
-import { LOCALES, HTML_LANG, type Locale, t } from '../../lib/i18n';
+import { LOCALES, HTML_LANG, localePath, type Locale, t } from '../../lib/i18n';
 
 export function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
 }
 
 const locale = Astro.params.locale as Locale;
-const posts = await getActivePosts(locale);
-const heading = t(locale).nav.home;
+const text = t(locale);
+const siteTitle = "Yuren's Blog";
 ---
 <BaseLayout
-  title="Yuren's Blog"
+  title={siteTitle}
+  description={text.site.description}
   lang={HTML_LANG[locale]}
   canonical={Astro.url}
   ogLocale={HTML_LANG[locale]}
 >
   <Header locale={locale} pathname={Astro.url.pathname} />
   <main class="container">
-    <h1 class="page-title">{heading}</h1>
-    {locale !== 'zh' && <LanguageNotice locale={locale} postCount={posts.length} />}
-    <PostList locale={locale} posts={posts} />
+    <section class="hero">
+      <h1 class="site-title">{siteTitle}</h1>
+      <p class="site-description">{text.site.description}</p>
+      <nav class="categories">
+        <a href={localePath(locale, 'life')}>{text.nav.life}</a>
+        <span aria-hidden="true">·</span>
+        <a href={localePath(locale, 'tech')}>{text.nav.tech}</a>
+      </nav>
+    </section>
   </main>
   <Footer />
 </BaseLayout>
 
 <style>
-  .page-title {
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
+  .hero {
+    max-width: 32rem;
+    margin: 4rem auto;
+    text-align: center;
+  }
+  .site-title {
+    font-family: var(--font-serif), serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .site-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .categories a {
+    color: var(--color-link);
   }
 </style>
