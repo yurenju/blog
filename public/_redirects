@@ -1,0 +1,12 @@
+# Root → default locale (faster than meta refresh)
+/                /zh/                301
+
+# Legacy Next.js root-level routes → /zh/...
+/tech            /zh/tech            301
+/life            /zh/life            301
+/archives        /zh/archives        301
+/archives/tech   /zh/archives/tech   301
+/archives/life   /zh/archives/life   301
+/about           /zh/about           301
+/subscription    /zh/subscription    301
+/posts/*         /zh/posts/:splat    301
