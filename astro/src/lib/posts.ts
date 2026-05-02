@@ -164,6 +164,25 @@ export async function getAllPosts(): Promise<PostMeta[]> {
     p.availableLocales = localeMap.get(key) ?? [p.locale];
   }
 
+  // Translations (index.ja.md / index.en.md) typically only carry `title` in
+  // frontmatter. Inherit `category` and `slug` from the zh sibling so that
+  // ja/en list pages categorise correctly and language switching reaches the
+  // same canonical URL across locales.
+  const zhByDir = new Map<string, PostMeta>();
+  for (const p of sorted) {
+    if (p.locale === 'zh') {
+      zhByDir.set(`${p.group}::${dirnameFromEntry(p.entry)}`, p);
+    }
+  }
+  for (const p of sorted) {
+    if (p.locale === 'zh') continue;
+    const zh = zhByDir.get(`${p.group}::${dirnameFromEntry(p.entry)}`);
+    if (!zh) continue;
+    p.category = zh.category;
+    // Only override slug if the translation didn't define its own.
+    if (!p.entry.data.slug) p.slug = zh.slug;
+  }
+
   // Slug uniqueness assertion: (locale, slug) pairs must be unique.
   const seen = new Map<string, string>();
   for (const post of sorted) {
