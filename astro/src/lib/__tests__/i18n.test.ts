@@ -67,3 +67,11 @@ describe('UI_TEXT rss labels', () => {
     expect(t('en').rss.allPosts).toBe('All Posts');
   });
 });
+
+describe('UI_TEXT theme labels', () => {
+  it('per-locale theme.toggle string', () => {
+    expect(t('zh').theme.toggle).toBe('切換主題');
+    expect(t('ja').theme.toggle).toBe('テーマ切替');
+    expect(t('en').theme.toggle).toBe('Toggle theme');
+  });
+});
