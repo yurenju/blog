@@ -123,6 +123,11 @@ export default defineConfig({
       cssVariable: '--font-serif',
       weights: [400, 700],
       optimizedFallbacks: false,
+      // Override Astro's default `['sans-serif']` so the variable resolves to
+      // a serif fallback before the web font loads. Otherwise `var(--font-serif)`
+      // emits `"Noto Serif TC-...", sans-serif` and headings briefly render in
+      // sans-serif during the swap window.
+      fallbacks: ['serif'],
     },
   ],
 });
