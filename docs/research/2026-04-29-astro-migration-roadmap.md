@@ -1,6 +1,6 @@
 # Astro 遷移路線圖
 
-**狀態：** Phase 0（POC）、Phase 1a、Phase 1b、Phase 2、Phase 3、Phase 4 已完成並 merge 進 main。後續 phase 待執行。
+**狀態：** Phase 0（POC）、Phase 1a、Phase 1b、Phase 2、Phase 3、Phase 4、Phase 5 已完成並 merge 進 main。後續 phase 待執行。
 
 > **維護提示：** 每次完成一個 phase 並 merge 後，記得回來更新本檔的「狀態」與下方各 phase 的進度標記，避免 roadmap 與實際進度脫節。
 
@@ -209,7 +209,22 @@
 
 **風險：** 低。多半是 metadata 補齊。
 
-### Phase 5 — 深色模式與其他樣式精修
+### Phase 5 — 暗色模式 ✅ 已完成（2026-05-02）
+
+**完成 commits：** `20b36ab` ~ `9770050`（6 個 commits）。spec：`docs/superpowers/specs/2026-05-02-phase-5-dark-mode-design.md`，plan：`docs/superpowers/plans/2026-05-02-phase-5-dark-mode.md`。
+
+**範圍縮減：** 原 roadmap 此 phase 同時涵蓋 prose 細節精修（OpenType `palt`、列表/引用排版等）。spec 階段確認本 phase **僅做暗色模式功能**，prose 樣式精修留待之後全面重做設計時處理。
+
+**完成備忘：**
+- 主題狀態模型 C：`<html data-theme>` 為 single source of truth。Inline `<script is:inline>` 在 `<head>` `<meta charset>` 之後第一個位置讀 localStorage `'theme'`，無條目則跟隨 `prefers-color-scheme`。Paint 前同步跑、無 FOUC。
+- CSS variables 在 `:root`（light）與 `:root[data-theme="dark"]`（dark）定義 10 個顏色 token：bg / bg-elevated / text / text-muted / text-subtle / border / border-strong / code-bg / hover-bg / link。
+- 8 個 .astro 元件 hardcoded 顏色全替換為 `var(--color-*)`：Header、Footer、PostList、PostMeta、LanguageSwitcher、LanguageNotice、ArticleLanguageIndicator、PostLayout。Light 模式視覺與 Phase 4 完全相同。
+- `ThemeToggle.astro` 用原生 `<button>` + 12 行 vanilla JS（無框架）切 `data-theme` 並寫 localStorage；CSS-only sun/moon 圖示切換（`:root[data-theme="dark"]` selector 控制 display）。Header 右側 LanguageSwitcher 旁。
+- `markdown.shikiConfig.themes: { light: 'github-light', dark: 'github-dark-dimmed' }`：每個 token 同時 emit `--shiki-light` 與 `--shiki-dark` CSS variables；global.css `:root[data-theme='dark'] pre.astro-code` override 切換。實測 dark 模式 code block bg `#22272e` / text `#adbac7` 對應 github-dark-dimmed。
+- i18n `theme.toggle` 文字三 locale（切換主題 / テーマ切替 / Toggle theme），1 個新 unit test。總計 71 vitest 測試全綠。
+- Preview 親自跑過：toggle 切換、localStorage 持久化、override OS、清 localStorage 跟回 OS、跨頁面維持、code block dual theme，全部行為符合 spec。
+- Build 時間：35.42s warm cache（Phase 4 baseline 35.22s，+0.2s）。
+- 範圍外明示不做：「跟隨 OS 變更時即時切換 (when localStorage 已設)」、prose 細節精修、theme 過場動畫。
 
 **目標：** 補回 Phase 0「夠用就好」版的樣式：深色模式、prose 細節（OpenType `palt`、列表間距、引用排版等與既有設計對齊）。
 

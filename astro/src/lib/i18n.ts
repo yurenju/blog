@@ -51,6 +51,9 @@ export interface UiText {
     tech: string;
     life: string;
   };
+  theme: {
+    toggle: string;
+  };
 }
 
 export const UI_TEXT: Record<Locale, UiText> = {
@@ -72,6 +75,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
       tech: '技術',
       life: '生活',
     },
+    theme: { toggle: '切換主題' },
   },
   ja: {
     nav: { home: 'ホーム', tech: '技術', life: '生活', archives: 'アーカイブ', about: '概要', subscription: '購読' },
@@ -91,6 +95,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
       tech: '技術',
       life: '生活',
     },
+    theme: { toggle: 'テーマ切替' },
   },
   en: {
     nav: { home: 'Home', tech: 'Tech', life: 'Life', archives: 'Archives', about: 'About', subscription: 'Subscribe' },
@@ -110,6 +115,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
       tech: 'Tech',
       life: 'Life',
     },
+    theme: { toggle: 'Toggle theme' },
   },
 };
 

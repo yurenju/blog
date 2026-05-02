@@ -1,5 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
+import ThemeToggle from './ThemeToggle.astro';
 import { localePath, t, type Locale } from '../lib/i18n';
 
 interface Props {
@@ -37,12 +38,13 @@ const showArchives = locale === 'zh';
       slug={slug}
       availableLocales={availableLocales}
     />
+    <ThemeToggle locale={locale} />
   </div>
 </header>
 
 <style>
   .site-header {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--color-border);
   }
   .inner {
     max-width: 48rem;

@@ -88,6 +88,12 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [obsidianRemark, remarkNormalizeImagePaths],
+    shikiConfig: {
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark-dimmed',
+      },
+    },
   },
   vite: {
     plugins: [fixContentAssetsImporterPaths(new URL('.', import.meta.url))],

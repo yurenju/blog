@@ -33,6 +33,13 @@ const image = ogImage ?? SITE_LOGO;
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={siteDescription} />
