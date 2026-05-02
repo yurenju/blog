@@ -48,6 +48,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+/* Site brand title ("Yuren's Blog") — Latin-only, all-OS system serif chain.
+   Skips Noto Serif TC so the home page does not load CJK web font, and the
+   render is identical at first paint (no scoped-CSS-injection race). */
+.site-title,
+.brand {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, 'Liberation Serif',
+               'DejaVu Serif', serif;
+}
+
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
