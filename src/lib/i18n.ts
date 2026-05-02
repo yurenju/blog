@@ -1,13 +1,15 @@
 export const LOCALES = ['zh', 'ja', 'en'] as const;
 export type Locale = (typeof LOCALES)[number];
 
-export const HTML_LANG: Record<Locale, string> = {
+export type HtmlLang = 'zh-Hant-TW' | 'ja' | 'en';
+export const HTML_LANG: Record<Locale, HtmlLang> = {
   zh: 'zh-Hant-TW',
   ja: 'ja',
   en: 'en',
 };
 
-export const HREFLANG: Record<Locale, string> = {
+export type Hreflang = 'zh-Hant' | 'ja' | 'en';
+export const HREFLANG: Record<Locale, Hreflang> = {
   zh: 'zh-Hant',
   ja: 'ja',
   en: 'en',
