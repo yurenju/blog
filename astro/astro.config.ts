@@ -111,12 +111,18 @@ export default defineConfig({
       name: 'Noto Sans TC',
       cssVariable: '--font-sans',
       weights: [400, 500, 700],
+      // Astro's auto fallback computes size-adjust against the full font
+      // (including CJK glyphs), producing ~197% for Noto Sans TC vs Next.js's
+      // Capsize-derived ~104%. The result: Latin fallback renders 2x oversized
+      // before the web font loads, causing a visible size jump on swap.
+      optimizedFallbacks: false,
     },
     {
       provider: fontProviders.google(),
       name: 'Noto Serif TC',
       cssVariable: '--font-serif',
       weights: [400, 700],
+      optimizedFallbacks: false,
     },
   ],
 });
