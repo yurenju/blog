@@ -33,9 +33,9 @@ html {
 }
 
 body {
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
-  line-height: 2;
-  letter-spacing: 0.05em;
+  font-family: var(--font-serif), 'Times New Roman', serif;
+  line-height: 2.05;
+  letter-spacing: 0.04em;
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -70,9 +70,9 @@ img, picture, svg { display: block; max-width: 100%; height: auto; }
 
 /* Markdown prose */
 .prose h1 { font-size: 2rem; margin: 2rem 0 1rem; }
-.prose h2 { font-size: 1.5rem; margin: 2rem 0 1rem; }
+.prose h2 { font-size: 1.6rem; margin: 2rem 0 1rem; }
 .prose h3 { font-size: 1.25rem; margin: 1.5rem 0 0.75rem; }
-.prose p { margin: 1rem 0; }
+.prose p { margin: 1.1rem 0; }
 .prose ul, .prose ol { margin: 1rem 0; padding-left: 1.5rem; }
 .prose li { margin: 0.25rem 0; }
 .prose blockquote {
@@ -100,7 +100,7 @@ img, picture, svg { display: block; max-width: 100%; height: auto; }
 .prose pre code {
   background: transparent;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
 }
 .prose a { color: var(--color-link); text-decoration: underline; text-underline-offset: 3px; }
 .prose hr { border: 0; border-top: 1px solid var(--color-border); margin: 2rem 0; }
