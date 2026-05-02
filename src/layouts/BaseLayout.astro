@@ -40,6 +40,12 @@ const image = ogImage ?? SITE_LOGO;
         document.documentElement.setAttribute('data-theme', theme);
       })();
     </script>
+    <style is:inline>
+      /* First-paint background to prevent FOUC before global.css applies.
+         Must mirror --color-bg in src/styles/global.css. */
+      :root { background-color: #f5ede0; color-scheme: light; }
+      :root[data-theme="dark"] { background-color: #1c1814; color-scheme: dark; }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={siteDescription} />
