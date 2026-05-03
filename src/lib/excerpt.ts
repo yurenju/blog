@@ -18,14 +18,21 @@ function cleanFirstParagraph(body: string): string {
   // Remove fenced code blocks first (they would otherwise contribute text).
   let s = body.replace(/```[\s\S]*?```/g, '');
 
-  // Split into paragraphs (blank-line delimited) and process each until we
-  // find one that has visible text after cleaning.
+  // Split into paragraphs (blank-line delimited) and accumulate cleaned
+  // paragraphs until we have at least SOFT_LIMIT characters. This avoids
+  // returning a too-short opening line (e.g. a one-line dialogue) when
+  // following paragraphs would yield a more informative excerpt.
   const paragraphs = s.split(/\n\s*\n/);
+  const collected: string[] = [];
+  let total = 0;
   for (const raw of paragraphs) {
     const cleaned = cleanLine(raw);
-    if (cleaned) return cleaned;
+    if (!cleaned) continue;
+    collected.push(cleaned);
+    total += cleaned.length;
+    if (total >= SOFT_LIMIT) break;
   }
-  return '';
+  return collected.join(' ');
 }
 
 function cleanLine(raw: string): string {

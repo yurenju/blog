@@ -114,16 +114,22 @@ mobile 寬度（`max-width: 640px`）下：
 
 ### 清理規則
 
-從 body 取首段前依序剝除：
+從 body 取段落前依序剝除：
 
-1. Obsidian wiki link：`![[...]]`
-2. Markdown image：`![alt](url)`
-3. Markdown link 保留文字：`[text](url)` → `text`
-4. 標題行：以 `#` 開頭的整行
-5. HTML tag：`<...>`
-6. 多餘空白合併為單一空白，trim
+1. Fenced code block：` ``` ... ``` `
+2. Obsidian wiki link：`![[...]]`
+3. Markdown image：`![alt](url)`
+4. Markdown link 保留文字：`[text](url)` → `text`
+5. 標題行：以 `#` 開頭的整行（整段被視為空）
+6. HTML tag：`<...>`
+7. 段內多餘空白合併為單一空白，trim
 
-清理後取第一個非空段落。
+### 段落串接
+
+清理後從第一個非空段落開始累積，直到總長度達到 SOFT_LIMIT (80) 為止；
+段落之間以單一半形空白接合。這避免「首段是一句短對話」時摘要過於簡短
+（例如以引號開頭的問句或單行回答），讓後段更具資訊量的內容也能進入摘要。
+若首段已達或超過 SOFT_LIMIT，後段不會被讀取。
 
 ### 截斷規則
 

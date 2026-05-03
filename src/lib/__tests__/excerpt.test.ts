@@ -45,9 +45,41 @@ describe('extractExcerpt', () => {
       expect(extractExcerpt(body)).toBe('這是重點內容。');
     });
 
-    it('collapses repeated whitespace into a single space', () => {
+    it('collapses repeated whitespace inside each paragraph', () => {
+      // Both paragraphs are short, so they get concatenated (see "paragraph
+      // accumulation" tests below). Internal whitespace is collapsed.
       const body = '前段。\n\n\n   多   餘   空白。';
-      expect(extractExcerpt(body)).toBe('前段。');
+      expect(extractExcerpt(body)).toBe('前段。 多 餘 空白。');
+    });
+  });
+
+  describe('paragraph accumulation', () => {
+    it('joins short opening paragraph with the next when below soft limit', () => {
+      // First paragraph is a 16-char dialogue, well under 80; concatenate
+      // until total cleaned length reaches the soft limit.
+      const opener = '「你來東京有什麼感想？」'; // 12 chars
+      const body2 =
+        '幾個朋友在不同時間問了這問題，剛開始來的時候、過了幾個月後、甚至到最近這個問題偶爾就會蹦出來，我也經常問自己。';
+      const body = `${opener}\n\n${body2}`;
+      // Combined length > 80, so truncate kicks in. Last terminator within
+      // 80 chars of the joined string falls inside body2.
+      const result = extractExcerpt(body);
+      expect(result.startsWith(opener + ' ')).toBe(true);
+      expect(result.endsWith('。')).toBe(true);
+      expect(result.length).toBeLessThanOrEqual(80);
+    });
+
+    it('stops accumulating once soft limit is reached', () => {
+      // First paragraph alone is over 80 chars → second paragraph never
+      // contributes.
+      const long = '長'.repeat(80) + '。';
+      const body = `${long}\n\n後段不應該被讀到。`;
+      expect(extractExcerpt(body)).toBe(long);
+    });
+
+    it('concatenates multiple short paragraphs separated by spaces', () => {
+      const body = '一句。\n\n二句。\n\n三句。';
+      expect(extractExcerpt(body)).toBe('一句。 二句。 三句。');
     });
   });
 
