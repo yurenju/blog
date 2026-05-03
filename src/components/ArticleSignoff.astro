@@ -1,0 +1,24 @@
+---
+interface Props {
+  date: Date;
+  author?: string;
+}
+const { date, author = 'Yuren Ju' } = Astro.props;
+const formatted = date.toISOString().slice(0, 10);
+---
+<p class="signoff">
+  — <span class="author">{author}</span>, <time datetime={date.toISOString()}>{formatted}</time>
+</p>
+
+<style>
+  .signoff {
+    margin-top: 3rem;
+    text-align: right;
+    font-family: var(--font-serif), 'Times New Roman', serif;
+    font-style: italic;
+    color: var(--color-text);
+  }
+  .signoff:last-child {
+    margin-bottom: 4rem;
+  }
+</style>

@@ -1,9 +1,9 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import PostMeta from '../components/PostMeta.astro';
 import ArticleLanguageIndicator from '../components/ArticleLanguageIndicator.astro';
+import ArticleSignoff from '../components/ArticleSignoff.astro';
+import TranslationNotice from '../components/TranslationNotice.astro';
 import type { PostMeta as PostMetaType } from '../lib/posts';
 import { HTML_LANG, HREFLANG, type Locale } from '../lib/i18n';
 import { SITE_LOGO, absoluteUrl, buildArticleSchema } from '../lib/seo';
@@ -60,7 +60,6 @@ const articleSchemaJson = JSON.stringify(articleSchema).replaceAll('</', '<\\/')
     <article>
       <header class="post-head">
         <h1>{post.title}</h1>
-        <PostMeta date={post.date} category={post.category} />
         <ArticleLanguageIndicator
           currentLocale={locale}
           availableLocales={post.availableLocales}
@@ -70,9 +69,10 @@ const articleSchemaJson = JSON.stringify(articleSchema).replaceAll('</', '<\\/')
       <div class="prose">
         <slot />
       </div>
+      <ArticleSignoff date={post.date} />
+      <TranslationNotice locale={locale} slug={post.slug} />
     </article>
   </main>
-  <Footer />
 </BaseLayout>
 
 <style>

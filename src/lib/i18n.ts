@@ -37,6 +37,11 @@ export interface UiText {
   };
   post: {
     alsoAvailableIn: string;
+    translationNotice: {
+      prefix: string;
+      linkText: string;
+      suffix: string;
+    } | null;
   };
   languageNotice: {
     mainlyInChinese: string;
@@ -64,7 +69,10 @@ export interface UiText {
 export const UI_TEXT: Record<Locale, UiText> = {
   zh: {
     nav: { home: '首頁', tech: '技術', life: '生活', archives: '歸檔', about: '關於', subscription: '訂閱' },
-    post: { alsoAvailableIn: '其他語言版本：' },
+    post: {
+      alsoAvailableIn: '其他語言版本：',
+      translationNotice: null,
+    },
     languageNotice: {
       mainlyInChinese: '本站主要以繁體中文撰寫',
       currentlyHas: '目前有',
@@ -85,7 +93,14 @@ export const UI_TEXT: Record<Locale, UiText> = {
   },
   ja: {
     nav: { home: 'ホーム', tech: '技術', life: '生活', archives: 'アーカイブ', about: '概要', subscription: '購読' },
-    post: { alsoAvailableIn: 'Also available in:' },
+    post: {
+      alsoAvailableIn: 'Also available in: ',
+      translationNotice: {
+        prefix: '本記事は',
+        linkText: '繁体字中国語の原文',
+        suffix: 'を翻訳したものです。',
+      },
+    },
     languageNotice: {
       mainlyInChinese: 'このサイトは主に繁体字中国語で書かれています',
       currentlyHas: '現在',
@@ -106,7 +121,14 @@ export const UI_TEXT: Record<Locale, UiText> = {
   },
   en: {
     nav: { home: 'Home', tech: 'Tech', life: 'Life', archives: 'Archives', about: 'About', subscription: 'Subscribe' },
-    post: { alsoAvailableIn: 'Also available in:' },
+    post: {
+      alsoAvailableIn: 'Also available in: ',
+      translationNotice: {
+        prefix: 'Translated from the ',
+        linkText: 'Traditional Chinese original',
+        suffix: '.',
+      },
+    },
     languageNotice: {
       mainlyInChinese: 'This site is mainly written in Traditional Chinese',
       currentlyHas: 'Currently there are',
