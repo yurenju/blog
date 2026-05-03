@@ -3,6 +3,7 @@ import type { ImageMetadata } from 'astro';
 import { resolveCover } from './images/cover';
 import type { Locale } from './i18n';
 import { inferLocaleFromFilename, computeAvailableLocales } from './locale-helpers';
+import { extractExcerpt } from './excerpt';
 
 export type PostEntry = CollectionEntry<'posts'>;
 
@@ -15,6 +16,7 @@ export interface PostMeta {
   title: string;
   date: Date;
   description?: string;
+  excerpt: string;
   cover: ImageMetadata | null;
   locale: Locale;
   availableLocales: Locale[];
@@ -129,6 +131,7 @@ async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
   }
 
   const cover = await resolveCover(entry);
+  const excerpt = extractExcerpt(entry.body ?? '', entry.data.description);
 
   return {
     entry,
@@ -139,6 +142,7 @@ async function toMeta(entry: PostEntry): Promise<PostMeta | null> {
     title,
     date,
     description: entry.data.description,
+    excerpt,
     cover,
     locale,
     availableLocales: [locale],

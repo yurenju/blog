@@ -39,6 +39,7 @@ function makePost(overrides: Partial<PostMeta> = {}): PostMeta {
     title: 'Foo Title',
     date: new Date('2024-01-15T00:00:00Z'),
     description: 'Foo description',
+    excerpt: '',
     locale: 'zh',
     availableLocales: ['zh'],
     cover: null,
