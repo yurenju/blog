@@ -53,8 +53,8 @@ h1, h2, h3, h4, h5, h6 {
    render is identical at first paint (no scoped-CSS-injection race). */
 .site-title,
 .brand {
-  font-family: Georgia, Cambria, 'Times New Roman', Times, 'Liberation Serif',
-               'DejaVu Serif', serif;
+  font-family: var(--font-brand), Georgia, Cambria, 'Times New Roman', Times,
+               'Liberation Serif', 'DejaVu Serif', serif;
 }
 
 a { color: inherit; text-decoration: none; }

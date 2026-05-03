@@ -129,5 +129,13 @@ export default defineConfig({
       // sans-serif during the swap window.
       fallbacks: ['serif'],
     },
+    {
+      provider: fontProviders.google(),
+      name: 'Lora',
+      cssVariable: '--font-brand',
+      weights: [700],
+      // Brand title is Latin-only ("Yuren's Blog"), so no CJK subset.
+      fallbacks: ['serif'],
+    },
   ],
 });

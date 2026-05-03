@@ -28,9 +28,15 @@ const links = buildLanguageLinks({
 const switchLabel = t(currentLocale).switchLanguage;
 ---
 <details class="language-switcher">
-  <summary aria-label={switchLabel}>
-    <span aria-hidden="true">🌐</span>
-    <span class="current">{LANGUAGE_NAMES[currentLocale]}</span>
+  <summary aria-label={switchLabel} title={`${switchLabel}: ${LANGUAGE_NAMES[currentLocale]}`}>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 5h10"/>
+      <path d="M8 3v2"/>
+      <path d="M5 8c0 6 5 8 7 8"/>
+      <path d="M11 11c-1 4-4 6-8 7"/>
+      <path d="M14 21l4-10 4 10"/>
+      <path d="M15.5 17h5"/>
+    </svg>
   </summary>
   <ul>
     {links.map((link) => (
@@ -51,12 +57,16 @@ const switchLabel = t(currentLocale).switchLanguage;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    padding: 0.25rem 0.5rem;
+    justify-content: center;
+    padding: 0.4rem;
     border-radius: 4px;
+    color: var(--color-text-muted);
   }
   summary::-webkit-details-marker { display: none; }
-  summary:hover { background: var(--color-hover-bg); }
+  summary:hover {
+    background: var(--color-hover-bg);
+    color: var(--color-text);
+  }
   ul {
     position: absolute;
     right: 0;
