@@ -49,39 +49,52 @@
 每一篇文章為一個橫向 row：
 
 - **左**：縮圖框（`<div class="thumb-frame">` 包 `<img>`）
-  - 框 `width: 140px`，無固定 height
-  - `align-self: stretch` —— 框的高度會自動等於右側 body 的高度
-  - `border-radius: 6px`，`overflow: hidden`，背景色 `var(--color-border)` 作為載入時 placeholder
+  - 固定尺寸 `140 × 105`（4:3）
+  - `border-radius: 6px`，`overflow: hidden`
+  - 背景色 `var(--color-border)`（載入中 / 無圖時的視覺基底）
   - `<img>` 在框內 `width: 100%; height: 100%; object-fit: cover; display: block` —— 永遠裁切、絕不拉伸
 - **右**：`<div class="body">` 垂直堆疊三段
   - 日期（`MM-DD`，serif，`0.78rem`，`color: var(--color-text-subtle)`）
   - 標題（`1.1rem`，`color: var(--color-text)`，`line-height: 1.4`）
   - 摘要（`0.85rem`，`color: var(--color-text-muted)`，`line-height: 1.6`，限 2 行 `-webkit-line-clamp: 2`）
   - body gap `0.4rem`
-- **row 整體**：`display: flex`，`align-items: stretch`，`gap: 1.25rem`，`padding: 1.15rem 0`
+- **row 整體**：`display: flex`，`align-items: center`，`gap: 1.25rem`，`padding: 1.15rem 0`
 - **分隔**：`border-bottom: 1px solid var(--color-border)`，`:last-child` 不加底線
 
 年份 heading（`<h2>`）維持現況：serif，`1.5rem`，muted 色，下方 `1.5rem` 空白。
 
-### 為什麼是 stretch？
+### 為什麼固定尺寸 + 垂直置中
 
-舊版 `align-items: flex-start` + 固定縮圖高度（120 寬 × 原圖比例）會
-出現右側文字（特別是手機 2 行摘要）比縮圖高的不協調感。改成 stretch
-後，縮圖框高度永遠 = 文字高度，視覺對齊；img 用 `object-fit: cover`
-裁切到框內，圖片本身比例不變、不會被抽長。
+縮圖大小若隨 row 內容長短伸縮，每篇 row 的視覺重量會不一致，整頁
+看起來不齊。固定 4:3 桌面 / 1:1 手機的尺寸保證每 row 一致；當文字
+高度（2 / 3 行）與縮圖高度不完全相等時，用 `align-items: center`
+讓兩者垂直對齊，不會出現「文字貼縮圖頂端、底部空一截」或反之。
 
 ### 無封面 / 無摘要的退化
 
-- **無封面**：左側不渲染 `thumb-frame`，row 變成純文字。標題自動切回靠左。
-  （不刻意保留留白槽位，避免空框看起來像載入失敗。）
+- **無封面**：仍渲染 `thumb-frame`（同尺寸），但內容換成 placeholder ——
+  斜紋背景：
+  ```css
+  .thumb-frame.thumb-placeholder {
+    background: repeating-linear-gradient(
+      45deg,
+      var(--color-border) 0 8px,
+      var(--color-bg-elevated) 8px 16px
+    );
+  }
+  ```
+  斜紋的視覺意圖是「沒有圖」而非「圖載入失敗」。每 row 的縮圖位置
+  維持一致，標題不會跳回靠左破壞節奏。
 - **無摘要**（body 清理後為空、且無 `frontmatter.description`）：摘要那行不
-  渲染，row 自然壓縮為日期 + 標題兩行。此時縮圖框 stretch 後也會跟著變短。
+  渲染，row 高度自然壓縮為日期 + 標題；縮圖尺寸不變、垂直置中。
 
 ### 響應式
 
 mobile 寬度（`max-width: 640px`）下：
 
-- 縮圖框 `width: 110px`（其餘 stretch 邏輯不變）
+- 縮圖框改為 **`105 × 105`（1:1，正方形）** —— 縮圖比例與桌面不同，
+  目的是讓 row 高度與 2 行摘要的文字塊匹配（手機字級在 row 中佔的
+  比例較高）
 - 標題降為 `1rem`，`line-height: 1.35`
 - 摘要降為 `0.82rem`，`line-height: 1.55`
 - row gap `0.85rem`，padding `0.95rem 0`
@@ -191,9 +204,9 @@ const excerpt = extractExcerpt(entry.body ?? '', entry.data.description);
 - `/ja/life`、`/ja/tech`
 - `/en/life`、`/en/tech`
 - 桌面寬度與 375px 手機寬度都看
-- 確認：摘要正確截斷、無封面時 row 收斂正常、stretch 對齊符合預期、img
-  沒有變形、全站字級放大後其他頁面（首頁、文章內頁、Header、Footer）
-  也仍然正常
+- 確認：摘要正確截斷、無封面時 placeholder 顯示斜紋且 row 對齊一致、
+  img 沒有變形、所有 row 縮圖尺寸一致、全站字級放大後其他頁面
+  （首頁、文章內頁、Header、Footer）也仍然正常
 
 ## 不在範圍內
 
