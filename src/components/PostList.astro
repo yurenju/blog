@@ -25,8 +25,8 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
                   <Image
                     src={post.cover}
                     alt=""
-                    widths={[140, 280]}
-                    sizes="140px"
+                    widths={[105, 210]}
+                    sizes="105px"
                     loading="lazy"
                   />
                 </span>
@@ -60,7 +60,7 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
 
   li a {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.25rem;
     padding: 1.15rem 0;
     border-bottom: 1px solid var(--color-border);
@@ -71,8 +71,8 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
 
   .thumb-frame {
     flex-shrink: 0;
-    width: 140px;
-    height: 105px;
+    width: 120px;
+    height: 120px;
     border-radius: 6px;
     overflow: hidden;
     background: var(--color-border);
@@ -130,10 +130,6 @@ const years = [...grouped.keys()].sort((a, b) => b - a);
     li a {
       gap: 0.85rem;
       padding: 0.95rem 0;
-    }
-    .thumb-frame {
-      width: 105px;
-      height: 105px;
     }
     .body { gap: 0.3rem; }
     .date { font-size: 0.72rem; }
