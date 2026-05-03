@@ -11,7 +11,7 @@ tags:
 - focus
 ---
 
-{{< figure src="cover_observation.jpg" alt="觀察力" width="60%" >}}
+![觀察力](./cover_observation.jpg)
 
 
 最近看到的一些影片跟自己調整做事方式巧妙的產生了一點關聯。
