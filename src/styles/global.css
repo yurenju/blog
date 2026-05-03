@@ -108,6 +108,20 @@ img, picture, svg { display: block; max-width: 100%; height: auto; }
 .prose th, .prose td { border: 1px solid var(--color-border); padding: 0.5rem 0.75rem; }
 .prose th { background: var(--color-code-bg); font-weight: 600; }
 
+/* English pages have no CJK content, so skip Noto Serif TC entirely.
+   Otherwise U+2019 (’) and other ASCII-ish punctuation render as fullwidth
+   CJK glyphs, which look like a huge gap after the apostrophe. */
+html[lang="en"] body,
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4,
+html[lang="en"] h5,
+html[lang="en"] h6 {
+  font-family: var(--font-serif-en), Georgia, Cambria, 'Times New Roman', Times,
+               'Liberation Serif', 'DejaVu Serif', serif;
+}
+
 /* Shiki dual-theme override: switch token colors when data-theme=dark */
 :root[data-theme='dark'] pre.astro-code,
 :root[data-theme='dark'] pre.astro-code span {

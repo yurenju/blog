@@ -137,5 +137,12 @@ export default defineConfig({
       // Brand title is Latin-only ("Yuren's Blog"), so no CJK subset.
       fallbacks: ['serif'],
     },
+    {
+      provider: fontProviders.google(),
+      name: 'Noto Serif',
+      cssVariable: '--font-serif-en',
+      weights: [400, 700],
+      fallbacks: ['serif'],
+    },
   ],
 });

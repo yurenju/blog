@@ -52,6 +52,7 @@ const image = ogImage ?? SITE_LOGO;
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <Font cssVariable="--font-sans" preload />
     <Font cssVariable="--font-serif" preload />
+    {lang === 'en' && <Font cssVariable="--font-serif-en" preload />}
 
     <link rel="canonical" href={canonical.href} />
 
