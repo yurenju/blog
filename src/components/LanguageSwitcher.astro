@@ -5,6 +5,7 @@ interface Props {
   currentLocale: Locale;
   pathname: string;
   isPostPage?: boolean;
+  isWorkPage?: boolean;
   slug?: string;
   availableLocales?: Locale[];
 }
@@ -13,6 +14,7 @@ const {
   currentLocale,
   pathname,
   isPostPage = false,
+  isWorkPage = false,
   slug,
   availableLocales,
 } = Astro.props;
@@ -21,6 +23,7 @@ const links = buildLanguageLinks({
   currentLocale,
   pathname,
   isPostPage,
+  isWorkPage,
   slug,
   availableLocales,
 });
