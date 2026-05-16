@@ -1,0 +1,93 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import WorkMeta from '../components/WorkMeta.astro';
+import type { WorkMeta as WorkMetaType } from '../lib/works';
+import { HTML_LANG, HREFLANG, type Locale } from '../lib/i18n';
+import { SITE_LOGO, absoluteUrl } from '../lib/seo';
+
+interface Props {
+  locale: Locale;
+  work: WorkMetaType;
+}
+
+const { locale, work } = Astro.props;
+const pageTitle = `${work.title} · Yuren's Blog`;
+const siteUrl = 'https://yurenju.blog';
+
+const ogImage = work.cover
+  ? {
+      url: absoluteUrl(work.cover.src, Astro.site!),
+      width: work.cover.width,
+      height: work.cover.height,
+    }
+  : SITE_LOGO;
+---
+<BaseLayout
+  title={pageTitle}
+  description={work.description}
+  lang={HTML_LANG[locale]}
+  canonical={Astro.url}
+  ogType="article"
+  ogImage={ogImage}
+  ogLocale={HTML_LANG[locale] as 'zh-Hant-TW' | 'ja' | 'en'}
+>
+  <Fragment slot="head">
+    {work.availableLocales.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={HREFLANG[l]}
+        href={`${siteUrl}/${l}/studio/${work.slug}`}
+      />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/zh/studio/${work.slug}`} />
+  </Fragment>
+  <Header
+    locale={locale}
+    pathname={Astro.url.pathname}
+    isWorkPage={true}
+    slug={work.slug}
+    availableLocales={work.availableLocales}
+  />
+  <main class="container">
+    <article>
+      <header class="head">
+        <h1>{work.title}</h1>
+      </header>
+      <WorkMeta work={work} />
+      <div class="prose">
+        <slot />
+      </div>
+      {work.demoUrl && (
+        <div class="work-cta">
+          <a class="cta-btn" href={work.demoUrl} target="_blank" rel="noopener">
+            Demo ↗
+          </a>
+        </div>
+      )}
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .head { margin-bottom: 1rem; }
+  .head h1 { font-size: 2.25rem; line-height: 1.25; }
+  .work-cta {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    background: var(--color-link);
+    color: var(--color-bg);
+    border: 1px solid var(--color-link);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .cta-btn:hover { opacity: 0.85; color: var(--color-bg); }
+</style>

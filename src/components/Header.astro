@@ -7,6 +7,7 @@ interface Props {
   locale: Locale;
   pathname: string;
   isPostPage?: boolean;
+  isWorkPage?: boolean;
   slug?: string;
   availableLocales?: Locale[];
 }
@@ -15,6 +16,7 @@ const {
   locale,
   pathname,
   isPostPage = false,
+  isWorkPage = false,
   slug,
   availableLocales,
 } = Astro.props;
@@ -34,6 +36,7 @@ const text = t(locale);
           currentLocale={locale}
           pathname={pathname}
           isPostPage={isPostPage}
+          isWorkPage={isWorkPage}
           slug={slug}
           availableLocales={availableLocales}
         />

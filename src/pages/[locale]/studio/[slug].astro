@@ -1,0 +1,21 @@
+---
+import WorkLayout from '../../../layouts/WorkLayout.astro';
+import { getAllWorks } from '../../../lib/works';
+import { render } from 'astro:content';
+import type { Locale } from '../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const works = await getAllWorks();
+  return works.map((work) => ({
+    params: { locale: work.locale, slug: work.slug },
+    props: { work },
+  }));
+}
+
+const locale = Astro.params.locale as Locale;
+const { work } = Astro.props;
+const { Content } = await render(work.entry);
+---
+<WorkLayout locale={locale} work={work}>
+  <Content />
+</WorkLayout>

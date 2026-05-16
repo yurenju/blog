@@ -1,0 +1,28 @@
+---
+import type { WorkMeta as WorkMetaType } from '../lib/works';
+
+interface Props {
+  work: WorkMetaType;
+}
+const { work } = Astro.props;
+const dateLabel = work.date.toISOString().slice(0, 10);
+---
+<div class="work-meta">
+  <span class="date">{dateLabel}</span>
+  {work.tags.length > 0 && <span class="sep" aria-hidden="true">·</span>}
+  {work.tags.map((tag) => (
+    <span class="tag">{tag}</span>
+  ))}
+</div>
+
+<style>
+  .work-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+  .tag { color: var(--color-text-subtle); }
+</style>

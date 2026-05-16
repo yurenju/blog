@@ -10,7 +10,10 @@ import { buildIndex } from './find-in-entry-dir';
  * Loaders return the processed ImageMetadata that <Image> expects.
  */
 const imageModules = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/content/posts/**/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}',
+  [
+    '/src/content/posts/**/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}',
+    '/src/content/works/**/*.{png,jpg,jpeg,webp,PNG,JPG,JPEG,WEBP}',
+  ],
 );
 
 const ALLOWED_EXT = /\.(png|jpe?g|webp)$/i;
@@ -57,16 +60,16 @@ export function findFirstBodyImage(body: string): BodyImage | null {
   return candidates[0]!.image;
 }
 
-type PostEntry = CollectionEntry<'posts'>;
+type CoverEntry = CollectionEntry<'posts'> | CollectionEntry<'works'>;
 
 /**
- * Resolve a cover image for a post: prefer frontmatter `cover`, else scan body.
+ * Resolve a cover image for a post or work: prefer frontmatter `cover`, else scan body.
  *
  * Returns the processed ImageMetadata (with width/height/format) or null if
  * no candidate exists or the candidate file is not in the indexed glob.
  */
 export async function resolveCover(
-  entry: PostEntry,
+  entry: CoverEntry,
 ): Promise<ImageMetadata | null> {
   const entryFilePath = entry.filePath;
   if (!entryFilePath) return null;
