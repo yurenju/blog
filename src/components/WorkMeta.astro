@@ -1,0 +1,71 @@
+---
+import type { WorkMeta as WorkMetaType } from '../lib/works';
+
+interface Props {
+  work: WorkMetaType;
+}
+const { work } = Astro.props;
+const dateLabel = work.date.toISOString().slice(0, 10);
+---
+<div class="work-meta">
+  <div class="row">
+    <span class="date">{dateLabel}</span>
+    {work.tags.length > 0 && <span class="sep" aria-hidden="true">·</span>}
+    {work.tags.map((tag) => (
+      <span class="tag">{tag}</span>
+    ))}
+  </div>
+  {(work.demoUrl || work.repoUrl) && (
+    <div class="actions">
+      {work.demoUrl && (
+        <a class="btn primary" href={work.demoUrl} target="_blank" rel="noopener">
+          Demo ↗
+        </a>
+      )}
+      {work.repoUrl && (
+        <a class="btn" href={work.repoUrl} target="_blank" rel="noopener">
+          GitHub ↗
+        </a>
+      )}
+    </div>
+  )}
+</div>
+
+<style>
+  .work-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+  .tag { color: var(--color-text-subtle); }
+  .actions {
+    display: inline-flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+  .btn:hover { border-color: var(--color-link); color: var(--color-link); }
+  .btn.primary {
+    background: var(--color-link);
+    color: var(--color-bg);
+    border-color: var(--color-link);
+  }
+  .btn.primary:hover { opacity: 0.85; color: var(--color-bg); }
+</style>
