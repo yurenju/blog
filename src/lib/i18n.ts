@@ -69,7 +69,7 @@ export interface UiText {
 
 export const UI_TEXT: Record<Locale, UiText> = {
   zh: {
-    nav: { home: '首頁', tech: '技術', life: '生活', studio: '工作室', archives: '歸檔', about: '關於', subscription: '訂閱' },
+    nav: { home: '首頁', tech: '技術', life: '生活', studio: '創作', archives: '歸檔', about: '關於', subscription: '訂閱' },
     post: {
       alsoAvailableIn: '其他語言版本：',
       translationNotice: null,
