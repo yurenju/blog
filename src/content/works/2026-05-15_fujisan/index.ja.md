@@ -3,7 +3,7 @@ title: 富士山 — 日没の移ろい
 description: 同じ場所で時間を変えて撮影した125枚の富士山の写真を、輪郭を揃えてスマートフォンの傾きで切り替えながら、時間と季節の流れを体感する。
 ---
 
-<video autoplay loop muted playsinline controls preload="metadata" style="width: 100%; height: auto; border-radius: 8px;">
+<video autoplay loop muted playsinline controls preload="metadata" style="display: block; width: 50%; max-width: 100%; height: auto; margin: 0 auto; border-radius: 8px;">
   <source src="/works/2026-05-15_fujisan/fujisan-demo.mp4" type="video/mp4">
 </video>
 
