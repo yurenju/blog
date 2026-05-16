@@ -31,6 +31,7 @@ export interface UiText {
     home: string;
     tech: string;
     life: string;
+    studio: string;
     archives: string;
     about: string;
     subscription: string;
@@ -68,7 +69,7 @@ export interface UiText {
 
 export const UI_TEXT: Record<Locale, UiText> = {
   zh: {
-    nav: { home: '首頁', tech: '技術', life: '生活', archives: '歸檔', about: '關於', subscription: '訂閱' },
+    nav: { home: '首頁', tech: '技術', life: '生活', studio: '工作室', archives: '歸檔', about: '關於', subscription: '訂閱' },
     post: {
       alsoAvailableIn: '其他語言版本：',
       translationNotice: null,
@@ -92,7 +93,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     theme: { toggle: '切換主題' },
   },
   ja: {
-    nav: { home: 'ホーム', tech: '技術', life: '生活', archives: 'アーカイブ', about: '概要', subscription: '購読' },
+    nav: { home: 'ホーム', tech: '技術', life: '生活', studio: 'スタジオ', archives: 'アーカイブ', about: '概要', subscription: '購読' },
     post: {
       alsoAvailableIn: 'Also available in: ',
       translationNotice: {
@@ -120,7 +121,7 @@ export const UI_TEXT: Record<Locale, UiText> = {
     theme: { toggle: 'テーマ切替' },
   },
   en: {
-    nav: { home: 'Home', tech: 'Tech', life: 'Life', archives: 'Archives', about: 'About', subscription: 'Subscribe' },
+    nav: { home: 'Home', tech: 'Tech', life: 'Life', studio: 'Studio', archives: 'Archives', about: 'About', subscription: 'Subscribe' },
     post: {
       alsoAvailableIn: 'Also available in: ',
       translationNotice: {
@@ -162,6 +163,7 @@ export interface BuildLanguageLinksInput {
   currentLocale: Locale;
   pathname: string;
   isPostPage: boolean;
+  isWorkPage?: boolean;
   slug?: string;
   availableLocales?: Locale[];
 }
@@ -189,9 +191,15 @@ function isZhOnlyPath(pathWithoutLocale: string): boolean {
  *   otherwise link to the target locale's home /{target}.
  */
 export function buildLanguageLinks(input: BuildLanguageLinksInput): LanguageLink[] {
-  const { currentLocale, pathname, isPostPage, slug, availableLocales } = input;
+  const { currentLocale, pathname, isPostPage, isWorkPage = false, slug, availableLocales } = input;
   const others = LOCALES.filter((l) => l !== currentLocale);
   return others.map((target) => {
+    if (isWorkPage && slug && availableLocales?.includes(target)) {
+      return { locale: target, href: `/${target}/studio/${slug}` };
+    }
+    if (isWorkPage) {
+      return { locale: target, href: `/${target}` };
+    }
     if (isPostPage && slug && availableLocales?.includes(target)) {
       return { locale: target, href: `/${target}/posts/${slug}` };
     }

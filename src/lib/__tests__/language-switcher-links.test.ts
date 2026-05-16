@@ -87,3 +87,30 @@ describe('buildLanguageLinks', () => {
     expect(links.map((l) => l.locale)).toEqual(['zh', 'en']);
   });
 });
+
+describe('buildLanguageLinks for work pages', () => {
+  it('links to /[target]/studio/[slug] when translation available', () => {
+    const links = buildLanguageLinks({
+      currentLocale: 'zh',
+      pathname: '/zh/studio/2026-05-15_fujisan',
+      isPostPage: false,
+      isWorkPage: true,
+      slug: '2026-05-15_fujisan',
+      availableLocales: ['zh', 'ja', 'en'],
+    });
+    expect(links.find((l) => l.locale === 'ja')?.href).toBe('/ja/studio/2026-05-15_fujisan');
+    expect(links.find((l) => l.locale === 'en')?.href).toBe('/en/studio/2026-05-15_fujisan');
+  });
+
+  it('falls back to /[target] home when translation missing', () => {
+    const links = buildLanguageLinks({
+      currentLocale: 'zh',
+      pathname: '/zh/studio/2026-05-15_fujisan',
+      isPostPage: false,
+      isWorkPage: true,
+      slug: '2026-05-15_fujisan',
+      availableLocales: ['zh'],
+    });
+    expect(links.find((l) => l.locale === 'ja')?.href).toBe('/ja');
+  });
+});
