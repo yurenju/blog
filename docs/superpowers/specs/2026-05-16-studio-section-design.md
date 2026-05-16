@@ -134,7 +134,7 @@ i18n inherit 行為與 posts 完全一致 (參考 `src/lib/posts.ts` 的 `resolv
   tags: [photography, interactive]
   ---
   ```
-- ja / en 翻譯先不做,之後用 `translate` skill 補
+- ja / en 翻譯一併完成,使用 `translate` skill (Translate Chinese blog post to Japanese and English) 從 zh 版產出 `index.ja.md` 與 `index.en.md`
 
 ## 範圍外 (這次不做)
 
