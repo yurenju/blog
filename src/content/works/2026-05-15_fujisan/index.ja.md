@@ -3,7 +3,9 @@ title: 富士山 — 日没の移ろい
 description: 同じ場所で時間を変えて撮影した125枚の富士山の写真を、輪郭を揃えてスマートフォンの傾きで切り替えながら、時間と季節の流れを体感する。
 ---
 
-![[cover.jpg]]
+<video autoplay loop muted playsinline controls preload="metadata" style="width: 100%; height: auto; border-radius: 8px;">
+  <source src="/works/2026-05-15_fujisan/fujisan-demo.mp4" type="video/mp4">
+</video>
 
 去年の秋、ぼんやりと輪郭が見えはじめた頃、家を出ると正面にちょうど富士山が見えることに気がついた。そこからあらためて、地球の傾きが日没の位置に与える影響を感じるようになる。とくにこの山を目印にすると、撮影した一枚一枚の写真がまるで時間の断片のようで、何層にも重ねていくうちに、時間と季節がゆっくりと動きはじめた。
 

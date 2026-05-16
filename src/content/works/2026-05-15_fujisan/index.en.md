@@ -3,7 +3,9 @@ title: Fujisan — The Shifting Sunset
 description: 125 photographs of Mount Fuji taken from a single spot at different moments, aligned by silhouette and browsed by tilting your phone, as a way to feel time and the seasons flow.
 ---
 
-![[cover.jpg]]
+<video autoplay loop muted playsinline controls preload="metadata" style="width: 100%; height: auto; border-radius: 8px;">
+  <source src="/works/2026-05-15_fujisan/fujisan-demo.mp4" type="video/mp4">
+</video>
 
 Last autumn, after first making out its faint silhouette, I realized that Mount Fuji is visible right when you step out of my home. From then on I began to feel, all over again, how the Earth's tilt shifts where the sun sets. With this mountain as a landmark, every photograph I took felt like a slice of time, and as the slices layered up, time and the seasons began to flow.
 
