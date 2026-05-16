@@ -22,4 +22,23 @@ const posts = defineCollection({
     .passthrough(),
 });
 
-export const collections = { posts };
+const works = defineCollection({
+  loader: glob({
+    pattern: ['**/*.md'],
+    base: './src/content/works',
+  }),
+  schema: z
+    .object({
+      slug: z.string().optional(),
+      title: z.string().optional(),
+      date: z.coerce.date().optional(),
+      description: z.string().optional(),
+      cover: z.string().optional(),
+      demo_url: z.string().url().optional(),
+      repo_url: z.string().url().optional(),
+      tags: z.array(z.string()).optional(),
+    })
+    .passthrough(),
+});
+
+export const collections = { posts, works };
