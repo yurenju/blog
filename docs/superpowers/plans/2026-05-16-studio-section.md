@@ -1169,6 +1169,16 @@ git commit -m "feat(works): add fujisan as first studio work (zh)"
 
 ---
 
+---
+
+## 🛑 Checkpoint:User 修改 zh 文案
+
+Task 12 完成後**停下來**,把控制權交回給 user 修改 `富士山 — 日落的位移.md` 的內文。User 確認 zh 版定稿後才繼續 Task 13 翻譯。
+
+不要自行進入 Task 13。
+
+---
+
 ## 任務 13:翻譯 fujisan 到日文與英文
 
 **檔案:**
