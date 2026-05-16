@@ -63,7 +63,7 @@ export function findFirstBodyImage(body: string): BodyImage | null {
 type CoverEntry = CollectionEntry<'posts'> | CollectionEntry<'works'>;
 
 /**
- * Resolve a cover image for a post: prefer frontmatter `cover`, else scan body.
+ * Resolve a cover image for a post or work: prefer frontmatter `cover`, else scan body.
  *
  * Returns the processed ImageMetadata (with width/height/format) or null if
  * no candidate exists or the candidate file is not in the indexed glob.
