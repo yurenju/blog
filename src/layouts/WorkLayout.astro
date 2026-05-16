@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import WorkMeta from '../components/WorkMeta.astro';
@@ -52,17 +51,6 @@ const ogImage = work.cover
   />
   <main class="container">
     <article>
-      {work.cover && (
-        <figure class="hero">
-          <Image
-            src={work.cover}
-            alt={work.title}
-            widths={[600, 1200, 1800]}
-            sizes="(max-width: 768px) 100vw, 48rem"
-            loading="eager"
-          />
-        </figure>
-      )}
       <header class="head">
         <h1>{work.title}</h1>
       </header>
@@ -75,15 +63,6 @@ const ogImage = work.cover
 </BaseLayout>
 
 <style>
-  .hero {
-    margin: 0 0 2rem;
-  }
-  .hero :global(img) {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-  }
   .head { margin-bottom: 1rem; }
   .head h1 { font-size: 2.25rem; line-height: 1.25; }
 </style>
