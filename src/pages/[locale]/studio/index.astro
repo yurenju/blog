@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import WorkCard from '../../../components/WorkCard.astro';
+import { getWorksByLocale } from '../../../lib/works';
+import { LOCALES, HTML_LANG, type Locale, t } from '../../../lib/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const works = await getWorksByLocale(locale);
+const heading = t(locale).nav.studio;
+---
+<BaseLayout
+  title={`${heading} · Yuren's Blog`}
+  lang={HTML_LANG[locale]}
+  canonical={Astro.url}
+  ogLocale={HTML_LANG[locale]}
+>
+  <Header locale={locale} pathname={Astro.url.pathname} />
+  <main class="container">
+    <h1 class="page-title">{heading}</h1>
+    <div class="grid">
+      {works.map((work) => (
+        <WorkCard locale={locale} work={work} />
+      ))}
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .page-title { font-size: 2.25rem; margin-bottom: 2rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+  @media (max-width: 640px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+</style>
