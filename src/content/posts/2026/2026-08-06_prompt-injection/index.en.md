@@ -3,6 +3,9 @@ title: Surviving a Prompt Injection
 ---
 ![[prompt-injection-hero-en.png]]
 
+
+> **Update, 2026-08-07 8pm**: I later got a few comments on Facebook suggesting this may have been an Opus 4.8 hallucination. If that's what it was, so much the better, at least nothing was actually compromised. Even so, this incident convinced me that I really had let my guard down too far. If you're running in auto mode, it's safer to develop inside an isolated environment, and if something does go wrong, it's much easier to contain.
+
 After spending this much time with Claude Code, I've been impressed by the efficiency it brings. At the same time, once auto mode had worked fine for several months, my guard on security gradually came down.
 
 Then, on a hot summer afternoon a few weeks ago, I was watching Claude Code in auto mode rapidly finish its work and move into wrapping up, ready to diff and then commit. At that point the conversation suddenly paused for quite a while. Claude Code's servers had been unstable a lot during this period, so I didn't think much of it.
